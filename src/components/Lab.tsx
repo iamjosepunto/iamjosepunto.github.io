@@ -18,10 +18,10 @@ const labs = [
     titleEn: "Software Architecture",
 
     descriptionEs:
-      "Diseño y evaluación de arquitecturas Full Stack escalables utilizando .NET, React, APIs REST, SQL Server y MongoDB.",
+      "Diseño y evaluación de arquitecturas Full Stack escalables utilizando .NET, React, APIs REST, SQL y MongoDB.",
 
     descriptionEn:
-      "Design and evaluation of scalable Full Stack architectures using .NET, React, REST APIs, SQL Server and MongoDB.",
+      "Design and evaluation of scalable Full Stack architectures using .NET, React, REST APIs, SQL and MongoDB.",
   },
 
   {
