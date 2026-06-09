@@ -14,7 +14,7 @@ const skillGroups = [
       "ASP.NET Core",
       "ASP.NET MVC",
       "REST APIs",
-      "SQL Server",
+      "SQL",
       "MongoDB",
     ],
   },
