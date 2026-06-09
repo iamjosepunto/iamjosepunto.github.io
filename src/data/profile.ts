@@ -18,7 +18,7 @@ export const PROFILE = {
   socials: {
     email: "mailto:joseluisbejar@gmail.com",
     linkedin: "https://www.linkedin.com/in/iamjosepunto",
-    github: "#",
+    github: "https://github.com/iamjosepunto",
   },
 };
 
