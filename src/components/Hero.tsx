@@ -12,7 +12,7 @@ const Hero = () => {
         items-center
         justify-center
         px-6
-        py-16
+        py-8
       "
     >
       <div className="max-w-5xl mx-auto">
@@ -42,7 +42,7 @@ const Hero = () => {
             text-xl
             md:text-3xl
             text-ivory
-            mb-8
+            mb-6
             leading-relaxed
             text-left
           "
@@ -88,7 +88,7 @@ const Hero = () => {
             mx-auto
             text-ivory
             text-base
-            mt-6
+            mt-4
             text-left
           "
         >
