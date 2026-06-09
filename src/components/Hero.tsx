@@ -38,7 +38,7 @@ const Hero = () => {
           className="
             text-xl
             md:text-3xl
-            text-slate-300
+            text-ivory
             mb-8
             leading-relaxed
           "
@@ -55,7 +55,7 @@ const Hero = () => {
           className="
             max-w-4xl
             mx-auto
-            text-slate-400
+            text-ivory
             text-lg
             leading-relaxed
           "
@@ -70,7 +70,7 @@ const Hero = () => {
           className="
             max-w-4xl
             mx-auto
-            text-slate-500
+            text-ivory
             text-base
             mt-6
           "
