@@ -77,13 +77,13 @@ const Lab = () => {
   return (
     <section
       id="lab"
-      className="max-w-6xl mx-auto px-6 py-12"
+      className="max-w-6xl mx-auto px-6 py-4"
     >
       <h2
         className="
           text-4xl
           font-bold
-          mb-12
+          mb-6
           text-yellow-400
           text-center
           w-full
