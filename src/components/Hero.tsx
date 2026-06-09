@@ -24,10 +24,10 @@ const Hero = () => {
           src="/FotoJosePunto.jpg"
           alt="Jose Punto"
           className="
-            w-32
-            h-32
-            md:w-40
-            md:h-40
+            w-28
+            h-28
+            md:w-36
+            md:h-36
             rounded-full
             object-cover
             mx-auto
