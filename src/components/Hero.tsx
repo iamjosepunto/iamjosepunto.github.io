@@ -77,22 +77,6 @@ const Hero = () => {
         >
           {t("hero.description2")}
         </motion.p>
-
-        <div className="mt-8 flex justify-center">
-          <a
-            href="#projects"
-            className="
-              px-6
-              py-3
-              rounded-xl
-              bg-blue-600
-              hover:bg-blue-500
-              transition
-            "
-          >
-            {t("hero.viewProjects")}
-          </a>
-        </div>
       </div>
     </section>
   );
