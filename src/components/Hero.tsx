@@ -4,10 +4,6 @@ import { useTranslation } from "react-i18next";
 const Hero = () => {
   const { t } = useTranslation();
 
-  const roleLines = t("hero.role", {
-    returnObjects: true,
-  }) as string[];
-
   return (
     <section
       id="home"
@@ -47,9 +43,9 @@ const Hero = () => {
             leading-relaxed
           "
         >
-          {roleLines.map((line) => (
-            <div key={line}>{line}</div>
-          ))}
+          <div>{t("hero.role1")}</div>
+          <div>{t("hero.role2")}</div>
+          <div>{t("hero.role3")}</div>
         </motion.h2>
 
         <motion.p

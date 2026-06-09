@@ -1,13 +1,43 @@
-"hero": {
-  "role": [
-    "Analista Programador .NET Senior Full Stack",
-    "Ingeniero Industrial",
-    "IA y Automatización de Software"
-  ],
+{
+  "nav": {
+    "projects": "Mis proyectos",
+    "lab": "Laboratorio",
+    "skills": "Habilidades",
+    "about": "Acerca de",
+    "github": "GitHub"
+  },
 
-  "viewProjects": "Ver Proyectos",
+  "hero": {
+    "role1": "Analista Programador .NET Senior Full Stack",
+    "role2": "Ingeniero Industrial",
+    "role3": "IA y Automatización de Software",
 
-  "description1": "Ingeniero Industrial y Analista Programador .NET Senior Full Stack con más de 10 años de experiencia desarrollando aplicaciones web, APIs REST, soluciones móviles y software empresarial.",
+    "viewProjects": "Ver Proyectos",
 
-  "description2": "Especializado en .NET, C#, React, TypeScript, SQL Server, MongoDB y arquitecturas Full Stack modernas. Apasionado por la ingeniería del software, la automatización, la inteligencia artificial y el aprendizaje continuo."
+    "description1": "Ingeniero Industrial y Analista Programador .NET Senior Full Stack con más de 10 años de experiencia desarrollando aplicaciones web, APIs REST, soluciones móviles y software empresarial.",
+
+    "description2": "Especializado en .NET, C#, React, TypeScript, SQL Server, MongoDB y arquitecturas Full Stack modernas. Apasionado por la ingeniería del software, la automatización, la inteligencia artificial y el aprendizaje continuo."
+  },
+
+  "about": {
+    "title": "Acerca de",
+
+    "paragraph1": "Comencé mi carrera profesional como Ingeniero Industrial, participando en proyectos relacionados con eficiencia energética, instalaciones eléctricas, climatización e instalaciones industriales.",
+
+    "paragraph2": "Durante aquellos años, el desarrollo de software era inicialmente una pasión personal. Con el tiempo, esa pasión se convirtió en mi profesión principal y finalmente me llevó a dedicarme por completo a la ingeniería del software.",
+
+    "paragraph3": "Actualmente trabajo como Analista Programador .NET Senior Full Stack, participando en el análisis, diseño, desarrollo y mantenimiento de aplicaciones empresariales, APIs REST, plataformas web y soluciones móviles.",
+
+    "paragraph4": "Mis principales tecnologías incluyen C#, .NET, ASP.NET Core, React, TypeScript, SQL Server, MongoDB, Razor, Blazor, Unity y arquitecturas Full Stack modernas.",
+
+    "paragraph5": "Desde 2023 he incorporado herramientas de Inteligencia Artificial como ChatGPT y Claude a flujos reales de desarrollo de software."
+  },
+
+  "skills": {
+    "title": "Habilidades"
+  },
+
+  "lab": {
+    "title": "Laboratorio"
+  }
 }
