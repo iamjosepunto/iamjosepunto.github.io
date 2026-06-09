@@ -5,6 +5,7 @@ import Lab from "./components/Lab";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./App.css";
 
@@ -26,6 +27,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <ScrollToTop />
     </div>
   );
 }
