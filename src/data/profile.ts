@@ -29,7 +29,7 @@ export const SKILLS = [
   "React",
   "TypeScript",
   "JavaScript",
-  "SQL Server",
+  "SQL",
   "MongoDB",
   "Blazor",
   "Razor",
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     repo: "",
     description:
       "REST API and backend services focused on scalability and maintainability.",
-    tech: ["C#", ".NET", "SQL Server"],
+    tech: ["C#", ".NET", "SQL"],
   },
 
   {
