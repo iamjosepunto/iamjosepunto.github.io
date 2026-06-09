@@ -15,12 +15,13 @@ const Hero = () => {
         py-16
       "
     >
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="
+            text-center
             text-5xl
             md:text-7xl
             font-black
@@ -36,16 +37,19 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="
+            max-w-4xl
+            mx-auto
             text-xl
             md:text-3xl
             text-ivory
             mb-8
             leading-relaxed
+            text-left
           "
         >
-          <div>{t("hero.role1")}</div>
-          <div>{t("hero.role2")}</div>
-          <div>{t("hero.role3")}</div>
+          <div>Senior Full-Stack .NET Developer</div>
+          <div>Industrial Engineer</div>
+          <div>AI & Software Automation</div>
         </motion.h2>
 
         <motion.p
@@ -58,6 +62,7 @@ const Hero = () => {
             text-ivory
             text-lg
             leading-relaxed
+            text-left
           "
         >
           {t("hero.description1")}
@@ -73,6 +78,7 @@ const Hero = () => {
             text-ivory
             text-base
             mt-6
+            text-left
           "
         >
           {t("hero.description2")}
