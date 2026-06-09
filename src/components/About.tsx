@@ -30,23 +30,23 @@ const About = () => {
           p-8
         "
       >
-        <p className="text-lg text-slate-300 leading-relaxed mb-6">
+        <p className="text-lg text-ivory leading-relaxed mb-6">
           {t("about.paragraph1")}
         </p>
 
-        <p className="text-lg text-slate-300 leading-relaxed mb-6">
+        <p className="text-lg text-ivory leading-relaxed mb-6">
           {t("about.paragraph2")}
         </p>
 
-        <p className="text-lg text-slate-300 leading-relaxed mb-6">
+        <p className="text-lg text-ivory leading-relaxed mb-6">
           {t("about.paragraph3")}
         </p>
 
-        <p className="text-lg text-slate-300 leading-relaxed mb-6">
+        <p className="text-lg text-ivory leading-relaxed mb-6">
           {t("about.paragraph4")}
         </p>
 
-        <p className="text-lg text-slate-300 leading-relaxed">
+        <p className="text-lg text-ivory leading-relaxed">
           {t("about.paragraph5")}
         </p>
       </div>
