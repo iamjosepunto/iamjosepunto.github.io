@@ -27,7 +27,7 @@ const Nav = () => {
         </a>
 
         {/* Desktop */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-8 text-ivory">
           <li>
             <a href="#projects">{t("nav.projects")}</a>
           </li>
@@ -53,20 +53,20 @@ const Nav = () => {
               className={
                 i18n.language.startsWith("es")
                   ? "text-yellow-400 font-bold cursor-pointer"
-                  : "text-slate-400 hover:text-yellow-300 transition cursor-pointer"
+                  : "text-ivory hover:text-yellow-300 transition cursor-pointer"
               }
             >
               ES
             </button>
 
-            <span className="mx-2 text-slate-500">|</span>
+            <span className="mx-2 text-ivory">|</span>
 
             <button
               onClick={() => changeLanguage("en")}
               className={
                 i18n.language.startsWith("en")
                   ? "text-yellow-400 font-bold cursor-pointer"
-                  : "text-slate-400 hover:text-yellow-300 transition cursor-pointer"
+                  : "text-ivory hover:text-yellow-300 transition cursor-pointer"
               }
             >
               EN
@@ -97,7 +97,7 @@ const Nav = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="
             md:hidden
-            text-white
+            text-ivory
             text-3xl
             cursor-pointer
           "
@@ -117,7 +117,7 @@ const Nav = () => {
             border-slate-800
           "
         >
-          <div className="flex flex-col p-6 gap-6">
+          <div className="flex flex-col p-6 gap-6 text-ivory">
             <a href="#projects" onClick={closeMenu}>
               {t("nav.projects")}
             </a>
@@ -140,7 +140,7 @@ const Nav = () => {
                 className={
                   i18n.language.startsWith("es")
                     ? "text-yellow-400 font-bold mr-4"
-                    : "text-slate-400 mr-4"
+                    : "text-ivory mr-4"
                 }
               >
                 ES
@@ -151,7 +151,7 @@ const Nav = () => {
                 className={
                   i18n.language.startsWith("en")
                     ? "text-yellow-400 font-bold"
-                    : "text-slate-400"
+                    : "text-ivory"
                 }
               >
                 EN
