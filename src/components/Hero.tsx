@@ -8,11 +8,11 @@ const Hero = () => {
     <section
       id="home"
       className="
-        min-h-[70vh]
         flex
         items-center
         justify-center
         px-6
+        py-16
       "
     >
       <div className="max-w-5xl mx-auto text-center">
@@ -75,7 +75,7 @@ const Hero = () => {
           {t("hero.description2")}
         </motion.p>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <a
             href="#projects"
             className="

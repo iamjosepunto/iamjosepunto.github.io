@@ -5,7 +5,7 @@ const Footer = () => {
         border-t
         border-slate-800
         py-10
-        mt-20
+        mt-10
       "
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
