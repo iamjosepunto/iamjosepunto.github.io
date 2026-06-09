@@ -47,9 +47,20 @@ const Hero = () => {
             text-left
           "
         >
-          <div>Senior Full-Stack .NET Developer</div>
-          <div>Industrial Engineer</div>
-          <div>AI & Software Automation</div>
+          <div>
+            <span className="text-yellow-400">•</span>{" "}
+            {t("hero.role1")}
+          </div>
+
+          <div>
+            <span className="text-yellow-400">•</span>{" "}
+            {t("hero.role2")}
+          </div>
+
+          <div>
+            <span className="text-yellow-400">•</span>{" "}
+            {t("hero.role3")}
+          </div>
         </motion.h2>
 
         <motion.p
