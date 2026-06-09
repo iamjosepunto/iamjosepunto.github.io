@@ -109,7 +109,7 @@ const Lab = () => {
               {isSpanish ? item.titleEs : item.titleEn}
             </h3>
 
-            <p className="text-slate-300">
+            <p className="text-ivory">
               {isSpanish
                 ? item.descriptionEs
                 : item.descriptionEn}

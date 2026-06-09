@@ -53,7 +53,7 @@ const Projects = () => {
                 {project.title}
               </h3>
 
-              <p className="text-slate-400 mb-5">
+              <p className="text-ivory mb-5">
                 {project.description}
               </p>
 
