@@ -1,13 +1,18 @@
 import { PROJECTS } from "../data/profile";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { i18n } = useTranslation();
+
+  const isSpanish = i18n.language.startsWith("es");
+
   return (
     <section
       id="projects"
       className="max-w-7xl mx-auto px-6 py-24"
     >
       <h2 className="text-4xl font-bold mb-12 text-yellow-400">
-        Projects
+        {isSpanish ? "Mis proyectos" : "My projects"}
       </h2>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -72,7 +77,9 @@ const Projects = () => {
                     hover:text-yellow-300
                   "
                 >
-                  View Repository →
+                  {isSpanish
+                    ? "Ver repositorio →"
+                    : "View repository →"}
                 </a>
               )}
             </div>
