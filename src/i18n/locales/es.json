@@ -8,8 +8,8 @@
   },
 
   "hero": {
-    "role1": "Analista Programador .NET Senior Full Stack",
-    "role2": "Ingeniero Industrial",
+    "role1": "Ingeniero Industrial",
+    "role2": "Analista Programador .NET Senior Full-Stack",
     "role3": "IA y Automatización de Software",
 
     "viewProjects": "Ver Proyectos",
@@ -39,5 +39,8 @@
 
   "lab": {
     "title": "Laboratorio"
+  }
+  "footer": {
+  "subtitle": "Ingeniero Industrial · Analista Programador .NET Senior Full-Stack · IA y Automatización de Software"
   }
 }

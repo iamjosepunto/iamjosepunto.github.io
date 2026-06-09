@@ -8,8 +8,8 @@
   },
 
   "hero": {
-    "role1": "Senior Full-Stack .NET Developer",
-    "role2": "Industrial Engineer",
+    "role1": "Industrial Engineer",
+    "role2": "Senior Full-Stack .NET Developer",
     "role3": "AI & Software Automation",
 
     "viewProjects": "View Projects",
@@ -39,5 +39,8 @@
 
   "lab": {
     "title": "Lab"
+  }
+  "footer": {
+  "subtitle": "Industrial Engineer · Senior Full-Stack .NET Developer · AI & Software Automation"
   }
 }

@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer
       className="
@@ -14,7 +18,7 @@ const Footer = () => {
         </p>
 
         <p className="text-ivory text-sm mt-2">
-          Senior Full-Stack .NET Developer · Industrial Engineer · AI & Software Automation
+          {t("footer.subtitle")}
         </p>
       </div>
     </footer>
