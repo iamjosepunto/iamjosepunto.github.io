@@ -79,7 +79,16 @@ const Lab = () => {
       id="lab"
       className="max-w-6xl mx-auto px-6 py-12"
     >
-      <h2 className="text-4xl font-bold mb-12 text-yellow-400">
+      <h2
+        className="
+          text-4xl
+          font-bold
+          mb-12
+          text-yellow-400
+          text-center
+          w-full
+        "
+      >
         {t("lab.title")}
       </h2>
 

@@ -8,7 +8,16 @@ const About = () => {
       id="about"
       className="max-w-5xl mx-auto px-6 py-12"
     >
-      <h2 className="text-4xl font-bold mb-10 text-yellow-400">
+      <h2
+        className="
+          text-4xl
+          font-bold
+          mb-10
+          text-yellow-400
+          text-center
+          w-full
+        "
+      >
         {t("about.title")}
       </h2>
 

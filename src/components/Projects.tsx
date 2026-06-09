@@ -11,7 +11,16 @@ const Projects = () => {
       id="projects"
       className="max-w-7xl mx-auto px-6 py-12"
     >
-      <h2 className="text-4xl font-bold mb-12 text-yellow-400">
+      <h2
+        className="
+          text-4xl
+          font-bold
+          mb-12
+          text-yellow-400
+          text-center
+          w-full
+        "
+      >
         {isSpanish ? "Mis proyectos" : "My projects"}
       </h2>
 
