@@ -16,6 +16,28 @@ const Hero = () => {
       "
     >
       <div className="max-w-5xl mx-auto">
+
+        <motion.img
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          src="/FotoJosePunto.jpg"
+          alt="Jose Punto"
+          className="
+            w-40
+            h-40
+            md:w-48
+            md:h-48
+            rounded-full
+            object-cover
+            mx-auto
+            mb-6
+            border-4
+            border-yellow-400
+            shadow-lg
+          "
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
