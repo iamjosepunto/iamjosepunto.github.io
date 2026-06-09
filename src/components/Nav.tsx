@@ -1,12 +1,18 @@
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const Nav = () => {
   const { t, i18n } = useTranslation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const changeLanguage = (language: "es" | "en") => {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
+  };
+
+  const closeMenu = () => {
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -20,6 +26,7 @@ const Nav = () => {
           <span className="text-yellow-400"> Punto</span>
         </a>
 
+        {/* Desktop */}
         <ul className="hidden md:flex gap-8">
           <li>
             <a href="#projects">{t("nav.projects")}</a>
@@ -38,7 +45,8 @@ const Nav = () => {
           </li>
         </ul>
 
-        <div className="flex items-center gap-4">
+        {/* Desktop controls */}
+        <div className="hidden md:flex items-center gap-4">
           <div className="text-sm">
             <button
               onClick={() => changeLanguage("es")}
@@ -83,7 +91,91 @@ const Nav = () => {
             GitHub
           </a>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="
+            md:hidden
+            text-white
+            text-3xl
+            cursor-pointer
+          "
+          aria-label="Menu"
+        >
+          ☰
+        </button>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div
+          className="
+            md:hidden
+            bg-slate-900
+            border-t
+            border-slate-800
+          "
+        >
+          <div className="flex flex-col p-6 gap-6">
+            <a href="#projects" onClick={closeMenu}>
+              {t("nav.projects")}
+            </a>
+
+            <a href="#lab" onClick={closeMenu}>
+              {t("nav.lab")}
+            </a>
+
+            <a href="#skills" onClick={closeMenu}>
+              {t("nav.skills")}
+            </a>
+
+            <a href="#about" onClick={closeMenu}>
+              {t("nav.about")}
+            </a>
+
+            <div className="pt-2 border-t border-slate-800">
+              <button
+                onClick={() => changeLanguage("es")}
+                className={
+                  i18n.language.startsWith("es")
+                    ? "text-yellow-400 font-bold mr-4"
+                    : "text-slate-400 mr-4"
+                }
+              >
+                ES
+              </button>
+
+              <button
+                onClick={() => changeLanguage("en")}
+                className={
+                  i18n.language.startsWith("en")
+                    ? "text-yellow-400 font-bold"
+                    : "text-slate-400"
+                }
+              >
+                EN
+              </button>
+            </div>
+
+            <a
+              href={PROFILE.socials.github}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                px-4
+                py-2
+                rounded-xl
+                bg-blue-600
+                text-center
+                font-medium
+              "
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
