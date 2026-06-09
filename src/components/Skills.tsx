@@ -122,7 +122,7 @@ const Skills = () => {
               {isSpanish ? group.titleEs : group.titleEn}
             </h3>
 
-            <p className="text-slate-400 mb-5 text-sm">
+            <p className="text-ivory mb-5 text-sm">
               {isSpanish
                 ? group.descriptionEs
                 : group.descriptionEn}
