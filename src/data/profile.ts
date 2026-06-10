@@ -18,7 +18,7 @@ export const PROFILE = {
   socials: {
     email: "",
     linkedin: "https://www.linkedin.com/in/iamjosepunto",
-    github: "https://github.com/iamjosepunto",
+    github: "https://github.com/iamjosepunto/iamjosepunto.github.io",
   },
 };
 
