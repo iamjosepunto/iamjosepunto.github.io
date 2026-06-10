@@ -16,7 +16,7 @@ export const PROFILE = {
     "Industrial Engineer and Senior Full Stack Developer with more than 10 years of experience building web applications, REST APIs, mobile solutions and enterprise software.",
 
   socials: {
-    email: "mailto:joseluisbejar@gmail.com",
+    email: "",
     linkedin: "https://www.linkedin.com/in/iamjosepunto",
     github: "https://github.com/iamjosepunto",
   },
