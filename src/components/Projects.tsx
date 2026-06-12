@@ -89,7 +89,7 @@ const Projects = () => {
 
             {/* Teclas */}
             <div className="flex flex-wrap gap-2 md:justify-end shrink-0">
-              {group.tasks.map((task) => {
+              {[...group.tasks].reverse().map((task) => {
                 const code = task.code.split(" - ").pop();
                 const isActive = selected.code === task.code;
 
