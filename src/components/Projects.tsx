@@ -131,9 +131,9 @@ const Projects = () => {
         "
       >
         {isSummary ? (
-          <p className="text-ivory leading-relaxed whitespace-pre-line">
+          <pre className="text-ivory leading-relaxed whitespace-pre-wrap font-sans m-0">
             {t("projects.summary.text")}
-          </p>
+          </pre>
         ) : (
           <>
             <div className="font-mono text-sm text-blue-400 mb-2">
