@@ -6,41 +6,855 @@
     "about": "Acerca de",
     "github": "GitHub"
   },
-
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
     "role2": "Analista Programador .NET Senior Full-Stack",
     "role3": "IA y Automatización de Software",
-
     "viewProjects": "Ver Proyectos",
-
     "description1": "Ingeniero Industrial y Analista Programador .NET Senior Full Stack con más de 10 años de experiencia desarrollando aplicaciones web, APIs REST, soluciones móviles y software empresarial.",
-
     "description2": "Especializado en .NET, C#, React, TypeScript, SQL, MongoDB y arquitecturas Full Stack modernas. Apasionado por la ingeniería del software, la automatización, la inteligencia artificial y el aprendizaje continuo."
   },
-
   "about": {
     "title": "Acerca de",
-
     "paragraph1": "Comencé mi carrera profesional como Ingeniero Industrial, participando en proyectos relacionados con eficiencia energética, instalaciones eléctricas, climatización e instalaciones industriales.",
-
     "paragraph2": "Durante aquellos años, el desarrollo de software era inicialmente una pasión personal. Con el tiempo, esa pasión se convirtió en mi profesión principal y finalmente me llevó a dedicarme por completo a la ingeniería del software.",
-
     "paragraph3": "Actualmente trabajo como Analista Programador .NET Senior Full Stack, participando en el análisis, diseño, desarrollo y mantenimiento de aplicaciones empresariales, APIs REST, plataformas web y soluciones móviles.",
-
     "paragraph4": "Mis principales tecnologías incluyen C#, .NET, ASP.NET Core, React, TypeScript, SQL, MongoDB, Razor, Blazor, Unity y arquitecturas Full Stack modernas.",
-
     "paragraph5": "Desde 2023 he incorporado herramientas de Inteligencia Artificial como ChatGPT y Claude a flujos reales de desarrollo de software."
   },
-
   "skills": {
     "title": "Habilidades"
   },
-
   "lab": {
     "title": "Laboratorio"
   },
   "footer": {
-  "subtitle": "Ingeniero Industrial (finalizada) · Analista Programador .NET Senior Full-Stack · IA y Automatización de Software"
+    "subtitle": "Ingeniero Industrial (finalizada) · Analista Programador .NET Senior Full-Stack · IA y Automatización de Software"
+  },
+  "projects": {
+    "title": "Mis proyectos",
+    "labels": {
+      "resumen": "Resumen",
+      "objetivo": "Objetivo",
+      "funcionalidades": "Funcionalidades",
+      "responsabilidades": "Responsabilidades",
+      "tecnologias": "Tecnologías",
+      "resultado": "Resultado",
+      "aptitudes": "Aptitudes"
+    },
+    "durationDev": "Todavía en desarrollo",
+    "proyectos": {
+      "e100_p100": "Portfolio Personal",
+      "e011_p006": "Gestión de Calibraciones",
+      "e011_p005": "Aplicación Mobile de Inspección",
+      "e010_p004": "Certificación de Pilotos de Dron",
+      "e009_p003": "Facturación y Comisiones Energéticas",
+      "e008_p002": "Gestión de Suelos Fotovoltaicos",
+      "e007_p001": "Monitorización Energética"
+    },
+    "tareas": {
+      "e100_p100_t001": {
+        "title": "Portfolio Personal",
+        "duration": "Todavía en desarrollo",
+        "resumen": "Portfolio web desarrollado con React para presentar proyectos y stack tecnológico.",
+        "objetivo": "Disponer de una plataforma personal para presentar la trayectoria profesional, los proyectos y el stack tecnológico de forma moderna y responsive.",
+        "funcionalidades": "Diseño responsive, navegación dinámica entre secciones y despliegue automatizado en GitHub mediante GitHub Actions.",
+        "responsabilidades": "Diseño de la interfaz, desarrollo de los componentes, configuración del sistema de internacionalización y automatización del despliegue continuo.",
+        "tecnologias": "React, Vite, TailwindCSS, TypeScript, GitHub y GitHub Actions.",
+        "resultado": "Portfolio web moderno, responsive y con despliegue automatizado, utilizado como carta de presentación profesional.",
+        "aptitudes": [
+          "TypeScript",
+          "Vite",
+          "React.js",
+          "Tailwind CSS",
+          "GitHub"
+        ]
+      },
+      "e011_p006_t010": {
+        "title": "Asistente Técnico Interno Basado en IA",
+        "duration": "Todavía en desarrollo",
+        "resumen": "Participé en el diseño y desarrollo de un asistente técnico interno basado en Inteligencia Artificial Generativa, integrado dentro de una plataforma corporativa de gestión de calibraciones. La solución está orientada a mejorar la productividad de los equipos técnicos y de desarrollo mediante la automatización de tareas de consulta, análisis, documentación y soporte operativo.",
+        "objetivo": "Facilitar el acceso al conocimiento técnico de la organización, reducir tiempos de búsqueda de información y automatizar actividades repetitivas relacionadas con el desarrollo de software, la gestión documental y los procesos internos de la compañía.",
+        "funcionalidades": "Desarrollo de funcionalidades de asistencia conversacional, consulta contextual de información técnica, generación automática de documentación, ayuda a la resolución de incidencias, soporte a tareas de desarrollo, generación de código asistida por IA, elaboración de resúmenes técnicos y asistencia en procesos de análisis funcional y mantenimiento evolutivo.",
+        "responsabilidades": "Análisis de requisitos, definición de casos de uso, diseño de arquitectura, integración de modelos de Inteligencia Artificial Generativa, desarrollo de componentes frontend y backend, implementación de APIs de integración, validación funcional y mejora continua de la calidad de las respuestas generadas por el asistente.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, APIs REST, Claude, ChatGPT, Git, Inteligencia Artificial Generativa y arquitecturas modernas para aplicaciones empresariales.",
+        "resultado": "El proyecto se encuentra actualmente en desarrollo y evolución continua. Las funcionalidades implementadas hasta la fecha han permitido acelerar tareas de análisis, desarrollo y documentación, mejorar el acceso al conocimiento corporativo y aumentar la productividad de los equipos técnicos mediante el uso de asistentes basados en Inteligencia Artificial.",
+        "aptitudes": [
+          "TypeScript",
+          "Automatización de procesos",
+          "IA generativa",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "ChatGPT",
+          "Desarrollo de Software",
+          "Desarrollo Full Stack",
+          "React.js",
+          "MongoDB",
+          "C#",
+          "Anthropic Claude"
+        ]
+      },
+      "e011_p006_t009": {
+        "title": "Generación Automática de Documentación Técnica",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en el diseño e implementación de un sistema de generación automática de documentación técnica integrado dentro de una plataforma corporativa de gestión de calibraciones. La solución permitió automatizar la elaboración de documentación operativa y técnica a partir de información almacenada en los sistemas de la organización.",
+        "objetivo": "Reducir el tiempo dedicado a la elaboración manual de documentación, mejorar la consistencia de los documentos generados y garantizar la disponibilidad de información técnica actualizada para los distintos departamentos de la compañía.",
+        "funcionalidades": "Desarrollo de procesos de generación automática de documentación, creación de plantillas dinámicas, generación de informes técnicos, elaboración de resúmenes operativos, producción automatizada de documentación funcional y técnica, consolidación de información procedente de distintas fuentes y generación de contenidos utilizando Inteligencia Artificial Generativa.",
+        "responsabilidades": "Análisis de requisitos funcionales, definición de plantillas documentales, integración de modelos de Inteligencia Artificial Generativa, desarrollo de servicios backend para la generación de documentos, implementación de interfaces de usuario para la gestión de plantillas y validación de la calidad de los resultados generados.",
+        "tecnologias": "ASP.NET Core, C#, React, APIs REST, Claude, ChatGPT, Git, Inteligencia Artificial Generativa y tecnologías orientadas a la automatización de procesos documentales.",
+        "resultado": "La solución permitió reducir significativamente el esfuerzo necesario para generar documentación técnica y funcional, mejorar la homogeneidad de los documentos producidos y aumentar la productividad de los equipos técnicos mediante la automatización de tareas repetitivas relacionadas con la elaboración de documentación.",
+        "aptitudes": [
+          "TypeScript",
+          "Automatización de procesos",
+          "IA generativa",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "ChatGPT",
+          "Desarrollo Full Stack",
+          "React.js",
+          "Documentación técnica",
+          "C#",
+          "Anthropic Claude"
+        ]
+      },
+      "e011_p006_t008": {
+        "title": "Automatización con IA Generativa",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño e implementación de soluciones de automatización basadas en Inteligencia Artificial Generativa dentro de una plataforma corporativa de gestión de calibraciones. El proyecto estuvo orientado a optimizar procesos internos, reducir tareas manuales repetitivas y mejorar la eficiencia operativa de los equipos técnicos y funcionales.",
+        "objetivo": "Incrementar la productividad mediante la automatización de actividades relacionadas con análisis de información, generación de contenidos técnicos, elaboración de documentación, asistencia a usuarios internos y soporte a procesos de desarrollo y mantenimiento de software.",
+        "funcionalidades": "Desarrollo de herramientas para generación automática de textos técnicos, creación de resúmenes de información, asistencia en análisis funcionales, automatización de tareas documentales, generación de propuestas de código, apoyo a procesos de revisión técnica y automatización de actividades administrativas asociadas a la gestión de calibraciones y activos.",
+        "responsabilidades": "Análisis de oportunidades de automatización, definición de casos de uso, integración de modelos de Inteligencia Artificial Generativa, desarrollo de componentes backend y frontend, implementación de APIs de integración, validación funcional de resultados y optimización continua de los procesos automatizados.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, APIs REST, Claude, ChatGPT, Git, Inteligencia Artificial Generativa y tecnologías orientadas a la automatización de procesos empresariales.",
+        "resultado": "La solución permitió reducir significativamente el tiempo dedicado a tareas repetitivas, mejorar la calidad y consistencia de la información generada, agilizar procesos internos y aumentar la productividad de los equipos mediante el uso de herramientas basadas en Inteligencia Artificial Generativa integradas en el ecosistema corporativo.",
+        "aptitudes": [
+          "TypeScript",
+          "Automatización de procesos",
+          "IA generativa",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "ChatGPT",
+          "Desarrollo Full Stack",
+          "React.js",
+          "C#",
+          "Anthropic Claude"
+        ]
+      },
+      "e011_p006_t007": {
+        "title": "Optimización de APIs REST",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en la optimización y evolución de la arquitectura de APIs REST utilizadas por una plataforma corporativa de gestión de calibraciones. El proyecto estuvo orientado a mejorar el rendimiento, la escalabilidad y la mantenibilidad de los servicios encargados de dar soporte a las distintas aplicaciones y módulos del ecosistema corporativo.",
+        "objetivo": "Reducir tiempos de respuesta, optimizar el consumo de recursos, mejorar la experiencia de usuario y garantizar una integración eficiente entre aplicaciones frontend, servicios backend y sistemas corporativos externos.",
+        "funcionalidades": "Refactorización de servicios existentes, optimización de consultas y operaciones de acceso a datos, mejora de mecanismos de paginación y filtrado, revisión de contratos de integración, simplificación de procesos de intercambio de información, implementación de nuevos endpoints y mejora de la trazabilidad y monitorización de los servicios.",
+        "responsabilidades": "Análisis del rendimiento de los servicios existentes, identificación de cuellos de botella, diseño de mejoras arquitectónicas, desarrollo de nuevas funcionalidades backend, optimización de consultas a bases de datos, revisión de integraciones y validación funcional y técnica de las mejoras implementadas.",
+        "tecnologias": "ASP.NET Core, C#, MongoDB, APIs REST, React, Git, JSON, Swagger/OpenAPI y tecnologías orientadas al desarrollo de aplicaciones empresariales distribuidas.",
+        "resultado": "La optimización realizada permitió reducir significativamente los tiempos de respuesta de los servicios más utilizados por la plataforma, mejorar la capacidad de escalado de la solución, facilitar futuras evoluciones funcionales y aumentar la estabilidad general de las integraciones entre los distintos componentes del sistema.",
+        "aptitudes": [
+          "TypeScript",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Desarrollo web back end",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "Optimización del rendimiento",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t006": {
+        "title": "Migración React + TypeScript",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en la migración tecnológica de una aplicación corporativa de gestión de calibraciones desde una base de código desarrollada en JavaScript hacia una arquitectura moderna basada en React y TypeScript. El proyecto tuvo como objetivo mejorar la mantenibilidad, escalabilidad y calidad del código de la aplicación, facilitando su evolución futura y reduciendo la probabilidad de errores en producción.",
+        "objetivo": "Modernizar la plataforma frontend mediante la adopción de TypeScript, mejorando la robustez del desarrollo, la detección temprana de errores y la productividad de los equipos encargados del mantenimiento y evolución de la aplicación.",
+        "funcionalidades": "Migración progresiva de componentes existentes, definición de tipados y contratos de datos, adaptación de servicios de integración con APIs REST, reorganización de la arquitectura frontend, mejora de la reutilización de componentes, optimización de formularios complejos y actualización de procesos de desarrollo asociados al ciclo de vida de la aplicación.",
+        "responsabilidades": "Análisis del código existente, planificación de la estrategia de migración, desarrollo de nuevos componentes React tipados, adaptación de funcionalidades existentes, resolución de incidencias derivadas de la transición tecnológica, validación funcional y coordinación de despliegues asociados a la migración.",
+        "tecnologias": "React, TypeScript, JavaScript, ASP.NET Core, C#, APIs REST, Git, Visual Studio Code y herramientas modernas para el desarrollo de aplicaciones web empresariales.",
+        "resultado": "La migración permitió mejorar significativamente la calidad del código fuente, aumentar la mantenibilidad de la aplicación, reducir errores asociados a inconsistencias de datos y facilitar el desarrollo de nuevas funcionalidades mediante una arquitectura frontend más robusta y escalable.",
+        "aptitudes": [
+          "JavaScript",
+          "TypeScript",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Refactorización",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "Desarrollo Front-End",
+          "React.js",
+          "C#"
+        ]
+      },
+      "e011_p006_t005": {
+        "title": "Dashboard Operacional",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un dashboard operacional destinado a proporcionar una visión centralizada y en tiempo real de la información más relevante de una plataforma corporativa de gestión de calibraciones. El proyecto estuvo enfocado en mejorar la capacidad de seguimiento, análisis y toma de decisiones de los distintos perfiles de usuario de la organización.",
+        "objetivo": "Facilitar el acceso a indicadores clave de negocio y métricas operativas mediante una interfaz visual intuitiva, permitiendo identificar incidencias, monitorizar procesos y realizar un seguimiento eficiente de la actividad diaria de la plataforma.",
+        "funcionalidades": "Desarrollo de paneles de control interactivos, visualización de indicadores de rendimiento, seguimiento del estado de calibraciones, mantenimientos y activos, integración de gráficos dinámicos, filtros avanzados, consultas agregadas y herramientas de navegación orientadas al análisis de información operativa y técnica.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de cuadros de mando, desarrollo de componentes frontend, implementación de servicios backend para consolidación de datos, optimización de consultas, integración con APIs corporativas y validación de la información mostrada en los distintos paneles operacionales.",
+        "tecnologias": "React, TypeScript, ASP.NET Core, C#, MongoDB, APIs REST, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales basadas en visualización y explotación de datos.",
+        "resultado": "La solución permitió centralizar información procedente de distintos módulos de la plataforma, mejorar la visibilidad sobre el estado de las operaciones, facilitar la detección temprana de incidencias y proporcionar una herramienta eficaz para el seguimiento de indicadores clave relacionados con calibraciones, mantenimientos y gestión de activos.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t004": {
+        "title": "Gestión Documental",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un módulo de gestión documental integrado dentro de una plataforma corporativa de gestión de calibraciones. El proyecto estuvo orientado a centralizar, organizar y facilitar el acceso a la documentación técnica y administrativa asociada a equipos de medición, calibraciones, mantenimientos y procesos de calidad.",
+        "objetivo": "Mejorar la trazabilidad documental de la organización, reducir la dependencia de repositorios dispersos y garantizar la disponibilidad inmediata de la información necesaria para los distintos procesos operativos y de auditoría.",
+        "funcionalidades": "Desarrollo de funcionalidades para almacenamiento y clasificación documental, asociación de documentos a equipos y procesos específicos, gestión de versiones, búsqueda avanzada, filtrado por categorías, control de accesos y visualización centralizada de documentación técnica, certificados, informes y registros históricos.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de la estructura documental, implementación de funcionalidades frontend y backend, integración con los sistemas existentes, optimización de consultas documentales, definición de permisos de acceso y validación de la información gestionada por el sistema.",
+        "tecnologias": "ASP.NET Core, C#, React, MongoDB, APIs REST, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales con gestión centralizada de documentación.",
+        "resultado": "La solución permitió centralizar la documentación corporativa relacionada con calibraciones y activos de medición, mejorar los tiempos de acceso a la información, aumentar la trazabilidad documental y simplificar los procesos de auditoría, revisión y seguimiento realizados por usuarios técnicos y responsables de calidad.",
+        "aptitudes": [
+          "Automatización de procesos",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t003": {
+        "title": "Portal de Clientes",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un portal web para clientes integrado dentro de una plataforma corporativa de gestión de calibraciones. El proyecto estuvo orientado a proporcionar a los clientes acceso directo y seguro a la información relacionada con sus equipos, certificados, calibraciones, mantenimientos y documentación asociada.",
+        "objetivo": "Mejorar la experiencia de los clientes mediante una plataforma de autoservicio que permitiera consultar información en tiempo real, reducir la dependencia de comunicaciones manuales y facilitar el acceso a documentación técnica y administrativa desde un único punto centralizado.",
+        "funcionalidades": "Desarrollo de áreas privadas para clientes, consulta de equipos e históricos de calibración, acceso a certificados e informes técnicos, visualización del estado de trabajos en curso, descarga de documentación, gestión de perfiles de usuario y herramientas de búsqueda y filtrado de información.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de la experiencia de usuario, desarrollo de componentes frontend y backend, implementación de mecanismos de autenticación y autorización, integración con APIs corporativas, optimización del rendimiento de consultas y validación funcional junto con usuarios finales.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, APIs REST, Git y tecnologías orientadas al desarrollo de portales web empresariales y plataformas de autoservicio para clientes.",
+        "resultado": "La solución permitió mejorar significativamente el acceso a la información por parte de los clientes, reducir tiempos de respuesta asociados a consultas manuales, aumentar la transparencia de los procesos operativos y proporcionar una experiencia digital más eficiente y moderna para la gestión de servicios relacionados con calibraciones y activos de medición.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "React.js",
+          "MongoDB",
+          "C#",
+          "Experiencia de Usuario (UX)"
+        ]
+      },
+      "e011_p006_t002": {
+        "title": "Gestión de Mantenimientos y Calibraciones",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un módulo integral para la gestión de mantenimientos y calibraciones dentro de una plataforma corporativa orientada al control de equipos de medición y activos técnicos. El proyecto estuvo enfocado en digitalizar procesos operativos, mejorar la planificación de actividades y aumentar la trazabilidad de las intervenciones realizadas sobre los equipos.",
+        "objetivo": "Centralizar la gestión de mantenimientos preventivos, correctivos y calibraciones en una única plataforma, facilitando la planificación de tareas, el seguimiento de actuaciones realizadas y el control del estado operativo de los equipos a lo largo de su ciclo de vida.",
+        "funcionalidades": "Desarrollo de funcionalidades para planificación de mantenimientos, programación de calibraciones periódicas, control de vencimientos, gestión de órdenes de trabajo, seguimiento de incidencias, historial de intervenciones, gestión de estados operativos, generación de avisos automáticos y consulta de información histórica asociada a cada activo.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de datos, desarrollo de componentes frontend y backend, implementación de reglas de negocio, integración con módulos existentes de la plataforma, optimización de procesos de consulta y validación funcional junto con usuarios técnicos y responsables operativos.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, APIs REST, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para la gestión de activos, mantenimientos y procesos técnicos.",
+        "resultado": "La solución permitió mejorar la planificación de actividades de mantenimiento y calibración, aumentar la trazabilidad de las actuaciones realizadas sobre los equipos, reducir tareas administrativas manuales y proporcionar una visión centralizada del estado operativo de los activos gestionados por la organización.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Desarrollo Full Stack",
+          "Gestión de equipos",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t001": {
+        "title": "Inventario de Equipos de Medición",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo del módulo de inventario de equipos de medición de una plataforma corporativa de gestión de calibraciones. Este proyecto constituyó la base funcional sobre la que posteriormente se desarrollaron los módulos de mantenimientos, calibraciones, gestión documental, portal de clientes y cuadros de mando operacionales.",
+        "objetivo": "Centralizar la información de los equipos de medición gestionados por la organización, proporcionando una visión unificada de sus características técnicas, estado operativo, ubicación, historial y relaciones con otros procesos corporativos.",
+        "funcionalidades": "Desarrollo de funcionalidades para alta, modificación y consulta de equipos, clasificación por categorías, gestión de fabricantes y modelos, control de ubicaciones, asignación de responsables, seguimiento del estado operativo, almacenamiento de información técnica, búsqueda avanzada y trazabilidad completa de los activos registrados en la plataforma.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de datos, implementación de componentes frontend y backend, desarrollo de servicios de integración, definición de reglas de negocio, optimización de consultas, validación funcional y colaboración con usuarios técnicos para garantizar la correcta adaptación de la solución a las necesidades operativas de la organización.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, APIs REST, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para la gestión integral de activos técnicos.",
+        "resultado": "La solución permitió consolidar en una única plataforma la información asociada a los equipos de medición, mejorar la calidad y disponibilidad de los datos, aumentar la trazabilidad de los activos gestionados y establecer una base sólida para la posterior evolución funcional del sistema de gestión de calibraciones.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Desarrollo Full Stack",
+          "Gestión de equipos",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p005_t005": {
+        "title": "Captura de Datos en Campo",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de funcionalidades de captura de datos en campo para una aplicación móvil de inspección técnica utilizada por personal operativo durante la realización de trabajos sobre instalaciones, equipos y activos gestionados por la organización. El proyecto estuvo orientado a sustituir procedimientos manuales basados en papel por procesos digitales integrados con los sistemas corporativos.",
+        "objetivo": "Facilitar la recogida de información directamente desde dispositivos móviles, mejorar la calidad de los datos obtenidos durante las inspecciones y reducir los tiempos necesarios para registrar, procesar y consultar la información generada en campo.",
+        "funcionalidades": "Desarrollo de formularios de captura de información, registro de observaciones técnicas, validación de datos introducidos por los usuarios, gestión de estados de inspección, almacenamiento temporal de información, sincronización con sistemas corporativos y soporte para diferentes tipos de inspecciones y procedimientos operativos.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de la experiencia de usuario para entornos móviles, desarrollo de funcionalidades de captura de datos, integración con APIs corporativas, optimización del rendimiento de la aplicación, validación funcional y resolución de incidencias detectadas durante las pruebas y despliegues.",
+        "tecnologias": "Unity, C#, APIs REST, MongoDB, JSON, Git y tecnologías orientadas al desarrollo de aplicaciones móviles empresariales para la digitalización de procesos de inspección técnica.",
+        "resultado": "La solución permitió mejorar la eficiencia de los trabajos realizados en campo, reducir errores derivados de la introducción manual de información, aumentar la disponibilidad inmediata de los datos recogidos durante las inspecciones y facilitar su integración con los sistemas corporativos utilizados por la organización.",
+        "aptitudes": [
+          "Automatización de procesos",
+          "Desarrollo Mobile",
+          "ASP.NET Web API",
+          "Diseño de bases de datos",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t004": {
+        "title": "Sincronización Offline/Online",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en el diseño e implementación de un sistema de sincronización offline/online para una aplicación móvil de inspección técnica utilizada por personal de campo. El proyecto estuvo orientado a garantizar el funcionamiento de la aplicación en entornos con conectividad limitada o inexistente, permitiendo a los usuarios continuar trabajando con normalidad independientemente de la disponibilidad de red.",
+        "objetivo": "Asegurar la continuidad operativa de los procesos de inspección realizados en campo, permitiendo capturar, consultar y modificar información sin conexión y sincronizar automáticamente los cambios con los sistemas corporativos cuando la conectividad estuviera disponible.",
+        "funcionalidades": "Desarrollo de mecanismos de almacenamiento local, gestión de colas de sincronización, control de conflictos de datos, sincronización automática y manual, validación de integridad de la información, recuperación ante errores de comunicación y seguimiento del estado de sincronización de cada operación realizada por los usuarios.",
+        "responsabilidades": "Análisis de requisitos técnicos y funcionales, diseño de la arquitectura de sincronización, desarrollo de procesos de intercambio de información, implementación de mecanismos de persistencia local, integración con APIs corporativas, validación de escenarios offline y optimización del rendimiento de los procesos de sincronización.",
+        "tecnologias": "Unity, C#, APIs REST, MongoDB, JSON, Git y tecnologías orientadas al desarrollo de aplicaciones móviles empresariales con capacidad de funcionamiento offline y sincronización distribuida de datos.",
+        "resultado": "La solución permitió que los técnicos pudieran realizar inspecciones en ubicaciones con cobertura limitada o inexistente, eliminando dependencias de conectividad permanente, mejorando la fiabilidad de la captura de información y garantizando la sincronización segura de los datos con los sistemas corporativos cuando se restablecía la conexión.",
+        "aptitudes": [
+          "JSON",
+          "Desarrollo Mobile",
+          "ASP.NET Web API",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t003": {
+        "title": "Gestión de Evidencias Fotográficas",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de gestión de evidencias fotográficas integrado en una aplicación móvil de inspección técnica. El proyecto estuvo orientado a facilitar la captura, almacenamiento, consulta y trazabilidad de imágenes obtenidas durante las inspecciones realizadas por los técnicos de campo.",
+        "objetivo": "Digitalizar el proceso de recopilación de evidencias visuales asociadas a inspecciones, mantenimientos e incidencias, garantizando la correcta vinculación de las imágenes con los registros operativos y mejorando la calidad de la información disponible para análisis y auditorías posteriores.",
+        "funcionalidades": "Desarrollo de funcionalidades para captura de fotografías desde dispositivos móviles, asociación de imágenes a inspecciones y activos específicos, almacenamiento estructurado de evidencias, visualización de galerías fotográficas, descarga de imágenes, gestión de metadatos y consulta histórica de registros visuales asociados a cada intervención realizada en campo.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de los flujos de captura y consulta de evidencias, desarrollo de componentes móviles, integración con servicios backend, implementación de mecanismos de almacenamiento y recuperación de imágenes, optimización de procesos de transferencia de archivos y validación funcional junto con usuarios finales.",
+        "tecnologias": "Unity, C#, APIs REST, MongoDB, JSON, Git y tecnologías orientadas al desarrollo de aplicaciones móviles empresariales con gestión de contenido multimedia y documentación visual.",
+        "resultado": "La solución permitió mejorar significativamente la trazabilidad de las inspecciones realizadas, facilitar la documentación visual de incidencias y actuaciones técnicas, reducir el uso de medios manuales para la gestión de evidencias y aumentar la calidad de la información disponible para procesos de seguimiento, revisión y auditoría.",
+        "aptitudes": [
+          "Automatización de procesos",
+          "Desarrollo Mobile",
+          "ASP.NET Web API",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "Documentación técnica",
+          "C#",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t002": {
+        "title": "Formularios Dinámicos de Inspección",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de formularios dinámicos para una aplicación móvil de inspección técnica utilizada por personal operativo en campo. El proyecto estuvo orientado a sustituir formularios estáticos y procedimientos manuales por una solución flexible capaz de adaptarse a diferentes tipos de inspecciones, activos y procesos operativos.",
+        "objetivo": "Facilitar la creación y utilización de formularios configurables sin necesidad de realizar modificaciones en el código de la aplicación, permitiendo adaptar rápidamente los procesos de inspección a nuevas necesidades operativas y requisitos de negocio.",
+        "funcionalidades": "Desarrollo de formularios dinámicos basados en configuración, generación automática de controles de entrada, validación de campos obligatorios, gestión de distintos tipos de datos, agrupación de secciones, reglas de visibilidad condicional, captura estructurada de información y almacenamiento de resultados para su posterior sincronización con los sistemas corporativos.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de configuración de formularios, desarrollo de componentes reutilizables, implementación de mecanismos de validación, optimización de la experiencia de usuario en dispositivos móviles, integración con APIs corporativas y validación funcional junto con usuarios finales.",
+        "tecnologias": "Unity, C#, APIs REST, MongoDB, JSON, Git y tecnologías orientadas al desarrollo de aplicaciones móviles empresariales para digitalización de procesos de inspección y captura estructurada de información.",
+        "resultado": "La solución permitió reducir significativamente el tiempo necesario para adaptar los procesos de inspección a nuevos requisitos, mejorar la calidad y consistencia de los datos capturados en campo, disminuir la dependencia de desarrollos específicos y proporcionar una plataforma más flexible para la evolución futura de la aplicación móvil.",
+        "aptitudes": [
+          "Automatización de procesos",
+          "Desarrollo Mobile",
+          "ASP.NET Web API",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#",
+          "Experiencia de Usuario (UX)",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t001": {
+        "title": "Base Mobile para Técnicos de Campo",
+        "duration": "2 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de la base tecnológica de una aplicación móvil destinada a técnicos de campo encargados de realizar inspecciones, mantenimientos y recopilación de información operativa sobre activos e instalaciones. Este proyecto constituyó el punto de partida sobre el que posteriormente se desarrollaron funcionalidades avanzadas como formularios dinámicos, gestión de evidencias fotográficas, sincronización offline/online y captura de datos en campo.",
+        "objetivo": "Crear una plataforma móvil sólida, escalable y preparada para operar en entornos industriales y técnicos, proporcionando una experiencia de usuario sencilla y eficiente para el personal que realiza trabajos fuera de oficina.",
+        "funcionalidades": "Diseño de la arquitectura inicial de la aplicación, implementación de la navegación principal, desarrollo de sistemas de autenticación y gestión de usuarios, configuración de la comunicación con servicios corporativos, creación de estructuras de datos básicas, gestión de configuraciones locales y preparación de la infraestructura necesaria para futuras ampliaciones funcionales.",
+        "responsabilidades": "Análisis de requisitos funcionales y técnicos, definición de la arquitectura de la aplicación, desarrollo de componentes base, integración con APIs corporativas, diseño de la experiencia de usuario inicial, configuración de procesos de despliegue y validación de la plataforma en distintos escenarios de uso.",
+        "tecnologias": "Unity, C#, APIs REST, MongoDB, JSON, Git y tecnologías orientadas al desarrollo de aplicaciones móviles empresariales para digitalización de procesos técnicos y operativos.",
+        "resultado": "La solución proporcionó una base tecnológica estable para la evolución posterior de la aplicación móvil, facilitando la incorporación de nuevas funcionalidades, mejorando la productividad de los equipos de campo y permitiendo avanzar hacia la digitalización completa de los procesos de inspección y recopilación de información técnica.",
+        "aptitudes": [
+          "Automatización de procesos",
+          "Desarrollo Mobile",
+          "ASP.NET Web API",
+          "Ingeniería de Sistemas de Software",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "C#",
+          "Experiencia de Usuario (UX)",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e010_p004_t004": {
+        "title": "Optimización UX y Expedientes",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en la optimización de la experiencia de usuario y de los procesos de gestión de expedientes dentro de una plataforma web utilizada para la certificación de pilotos de dron. El proyecto estuvo orientado a simplificar la operativa diaria de usuarios administrativos y candidatos, mejorando la usabilidad de la aplicación y reduciendo la complejidad de los procesos asociados a la tramitación de certificaciones.",
+        "objetivo": "Incrementar la eficiencia operativa de la plataforma mediante la mejora de los flujos de navegación, la simplificación de procesos administrativos y la optimización de la gestión documental y de expedientes relacionados con la certificación de pilotos.",
+        "funcionalidades": "Rediseño de pantallas de gestión, mejora de formularios complejos, optimización de procesos de validación documental, simplificación de flujos de trabajo, reorganización de la información mostrada al usuario, mejora de mecanismos de búsqueda y filtrado y optimización de los procesos asociados al seguimiento de expedientes.",
+        "responsabilidades": "Análisis funcional de procesos existentes, identificación de puntos de mejora en la experiencia de usuario, rediseño de interfaces, implementación de mejoras frontend y backend, optimización de consultas, validación funcional con usuarios finales y soporte durante la implantación de las mejoras.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, Bootstrap, Git y tecnologías orientadas al desarrollo de aplicaciones web empresariales para gestión de procesos administrativos.",
+        "resultado": "La solución permitió reducir tiempos de gestión de expedientes, mejorar la productividad de los usuarios administrativos, simplificar la navegación dentro de la plataforma y proporcionar una experiencia de uso más intuitiva para los distintos perfiles involucrados en los procesos de certificación de pilotos de dron.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "ASP.NET Razor",
+          "Desarrollo Full Stack",
+          "C#",
+          "Experiencia de Usuario (UX)"
+        ]
+      },
+      "e010_p004_t003": {
+        "title": "Generación Automática de Certificados PDF",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de generación automática de certificados PDF para una plataforma de certificación de pilotos de dron. El proyecto estuvo orientado a automatizar la emisión de documentación oficial asociada a los procesos de evaluación, validación y certificación de candidatos, reduciendo tareas manuales y mejorando la eficiencia operativa de los equipos administrativos.",
+        "objetivo": "Automatizar la creación de certificados y documentación oficial generada por la plataforma, garantizando la consistencia de los documentos emitidos, reduciendo errores manuales y agilizando los procesos de gestión asociados a la certificación de pilotos.",
+        "funcionalidades": "Desarrollo de procesos de generación automática de documentos PDF, creación de plantillas dinámicas, incorporación automática de datos procedentes del sistema, generación de certificados personalizados, control de numeración y trazabilidad documental, almacenamiento de documentos generados y acceso centralizado a la documentación emitida.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de plantillas documentales, desarrollo de servicios backend para generación de documentos, integración con módulos de gestión de expedientes, optimización de procesos de generación masiva y validación funcional de la documentación producida por la plataforma.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, bibliotecas de generación de documentos PDF, Git y tecnologías orientadas al desarrollo de aplicaciones web empresariales para automatización documental.",
+        "resultado": "La solución permitió automatizar completamente la generación de certificados oficiales, reducir significativamente el tiempo dedicado a tareas administrativas, mejorar la calidad y consistencia de la documentación emitida y aumentar la capacidad operativa de la plataforma para gestionar procesos de certificación a gran escala.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo web back end",
+          "ASP.NET Razor",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "C#"
+        ]
+      },
+      "e010_p004_t002": {
+        "title": "Gestión Documental de Pilotos",
+        "duration": "3 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un módulo de gestión documental para una plataforma de certificación de pilotos de dron. El proyecto estuvo orientado a centralizar la documentación requerida durante los procesos de certificación, facilitando la presentación, validación, almacenamiento y consulta de la información asociada a cada candidato.",
+        "objetivo": "Digitalizar y optimizar la gestión documental de los expedientes de certificación, reduciendo la dependencia de procesos manuales, mejorando la trazabilidad de la documentación y simplificando las tareas administrativas realizadas por los distintos departamentos implicados.",
+        "funcionalidades": "Desarrollo de funcionalidades para carga y almacenamiento de documentos, clasificación por categorías documentales, asociación de archivos a expedientes de candidatos, control de estados de validación, gestión de incidencias documentales, búsqueda avanzada de información y acceso centralizado a la documentación requerida durante el proceso de certificación.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de la estructura documental, desarrollo de componentes backend y frontend, implementación de procesos de validación documental, integración con los módulos de gestión de expedientes, optimización de consultas y validación funcional junto con usuarios administrativos.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones web empresariales para gestión documental y tramitación administrativa.",
+        "resultado": "La solución permitió mejorar la organización de la documentación asociada a los procesos de certificación, reducir tiempos de búsqueda y validación de documentos, aumentar la trazabilidad de los expedientes y proporcionar una plataforma más eficiente para la gestión de candidatos y pilotos certificados.",
+        "aptitudes": [
+          "Gestión de proyectos",
+          "JavaScript",
+          "Automatización de procesos",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo web back end",
+          "ASP.NET Razor",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "C#"
+        ]
+      },
+      "e010_p004_t001": {
+        "title": "Registro y Validación de Pilotos",
+        "duration": "3 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo del módulo de registro y validación de pilotos para una plataforma web destinada a gestionar procesos de certificación de pilotos de dron. Este proyecto constituyó la base funcional sobre la que posteriormente se construyeron los módulos de gestión documental, generación automática de certificados y optimización de expedientes.",
+        "objetivo": "Digitalizar y centralizar los procesos de registro de candidatos, validación de requisitos y gestión inicial de expedientes, permitiendo un control más eficiente de la información asociada a los pilotos que participaban en los procesos de certificación.",
+        "funcionalidades": "Desarrollo de formularios de alta y actualización de datos personales, gestión de perfiles de candidatos, validación de requisitos administrativos, control de estados de tramitación, seguimiento de expedientes, registro histórico de acciones realizadas y consulta centralizada de la información asociada a cada piloto.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de datos, desarrollo de funcionalidades frontend y backend, implementación de reglas de validación, integración con módulos corporativos, optimización de consultas y validación funcional junto con usuarios administrativos responsables de la gestión de certificaciones.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones web empresariales para gestión administrativa y tramitación de expedientes.",
+        "resultado": "La solución permitió centralizar la información de candidatos y pilotos certificados, mejorar la calidad y consistencia de los datos registrados, reducir tareas administrativas manuales y proporcionar una base sólida para la evolución posterior de la plataforma de certificación de pilotos de dron.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo web back end",
+          "ASP.NET Razor",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e009_p003_t003": {
+        "title": "Métricas y Cuadros de Mando",
+        "duration": "3 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de métricas y cuadros de mando para una plataforma de gestión de facturación y comisiones del sector energético. El proyecto estuvo orientado a proporcionar una visión consolidada de los principales indicadores de negocio, permitiendo a los responsables de la organización realizar un seguimiento más eficiente de la actividad comercial y financiera.",
+        "objetivo": "Facilitar la toma de decisiones mediante el acceso centralizado a información clave sobre contratos, facturación, comisiones, rendimiento comercial y evolución de los distintos procesos gestionados por la plataforma.",
+        "funcionalidades": "Desarrollo de paneles de control interactivos, generación de indicadores de rendimiento, visualización de métricas comerciales y económicas, filtros dinámicos de información, consultas agregadas, informes resumidos y herramientas de análisis orientadas al seguimiento de resultados y objetivos de negocio.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de cuadros de mando, desarrollo de componentes frontend y backend, optimización de consultas de agregación, integración con módulos de facturación y comisiones, validación de indicadores y colaboración con usuarios de negocio para garantizar la calidad de la información presentada.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para análisis de datos y generación de indicadores de negocio.",
+        "resultado": "La solución permitió mejorar la visibilidad sobre los procesos de facturación y gestión de comisiones, facilitar el análisis de información comercial y financiera, reducir la elaboración manual de informes y proporcionar una herramienta eficaz para el seguimiento de indicadores clave de rendimiento.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "Modelado de datos",
+          "React.js",
+          "C#"
+        ]
+      },
+      "e009_p003_t002": {
+        "title": "Gestión de Facturación",
+        "duration": "3 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de funcionalidades de gestión de facturación para una plataforma del sector energético orientada a la administración de contratos, consumos, liquidaciones y procesos económicos asociados a clientes y colaboradores comerciales. El proyecto estuvo enfocado en mejorar la automatización de los procesos de facturación y aumentar la fiabilidad de la información financiera gestionada por la organización.",
+        "objetivo": "Optimizar los procesos relacionados con la generación, consulta y seguimiento de información de facturación, reduciendo tareas manuales y mejorando la consistencia de los datos utilizados en los procesos administrativos y financieros.",
+        "funcionalidades": "Desarrollo de módulos para gestión de facturas, consulta de históricos de facturación, seguimiento de estados de emisión y validación, cálculo de importes, gestión de incidencias administrativas, búsqueda avanzada de registros y generación de información consolidada para procesos de análisis y control económico.",
+        "responsabilidades": "Análisis de requisitos funcionales, implementación de reglas de negocio, desarrollo de componentes frontend y backend, optimización de consultas a bases de datos, integración con módulos corporativos, validación funcional de cálculos y soporte a usuarios durante las fases de pruebas y despliegue.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para gestión administrativa y financiera.",
+        "resultado": "La solución permitió mejorar la eficiencia de los procesos de facturación, reducir errores derivados de tareas manuales, aumentar la trazabilidad de la información económica y proporcionar una plataforma más sólida para la gestión de operaciones financieras relacionadas con la actividad comercial de la compañía.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "ASP.NET Web API",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "React.js",
+          "C#"
+        ]
+      },
+      "e009_p003_t001": {
+        "title": "Cálculo de Comisiones y Contratos",
+        "duration": "4 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un módulo para la gestión de contratos y cálculo de comisiones dentro de una plataforma del sector energético. Este proyecto constituyó la base funcional sobre la que posteriormente se desarrollaron los módulos de facturación, reporting y cuadros de mando, permitiendo centralizar la información comercial y automatizar procesos clave para la organización.",
+        "objetivo": "Automatizar el cálculo de comisiones asociadas a contratos energéticos, mejorar la trazabilidad de las operaciones comerciales y proporcionar una herramienta fiable para la gestión de acuerdos, colaboradores y procesos de liquidación económica.",
+        "funcionalidades": "Desarrollo de funcionalidades para gestión de contratos, definición de condiciones comerciales, parametrización de reglas de cálculo, seguimiento de operaciones, cálculo automático de comisiones, consulta de históricos, control de modificaciones contractuales y generación de información para procesos posteriores de facturación y análisis financiero.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de datos, implementación de reglas de negocio complejas, desarrollo de componentes frontend y backend, optimización de procesos de cálculo, validación funcional junto con usuarios de negocio y soporte durante las fases de pruebas e implantación.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para gestión comercial, contratos y procesos de liquidación económica.",
+        "resultado": "La solución permitió automatizar procesos de cálculo que anteriormente requerían intervención manual, mejorar la fiabilidad de la información utilizada para la gestión de comisiones, reducir errores operativos y proporcionar una base sólida para la evolución posterior de la plataforma de facturación y análisis de negocio.",
+        "aptitudes": [
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "React.js",
+          "Documentación técnica",
+          "C#"
+        ]
+      },
+      "e008_p002_t003": {
+        "title": "Seguimiento de Instalaciones Fotovoltaicas",
+        "duration": "3 meses de duración",
+        "resumen": "Participé en el desarrollo de funcionalidades para el seguimiento y control de instalaciones fotovoltaicas dentro de una plataforma orientada a la gestión de activos energéticos. El proyecto estuvo enfocado en proporcionar una visión centralizada del estado de las instalaciones, facilitando el acceso a información técnica y administrativa relevante para su supervisión y mantenimiento.",
+        "objetivo": "Mejorar la trazabilidad y el control de las instalaciones fotovoltaicas mediante herramientas que permitieran consultar información actualizada sobre activos, ubicaciones, estados operativos y documentación asociada.",
+        "funcionalidades": "Desarrollo de módulos de consulta y seguimiento de instalaciones, visualización de información técnica, acceso a históricos de actuaciones, gestión de estados operativos, clasificación de activos, consulta de información geográfica y acceso centralizado a datos relevantes para la supervisión de proyectos fotovoltaicos.",
+        "responsabilidades": "Análisis de requisitos funcionales, desarrollo de componentes frontend y backend, integración con bases de datos corporativas, optimización de consultas, implementación de funcionalidades de seguimiento y validación funcional junto con usuarios responsables de la gestión de instalaciones energéticas.",
+        "tecnologias": "ASP.NET MVC, C#, React, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para gestión y seguimiento de activos energéticos.",
+        "resultado": "La solución permitió mejorar la visibilidad sobre las instalaciones gestionadas, facilitar el acceso a información técnica y operativa, aumentar la trazabilidad de los activos y proporcionar una herramienta más eficiente para el seguimiento de proyectos relacionados con el sector fotovoltaico.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "React.js",
+          "Documentación técnica",
+          "C#"
+        ]
+      },
+      "e008_p002_t002": {
+        "title": "Gestión de Expedientes",
+        "duration": "2 meses de duración",
+        "resumen": "Participé en el desarrollo de funcionalidades para la gestión de expedientes dentro de una plataforma orientada a la administración de proyectos relacionados con suelos e instalaciones fotovoltaicas. El proyecto estuvo enfocado en centralizar la información administrativa y técnica asociada a los distintos expedientes gestionados durante el ciclo de vida de los proyectos.",
+        "objetivo": "Facilitar la organización, seguimiento y consulta de la documentación y los trámites asociados a proyectos fotovoltaicos, mejorando la trazabilidad de la información y reduciendo la complejidad de los procesos administrativos.",
+        "funcionalidades": "Desarrollo de módulos para alta y seguimiento de expedientes, gestión de estados de tramitación, asociación de documentación técnica y administrativa, control de incidencias, búsqueda avanzada de registros, consulta de históricos y acceso centralizado a la información necesaria para la gestión de proyectos.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de estructuras de información, desarrollo de componentes frontend y backend, implementación de reglas de negocio, optimización de consultas a bases de datos, integración con módulos existentes y validación funcional junto con usuarios responsables de la gestión administrativa.",
+        "tecnologias": "ASP.NET MVC, C#, React, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para gestión documental y tramitación de expedientes.",
+        "resultado": "La solución permitió mejorar la organización de la información asociada a proyectos fotovoltaicos, aumentar la trazabilidad de los expedientes gestionados, reducir tiempos de consulta y proporcionar una herramienta más eficiente para el control de procesos administrativos y documentales.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "React.js",
+          "Documentación técnica",
+          "C#"
+        ]
+      },
+      "e008_p002_t001": {
+        "title": "Inventario de Terrenos",
+        "duration": "3 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de inventario de terrenos destinado a apoyar la gestión de proyectos relacionados con instalaciones fotovoltaicas. Este proyecto constituyó la base funcional sobre la que posteriormente se desarrollaron los módulos de gestión de expedientes y seguimiento de instalaciones, permitiendo centralizar la información asociada a los emplazamientos potenciales y activos gestionados por la organización.",
+        "objetivo": "Disponer de una plataforma centralizada para registrar, organizar y consultar información relativa a terrenos vinculados a proyectos fotovoltaicos, facilitando los procesos de análisis, planificación y seguimiento realizados por los distintos departamentos implicados.",
+        "funcionalidades": "Desarrollo de módulos para alta y gestión de terrenos, almacenamiento de información descriptiva y técnica, clasificación de emplazamientos, consulta de ubicaciones, gestión de estados, búsqueda avanzada de registros, asociación de documentación relevante y acceso centralizado a la información de cada activo territorial.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de datos, desarrollo de componentes frontend y backend, implementación de funcionalidades de consulta y mantenimiento de información, optimización de consultas a bases de datos, integración con sistemas corporativos y validación funcional junto con usuarios responsables de la gestión de proyectos.",
+        "tecnologias": "ASP.NET MVC, C#, React, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para gestión de activos territoriales y proyectos energéticos.",
+        "resultado": "La solución permitió centralizar la información relacionada con terrenos e infraestructuras asociadas a proyectos fotovoltaicos, mejorar la disponibilidad de los datos, facilitar la localización y consulta de activos y proporcionar una base sólida para la evolución posterior de la plataforma de gestión de proyectos energéticos.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "React.js",
+          "Documentación técnica",
+          "C#"
+        ]
+      },
+      "e007_p001_t012": {
+        "title": "Optimización de Rendimiento",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en un proyecto de optimización de rendimiento de una plataforma de monitorización energética utilizada para la supervisión y análisis de consumos eléctricos en instalaciones industriales y edificios. El proyecto estuvo orientado a mejorar la velocidad de respuesta de la aplicación, optimizar el tratamiento de grandes volúmenes de información y aumentar la capacidad de escalabilidad de la solución.",
+        "objetivo": "Incrementar el rendimiento general de la plataforma, reducir tiempos de carga y procesamiento de información, optimizar consultas a bases de datos y mejorar la experiencia de usuario en escenarios con grandes cantidades de datos históricos y mediciones en tiempo real.",
+        "funcionalidades": "Optimización de consultas SQL, mejora de procesos de carga de datos, revisión de algoritmos de cálculo y agregación, optimización de generación de informes, mejora de mecanismos de almacenamiento y recuperación de información, refactorización de componentes críticos y optimización de procesos de comunicación entre módulos de la aplicación.",
+        "responsabilidades": "Análisis de cuellos de botella, evaluación de métricas de rendimiento, optimización de código backend y frontend, revisión de estructuras de bases de datos, implementación de mejoras arquitectónicas, realización de pruebas de carga y validación de los resultados obtenidos tras la optimización.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización y análisis de datos energéticos.",
+        "resultado": "La solución permitió reducir significativamente los tiempos de respuesta de las operaciones más utilizadas por los usuarios, mejorar el rendimiento de consultas complejas, optimizar el tratamiento de datos históricos y aumentar la capacidad de la plataforma para gestionar un volumen creciente de información energética.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "C#"
+        ]
+      },
+      "e007_p001_t011": {
+        "title": "Sistema de Alertas Energéticas",
+        "duration": "7 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de alertas energéticas integrado dentro de una plataforma de monitorización y gestión de consumos eléctricos. El proyecto estuvo orientado a detectar automáticamente situaciones anómalas en las instalaciones monitorizadas y notificar a los usuarios responsables para facilitar una actuación rápida y eficiente.",
+        "objetivo": "Mejorar la capacidad de supervisión de las instalaciones energéticas mediante mecanismos automáticos de detección de incidencias, desviaciones de consumo y situaciones operativas que requirieran atención inmediata por parte de técnicos y responsables energéticos.",
+        "funcionalidades": "Desarrollo de reglas configurables de generación de alertas, monitorización de umbrales de consumo, detección de comportamientos anómalos, gestión de niveles de severidad, registro histórico de incidencias, visualización de alertas activas, notificaciones automáticas y seguimiento de eventos generados por los distintos sistemas monitorizados.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de la arquitectura de alertas, implementación de reglas de negocio, desarrollo de componentes frontend y backend, optimización de procesos de evaluación de eventos, integración con módulos de monitorización existentes y validación funcional junto con usuarios finales.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización, supervisión y control energético.",
+        "resultado": "La solución permitió detectar incidencias de forma temprana, mejorar la capacidad de respuesta ante situaciones anómalas, reducir tiempos de reacción de los equipos técnicos y aumentar la eficiencia de los procesos de supervisión energética mediante la automatización de mecanismos de control y notificación.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t010": {
+        "title": "Cuadros de Mando Energéticos",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de cuadros de mando energéticos para una plataforma de monitorización y análisis de consumos eléctricos utilizada en entornos industriales, terciarios y de servicios. El proyecto estuvo orientado a transformar grandes volúmenes de datos energéticos en información visual clara y útil para facilitar la toma de decisiones por parte de gestores energéticos, responsables de mantenimiento y equipos directivos.",
+        "objetivo": "Proporcionar una visión global y centralizada del comportamiento energético de las instalaciones monitorizadas, permitiendo identificar tendencias, desviaciones, oportunidades de ahorro y áreas susceptibles de mejora en términos de eficiencia energética.",
+        "funcionalidades": "Desarrollo de paneles de control interactivos, representación gráfica de consumos eléctricos, análisis comparativos entre periodos, visualización de indicadores clave de rendimiento energético, generación de informes resumidos, filtros avanzados de consulta y herramientas para el seguimiento continuo de la actividad energética de las instalaciones.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de cuadros de mando, desarrollo de componentes frontend y backend, optimización de consultas de agregación de datos, integración con sistemas de monitorización existentes, validación de indicadores energéticos y colaboración con usuarios finales para adaptar la información mostrada a sus necesidades operativas.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización energética, análisis de datos y generación de indicadores de rendimiento.",
+        "resultado": "La solución permitió mejorar la visibilidad sobre el comportamiento energético de las instalaciones monitorizadas, facilitar la detección de patrones de consumo, apoyar la toma de decisiones basada en datos y proporcionar una herramienta eficaz para el seguimiento continuo de indicadores.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t009": {
+        "title": "Informes Históricos de Consumo",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de informes históricos de consumo integrado en una plataforma de monitorización energética utilizada para supervisar instalaciones industriales, edificios y centros de servicios. El proyecto estuvo orientado a proporcionar herramientas avanzadas de consulta y análisis de información histórica para facilitar la evaluación del comportamiento energético a medio y largo plazo.",
+        "objetivo": "Permitir a los usuarios analizar la evolución de los consumos energéticos mediante el acceso a datos históricos consolidados, facilitando la detección de tendencias, desviaciones, patrones de comportamiento y oportunidades de mejora en la eficiencia energética.",
+        "funcionalidades": "Desarrollo de informes históricos configurables, consultas por rangos temporales, análisis comparativos entre periodos, agrupación de datos por instalaciones y dispositivos, exportación de información, generación de resúmenes de consumo, filtros avanzados y herramientas de visualización orientadas al análisis energético.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de estructuras de consulta y almacenamiento, desarrollo de componentes frontend y backend, optimización de consultas sobre grandes volúmenes de datos históricos, implementación de mecanismos de generación de informes y validación funcional junto con usuarios especializados en gestión energética.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización, reporting y análisis de información energética.",
+        "resultado": "La solución permitió mejorar significativamente la capacidad de análisis histórico de la plataforma, facilitar la elaboración de estudios energéticos, optimizar la generación de informes para clientes y proporcionar una base sólida para la toma de decisiones relacionadas con eficiencia energética y optimización de consumos.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión documental",
+          "C#"
+        ]
+      },
+      "e007_p001_t008": {
+        "title": "Gestión Avanzada de Contadores",
+        "duration": "7 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de funcionalidades avanzadas para la gestión de contadores energéticos dentro de una plataforma de monitorización utilizada en instalaciones industriales, edificios y centros de servicios. El proyecto estuvo orientado a mejorar la administración de dispositivos de medida, optimizar la recopilación de información energética y facilitar la supervisión centralizada de múltiples puntos de consumo.",
+        "objetivo": "Proporcionar herramientas que permitieran gestionar de forma eficiente el ciclo de vida de los contadores energéticos, garantizar la calidad de los datos recopilados y facilitar la explotación de la información generada por los distintos dispositivos de medida conectados a la plataforma.",
+        "funcionalidades": "Desarrollo de módulos para alta y configuración de contadores, asociación de dispositivos a instalaciones y circuitos eléctricos, gestión de parámetros de comunicación, control de estados operativos, consulta de históricos de mediciones, validación de lecturas, clasificación de dispositivos y supervisión centralizada de activos de monitorización energética.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de modelos de datos, desarrollo de componentes frontend y backend, integración con sistemas de adquisición de datos, optimización de consultas relacionadas con dispositivos y mediciones, validación funcional y colaboración con usuarios especializados en gestión energética.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización energética, gestión de dispositivos y adquisición de datos industriales.",
+        "resultado": "La solución permitió mejorar la administración de contadores energéticos, aumentar la fiabilidad de la información recopilada por la plataforma, simplificar las tareas de configuración y mantenimiento de dispositivos y proporcionar una infraestructura más sólida para la supervisión energética.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Gestión de equipos",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t007": {
+        "title": "Sincronización de Datos mediante AJAX",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño e implementación de mecanismos de sincronización de datos mediante AJAX dentro de una plataforma de monitorización energética utilizada para supervisar consumos eléctricos y parámetros operativos en tiempo real. El proyecto estuvo orientado a mejorar la fluidez de la experiencia de usuario y optimizar la actualización de información sin necesidad de recargar completamente las páginas de la aplicación.",
+        "objetivo": "Incrementar la capacidad de respuesta de la plataforma y proporcionar acceso más rápido a la información energética, permitiendo la actualización continua de datos de consumo, estados operativos y métricas de monitorización de forma eficiente y transparente para el usuario.",
+        "funcionalidades": "Desarrollo de procesos de actualización asíncrona de datos, sincronización de mediciones energéticas, actualización dinámica de paneles de información, consultas periódicas de estados operativos, carga parcial de contenidos, optimización de tiempos de respuesta y mejora de la interacción entre frontend y backend.",
+        "responsabilidades": "Análisis de requisitos técnicos y funcionales, diseño de mecanismos de comunicación asíncrona, desarrollo de servicios backend, implementación de llamadas AJAX, optimización del intercambio de datos, validación funcional y mejora continua de la experiencia de usuario en escenarios de monitorización intensiva.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, AJAX, HTML, CSS, JSON, Git y tecnologías orientadas al desarrollo de aplicaciones web empresariales con actualización dinámica de información.",
+        "resultado": "La solución permitió mejorar significativamente la experiencia de usuario de la plataforma, reducir tiempos de espera asociados a la actualización de información, optimizar el consumo de recursos de red y proporcionar una visualización más ágil y eficiente de los datos energéticos monitorizados en tiempo real.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "AJAX",
+          "Desarrollo Full Stack",
+          "Desarrollo Front-End",
+          "C#"
+        ]
+      },
+      "e007_p001_t006": {
+        "title": "Supervisión de Parámetros Eléctricos",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de supervisión de parámetros eléctricos integrado en una plataforma de monitorización energética orientada a instalaciones industriales, edificios corporativos y centros de servicios. El proyecto estuvo enfocado en proporcionar visibilidad en tiempo real sobre el comportamiento eléctrico de las instalaciones, facilitando la detección de incidencias y el análisis de la calidad del suministro energético.",
+        "objetivo": "Permitir la supervisión continua de parámetros eléctricos críticos mediante la recopilación, almacenamiento y visualización de información procedente de equipos de medida distribuidos en diferentes instalaciones, contribuyendo a mejorar el control operativo y la eficiencia energética.",
+        "funcionalidades": "Desarrollo de módulos para adquisición y visualización de parámetros eléctricos, seguimiento de tensión, intensidad, potencia activa, potencia reactiva, energía consumida, factor de potencia y frecuencia, consulta de históricos de mediciones, representación gráfica de datos y acceso centralizado a la información procedente de distintos dispositivos de monitorización.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de modelos de datos para almacenamiento de mediciones, desarrollo de componentes frontend y backend, integración con sistemas de adquisición de datos, optimización de consultas sobre grandes volúmenes de información, validación funcional y soporte a usuarios especializados en gestión energética.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización energética y supervisión de infraestructuras eléctricas.",
+        "resultado": "La solución permitió mejorar la capacidad de supervisión de las instalaciones monitorizadas, facilitar el acceso a información eléctrica relevante, aumentar la rapidez en la detección de incidencias operativas y proporcionar una base sólida para el análisis.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t005": {
+        "title": "Análisis de Consumos",
+        "duration": "7 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de funcionalidades de análisis de consumos energéticos dentro de una plataforma de monitorización utilizada para supervisar instalaciones industriales, edificios corporativos y centros de servicios. El proyecto estuvo orientado a transformar los datos recopilados por los sistemas de medición en información útil para la identificación de patrones de consumo y oportunidades de mejora energética.",
+        "objetivo": "Facilitar el análisis detallado de los consumos eléctricos mediante herramientas que permitieran interpretar grandes volúmenes de información, detectar desviaciones respecto a comportamientos esperados y apoyar la toma de decisiones relacionadas con eficiencia energética y optimización de recursos.",
+        "funcionalidades": "Desarrollo de módulos de análisis de consumos, consultas comparativas entre periodos, segmentación de información por instalaciones y dispositivos, cálculo de indicadores energéticos, identificación de tendencias de consumo, generación de informes analíticos y herramientas de apoyo para estudios de eficiencia energética.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de modelos de información, desarrollo de componentes frontend y backend, optimización de consultas analíticas, implementación de cálculos energéticos, validación funcional junto con usuarios especializados y mejora continua de las capacidades analíticas de la plataforma.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización, análisis de datos y gestión energética.",
+        "resultado": "La solución permitió mejorar significativamente la capacidad de análisis de la información energética disponible, facilitar la detección de consumos anómalos, apoyar estudios de optimización energética y proporcionar herramientas más avanzadas para la gestión eficiente de instalaciones y recursos energéticos.",
+        "aptitudes": [
+          "Desarrollo de base de datos",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t004": {
+        "title": "Visualización en Tiempo Real",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de funcionalidades de visualización en tiempo real para una plataforma de monitorización energética orientada a la supervisión de instalaciones industriales, edificios corporativos y centros de servicios. El proyecto estuvo enfocado en proporcionar acceso inmediato a la información procedente de sistemas de medición eléctrica, facilitando la observación continua del comportamiento energético de las instalaciones monitorizadas.",
+        "objetivo": "Permitir a los usuarios visualizar información actualizada de manera continua, facilitando la detección temprana de incidencias, el seguimiento de consumos energéticos y la supervisión operativa de instalaciones mediante herramientas gráficas accesibles y de fácil interpretación.",
+        "funcionalidades": "Desarrollo de paneles de visualización en tiempo real, actualización dinámica de indicadores energéticos, representación gráfica de consumos instantáneos, consulta de estados operativos, visualización de alarmas y eventos, seguimiento de parámetros eléctricos y acceso centralizado a información procedente de múltiples dispositivos de medición.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño de interfaces de usuario, desarrollo de componentes frontend y backend, implementación de mecanismos de actualización dinámica de datos, optimización de consultas y validación funcional junto con usuarios especializados en monitorización energética.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, AJAX, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para supervisión y monitorización en tiempo real.",
+        "resultado": "La solución permitió mejorar significativamente la capacidad de supervisión de las instalaciones monitorizadas, reducir los tiempos necesarios para detectar incidencias operativas y proporcionar una experiencia más eficiente para usuarios responsables del seguimiento y control energético de infraestructuras complejas.",
+        "aptitudes": [
+          "JavaScript",
+          "Automatización de procesos",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "AJAX",
+          "Desarrollo Full Stack",
+          "C#"
+        ]
+      },
+      "e007_p001_t003": {
+        "title": "Gestión de Circuitos Eléctricos",
+        "duration": "6 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un módulo para la gestión de circuitos eléctricos dentro de una plataforma de monitorización energética destinada a instalaciones industriales, edificios corporativos y centros de servicios. El proyecto estuvo orientado a estructurar y organizar la información eléctrica de las instalaciones monitorizadas, permitiendo representar de forma lógica los distintos circuitos y sus relaciones con equipos de medida y sistemas de supervisión.",
+        "objetivo": "Proporcionar una herramienta centralizada para la gestión de circuitos eléctricos, facilitando la organización de la información energética y permitiendo una interpretación más precisa de los datos procedentes de los dispositivos de monitorización instalados en las diferentes infraestructuras.",
+        "funcionalidades": "Desarrollo de módulos para alta y gestión de circuitos eléctricos, asociación de contadores y dispositivos de medida, clasificación de circuitos por tipología, consulta de información técnica, gestión de relaciones jerárquicas entre elementos, mantenimiento de configuraciones y acceso centralizado a la estructura eléctrica de cada instalación monitorizada.",
+        "responsabilidades": "Análisis de requisitos funcionales, diseño del modelo de datos, desarrollo de componentes frontend y backend, implementación de reglas de negocio, optimización de consultas relacionadas con la estructura eléctrica de las instalaciones, validación funcional y colaboración con especialistas en eficiencia energética y sistemas eléctricos.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización energética y gestión de infraestructuras eléctricas.",
+        "resultado": "La solución permitió mejorar la organización de la información asociada a los sistemas eléctricos monitorizados, facilitar la gestión de circuitos y dispositivos de medida, aumentar la trazabilidad de los datos energéticos.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t002": {
+        "title": "Captura de Datos Energéticos",
+        "duration": "7 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de un sistema de captura de datos energéticos destinado a recopilar, almacenar y procesar información procedente de dispositivos de medida instalados en infraestructuras industriales y edificios. El proyecto estuvo orientado a establecer una base sólida para la monitorización energética, garantizando la disponibilidad y fiabilidad de los datos utilizados posteriormente por los módulos de análisis, supervisión y reporting.",
+        "objetivo": "Implementar mecanismos eficientes para la recopilación automática de información energética, permitiendo centralizar los datos generados por diferentes equipos de medida y proporcionar una fuente única de información para la plataforma de monitorización.",
+        "funcionalidades": "Desarrollo de procesos de recepción y almacenamiento de lecturas energéticas, validación de datos recibidos, gestión de históricos de mediciones, tratamiento de incidencias en la captura de información, normalización de datos procedentes de diferentes dispositivos, seguimiento de estados de comunicación y acceso centralizado a las mediciones registradas.",
+        "responsabilidades": "Análisis de requisitos técnicos y funcionales, diseño de estructuras de almacenamiento, desarrollo de procesos backend para adquisición y tratamiento de datos, integración con dispositivos de medida, optimización de procesos de carga masiva de información, validación funcional y soporte durante las fases de implantación.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para adquisición, almacenamiento y procesamiento de datos energéticos.",
+        "resultado": "La solución permitió centralizar la información procedente de múltiples sistemas de medición, mejorar la calidad de los datos energéticos disponibles para análisis posteriores, aumentar la fiabilidad de los procesos de captura y proporcionar una infraestructura sólida para la evolución futura de la plataforma.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Ingeniería de Sistemas de Software",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      },
+      "e007_p001_t001": {
+        "title": "Arquitectura Inicial Plataforma",
+        "duration": "5 meses de duración",
+        "resumen": "Participé en el diseño y desarrollo de la arquitectura inicial de una plataforma de monitorización energética destinada a recopilar, gestionar y analizar información procedente de sistemas de medición eléctrica. Este proyecto constituyó el punto de partida sobre el que posteriormente se construyeron los módulos de captura de datos, gestión de circuitos, visualización en tiempo real, análisis de consumos, reporting y cuadros de mando energéticos.",
+        "objetivo": "Definir una arquitectura tecnológica sólida, escalable y mantenible que permitiera soportar el crecimiento funcional de la plataforma, facilitando la integración de nuevos módulos y garantizando un rendimiento adecuado para el tratamiento de grandes volúmenes de información energética.",
+        "funcionalidades": "Diseño de la estructura general de la aplicación, definición del modelo de datos principal, implementación de los mecanismos básicos de autenticación y gestión de usuarios, desarrollo de la arquitectura de acceso a datos, configuración de la infraestructura de comunicación entre componentes y establecimiento de las bases para la evolución futura de la plataforma.",
+        "responsabilidades": "Análisis de requisitos funcionales y técnicos, diseño de la arquitectura de software, modelado de bases de datos, desarrollo de componentes base de la aplicación, definición de estándares de desarrollo, implementación de servicios comunes y validación de la estructura tecnológica utilizada como fundamento del sistema.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git y tecnologías orientadas al desarrollo de aplicaciones empresariales para monitorización, análisis de datos y gestión energética.",
+        "resultado": "La solución proporcionó una base tecnológica robusta para el crecimiento de la plataforma durante los años posteriores, permitiendo incorporar nuevas funcionalidades de monitorización, análisis y reporting sin necesidad de rediseños significativos, mejorando la mantenibilidad del sistema.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Desarrollo web",
+          "Desarrollo web back end",
+          "Ingeniería de Sistemas de Software",
+          "Arquitectura de software",
+          "Desarrollo Full Stack",
+          "Modelado de datos",
+          "C#"
+        ]
+      }
+    },
+    "summary": {
+      "label": "RESUMEN DE PROYECTOS",
+      "text": "RESUMEN DE PROYECTOS\n• E100-P100-PORTFOLIO\n• E011-P006-GESTIÓN DE CALIBRACIONES\n>T010-Asistente Técnico Interno Basado en IA\n>T009-Generación Automática de Documentación Técnica\n>T008-Automatización con IA Generativa\n>T007-Optimización de APIs REST\n>T006-Migración React + TypeScript\n>T005-Dashboard Operacional\n>T004-Gestión Documental\n>T003-Portal de Clientes\n>T002-Gestión de Mantenimientos y Calibraciones\n>T001-Inventario de Equipos de Medición\n• E011-P005-APLICACIÓN MOBILE DE INSPECCIÓN\n>T005-Captura de Datos en Campo\n>T004-Sincronización Offline/Online\n>T003-Gestión de Evidencias Fotográficas\n>T002-Formularios Dinámicos de Inspección\n>T001-Base Mobile para Técnicos de Campo\n• E010-P004-CERTIFICACIÓN DE PILOTOS DE DRON\n>T004-Optimización UX y Expedientes\n>T003-Generación Automática de Certificados PDF\n>T002-Gestión Documental de Pilotos\n>T001-Registro y Validación de Pilotos\n• E009-P003-FACTURACIÓN Y COMISIONES ENERGÉTICAS\n>T003-Métricas y Cuadros de Mando\n>T002-Gestión de Facturación\n>T001-Cálculo de Comisiones y Contratos\n• E008-P002-GESTIÓN DE SUELOS FOTOVOLTAICOS\n>T003-Seguimiento de Instalaciones Fotovoltaicas\n>T002-Gestión de Expedientes\n>T001-Inventario de Terrenos\n• E007-P001-MONITORIZACIÓN ENERGÉTICA\n>T012-Optimización de Rendimiento\n>T011-Sistema de Alertas Energéticas\n>T010-Cuadros de Mando Energéticos\n>T009-Informes Históricos de Consumo\n>T008-Gestión Avanzada de Contadores\n>T007-Sincronización de Datos mediante AJAX\n>T006-Supervisión de Parámetros Eléctricos\n>T005-Análisis de Consumos\n>T004-Visualización en Tiempo Real\n>T003-Gestión de Circuitos Eléctricos\n>T002-Captura de Datos Energéticos\n>T001-Arquitectura Inicial Plataforma"
+    }
   }
 }

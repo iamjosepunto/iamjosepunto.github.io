@@ -6,41 +6,855 @@
     "about": "About",
     "github": "GitHub"
   },
-
   "hero": {
     "role1": "Industrial Engineer (completed)",
     "role2": "Senior Full-Stack .NET Developer",
     "role3": "AI & Software Automation",
-
     "viewProjects": "View Projects",
-
     "description1": "Industrial Engineer and Senior Full Stack Developer with more than 10 years of experience building web applications, REST APIs, mobile solutions and enterprise software.",
-
     "description2": "Specialized in .NET, C#, React, TypeScript, SQL, MongoDB and modern Full Stack architectures. Passionate about software engineering, automation, artificial intelligence and continuous learning."
   },
-
   "about": {
     "title": "About",
-
     "paragraph1": "I started my professional career as an Industrial Engineer, working on projects related to energy efficiency, electrical systems, climate control and industrial installations.",
-
     "paragraph2": "During those years, software development was initially a personal passion. Over time, that passion became my main profession and eventually led me to transition completely into software engineering.",
-
     "paragraph3": "Today I work as a Senior .NET Full Stack Developer, participating in the analysis, design, development and maintenance of enterprise applications, REST APIs, web platforms and mobile solutions.",
-
     "paragraph4": "My main technologies include C#, .NET, ASP.NET Core, React, TypeScript, SQL, MongoDB, Razor, Blazor, Unity and modern Full Stack architectures.",
-
     "paragraph5": "Since 2023 I have incorporated Artificial Intelligence tools such as ChatGPT and Claude into real software development workflows."
   },
-
   "skills": {
     "title": "Skills"
   },
-
   "lab": {
     "title": "Lab"
   },
   "footer": {
-  "subtitle": "Industrial Engineer (completed) · Senior Full-Stack .NET Developer · AI & Software Automation"
+    "subtitle": "Industrial Engineer (completed) · Senior Full-Stack .NET Developer · AI & Software Automation"
+  },
+  "projects": {
+    "title": "My projects",
+    "labels": {
+      "resumen": "Summary",
+      "objetivo": "Objective",
+      "funcionalidades": "Features",
+      "responsabilidades": "Responsibilities",
+      "tecnologias": "Technologies",
+      "resultado": "Result",
+      "aptitudes": "Skills"
+    },
+    "durationDev": "Still in development",
+    "proyectos": {
+      "e100_p100": "Personal Portfolio",
+      "e011_p006": "Calibration Management",
+      "e011_p005": "Mobile Inspection App",
+      "e010_p004": "Drone Pilot Certification",
+      "e009_p003": "Energy Billing & Commissions",
+      "e008_p002": "Photovoltaic Land Management",
+      "e007_p001": "Energy Monitoring"
+    },
+    "tareas": {
+      "e100_p100_t001": {
+        "title": "Personal Portfolio",
+        "duration": "Still in development",
+        "resumen": "Web portfolio developed with React to showcase projects and technology stack.",
+        "objetivo": "Provide a personal platform to present my professional background, projects and technology stack in a modern, responsive way.",
+        "funcionalidades": "Responsive design, dynamic navigation between sections and automated deployment to GitHub via GitHub Actions.",
+        "responsabilidades": "Interface design, component development, internationalization setup and continuous deployment automation.",
+        "tecnologias": "React, Vite, TailwindCSS, TypeScript, GitHub and GitHub Actions.",
+        "resultado": "A modern, responsive web portfolio with automated deployment, used as a professional showcase.",
+        "aptitudes": [
+          "TypeScript",
+          "Vite",
+          "React.js",
+          "Tailwind CSS",
+          "GitHub"
+        ]
+      },
+      "e011_p006_t010": {
+        "title": "AI-Based Internal Technical Assistant",
+        "duration": "Still in development",
+        "resumen": "I took part in the design and development of an internal technical assistant based on Generative Artificial Intelligence, integrated within a corporate calibration management platform. The solution is aimed at improving the productivity of technical and development teams by automating query, analysis, documentation and operational support tasks.",
+        "objetivo": "Facilitate access to the organization's technical knowledge, reduce information search times and automate repetitive activities related to software development, document management and the company's internal processes.",
+        "funcionalidades": "Development of conversational assistance features, contextual querying of technical information, automatic documentation generation, support for incident resolution, assistance with development tasks, AI-assisted code generation, technical summary creation and support for functional analysis and evolutionary maintenance processes.",
+        "responsabilidades": "Requirements analysis, use case definition, architecture design, integration of Generative Artificial Intelligence models, frontend and backend component development, integration API implementation, functional validation and continuous improvement of the quality of the assistant's generated responses.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, REST APIs, Claude, ChatGPT, Git, Generative Artificial Intelligence and modern architectures for enterprise applications.",
+        "resultado": "The project is currently under continuous development and evolution. The features implemented to date have accelerated analysis, development and documentation tasks, improved access to corporate knowledge and increased the productivity of technical teams through the use of AI-based assistants.",
+        "aptitudes": [
+          "TypeScript",
+          "Process automation",
+          "Generative AI",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "ChatGPT",
+          "Software development",
+          "Full Stack development",
+          "React.js",
+          "MongoDB",
+          "C#",
+          "Anthropic Claude"
+        ]
+      },
+      "e011_p006_t009": {
+        "title": "Automatic Technical Documentation Generation",
+        "duration": "4 months",
+        "resumen": "I took part in the design and implementation of an automatic technical documentation generation system integrated within a corporate calibration management platform. The solution automated the creation of operational and technical documentation from information stored in the organization's systems.",
+        "objetivo": "Reduce the time spent on manual documentation, improve the consistency of generated documents and ensure the availability of up-to-date technical information for the company's various departments.",
+        "funcionalidades": "Development of automatic documentation generation processes, creation of dynamic templates, generation of technical reports, creation of operational summaries, automated production of functional and technical documentation, consolidation of information from various sources and content generation using Generative Artificial Intelligence.",
+        "responsabilidades": "Functional requirements analysis, definition of documentation templates, integration of Generative Artificial Intelligence models, development of backend services for document generation, implementation of user interfaces for template management and validation of the quality of the generated results.",
+        "tecnologias": "ASP.NET Core, C#, React, REST APIs, Claude, ChatGPT, Git, Generative Artificial Intelligence and technologies focused on document process automation.",
+        "resultado": "The solution significantly reduced the effort required to generate technical and functional documentation, improved the consistency of the documents produced and increased the productivity of technical teams by automating repetitive documentation tasks.",
+        "aptitudes": [
+          "TypeScript",
+          "Process automation",
+          "Generative AI",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "ChatGPT",
+          "Full Stack development",
+          "React.js",
+          "Technical documentation",
+          "C#",
+          "Anthropic Claude"
+        ]
+      },
+      "e011_p006_t008": {
+        "title": "Automation with Generative AI",
+        "duration": "5 months",
+        "resumen": "I took part in the design and implementation of automation solutions based on Generative Artificial Intelligence within a corporate calibration management platform. The project was aimed at optimizing internal processes, reducing repetitive manual tasks and improving the operational efficiency of technical and functional teams.",
+        "objetivo": "Increase productivity by automating activities related to information analysis, technical content generation, documentation creation, internal user assistance and support for software development and maintenance processes.",
+        "funcionalidades": "Development of tools for automatic technical text generation, information summary creation, assistance with functional analysis, automation of documentation tasks, code proposal generation, support for technical review processes and automation of administrative activities associated with calibration and asset management.",
+        "responsabilidades": "Analysis of automation opportunities, use case definition, integration of Generative Artificial Intelligence models, backend and frontend component development, integration API implementation, functional validation of results and continuous optimization of the automated processes.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, REST APIs, Claude, ChatGPT, Git, Generative Artificial Intelligence and technologies focused on enterprise process automation.",
+        "resultado": "The solution significantly reduced the time spent on repetitive tasks, improved the quality and consistency of the generated information, streamlined internal processes and increased team productivity through the use of Generative AI tools integrated into the corporate ecosystem.",
+        "aptitudes": [
+          "TypeScript",
+          "Process automation",
+          "Generative AI",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "ChatGPT",
+          "Full Stack development",
+          "React.js",
+          "C#",
+          "Anthropic Claude"
+        ]
+      },
+      "e011_p006_t007": {
+        "title": "REST API Optimization",
+        "duration": "6 months",
+        "resumen": "I took part in the optimization and evolution of the REST API architecture used by a corporate calibration management platform. The project was aimed at improving the performance, scalability and maintainability of the services that support the different applications and modules of the corporate ecosystem.",
+        "objetivo": "Reduce response times, optimize resource consumption, improve user experience and ensure efficient integration between frontend applications, backend services and external corporate systems.",
+        "funcionalidades": "Refactoring of existing services, optimization of queries and data access operations, improvement of pagination and filtering mechanisms, review of integration contracts, simplification of information exchange processes, implementation of new endpoints and improvement of service traceability and monitoring.",
+        "responsabilidades": "Performance analysis of existing services, bottleneck identification, design of architectural improvements, development of new backend features, database query optimization, integration review and functional and technical validation of the implemented improvements.",
+        "tecnologias": "ASP.NET Core, C#, MongoDB, REST APIs, React, Git, JSON, Swagger/OpenAPI and technologies focused on the development of distributed enterprise applications.",
+        "resultado": "The optimization significantly reduced the response times of the most heavily used services, improved the solution's scalability, made future functional evolution easier and increased the overall stability of the integrations between the system's different components.",
+        "aptitudes": [
+          "TypeScript",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Backend web development",
+          "Software architecture",
+          "Full Stack development",
+          "Performance optimization",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t006": {
+        "title": "React + TypeScript Migration",
+        "duration": "6 months",
+        "resumen": "I took part in the technological migration of a corporate calibration management application from a JavaScript codebase toward a modern architecture based on React and TypeScript. The project aimed to improve the maintainability, scalability and quality of the application's code, making future evolution easier and reducing the likelihood of production errors.",
+        "objetivo": "Modernize the frontend platform through the adoption of TypeScript, improving development robustness, early error detection and the productivity of the teams responsible for maintaining and evolving the application.",
+        "funcionalidades": "Progressive migration of existing components, definition of types and data contracts, adaptation of REST API integration services, reorganization of the frontend architecture, improved component reuse, optimization of complex forms and updating of development processes associated with the application's lifecycle.",
+        "responsabilidades": "Analysis of the existing code, planning of the migration strategy, development of new typed React components, adaptation of existing features, resolution of issues arising from the technological transition, functional validation and coordination of deployments associated with the migration.",
+        "tecnologias": "React, TypeScript, JavaScript, ASP.NET Core, C#, REST APIs, Git, Visual Studio Code and modern tools for enterprise web application development.",
+        "resultado": "The migration significantly improved source code quality, increased application maintainability, reduced errors associated with data inconsistencies and made it easier to develop new features through a more robust and scalable frontend architecture.",
+        "aptitudes": [
+          "JavaScript",
+          "TypeScript",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Refactoring",
+          "Software architecture",
+          "Full Stack development",
+          "Front-End development",
+          "React.js",
+          "C#"
+        ]
+      },
+      "e011_p006_t005": {
+        "title": "Operational Dashboard",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of an operational dashboard intended to provide a centralized, real-time view of the most relevant information of a corporate calibration management platform. The project focused on improving the tracking, analysis and decision-making capabilities of the organization's various user profiles.",
+        "objetivo": "Facilitate access to key business indicators and operational metrics through an intuitive visual interface, allowing incidents to be identified, processes to be monitored and the platform's daily activity to be tracked efficiently.",
+        "funcionalidades": "Development of interactive control panels, visualization of performance indicators, tracking of the status of calibrations, maintenance and assets, integration of dynamic charts, advanced filters, aggregated queries and navigation tools focused on operational and technical information analysis.",
+        "responsabilidades": "Functional requirements analysis, dashboard design, frontend component development, implementation of backend services for data consolidation, query optimization, integration with corporate APIs and validation of the information displayed across the operational panels.",
+        "tecnologias": "React, TypeScript, ASP.NET Core, C#, MongoDB, REST APIs, Git and technologies focused on enterprise applications based on data visualization and exploitation.",
+        "resultado": "The solution centralized information from the platform's various modules, improved visibility over operational status, made early incident detection easier and provided an effective tool for tracking key indicators related to calibrations, maintenance and asset management.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Full Stack development",
+          "Data modeling",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t004": {
+        "title": "Document Management",
+        "duration": "4 months",
+        "resumen": "I took part in the design and development of a document management module integrated within a corporate calibration management platform. The project was aimed at centralizing, organizing and facilitating access to the technical and administrative documentation associated with measurement equipment, calibrations, maintenance and quality processes.",
+        "objetivo": "Improve the organization's document traceability, reduce dependence on scattered repositories and ensure the immediate availability of the information needed for the various operational and audit processes.",
+        "funcionalidades": "Development of features for document storage and classification, association of documents with specific equipment and processes, version management, advanced search, filtering by category, access control and centralized visualization of technical documentation, certificates, reports and historical records.",
+        "responsabilidades": "Functional requirements analysis, design of the document structure, implementation of frontend and backend features, integration with existing systems, optimization of document queries, definition of access permissions and validation of the information managed by the system.",
+        "tecnologias": "ASP.NET Core, C#, React, MongoDB, REST APIs, Git and technologies focused on enterprise applications with centralized document management.",
+        "resultado": "The solution centralized corporate documentation related to calibrations and measurement assets, improved information access times, increased document traceability and simplified the audit, review and tracking processes carried out by technical users and quality managers.",
+        "aptitudes": [
+          "Process automation",
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Software architecture",
+          "Full Stack development",
+          "Document management",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t003": {
+        "title": "Client Portal",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of a client web portal integrated within a corporate calibration management platform. The project was aimed at providing clients with direct, secure access to information related to their equipment, certificates, calibrations, maintenance and associated documentation.",
+        "objetivo": "Improve the client experience through a self-service platform that allowed real-time information querying, reduced dependence on manual communications and made it easier to access technical and administrative documentation from a single centralized point.",
+        "funcionalidades": "Development of private client areas, querying of equipment and calibration history, access to certificates and technical reports, visualization of in-progress work status, document downloads, user profile management and information search and filtering tools.",
+        "responsabilidades": "Functional requirements analysis, user experience design, frontend and backend component development, implementation of authentication and authorization mechanisms, integration with corporate APIs, query performance optimization and functional validation with end users.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, REST APIs, Git and technologies focused on enterprise web portals and client self-service platforms.",
+        "resultado": "The solution significantly improved client access to information, reduced response times associated with manual queries, increased the transparency of operational processes and provided a more efficient, modern digital experience for managing calibration and measurement asset services.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Web development",
+          "Full Stack development",
+          "React.js",
+          "MongoDB",
+          "C#",
+          "User Experience (UX)"
+        ]
+      },
+      "e011_p006_t002": {
+        "title": "Maintenance & Calibration Management",
+        "duration": "6 months",
+        "resumen": "I took part in the design and development of a comprehensive module for maintenance and calibration management within a corporate platform focused on the control of measurement equipment and technical assets. The project focused on digitizing operational processes, improving activity planning and increasing the traceability of interventions performed on the equipment.",
+        "objetivo": "Centralize the management of preventive and corrective maintenance and calibrations in a single platform, making it easier to plan tasks, track completed actions and control the operational status of equipment throughout its lifecycle.",
+        "funcionalidades": "Development of features for maintenance planning, scheduling of periodic calibrations, expiration control, work order management, incident tracking, intervention history, operational status management, automatic notification generation and querying of historical information associated with each asset.",
+        "responsabilidades": "Functional requirements analysis, data model design, frontend and backend component development, implementation of business rules, integration with existing platform modules, query process optimization and functional validation with technical users and operational managers.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, REST APIs, Git and technologies focused on enterprise applications for asset, maintenance and technical process management.",
+        "resultado": "The solution improved maintenance and calibration activity planning, increased the traceability of actions performed on equipment, reduced manual administrative tasks and provided a centralized view of the operational status of the organization's managed assets.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Full Stack development",
+          "Equipment management",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p006_t001": {
+        "title": "Measurement Equipment Inventory",
+        "duration": "6 months",
+        "resumen": "I took part in the design and development of the measurement equipment inventory module of a corporate calibration management platform. This project formed the functional foundation on which the maintenance, calibration, document management, client portal and operational dashboard modules were later built.",
+        "objetivo": "Centralize the information of the measurement equipment managed by the organization, providing a unified view of its technical characteristics, operational status, location, history and relationships with other corporate processes.",
+        "funcionalidades": "Development of features for creating, editing and querying equipment, classification by category, management of manufacturers and models, location control, assignment of responsible parties, operational status tracking, technical information storage, advanced search and full traceability of the assets registered in the platform.",
+        "responsabilidades": "Functional requirements analysis, data model design, implementation of frontend and backend components, development of integration services, definition of business rules, query optimization, functional validation and collaboration with technical users to ensure the solution fit the organization's operational needs.",
+        "tecnologias": "ASP.NET Core, C#, React, TypeScript, MongoDB, REST APIs, Git and technologies focused on enterprise applications for the comprehensive management of technical assets.",
+        "resultado": "The solution consolidated the information associated with measurement equipment into a single platform, improved data quality and availability, increased the traceability of managed assets and established a solid foundation for the subsequent functional evolution of the calibration management system.",
+        "aptitudes": [
+          "ASP.NET Core",
+          "ASP.NET Web API",
+          "Full Stack development",
+          "Equipment management",
+          "React.js",
+          "MongoDB",
+          "C#"
+        ]
+      },
+      "e011_p005_t005": {
+        "title": "Field Data Capture",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of field data capture features for a technical inspection mobile application used by operational staff while carrying out work on installations, equipment and assets managed by the organization. The project was aimed at replacing manual paper-based procedures with digital processes integrated with corporate systems.",
+        "objetivo": "Make it easier to collect information directly from mobile devices, improve the quality of the data obtained during inspections and reduce the time needed to record, process and query the information generated in the field.",
+        "funcionalidades": "Development of information capture forms, recording of technical observations, validation of user-entered data, inspection status management, temporary information storage, synchronization with corporate systems and support for different types of inspections and operational procedures.",
+        "responsabilidades": "Functional requirements analysis, user experience design for mobile environments, development of data capture features, integration with corporate APIs, application performance optimization, functional validation and resolution of issues detected during testing and deployment.",
+        "tecnologias": "Unity, C#, REST APIs, MongoDB, JSON, Git and technologies focused on enterprise mobile applications for the digitization of technical inspection processes.",
+        "resultado": "The solution improved the efficiency of field work, reduced errors from manual data entry, increased the immediate availability of data collected during inspections and made it easier to integrate that data with the organization's corporate systems.",
+        "aptitudes": [
+          "Process automation",
+          "Mobile development",
+          "ASP.NET Web API",
+          "Database design",
+          "Full Stack development",
+          "Data modeling",
+          "C#",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t004": {
+        "title": "Offline/Online Synchronization",
+        "duration": "4 months",
+        "resumen": "I took part in the design and implementation of an offline/online synchronization system for a technical inspection mobile application used by field staff. The project was aimed at ensuring the application worked in environments with limited or no connectivity, allowing users to continue working normally regardless of network availability.",
+        "objetivo": "Ensure the operational continuity of field inspection processes, allowing information to be captured, queried and modified offline and changes to be automatically synchronized with corporate systems whenever connectivity was available.",
+        "funcionalidades": "Development of local storage mechanisms, synchronization queue management, data conflict control, automatic and manual synchronization, information integrity validation, recovery from communication errors and tracking of the synchronization status of each operation performed by users.",
+        "responsabilidades": "Technical and functional requirements analysis, design of the synchronization architecture, development of information exchange processes, implementation of local persistence mechanisms, integration with corporate APIs, validation of offline scenarios and performance optimization of the synchronization processes.",
+        "tecnologias": "Unity, C#, REST APIs, MongoDB, JSON, Git and technologies focused on enterprise mobile applications with offline capability and distributed data synchronization.",
+        "resultado": "The solution allowed technicians to carry out inspections in locations with limited or no coverage, eliminating dependence on permanent connectivity, improving the reliability of information capture and ensuring secure data synchronization with corporate systems once the connection was restored.",
+        "aptitudes": [
+          "JSON",
+          "Mobile development",
+          "ASP.NET Web API",
+          "Software architecture",
+          "Full Stack development",
+          "Data modeling",
+          "C#",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t003": {
+        "title": "Photographic Evidence Management",
+        "duration": "4 months",
+        "resumen": "I took part in the design and development of a photographic evidence management system integrated into a technical inspection mobile application. The project was aimed at facilitating the capture, storage, querying and traceability of images obtained during inspections carried out by field technicians.",
+        "objetivo": "Digitize the process of collecting visual evidence associated with inspections, maintenance and incidents, ensuring the correct linking of images with operational records and improving the quality of the information available for subsequent analysis and audits.",
+        "funcionalidades": "Development of features for capturing photographs from mobile devices, associating images with specific inspections and assets, structured evidence storage, photo gallery visualization, image downloads, metadata management and historical querying of visual records associated with each field intervention.",
+        "responsabilidades": "Functional requirements analysis, design of evidence capture and query flows, development of mobile components, integration with backend services, implementation of image storage and retrieval mechanisms, optimization of file transfer processes and functional validation with end users.",
+        "tecnologias": "Unity, C#, REST APIs, MongoDB, JSON, Git and technologies focused on enterprise mobile applications with multimedia content and visual documentation management.",
+        "resultado": "The solution significantly improved the traceability of inspections, made it easier to visually document incidents and technical actions, reduced the use of manual means for evidence management and increased the quality of the information available for tracking, review and audit processes.",
+        "aptitudes": [
+          "Process automation",
+          "Mobile development",
+          "ASP.NET Web API",
+          "Full Stack development",
+          "Document management",
+          "Technical documentation",
+          "C#",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t002": {
+        "title": "Dynamic Inspection Forms",
+        "duration": "4 months",
+        "resumen": "I took part in the design and development of a dynamic forms system for a technical inspection mobile application used by operational staff in the field. The project was aimed at replacing static forms and manual procedures with a flexible solution able to adapt to different types of inspections, assets and operational processes.",
+        "objetivo": "Make it easier to create and use configurable forms without needing to modify the application's code, allowing inspection processes to be quickly adapted to new operational needs and business requirements.",
+        "funcionalidades": "Development of configuration-based dynamic forms, automatic generation of input controls, validation of required fields, management of different data types, section grouping, conditional visibility rules, structured information capture and storage of results for subsequent synchronization with corporate systems.",
+        "responsabilidades": "Functional requirements analysis, design of the form configuration model, development of reusable components, implementation of validation mechanisms, optimization of the user experience on mobile devices, integration with corporate APIs and functional validation with end users.",
+        "tecnologias": "Unity, C#, REST APIs, MongoDB, JSON, Git and technologies focused on enterprise mobile applications for the digitization of inspection processes and structured information capture.",
+        "resultado": "The solution significantly reduced the time needed to adapt inspection processes to new requirements, improved the quality and consistency of the data captured in the field, reduced dependence on specific developments and provided a more flexible platform for the future evolution of the mobile application.",
+        "aptitudes": [
+          "Process automation",
+          "Mobile development",
+          "ASP.NET Web API",
+          "Full Stack development",
+          "Data modeling",
+          "C#",
+          "User Experience (UX)",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e011_p005_t001": {
+        "title": "Mobile Foundation for Field Technicians",
+        "duration": "2 months",
+        "resumen": "I took part in the design and development of the technological foundation of a mobile application intended for field technicians responsible for carrying out inspections, maintenance and the collection of operational information about assets and installations. This project was the starting point on which advanced features such as dynamic forms, photographic evidence management, offline/online synchronization and field data capture were later developed.",
+        "objetivo": "Create a solid, scalable mobile platform ready to operate in industrial and technical environments, providing a simple, efficient user experience for staff working outside the office.",
+        "funcionalidades": "Design of the application's initial architecture, implementation of the main navigation, development of authentication and user management systems, configuration of communication with corporate services, creation of basic data structures, management of local configurations and preparation of the infrastructure needed for future functional extensions.",
+        "responsabilidades": "Functional and technical requirements analysis, definition of the application's architecture, development of base components, integration with corporate APIs, design of the initial user experience, configuration of deployment processes and validation of the platform across different usage scenarios.",
+        "tecnologias": "Unity, C#, REST APIs, MongoDB, JSON, Git and technologies focused on enterprise mobile applications for the digitization of technical and operational processes.",
+        "resultado": "The solution provided a stable technological foundation for the subsequent evolution of the mobile application, making it easier to add new features, improving the productivity of field teams and enabling progress toward the full digitization of inspection and technical information collection processes.",
+        "aptitudes": [
+          "Process automation",
+          "Mobile development",
+          "ASP.NET Web API",
+          "Software Systems Engineering",
+          "Software architecture",
+          "Full Stack development",
+          "C#",
+          "User Experience (UX)",
+          "Unity",
+          "MongoDB"
+        ]
+      },
+      "e010_p004_t004": {
+        "title": "UX & Case File Optimization",
+        "duration": "4 months",
+        "resumen": "I took part in optimizing the user experience and case file management processes within a web platform used for drone pilot certification. The project was aimed at simplifying the daily operations of administrative users and candidates, improving the application's usability and reducing the complexity of the processes associated with certification processing.",
+        "objetivo": "Increase the platform's operational efficiency by improving navigation flows, simplifying administrative processes and optimizing the management of documentation and case files related to pilot certification.",
+        "funcionalidades": "Redesign of management screens, improvement of complex forms, optimization of document validation processes, simplification of workflows, reorganization of the information shown to users, improvement of search and filtering mechanisms and optimization of the processes associated with case file tracking.",
+        "responsabilidades": "Functional analysis of existing processes, identification of user experience improvement points, interface redesign, implementation of frontend and backend improvements, query optimization, functional validation with end users and support during the rollout of the improvements.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, Bootstrap, Git and technologies focused on enterprise web applications for administrative process management.",
+        "resultado": "The solution reduced case file management times, improved the productivity of administrative users, simplified navigation within the platform and provided a more intuitive experience for the various profiles involved in drone pilot certification processes.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "ASP.NET Razor",
+          "Full Stack development",
+          "C#",
+          "User Experience (UX)"
+        ]
+      },
+      "e010_p004_t003": {
+        "title": "Automatic PDF Certificate Generation",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of an automatic PDF certificate generation system for a drone pilot certification platform. The project was aimed at automating the issuance of official documentation associated with candidate evaluation, validation and certification processes, reducing manual tasks and improving the operational efficiency of administrative teams.",
+        "objetivo": "Automate the creation of certificates and official documentation generated by the platform, ensuring the consistency of the issued documents, reducing manual errors and streamlining the management processes associated with pilot certification.",
+        "funcionalidades": "Development of automatic PDF document generation processes, creation of dynamic templates, automatic incorporation of data from the system, generation of personalized certificates, numbering control and document traceability, storage of generated documents and centralized access to the issued documentation.",
+        "responsabilidades": "Functional requirements analysis, design of document templates, development of backend services for document generation, integration with case file management modules, optimization of bulk generation processes and functional validation of the documentation produced by the platform.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, PDF generation libraries, Git and technologies focused on enterprise web applications for document automation.",
+        "resultado": "The solution fully automated the generation of official certificates, significantly reduced the time spent on administrative tasks, improved the quality and consistency of the issued documentation and increased the platform's operational capacity to handle certification processes at scale.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Backend web development",
+          "ASP.NET Razor",
+          "Full Stack development",
+          "Document management",
+          "C#"
+        ]
+      },
+      "e010_p004_t002": {
+        "title": "Pilot Document Management",
+        "duration": "3 months",
+        "resumen": "I took part in the design and development of a document management module for a drone pilot certification platform. The project was aimed at centralizing the documentation required during certification processes, making it easier to submit, validate, store and query the information associated with each candidate.",
+        "objetivo": "Digitize and optimize the document management of certification case files, reducing dependence on manual processes, improving documentation traceability and simplifying the administrative tasks carried out by the various departments involved.",
+        "funcionalidades": "Development of features for uploading and storing documents, classification by document category, association of files with candidate case files, validation status control, document incident management, advanced information search and centralized access to the documentation required during the certification process.",
+        "responsabilidades": "Functional requirements analysis, design of the document structure, development of backend and frontend components, implementation of document validation processes, integration with case file management modules, query optimization and functional validation with administrative users.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, Git and technologies focused on enterprise web applications for document management and administrative processing.",
+        "resultado": "The solution improved the organization of the documentation associated with certification processes, reduced document search and validation times, increased case file traceability and provided a more efficient platform for managing candidates and certified pilots.",
+        "aptitudes": [
+          "Project management",
+          "JavaScript",
+          "Process automation",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Backend web development",
+          "ASP.NET Razor",
+          "Full Stack development",
+          "Document management",
+          "C#"
+        ]
+      },
+      "e010_p004_t001": {
+        "title": "Pilot Registration & Validation",
+        "duration": "3 months",
+        "resumen": "I took part in the design and development of the pilot registration and validation module for a web platform intended to manage drone pilot certification processes. This project formed the functional foundation on which the document management, automatic certificate generation and case file optimization modules were later built.",
+        "objetivo": "Digitize and centralize candidate registration, requirement validation and initial case file management processes, allowing more efficient control of the information associated with the pilots taking part in certification processes.",
+        "funcionalidades": "Development of forms for creating and updating personal data, candidate profile management, validation of administrative requirements, processing status control, case file tracking, historical logging of actions performed and centralized querying of the information associated with each pilot.",
+        "responsabilidades": "Functional requirements analysis, data model design, development of frontend and backend features, implementation of validation rules, integration with corporate modules, query optimization and functional validation with administrative users responsible for certification management.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, Blazor, Razor, JavaScript, HTML, CSS, Git and technologies focused on enterprise web applications for administrative management and case file processing.",
+        "resultado": "The solution centralized candidate and certified pilot information, improved the quality and consistency of the recorded data, reduced manual administrative tasks and provided a solid foundation for the subsequent evolution of the drone pilot certification platform.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "Blazor",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Backend web development",
+          "ASP.NET Razor",
+          "Full Stack development",
+          "Document management",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e009_p003_t003": {
+        "title": "Metrics & Dashboards",
+        "duration": "3 months",
+        "resumen": "I took part in the design and development of a metrics and dashboards system for an energy-sector billing and commission management platform. The project was aimed at providing a consolidated view of the main business indicators, allowing the organization's managers to track commercial and financial activity more efficiently.",
+        "objetivo": "Facilitate decision-making through centralized access to key information about contracts, billing, commissions, commercial performance and the evolution of the various processes managed by the platform.",
+        "funcionalidades": "Development of interactive control panels, generation of performance indicators, visualization of commercial and economic metrics, dynamic information filters, aggregated queries, summary reports and analysis tools focused on tracking business results and objectives.",
+        "responsabilidades": "Functional requirements analysis, dashboard design, frontend and backend component development, optimization of aggregation queries, integration with billing and commission modules, indicator validation and collaboration with business users to ensure the quality of the information presented.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for data analysis and business indicator generation.",
+        "resultado": "The solution improved visibility over billing and commission management processes, made it easier to analyze commercial and financial information, reduced manual report creation and provided an effective tool for tracking key performance indicators.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "Data modeling",
+          "React.js",
+          "C#"
+        ]
+      },
+      "e009_p003_t002": {
+        "title": "Billing Management",
+        "duration": "3 months",
+        "resumen": "I took part in the design and development of billing management features for an energy-sector platform focused on managing contracts, consumption, settlements and economic processes associated with clients and commercial partners. The project focused on improving the automation of billing processes and increasing the reliability of the financial information managed by the organization.",
+        "objetivo": "Optimize the processes related to generating, querying and tracking billing information, reducing manual tasks and improving the consistency of the data used in administrative and financial processes.",
+        "funcionalidades": "Development of modules for invoice management, querying of billing history, tracking of issuance and validation statuses, amount calculation, administrative incident management, advanced record search and generation of consolidated information for analysis and economic control processes.",
+        "responsabilidades": "Functional requirements analysis, implementation of business rules, frontend and backend component development, database query optimization, integration with corporate modules, functional validation of calculations and user support during testing and deployment phases.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for administrative and financial management.",
+        "resultado": "The solution improved the efficiency of billing processes, reduced errors from manual tasks, increased the traceability of economic information and provided a more solid platform for managing financial operations related to the company's commercial activity.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "ASP.NET Web API",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "React.js",
+          "C#"
+        ]
+      },
+      "e009_p003_t001": {
+        "title": "Commission & Contract Calculation",
+        "duration": "4 months",
+        "resumen": "I took part in the design and development of a module for contract management and commission calculation within an energy-sector platform. This project formed the functional foundation on which the billing, reporting and dashboard modules were later developed, centralizing commercial information and automating key processes for the organization.",
+        "objetivo": "Automate the calculation of commissions associated with energy contracts, improve the traceability of commercial operations and provide a reliable tool for managing agreements, partners and economic settlement processes.",
+        "funcionalidades": "Development of features for contract management, definition of commercial conditions, parameterization of calculation rules, operation tracking, automatic commission calculation, history querying, control of contractual changes and generation of information for subsequent billing and financial analysis processes.",
+        "responsabilidades": "Functional requirements analysis, data model design, implementation of complex business rules, frontend and backend component development, optimization of calculation processes, functional validation with business users and support during testing and rollout phases.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for commercial management, contracts and economic settlement processes.",
+        "resultado": "The solution automated calculation processes that previously required manual intervention, improved the reliability of the information used for commission management, reduced operational errors and provided a solid foundation for the subsequent evolution of the billing and business analysis platform.",
+        "aptitudes": [
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "React.js",
+          "Technical documentation",
+          "C#"
+        ]
+      },
+      "e008_p002_t003": {
+        "title": "Photovoltaic Installation Tracking",
+        "duration": "3 months",
+        "resumen": "I took part in the development of features for tracking and controlling photovoltaic installations within a platform focused on energy asset management. The project focused on providing a centralized view of the status of installations, making it easier to access technical and administrative information relevant to their supervision and maintenance.",
+        "objetivo": "Improve the traceability and control of photovoltaic installations through tools that allowed up-to-date information about assets, locations, operational statuses and associated documentation to be queried.",
+        "funcionalidades": "Development of installation querying and tracking modules, visualization of technical information, access to action history, operational status management, asset classification, querying of geographic information and centralized access to data relevant to the supervision of photovoltaic projects.",
+        "responsabilidades": "Functional requirements analysis, frontend and backend component development, integration with corporate databases, query optimization, implementation of tracking features and functional validation with users responsible for managing energy installations.",
+        "tecnologias": "ASP.NET MVC, C#, React, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for the management and tracking of energy assets.",
+        "resultado": "The solution improved visibility over the managed installations, made it easier to access technical and operational information, increased asset traceability and provided a more efficient tool for tracking projects related to the photovoltaic sector.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "React.js",
+          "Technical documentation",
+          "C#"
+        ]
+      },
+      "e008_p002_t002": {
+        "title": "Case File Management",
+        "duration": "2 months",
+        "resumen": "I took part in the development of case file management features within a platform focused on managing projects related to photovoltaic land and installations. The project focused on centralizing the administrative and technical information associated with the various case files managed throughout the project lifecycle.",
+        "objetivo": "Facilitate the organization, tracking and querying of the documentation and procedures associated with photovoltaic projects, improving information traceability and reducing the complexity of administrative processes.",
+        "funcionalidades": "Development of modules for creating and tracking case files, processing status management, association of technical and administrative documentation, incident control, advanced record search, history querying and centralized access to the information needed for project management.",
+        "responsabilidades": "Functional requirements analysis, design of information structures, frontend and backend component development, implementation of business rules, database query optimization, integration with existing modules and functional validation with users responsible for administrative management.",
+        "tecnologias": "ASP.NET MVC, C#, React, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for document management and case file processing.",
+        "resultado": "The solution improved the organization of the information associated with photovoltaic projects, increased the traceability of managed case files, reduced query times and provided a more efficient tool for controlling administrative and document processes.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "React.js",
+          "Technical documentation",
+          "C#"
+        ]
+      },
+      "e008_p002_t001": {
+        "title": "Land Inventory",
+        "duration": "3 months",
+        "resumen": "I took part in the design and development of a land inventory system intended to support the management of projects related to photovoltaic installations. This project formed the functional foundation on which the case file management and installation tracking modules were later developed, centralizing the information associated with potential sites and assets managed by the organization.",
+        "objetivo": "Have a centralized platform to record, organize and query information about land linked to photovoltaic projects, supporting the analysis, planning and tracking processes carried out by the various departments involved.",
+        "funcionalidades": "Development of modules for creating and managing land records, storage of descriptive and technical information, site classification, location querying, status management, advanced record search, association of relevant documentation and centralized access to the information of each land asset.",
+        "responsabilidades": "Functional requirements analysis, data model design, frontend and backend component development, implementation of information querying and maintenance features, database query optimization, integration with corporate systems and functional validation with users responsible for project management.",
+        "tecnologias": "ASP.NET MVC, C#, React, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for the management of land assets and energy projects.",
+        "resultado": "The solution centralized the information related to land and infrastructure associated with photovoltaic projects, improved data availability, made it easier to locate and query assets and provided a solid foundation for the subsequent evolution of the energy project management platform.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "React.js",
+          "Technical documentation",
+          "C#"
+        ]
+      },
+      "e007_p001_t012": {
+        "title": "Performance Optimization",
+        "duration": "5 months",
+        "resumen": "I took part in a performance optimization project for an energy monitoring platform used to supervise and analyze electrical consumption in industrial installations and buildings. The project was aimed at improving the application's response speed, optimizing the processing of large volumes of information and increasing the solution's scalability.",
+        "objetivo": "Increase the platform's overall performance, reduce information loading and processing times, optimize database queries and improve the user experience in scenarios with large amounts of historical data and real-time measurements.",
+        "funcionalidades": "SQL query optimization, improvement of data loading processes, review of calculation and aggregation algorithms, optimization of report generation, improvement of information storage and retrieval mechanisms, refactoring of critical components and optimization of communication processes between application modules.",
+        "responsabilidades": "Bottleneck analysis, evaluation of performance metrics, backend and frontend code optimization, review of database structures, implementation of architectural improvements, load testing and validation of the results obtained after optimization.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for energy monitoring and data analysis.",
+        "resultado": "The solution significantly reduced the response times of the operations most used by users, improved the performance of complex queries, optimized the processing of historical data and increased the platform's capacity to handle a growing volume of energy information.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Software architecture",
+          "Full Stack development",
+          "C#"
+        ]
+      },
+      "e007_p001_t011": {
+        "title": "Energy Alert System",
+        "duration": "7 months",
+        "resumen": "I took part in the design and development of an energy alert system integrated within an electrical consumption monitoring and management platform. The project was aimed at automatically detecting anomalous situations in the monitored installations and notifying the responsible users to enable a fast, efficient response.",
+        "objetivo": "Improve the supervision capability of energy installations through automatic mechanisms for detecting incidents, consumption deviations and operational situations requiring immediate attention from technicians and energy managers.",
+        "funcionalidades": "Development of configurable alert generation rules, monitoring of consumption thresholds, detection of anomalous behavior, severity level management, historical incident logging, visualization of active alerts, automatic notifications and tracking of events generated by the various monitored systems.",
+        "responsabilidades": "Functional requirements analysis, design of the alert architecture, implementation of business rules, frontend and backend component development, optimization of event evaluation processes, integration with existing monitoring modules and functional validation with end users.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for energy monitoring, supervision and control.",
+        "resultado": "The solution made it possible to detect incidents early, improved the response capability to anomalous situations, reduced the reaction times of technical teams and increased the efficiency of energy supervision processes through the automation of control and notification mechanisms.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t010": {
+        "title": "Energy Dashboards",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of energy dashboards for an electrical consumption monitoring and analysis platform used in industrial, tertiary and service environments. The project was aimed at transforming large volumes of energy data into clear, useful visual information to support decision-making by energy managers, maintenance managers and executive teams.",
+        "objetivo": "Provide a global, centralized view of the energy behavior of the monitored installations, allowing trends, deviations, savings opportunities and areas for improvement in energy efficiency to be identified.",
+        "funcionalidades": "Development of interactive control panels, graphical representation of electrical consumption, comparative analysis between periods, visualization of key energy performance indicators, generation of summary reports, advanced query filters and tools for the continuous tracking of the installations' energy activity.",
+        "responsabilidades": "Functional requirements analysis, dashboard design, frontend and backend component development, optimization of data aggregation queries, integration with existing monitoring systems, validation of energy indicators and collaboration with end users to adapt the displayed information to their operational needs.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for energy monitoring, data analysis and performance indicator generation.",
+        "resultado": "The solution improved visibility over the energy behavior of the monitored installations, made it easier to detect consumption patterns, supported data-driven decision-making and provided an effective tool for the continuous tracking of indicators.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t009": {
+        "title": "Historical Consumption Reports",
+        "duration": "6 months",
+        "resumen": "I took part in the design and development of a historical consumption reporting system integrated into an energy monitoring platform used to supervise industrial installations, buildings and service centers. The project was aimed at providing advanced tools for querying and analyzing historical information to support the evaluation of energy behavior over the medium and long term.",
+        "objetivo": "Allow users to analyze the evolution of energy consumption through access to consolidated historical data, making it easier to detect trends, deviations, behavior patterns and opportunities for improvement in energy efficiency.",
+        "funcionalidades": "Development of configurable historical reports, queries by time range, comparative analysis between periods, grouping of data by installation and device, information export, generation of consumption summaries, advanced filters and visualization tools focused on energy analysis.",
+        "responsabilidades": "Functional requirements analysis, design of query and storage structures, frontend and backend component development, optimization of queries over large volumes of historical data, implementation of report generation mechanisms and functional validation with users specialized in energy management.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for monitoring, reporting and energy information analysis.",
+        "resultado": "The solution significantly improved the platform's historical analysis capability, made it easier to produce energy studies, optimized report generation for clients and provided a solid foundation for decision-making related to energy efficiency and consumption optimization.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Document management",
+          "C#"
+        ]
+      },
+      "e007_p001_t008": {
+        "title": "Advanced Meter Management",
+        "duration": "7 months",
+        "resumen": "I took part in the design and development of advanced features for energy meter management within a monitoring platform used in industrial installations, buildings and service centers. The project was aimed at improving the administration of measurement devices, optimizing the collection of energy information and facilitating the centralized supervision of multiple consumption points.",
+        "objetivo": "Provide tools that allowed the lifecycle of energy meters to be managed efficiently, ensure the quality of the collected data and make it easier to exploit the information generated by the various measurement devices connected to the platform.",
+        "funcionalidades": "Development of modules for creating and configuring meters, association of devices with installations and electrical circuits, communication parameter management, operational status control, querying of measurement history, reading validation, device classification and centralized supervision of energy monitoring assets.",
+        "responsabilidades": "Functional requirements analysis, data model design, frontend and backend component development, integration with data acquisition systems, optimization of queries related to devices and measurements, functional validation and collaboration with users specialized in energy management.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for energy monitoring, device management and industrial data acquisition.",
+        "resultado": "The solution improved the administration of energy meters, increased the reliability of the information collected by the platform, simplified device configuration and maintenance tasks and provided a more solid infrastructure for energy supervision.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Equipment management",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t007": {
+        "title": "Data Synchronization via AJAX",
+        "duration": "5 months",
+        "resumen": "I took part in the design and implementation of data synchronization mechanisms using AJAX within an energy monitoring platform used to supervise electrical consumption and operational parameters in real time. The project was aimed at improving the fluidity of the user experience and optimizing the updating of information without needing to fully reload the application's pages.",
+        "objetivo": "Increase the platform's responsiveness and provide faster access to energy information, allowing consumption data, operational statuses and monitoring metrics to be continuously updated in an efficient, transparent way for the user.",
+        "funcionalidades": "Development of asynchronous data update processes, synchronization of energy measurements, dynamic updating of information panels, periodic querying of operational statuses, partial content loading, response time optimization and improvement of the interaction between frontend and backend.",
+        "responsabilidades": "Technical and functional requirements analysis, design of asynchronous communication mechanisms, development of backend services, implementation of AJAX calls, optimization of data exchange, functional validation and continuous improvement of the user experience in intensive monitoring scenarios.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, AJAX, HTML, CSS, JSON, Git and technologies focused on enterprise web applications with dynamic information updating.",
+        "resultado": "The solution significantly improved the platform's user experience, reduced waiting times associated with information updates, optimized network resource consumption and provided a faster, more efficient view of the energy data monitored in real time.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "AJAX",
+          "Full Stack development",
+          "Front-End development",
+          "C#"
+        ]
+      },
+      "e007_p001_t006": {
+        "title": "Electrical Parameter Monitoring",
+        "duration": "6 months",
+        "resumen": "I took part in the design and development of an electrical parameter monitoring system integrated into an energy monitoring platform focused on industrial installations, corporate buildings and service centers. The project focused on providing real-time visibility over the electrical behavior of the installations, making it easier to detect incidents and analyze the quality of the energy supply.",
+        "objetivo": "Enable the continuous monitoring of critical electrical parameters through the collection, storage and visualization of information from measurement equipment distributed across different installations, helping to improve operational control and energy efficiency.",
+        "funcionalidades": "Development of modules for the acquisition and visualization of electrical parameters, tracking of voltage, current, active power, reactive power, energy consumed, power factor and frequency, querying of measurement history, graphical data representation and centralized access to information from various monitoring devices.",
+        "responsabilidades": "Functional requirements analysis, design of data models for storing measurements, frontend and backend component development, integration with data acquisition systems, optimization of queries over large volumes of information, functional validation and support for users specialized in energy management.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for energy monitoring and the supervision of electrical infrastructures.",
+        "resultado": "The solution improved the supervision capability of the monitored installations, made it easier to access relevant electrical information, increased the speed of detecting operational incidents and provided a solid foundation for analysis.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t005": {
+        "title": "Consumption Analysis",
+        "duration": "7 months",
+        "resumen": "I took part in the design and development of energy consumption analysis features within a monitoring platform used to supervise industrial installations, corporate buildings and service centers. The project was aimed at transforming the data collected by the measurement systems into useful information for identifying consumption patterns and energy improvement opportunities.",
+        "objetivo": "Facilitate the detailed analysis of electrical consumption through tools that allowed large volumes of information to be interpreted, deviations from expected behavior to be detected and decision-making related to energy efficiency and resource optimization to be supported.",
+        "funcionalidades": "Development of consumption analysis modules, comparative queries between periods, segmentation of information by installation and device, calculation of energy indicators, identification of consumption trends, generation of analytical reports and support tools for energy efficiency studies.",
+        "responsabilidades": "Functional requirements analysis, design of information models, frontend and backend component development, optimization of analytical queries, implementation of energy calculations, functional validation with specialized users and continuous improvement of the platform's analytical capabilities.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for monitoring, data analysis and energy management.",
+        "resultado": "The solution significantly improved the analysis capability of the available energy information, made it easier to detect anomalous consumption, supported energy optimization studies and provided more advanced tools for the efficient management of installations and energy resources.",
+        "aptitudes": [
+          "Database development",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t004": {
+        "title": "Real-Time Visualization",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of real-time visualization features for an energy monitoring platform focused on the supervision of industrial installations, corporate buildings and service centers. The project focused on providing immediate access to information from electrical measurement systems, making it easier to continuously observe the energy behavior of the monitored installations.",
+        "objetivo": "Allow users to view continuously updated information, making it easier to detect incidents early, track energy consumption and operationally supervise installations through accessible, easy-to-interpret graphical tools.",
+        "funcionalidades": "Development of real-time visualization panels, dynamic updating of energy indicators, graphical representation of instantaneous consumption, querying of operational statuses, visualization of alarms and events, tracking of electrical parameters and centralized access to information from multiple measurement devices.",
+        "responsabilidades": "Functional requirements analysis, user interface design, frontend and backend component development, implementation of dynamic data update mechanisms, query optimization and functional validation with users specialized in energy monitoring.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, AJAX, HTML, CSS, Git and technologies focused on enterprise applications for real-time supervision and monitoring.",
+        "resultado": "The solution significantly improved the supervision capability of the monitored installations, reduced the time needed to detect operational incidents and provided a more efficient experience for users responsible for the tracking and energy control of complex infrastructures.",
+        "aptitudes": [
+          "JavaScript",
+          "Process automation",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "AJAX",
+          "Full Stack development",
+          "C#"
+        ]
+      },
+      "e007_p001_t003": {
+        "title": "Electrical Circuit Management",
+        "duration": "6 months",
+        "resumen": "I took part in the design and development of a module for electrical circuit management within an energy monitoring platform intended for industrial installations, corporate buildings and service centers. The project was aimed at structuring and organizing the electrical information of the monitored installations, allowing the various circuits and their relationships with measurement equipment and supervision systems to be represented logically.",
+        "objetivo": "Provide a centralized tool for managing electrical circuits, making it easier to organize energy information and allowing a more precise interpretation of the data from the monitoring devices installed across the different infrastructures.",
+        "funcionalidades": "Development of modules for creating and managing electrical circuits, association of meters and measurement devices, classification of circuits by type, querying of technical information, management of hierarchical relationships between elements, configuration maintenance and centralized access to the electrical structure of each monitored installation.",
+        "responsabilidades": "Functional requirements analysis, data model design, frontend and backend component development, implementation of business rules, optimization of queries related to the electrical structure of the installations, functional validation and collaboration with specialists in energy efficiency and electrical systems.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for energy monitoring and electrical infrastructure management.",
+        "resultado": "The solution improved the organization of the information associated with the monitored electrical systems, made it easier to manage circuits and measurement devices and increased the traceability of energy data.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t002": {
+        "title": "Energy Data Capture",
+        "duration": "7 months",
+        "resumen": "I took part in the design and development of an energy data capture system intended to collect, store and process information from measurement devices installed in industrial infrastructures and buildings. The project was aimed at establishing a solid foundation for energy monitoring, ensuring the availability and reliability of the data later used by the analysis, supervision and reporting modules.",
+        "objetivo": "Implement efficient mechanisms for the automatic collection of energy information, allowing the data generated by different measurement devices to be centralized and providing a single source of information for the monitoring platform.",
+        "funcionalidades": "Development of processes for receiving and storing energy readings, validation of received data, management of measurement history, handling of incidents in information capture, normalization of data from different devices, tracking of communication statuses and centralized access to the recorded measurements.",
+        "responsabilidades": "Technical and functional requirements analysis, design of storage structures, development of backend processes for data acquisition and processing, integration with measurement devices, optimization of bulk information loading processes, functional validation and support during rollout phases.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for the acquisition, storage and processing of energy data.",
+        "resultado": "The solution centralized the information from multiple measurement systems, improved the quality of the energy data available for subsequent analysis, increased the reliability of the capture processes and provided a solid infrastructure for the platform's future evolution.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Software Systems Engineering",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      },
+      "e007_p001_t001": {
+        "title": "Initial Platform Architecture",
+        "duration": "5 months",
+        "resumen": "I took part in the design and development of the initial architecture of an energy monitoring platform intended to collect, manage and analyze information from electrical measurement systems. This project was the starting point on which the data capture, circuit management, real-time visualization, consumption analysis, reporting and energy dashboard modules were later built.",
+        "objetivo": "Define a solid, scalable and maintainable technological architecture able to support the platform's functional growth, making it easier to integrate new modules and ensuring adequate performance for processing large volumes of energy information.",
+        "funcionalidades": "Design of the application's general structure, definition of the main data model, implementation of the basic authentication and user management mechanisms, development of the data access architecture, configuration of the communication infrastructure between components and establishment of the foundations for the platform's future evolution.",
+        "responsabilidades": "Functional and technical requirements analysis, software architecture design, database modeling, development of the application's base components, definition of development standards, implementation of common services and validation of the technological structure used as the foundation of the system.",
+        "tecnologias": "ASP.NET MVC, C#, SQL, JavaScript, HTML, CSS, Git and technologies focused on enterprise applications for monitoring, data analysis and energy management.",
+        "resultado": "The solution provided a robust technological foundation for the platform's growth over the following years, allowing new monitoring, analysis and reporting features to be added without significant redesigns and improving the system's maintainability.",
+        "aptitudes": [
+          "JavaScript",
+          "ASP.NET MVC",
+          "SQL",
+          "Web development",
+          "Backend web development",
+          "Software Systems Engineering",
+          "Software architecture",
+          "Full Stack development",
+          "Data modeling",
+          "C#"
+        ]
+      }
+    },
+    "summary": {
+      "label": "PROJECTS SUMMARY",
+      "text": "PROJECTS SUMMARY\n• E100-P100-PORTFOLIO\n• E011-P006-CALIBRATION MANAGEMENT\n>T010-AI-Based Internal Technical Assistant\n>T009-Automatic Technical Documentation Generation\n>T008-Automation with Generative AI\n>T007-REST API Optimization\n>T006-React + TypeScript Migration\n>T005-Operational Dashboard\n>T004-Document Management\n>T003-Client Portal\n>T002-Maintenance & Calibration Management\n>T001-Measurement Equipment Inventory\n• E011-P005-MOBILE INSPECTION APP\n>T005-Field Data Capture\n>T004-Offline/Online Synchronization\n>T003-Photographic Evidence Management\n>T002-Dynamic Inspection Forms\n>T001-Mobile Foundation for Field Technicians\n• E010-P004-DRONE PILOT CERTIFICATION\n>T004-UX & Case File Optimization\n>T003-Automatic PDF Certificate Generation\n>T002-Pilot Document Management\n>T001-Pilot Registration & Validation\n• E009-P003-ENERGY BILLING & COMMISSIONS\n>T003-Metrics & Dashboards\n>T002-Billing Management\n>T001-Commission & Contract Calculation\n• E008-P002-PHOTOVOLTAIC LAND MANAGEMENT\n>T003-Photovoltaic Installation Tracking\n>T002-Case File Management\n>T001-Land Inventory\n• E007-P001-ENERGY MONITORING\n>T012-Performance Optimization\n>T011-Energy Alert System\n>T010-Energy Dashboards\n>T009-Historical Consumption Reports\n>T008-Advanced Meter Management\n>T007-Data Synchronization via AJAX\n>T006-Electrical Parameter Monitoring\n>T005-Consumption Analysis\n>T004-Real-Time Visualization\n>T003-Electrical Circuit Management\n>T002-Energy Data Capture\n>T001-Initial Platform Architecture"
+    }
   }
 }

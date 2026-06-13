@@ -1,35 +1,26 @@
 import { useState } from "react";
 import { PROJECT_GROUPS } from "../data/profile";
-import type { Task } from "../data/profile";
+import type { TaskRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
 
-const Projects = () => {
-  const { i18n } = useTranslation();
-  const isSpanish = i18n.language.startsWith("es");
+const SUMMARY = "__summary__";
 
-  const [selected, setSelected] = useState<Task>(
+const Projects = () => {
+  const { t } = useTranslation();
+
+  const [selected, setSelected] = useState<TaskRef | typeof SUMMARY>(
     PROJECT_GROUPS[0].tasks[0]
   );
 
-  const labels = isSpanish
-    ? {
-        resumen: "Resumen",
-        objetivo: "Objetivo",
-        funcionalidades: "Funcionalidades",
-        responsabilidades: "Responsabilidades",
-        tecnologias: "Tecnologías",
-        resultado: "Resultado",
-        aptitudes: "Aptitudes",
-      }
-    : {
-        resumen: "Summary",
-        objetivo: "Objective",
-        funcionalidades: "Features",
-        responsabilidades: "Responsibilities",
-        tecnologias: "Technologies",
-        resultado: "Result",
-        aptitudes: "Skills",
-      };
+  const isSummary = selected === SUMMARY;
+
+  const base = isSummary
+    ? ""
+    : `projects.tareas.${(selected as TaskRef).key}`;
+
+  const aptitudes = isSummary
+    ? []
+    : (t(`${base}.aptitudes`, { returnObjects: true }) as string[]);
 
   return (
     <section
@@ -46,11 +37,26 @@ const Projects = () => {
           w-full
         "
       >
-        {isSpanish ? "Mis proyectos" : "My projects"}
+        {t("projects.title")}
       </h2>
 
       {/* Teclado de tareas */}
       <div className="flex flex-col gap-3 mb-8">
+        {/* Tecla especial: Resumen de proyectos */}
+        <div className="flex md:justify-end border-b border-slate-800 pb-3">
+          <button
+            onClick={() => setSelected(SUMMARY)}
+            className={
+              "px-4 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
+              (isSummary
+                ? "bg-yellow-400 text-slate-950 border-yellow-400 font-bold"
+                : "bg-slate-900 text-ivory border-slate-700 hover:border-blue-500")
+            }
+          >
+            {t("projects.summary.label")}
+          </button>
+        </div>
+
         {PROJECT_GROUPS.map((group) => (
           <div
             key={`${group.empresa}-${group.proyecto}`}
@@ -82,7 +88,7 @@ const Projects = () => {
                   {group.proyecto}
                 </span>
                 <span className="text-base font-semibold text-ivory truncate">
-                  {group.proyectoName}
+                  {t(`projects.proyectos.${group.proyectoKey}`)}
                 </span>
               </div>
             </div>
@@ -91,7 +97,8 @@ const Projects = () => {
             <div className="flex flex-wrap gap-2 md:justify-end shrink-0">
               {[...group.tasks].reverse().map((task) => {
                 const code = task.code.split(" - ").pop();
-                const isActive = selected.code === task.code;
+                const isActive =
+                  !isSummary && (selected as TaskRef).code === task.code;
 
                 return (
                   <button
@@ -123,57 +130,65 @@ const Projects = () => {
           p-8
         "
       >
-        <div className="font-mono text-sm text-blue-400 mb-2">
-          {selected.code}
-        </div>
+        {isSummary ? (
+          <p className="text-ivory leading-relaxed whitespace-pre-line">
+            {t("projects.summary.text")}
+          </p>
+        ) : (
+          <>
+            <div className="font-mono text-sm text-blue-400 mb-2">
+              {(selected as TaskRef).code}
+            </div>
 
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          {selected.title}
-        </h3>
+            <h3 className="text-2xl font-bold text-yellow-400 mb-2">
+              {t(`${base}.title`)}
+            </h3>
 
-        <div className="text-sm text-slate-400 mb-6">
-          {selected.dates} · {selected.duration}
-        </div>
+            <div className="text-sm text-slate-400 mb-6">
+              {(selected as TaskRef).dates} · {t(`${base}.duration`)}
+            </div>
 
-        <div className="flex flex-col gap-5">
-          <Block label={labels.resumen} text={selected.resumen} />
-          <Block label={labels.objetivo} text={selected.objetivo} />
-          <Block
-            label={labels.funcionalidades}
-            text={selected.funcionalidades}
-          />
-          <Block
-            label={labels.responsabilidades}
-            text={selected.responsabilidades}
-          />
-          <Block label={labels.tecnologias} text={selected.tecnologias} />
-          <Block label={labels.resultado} text={selected.resultado} />
-        </div>
+            <div className="flex flex-col gap-5">
+              <Block label={t("projects.labels.resumen")} text={t(`${base}.resumen`)} />
+              <Block label={t("projects.labels.objetivo")} text={t(`${base}.objetivo`)} />
+              <Block
+                label={t("projects.labels.funcionalidades")}
+                text={t(`${base}.funcionalidades`)}
+              />
+              <Block
+                label={t("projects.labels.responsabilidades")}
+                text={t(`${base}.responsabilidades`)}
+              />
+              <Block label={t("projects.labels.tecnologias")} text={t(`${base}.tecnologias`)} />
+              <Block label={t("projects.labels.resultado")} text={t(`${base}.resultado`)} />
+            </div>
 
-        <div className="mt-6">
-          <div className="text-sm font-semibold text-blue-400 mb-3">
-            {labels.aptitudes}
-          </div>
+            <div className="mt-6">
+              <div className="text-sm font-semibold text-blue-400 mb-3">
+                {t("projects.labels.aptitudes")}
+              </div>
 
-          <div className="flex flex-wrap gap-2">
-            {selected.aptitudes.map((skill) => (
-              <span
-                key={skill}
-                className="
-                  px-3
-                  py-1
-                  text-sm
-                  rounded-full
-                  bg-slate-800
-                  border
-                  border-yellow-400
-                "
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+              <div className="flex flex-wrap gap-2">
+                {aptitudes.map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      px-3
+                      py-1
+                      text-sm
+                      rounded-full
+                      bg-slate-800
+                      border
+                      border-yellow-400
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </article>
     </section>
   );
