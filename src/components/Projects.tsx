@@ -49,16 +49,36 @@ const Projects = () => {
             flex-col
             md:flex-row
             md:items-center
-            md:justify-between
             gap-3
             border-b
             border-slate-800
             pb-3
           "
         >
-          <span className="text-base font-semibold text-ivory truncate">
-            {t("projects.summary.label")}
-          </span>
+          <div className="flex items-center gap-2 min-w-0 flex-1">
+            <span className="text-base font-semibold text-ivory whitespace-nowrap">
+              {t("projects.summary.label")}
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="
+                hidden
+                md:block
+                flex-1
+                border-t-2
+                border-dashed
+                border-slate-600
+              "
+            />
+
+            <span
+              aria-hidden="true"
+              className="hidden md:block text-slate-600 font-mono"
+            >
+              &gt;&gt;
+            </span>
+          </div>
 
           <div className="flex md:justify-end shrink-0">
             <button
