@@ -43,18 +43,36 @@ const Projects = () => {
       {/* Teclado de tareas */}
       <div className="flex flex-col gap-3 mb-8">
         {/* Tecla especial: Resumen de proyectos */}
-        <div className="flex md:justify-end border-b border-slate-800 pb-3">
-          <button
-            onClick={() => setSelected(SUMMARY)}
-            className={
-              "px-4 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
-              (isSummary
-                ? "bg-yellow-400 text-slate-950 border-yellow-400 font-bold"
-                : "bg-slate-900 text-ivory border-slate-700 hover:border-blue-500")
-            }
-          >
+        <div
+          className="
+            flex
+            flex-col
+            md:flex-row
+            md:items-center
+            md:justify-between
+            gap-3
+            border-b
+            border-slate-800
+            pb-3
+          "
+        >
+          <span className="text-base font-semibold text-ivory truncate">
             {t("projects.summary.label")}
-          </button>
+          </span>
+
+          <div className="flex md:justify-end shrink-0">
+            <button
+              onClick={() => setSelected(SUMMARY)}
+              className={
+                "px-4 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
+                (isSummary
+                  ? "bg-yellow-400 text-slate-950 border-yellow-400 font-bold"
+                  : "bg-slate-900 text-ivory border-slate-700 hover:border-blue-500")
+              }
+            >
+              {t("projects.summary.label")}
+            </button>
+          </div>
         </div>
 
         {PROJECT_GROUPS.map((group) => (
