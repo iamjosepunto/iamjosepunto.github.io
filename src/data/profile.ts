@@ -67,7 +67,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
   },
   {
     "empresa": "E011",
-    "empresaName": "Grupo de empresas tecnológicas",
+    "empresaName": "Grupo de Empresas Tecnológicas",
     "proyecto": "P006",
     "proyectoKey": "e011_p006",
     "tasks": [
@@ -125,7 +125,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
   },
   {
     "empresa": "E011",
-    "empresaName": "Grupo de empresas tecnológicas",
+    "empresaName": "Grupo de Empresas Tecnológicas",
     "proyecto": "P005",
     "proyectoKey": "e011_p005",
     "tasks": [
