@@ -2,6 +2,7 @@ export type TaskRef = {
   code: string;
   key: string;
   dates: string;
+  url?: string;
 };
 
 export type ProjectGroup = {
@@ -58,7 +59,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
       {
         "code": "E100 - P100 - T001",
         "key": "e100_p100_t001",
-        "dates": "may. 2026 - actualidad"
+        "dates": "may. 2026 - actualidad",
+        "url": "https://iamjosepunto.github.io"
       }
     ]
   },

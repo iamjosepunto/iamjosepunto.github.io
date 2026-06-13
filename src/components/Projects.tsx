@@ -186,6 +186,23 @@ const Projects = () => {
               {(selected as TaskRef).dates} · {t(`${base}.duration`)}
             </div>
 
+            {(selected as TaskRef).url && (
+              <a
+                href={(selected as TaskRef).url}
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  inline-block
+                  mb-6
+                  text-yellow-400
+                  hover:text-yellow-300
+                  break-all
+                "
+              >
+                {t("projects.labels.viewSite")} → {(selected as TaskRef).url}
+              </a>
+            )}
+
             <div className="flex flex-col gap-5">
               <Block label={t("projects.labels.resumen")} text={t(`${base}.resumen`)} />
               <Block label={t("projects.labels.objetivo")} text={t(`${base}.objetivo`)} />
