@@ -12,10 +12,18 @@ const Projects = () => {
     PROJECT_GROUPS[0].tasks[0]
   );
 
+  const [selectedEmpresa, setSelectedEmpresa] = useState<string>(
+    PROJECT_GROUPS[0].empresaName
+  );
+
   const panelRef = useRef<HTMLElement>(null);
 
-  const select = (value: TaskRef | typeof SUMMARY) => {
+  const select = (
+    value: TaskRef | typeof SUMMARY,
+    empresaName?: string
+  ) => {
     setSelected(value);
+    if (empresaName) setSelectedEmpresa(empresaName);
     panelRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -151,7 +159,7 @@ const Projects = () => {
                 return (
                   <button
                     key={task.code}
-                    onClick={() => select(task)}
+                    onClick={() => select(task, group.empresaName)}
                     className={
                       "px-3 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
                       (isActive
@@ -195,7 +203,7 @@ const Projects = () => {
             </h3>
 
             <div className="text-sm text-slate-400 mb-6">
-              {(selected as TaskRef).dates} · {t(`${base}.duration`)}
+              {(selected as TaskRef).dates} · {t(`${base}.duration`)} · {selectedEmpresa}
             </div>
 
             {(selected as TaskRef).url && (
