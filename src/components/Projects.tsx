@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { PROJECT_GROUPS } from "../data/profile";
 import type { TaskRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
@@ -11,6 +11,16 @@ const Projects = () => {
   const [selected, setSelected] = useState<TaskRef | typeof SUMMARY>(
     PROJECT_GROUPS[0].tasks[0]
   );
+
+  const panelRef = useRef<HTMLElement>(null);
+
+  const select = (value: TaskRef | typeof SUMMARY) => {
+    setSelected(value);
+    panelRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const isSummary = selected === SUMMARY;
 
@@ -82,7 +92,7 @@ const Projects = () => {
 
           <div className="flex md:justify-end shrink-0">
             <button
-              onClick={() => setSelected(SUMMARY)}
+              onClick={() => select(SUMMARY)}
               className={
                 "px-4 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
                 (isSummary
@@ -141,7 +151,7 @@ const Projects = () => {
                 return (
                   <button
                     key={task.code}
-                    onClick={() => setSelected(task)}
+                    onClick={() => select(task)}
                     className={
                       "px-3 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
                       (isActive
@@ -160,7 +170,9 @@ const Projects = () => {
 
       {/* Panel de detalle */}
       <article
+        ref={panelRef}
         className="
+          scroll-mt-20
           bg-slate-900
           border
           border-slate-800
