@@ -4,7 +4,8 @@
     "lab": "Laboratorio",
     "skills": "Habilidades",
     "about": "Acerca de",
-    "github": "GitHub"
+    "github": "GitHub",
+    "contact": "Contacto"
   },
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
@@ -857,5 +858,13 @@
       "label": "RESUMEN DE PROYECTOS",
       "text": "<<RESUMEN DE PROYECTOS>>\n• E100-P100-PORTFOLIO\n• E011-P006-GESTIÓN DE CALIBRACIONES\n\t>T010-Asistente Técnico Interno Basado en IA\n\t>T009-Generación Automática de Documentación Técnica\n\t>T008-Automatización con IA Generativa\n\t>T007-Optimización de APIs REST\n\t>T006-Migración React + TypeScript\n\t>T005-Dashboard Operacional\n\t>T004-Gestión Documental\n\t>T003-Portal de Clientes\n\t>T002-Gestión de Mantenimientos y Calibraciones\n\t>T001-Inventario de Equipos de Medición\n• E011-P005-APLICACIÓN MOBILE DE INSPECCIÓN\n\t>T005-Captura de Datos en Campo\n\t>T004-Sincronización Offline/Online\n\t>T003-Gestión de Evidencias Fotográficas\n\t>T002-Formularios Dinámicos de Inspección\n\t>T001-Base Mobile para Técnicos de Campo\n• E010-P004-CERTIFICACIÓN DE PILOTOS DE DRON\n\t>T004-Optimización UX y Expedientes\n\t>T003-Generación Automática de Certificados PDF\n\t>T002-Gestión Documental de Pilotos\n\t>T001-Registro y Validación de Pilotos\n• E009-P003-FACTURACIÓN Y COMISIONES ENERGÉTICAS\n\t>T003-Métricas y Cuadros de Mando\n\t>T002-Gestión de Facturación\n\t>T001-Cálculo de Comisiones y Contratos\n• E008-P002-GESTIÓN DE SUELOS FOTOVOLTAICOS\n\t>T003-Seguimiento de Instalaciones Fotovoltaicas\n\t>T002-Gestión de Expedientes\n\t>T001-Inventario de Terrenos\n• E007-P001-MONITORIZACIÓN ENERGÉTICA\n\t>T012-Optimización de Rendimiento\n\t>T011-Sistema de Alertas Energéticas\n\t>T010-Cuadros de Mando Energéticos\n\t>T009-Informes Históricos de Consumo\n\t>T008-Gestión Avanzada de Contadores\n\t>T007-Sincronización de Datos mediante AJAX\n\t>T006-Supervisión de Parámetros Eléctricos\n\t>T005-Análisis de Consumos\n\t>T004-Visualización en Tiempo Real\n\t>T003-Gestión de Circuitos Eléctricos\n\t>T002-Captura de Datos Energéticos\n\t>T001-Arquitectura Inicial Plataforma"
     }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Hablamos? Puedes contactarme a través de estos canales.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "web": "Web"
   }
 }

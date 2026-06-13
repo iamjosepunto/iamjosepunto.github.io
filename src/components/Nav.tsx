@@ -1,4 +1,3 @@
-import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
@@ -43,6 +42,10 @@ const Nav = () => {
           <li>
             <a href="#about">{t("nav.about")}</a>
           </li>
+
+          <li>
+            <a href="#contact">{t("nav.contact")}</a>
+          </li>
         </ul>
 
         {/* Desktop controls */}
@@ -72,24 +75,6 @@ const Nav = () => {
               EN
             </button>
           </div>
-
-          <a
-            href={PROFILE.socials.github}
-            target="_blank"
-            rel="noreferrer"
-            className="
-              px-4
-              py-2
-              rounded-xl
-              bg-blue-600
-              hover:bg-yellow-400
-              hover:text-slate-950
-              transition
-              font-medium
-            "
-          >
-            GitHub
-          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -134,6 +119,10 @@ const Nav = () => {
               {t("nav.about")}
             </a>
 
+            <a href="#contact" onClick={closeMenu}>
+              {t("nav.contact")}
+            </a>
+
             <div className="pt-2 border-t border-slate-800">
               <button
                 onClick={() => changeLanguage("es")}
@@ -157,22 +146,6 @@ const Nav = () => {
                 EN
               </button>
             </div>
-
-            <a
-              href={PROFILE.socials.github}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                px-4
-                py-2
-                rounded-xl
-                bg-blue-600
-                text-center
-                font-medium
-              "
-            >
-              GitHub
-            </a>
           </div>
         </div>
       )}

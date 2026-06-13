@@ -4,7 +4,8 @@
     "lab": "Lab",
     "skills": "Skills",
     "about": "About",
-    "github": "GitHub"
+    "github": "GitHub",
+    "contact": "Contact"
   },
   "hero": {
     "role1": "Industrial Engineer (completed)",
@@ -857,5 +858,13 @@
       "label": "PROJECTS SUMMARY",
       "text": "<<PROJECTS SUMMARY>>\n• E100-P100-PORTFOLIO\n• E011-P006-CALIBRATION MANAGEMENT\n\t>T010-AI-Based Internal Technical Assistant\n\t>T009-Automatic Technical Documentation Generation\n\t>T008-Automation with Generative AI\n\t>T007-REST API Optimization\n\t>T006-React + TypeScript Migration\n\t>T005-Operational Dashboard\n\t>T004-Document Management\n\t>T003-Client Portal\n\t>T002-Maintenance & Calibration Management\n\t>T001-Measurement Equipment Inventory\n• E011-P005-MOBILE INSPECTION APP\n\t>T005-Field Data Capture\n\t>T004-Offline/Online Synchronization\n\t>T003-Photographic Evidence Management\n\t>T002-Dynamic Inspection Forms\n\t>T001-Mobile Foundation for Field Technicians\n• E010-P004-DRONE PILOT CERTIFICATION\n\t>T004-UX & Case File Optimization\n\t>T003-Automatic PDF Certificate Generation\n\t>T002-Pilot Document Management\n\t>T001-Pilot Registration & Validation\n• E009-P003-ENERGY BILLING & COMMISSIONS\n\t>T003-Metrics & Dashboards\n\t>T002-Billing Management\n\t>T001-Commission & Contract Calculation\n• E008-P002-PHOTOVOLTAIC LAND MANAGEMENT\n\t>T003-Photovoltaic Installation Tracking\n\t>T002-Case File Management\n\t>T001-Land Inventory\n• E007-P001-ENERGY MONITORING\n\t>T012-Performance Optimization\n\t>T011-Energy Alert System\n\t>T010-Energy Dashboards\n\t>T009-Historical Consumption Reports\n\t>T008-Advanced Meter Management\n\t>T007-Data Synchronization via AJAX\n\t>T006-Electrical Parameter Monitoring\n\t>T005-Consumption Analysis\n\t>T004-Real-Time Visualization\n\t>T003-Electrical Circuit Management\n\t>T002-Energy Data Capture\n\t>T001-Initial Platform Architecture"
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk? You can reach me through these channels.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "web": "Website"
   }
 }
