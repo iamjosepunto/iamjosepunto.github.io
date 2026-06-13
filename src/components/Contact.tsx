@@ -6,11 +6,6 @@ const Contact = () => {
 
   const items = [
     {
-      label: t("contact.web"),
-      value: PROFILE.socials.web.replace(/^https?:\/\//, "").replace(/\/$/, ""),
-      href: PROFILE.socials.web,
-    },
-    {
       label: t("contact.email"),
       value: PROFILE.socials.email,
       href: `mailto:${PROFILE.socials.email}`,
@@ -24,6 +19,11 @@ const Contact = () => {
       label: t("contact.github"),
       value: PROFILE.socials.github.replace(/^https?:\/\//, ""),
       href: PROFILE.socials.github,
+    },
+    {
+      label: t("contact.web"),
+      value: PROFILE.socials.web.replace(/^https?:\/\//, "").replace(/\/$/, ""),
+      href: PROFILE.socials.web,
     },
   ];
 
