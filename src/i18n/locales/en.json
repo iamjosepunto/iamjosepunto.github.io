@@ -9,7 +9,7 @@
   },
   "hero": {
     "role1": "Industrial Engineer (completed)",
-    "role2": "Senior Full-Stack .NET Developer",
+    "role2": "Senior Full Stack .NET Developer",
     "role3": "AI & Software Automation",
     "viewProjects": "View Projects",
     "description1": "Industrial Engineer and Senior Full Stack Developer with more than 10 years of experience building web applications, REST APIs, mobile solutions and enterprise software.",
@@ -30,7 +30,7 @@
     "title": "Lab"
   },
   "footer": {
-    "subtitle": "Industrial Engineer (completed) · Senior Full-Stack .NET Developer · AI & Software Automation"
+    "subtitle": "Industrial Engineer (completed) · Senior Full Stack .NET Developer · AI & Software Automation"
   },
   "projects": {
     "title": "My projects",
