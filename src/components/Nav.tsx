@@ -45,6 +45,10 @@ const Nav = () => {
           <li>
             <a href="#contact">{t("nav.contact")}</a>
           </li>
+
+          <li>
+            <a href="#location">{t("nav.location")}</a>
+          </li>
         </ul>
 
         {/* Desktop controls */}
@@ -120,6 +124,10 @@ const Nav = () => {
 
             <a href="#contact" onClick={closeMenu}>
               {t("nav.contact")}
+            </a>
+
+            <a href="#location" onClick={closeMenu}>
+              {t("nav.location")}
             </a>
 
             <div className="pt-2 border-t border-slate-800">

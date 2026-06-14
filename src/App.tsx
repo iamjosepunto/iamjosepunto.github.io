@@ -5,6 +5,7 @@ import Lab from "./components/Lab";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Location from "./components/Location";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -27,6 +28,8 @@ function App() {
         <About />
 
         <Contact />
+
+        <Location />
       </main>
 
       <Footer />

@@ -5,7 +5,8 @@
     "skills": "Habilidades",
     "about": "Acerca de",
     "github": "GitHub",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "location": "Ubicación"
   },
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
@@ -866,5 +867,9 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "web": "Portfolio"
+  },
+  "location": {
+    "title": "Ubicación",
+    "place": "Toledo, España, Europa"
   }
 }
