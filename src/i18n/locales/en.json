@@ -1,6 +1,6 @@
 {
   "nav": {
-    "projects": "My projects",
+    "projects": "Portfolio",
     "lab": "Lab",
     "skills": "Skills",
     "about": "About",
@@ -33,7 +33,7 @@
     "subtitle": "Industrial Engineer (completed) · Senior Full Stack .NET Developer · AI & Software Automation"
   },
   "projects": {
-    "title": "My projects",
+    "title": "My projects - Portfolio",
     "labels": {
       "resumen": "Summary",
       "objetivo": "Objective",

@@ -1,6 +1,6 @@
 {
   "nav": {
-    "projects": "Mis proyectos",
+    "projects": "Portfolio",
     "lab": "Laboratorio",
     "skills": "Habilidades",
     "about": "Acerca de",
@@ -33,7 +33,7 @@
     "subtitle": "Ingeniero Industrial (finalizada) · Analista Programador .NET Senior Full Stack · IA y Automatización de Software"
   },
   "projects": {
-    "title": "Mis proyectos",
+    "title": "Mis proyectos - Portfolio",
     "labels": {
       "resumen": "Resumen",
       "objetivo": "Objetivo",
