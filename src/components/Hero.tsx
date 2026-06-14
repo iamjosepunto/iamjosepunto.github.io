@@ -50,8 +50,7 @@ const Hero = () => {
             mb-6
           "
         >
-          <span className="text-blue-400">Jose</span>{" "}
-          <span className="text-yellow-400">Punto</span>
+          <span className="text-yellow-400">Jose .</span>
         </motion.h1>
 
         <motion.h2

@@ -14,7 +14,8 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-ivory">
-          © {new Date().getFullYear()} Jose Punto
+          © {new Date().getFullYear()}{" "}
+          <span className="text-yellow-400">Jose .</span>
         </p>
 
         <p className="text-ivory text-sm mt-2">

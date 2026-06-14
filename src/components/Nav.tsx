@@ -21,8 +21,7 @@ const Nav = () => {
           href="#"
           className="font-bold text-xl tracking-wide"
         >
-          <span className="text-blue-400">Jose</span>
-          <span className="text-yellow-400"> Punto</span>
+          <span className="text-yellow-400">Jose .</span>
         </a>
 
         {/* Desktop */}
