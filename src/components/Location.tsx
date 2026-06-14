@@ -30,8 +30,12 @@ const Location = () => {
           p-8
         "
       >
-        <p className="text-lg text-ivory leading-relaxed mb-6">
+        <p className="text-lg text-ivory leading-relaxed mb-2">
           {t("location.place")}
+        </p>
+
+        <p className="text-ivory leading-relaxed mb-6">
+          {t("location.description")}
         </p>
 
         <div className="rounded-2xl overflow-hidden border border-slate-800">
