@@ -31,6 +31,10 @@ const Nav = () => {
           </li>
 
           <li>
+            <a href="#experience">{t("nav.experience")}</a>
+          </li>
+
+          <li>
             <a href="#lab">{t("nav.lab")}</a>
           </li>
 
@@ -108,6 +112,10 @@ const Nav = () => {
           <div className="flex flex-col p-6 gap-6 text-ivory">
             <a href="#projects" onClick={closeMenu}>
               {t("nav.projects")}
+            </a>
+
+            <a href="#experience" onClick={closeMenu}>
+              {t("nav.experience")}
             </a>
 
             <a href="#lab" onClick={closeMenu}>

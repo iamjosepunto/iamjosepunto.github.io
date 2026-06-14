@@ -13,6 +13,14 @@ export type ProjectGroup = {
   tasks: TaskRef[];
 };
 
+
+export type ExperienceRef = {
+  code: string;
+  key: string;
+  company: string;
+  dates: string;
+};
+
 export const PROFILE = {
   name: "Jose Punto",
 
@@ -297,5 +305,75 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "dates": "mar. 2012 - jul. 2012"
       }
     ]
+  }
+];
+
+
+export const EXPERIENCE_GROUPS: ExperienceRef[] = [
+  {
+    "code": "E011",
+    "key": "e011",
+    "company": "Grupo de Empresas Tecnológicas",
+    "dates": "sept. 2020 - actualidad"
+  },
+  {
+    "code": "E010",
+    "key": "e010",
+    "company": "Unisys",
+    "dates": "jun. 2019 - sept. 2020"
+  },
+  {
+    "code": "E009",
+    "key": "e009",
+    "company": "IO Digital X",
+    "dates": "sept. 2018 - jun. 2019"
+  },
+  {
+    "code": "E008",
+    "key": "e008",
+    "company": "INECO",
+    "dates": "feb. 2018 - sept. 2018"
+  },
+  {
+    "code": "E007",
+    "key": "e007",
+    "company": "GRUPO J2INGENIEROS",
+    "dates": "mar. 2012 - ene. 2018"
+  },
+  {
+    "code": "E006",
+    "key": "e006",
+    "company": "Apave Spain (antes Eurocontrol)",
+    "dates": "ago. 2009 - mar. 2012"
+  },
+  {
+    "code": "E005",
+    "key": "e005",
+    "company": "PROIMA",
+    "dates": "sept. 2008 - ago. 2009"
+  },
+  {
+    "code": "E004",
+    "key": "e004",
+    "company": "JG Ingenieros S.A.",
+    "dates": "oct. 2007 - sept. 2008"
+  },
+  {
+    "code": "E003",
+    "key": "e003",
+    "company": "Grupo Tragsa",
+    "dates": "may. 2006 - oct. 2007"
+  },
+  {
+    "code": "E002",
+    "key": "e002",
+    "company": "3g office",
+    "dates": "nov. 2005 - may. 2006"
+  },
+  {
+    "code": "E001",
+    "key": "e001",
+    "company": "Iberdrola",
+    "dates": "jun. 2005 - nov. 2005"
   }
 ];
