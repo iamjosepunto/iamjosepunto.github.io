@@ -7,7 +7,8 @@
     "github": "GitHub",
     "contact": "Contacto",
     "location": "Ubicación",
-    "experience": "Experiencia"
+    "experience": "Experiencia",
+    "languages": "Idiomas"
   },
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
@@ -1439,5 +1440,18 @@
         ]
       }
     }
+  },
+  "languages": {
+    "title": "Idiomas",
+    "items": [
+      {
+        "name": "Español",
+        "level": "Competencia bilingüe o nativa"
+      },
+      {
+        "name": "Inglés",
+        "level": "Competencia profesional completa"
+      }
+    ]
   }
 }

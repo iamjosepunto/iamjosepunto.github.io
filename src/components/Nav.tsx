@@ -35,6 +35,10 @@ const Nav = () => {
           </li>
 
           <li>
+            <a href="#languages">{t("nav.languages")}</a>
+          </li>
+
+          <li>
             <a href="#lab">{t("nav.lab")}</a>
           </li>
 
@@ -116,6 +120,10 @@ const Nav = () => {
 
             <a href="#experience" onClick={closeMenu}>
               {t("nav.experience")}
+            </a>
+
+            <a href="#languages" onClick={closeMenu}>
+              {t("nav.languages")}
             </a>
 
             <a href="#lab" onClick={closeMenu}>

@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Languages from "./components/Languages";
 import Lab from "./components/Lab";
 import Skills from "./components/Skills";
 import About from "./components/About";
@@ -23,6 +24,8 @@ function App() {
         <Projects />
 
         <Experience />
+
+        <Languages />
 
         <Lab />
 

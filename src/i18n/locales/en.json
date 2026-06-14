@@ -7,7 +7,8 @@
     "github": "GitHub",
     "contact": "Contact",
     "location": "Location",
-    "experience": "Experience"
+    "experience": "Experience",
+    "languages": "Languages"
   },
   "hero": {
     "role1": "Industrial Engineer (completed)",
@@ -1439,5 +1440,18 @@
         ]
       }
     }
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      {
+        "name": "Spanish",
+        "level": "Native or bilingual proficiency"
+      },
+      {
+        "name": "English",
+        "level": "Full professional proficiency"
+      }
+    ]
   }
 }
