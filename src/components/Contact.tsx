@@ -1,15 +1,27 @@
+import { useState } from "react";
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [copied, setCopied] = useState(false);
 
-  const items = [
-    {
-      label: t("contact.email"),
-      value: PROFILE.socials.email,
-      href: `mailto:${PROFILE.socials.email}`,
-    },
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(PROFILE.socials.email);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = PROFILE.socials.email;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  };
+
+  const links = [
     {
       label: t("contact.linkedin"),
       value: PROFILE.socials.linkedin.replace(/^https?:\/\//, ""),
@@ -59,12 +71,40 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col gap-4">
-          {items.map((item) => (
+          {/* Email: botón que copia al portapapeles */}
+          <button
+            onClick={copyEmail}
+            className="
+              flex
+              flex-col
+              sm:flex-row
+              sm:items-baseline
+              sm:gap-3
+              text-left
+              cursor-pointer
+              group
+            "
+          >
+            <span className="text-sm font-semibold text-blue-400 sm:w-24 shrink-0">
+              {t("contact.email")}
+            </span>
+
+            <span className="text-ivory group-hover:text-yellow-400 transition break-all">
+              {PROFILE.socials.email}
+            </span>
+
+            <span className="text-xs text-slate-400 group-hover:text-yellow-400 transition shrink-0">
+              {copied ? t("contact.copied") : t("contact.copy")}
+            </span>
+          </button>
+
+          {/* Resto de enlaces */}
+          {links.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              target={item.href.startsWith("mailto:") ? undefined : "_blank"}
-              rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+              target="_blank"
+              rel="noreferrer"
               className="
                 flex
                 flex-col

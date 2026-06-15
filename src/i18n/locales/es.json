@@ -868,7 +868,9 @@
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "web": "Portfolio"
+    "web": "Portfolio",
+    "copy": "Copiar",
+    "copied": "¡Copiado!"
   },
   "location": {
     "title": "Ubicación",

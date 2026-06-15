@@ -27,11 +27,11 @@ const Nav = () => {
         {/* Desktop */}
         <ul className="hidden md:flex gap-8 text-ivory">
           <li>
-            <a href="#projects">{t("nav.projects")}</a>
+            <a href="#experience">{t("nav.experience")}</a>
           </li>
 
           <li>
-            <a href="#experience">{t("nav.experience")}</a>
+            <a href="#projects">{t("nav.projects")}</a>
           </li>
 
           <li>
@@ -51,11 +51,11 @@ const Nav = () => {
           </li>
 
           <li>
-            <a href="#contact">{t("nav.contact")}</a>
+            <a href="#location">{t("nav.location")}</a>
           </li>
 
           <li>
-            <a href="#location">{t("nav.location")}</a>
+            <a href="#contact">{t("nav.contact")}</a>
           </li>
         </ul>
 
@@ -114,12 +114,12 @@ const Nav = () => {
           "
         >
           <div className="flex flex-col p-6 gap-6 text-ivory">
-            <a href="#projects" onClick={closeMenu}>
-              {t("nav.projects")}
-            </a>
-
             <a href="#experience" onClick={closeMenu}>
               {t("nav.experience")}
+            </a>
+
+            <a href="#projects" onClick={closeMenu}>
+              {t("nav.projects")}
             </a>
 
             <a href="#languages" onClick={closeMenu}>
@@ -138,12 +138,12 @@ const Nav = () => {
               {t("nav.about")}
             </a>
 
-            <a href="#contact" onClick={closeMenu}>
-              {t("nav.contact")}
-            </a>
-
             <a href="#location" onClick={closeMenu}>
               {t("nav.location")}
+            </a>
+
+            <a href="#contact" onClick={closeMenu}>
+              {t("nav.contact")}
             </a>
 
             <div className="pt-2 border-t border-slate-800">
