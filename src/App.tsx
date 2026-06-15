@@ -1,13 +1,13 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Languages from "./components/Languages";
 import Lab from "./components/Lab";
 import Skills from "./components/Skills";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Location from "./components/Location";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -21,9 +21,9 @@ function App() {
       <main>
         <Hero />
 
-        <Projects />
-
         <Experience />
+
+        <Projects />
 
         <Languages />
 
@@ -33,9 +33,9 @@ function App() {
 
         <About />
 
-        <Contact />
-
         <Location />
+
+        <Contact />
       </main>
 
       <Footer />
