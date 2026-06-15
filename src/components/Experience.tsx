@@ -78,6 +78,10 @@ const Experience = () => {
                     {exp.company}
                   </span>
                 </div>
+
+                <div className="text-sm text-slate-400 mt-0.5 pl-8">
+                  {t(`experience.items.${exp.key}.title`)}
+                </div>
               </div>
 
               {/* Tecla */}
