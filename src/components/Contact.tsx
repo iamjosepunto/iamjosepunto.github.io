@@ -93,7 +93,7 @@ const Contact = () => {
               {PROFILE.socials.email}
             </span>
 
-            <span className="text-xs text-slate-400 group-hover:text-yellow-400 transition shrink-0">
+            <span className="text-base text-slate-400 group-hover:text-yellow-400 transition shrink-0">
               {copied ? t("contact.copied") : t("contact.copy")}
             </span>
           </button>
