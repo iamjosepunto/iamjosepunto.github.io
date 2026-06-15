@@ -27,6 +27,439 @@
     "paragraph5": "Since 2023 I have incorporated Artificial Intelligence tools such as ChatGPT and Claude into real software development workflows."
   },
   "skills": {
+    "hard": {
+      "title": "Hard skills",
+      "groups": [
+        {
+          "group": "TOOLS",
+          "subgroups": [
+            {
+              "sub": null,
+              "categories": [
+                {
+                  "cat": "IDEs",
+                  "skills": [
+                    {
+                      "name": "V. Studio 2022",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Unity 6",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Android Studio",
+                      "level": "M"
+                    }
+                  ]
+                },
+                {
+                  "cat": "AIs",
+                  "skills": [
+                    {
+                      "name": "Claude.ai",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Claude.ai API",
+                      "level": "A"
+                    },
+                    {
+                      "name": "ChatGPT.com",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Console",
+                  "skills": [
+                    {
+                      "name": "PowerShell7",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Methodologies",
+                  "skills": [
+                    {
+                      "name": "Agile (scrum)",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Agile (kanban)",
+                      "level": "M"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Design",
+                  "skills": [
+                    {
+                      "name": "SOLID",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Architectures & Quality",
+                  "skills": [
+                    {
+                      "name": "Clean Arch.",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Clean Code",
+                      "level": "A"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group": "BACKEND",
+          "subgroups": [
+            {
+              "sub": null,
+              "categories": [
+                {
+                  "cat": "Languages & Development Platforms",
+                  "skills": [
+                    {
+                      "name": "C# 14",
+                      "level": "A"
+                    },
+                    {
+                      "name": ".NET 10",
+                      "level": "A"
+                    },
+                    {
+                      "name": "ASP.NET Core 9",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Connection, Interfaces & Microservices",
+                  "skills": [
+                    {
+                      "name": "API REST Json",
+                      "level": "A"
+                    },
+                    {
+                      "name": "OpenAPI",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Servers, Containers & Orchestrators",
+                  "skills": [
+                    {
+                      "name": "Azure container",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Docker (Linux)",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "DevOps & CI/CD",
+                  "skills": [
+                    {
+                      "name": "GitHub Actions",
+                      "level": "A"
+                    },
+                    {
+                      "name": "PowerShell7",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Repositories",
+                  "skills": [
+                    {
+                      "name": "GitHub",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Unit Tests",
+                  "skills": [
+                    {
+                      "name": "xUnit.net v3",
+                      "level": "M"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "sub": "DATA BASEs",
+              "categories": [
+                {
+                  "cat": "SQL",
+                  "skills": [
+                    {
+                      "name": "MySQL",
+                      "level": "A"
+                    },
+                    {
+                      "name": "MariaDB",
+                      "level": "A"
+                    },
+                    {
+                      "name": "PostgreSQL",
+                      "level": "B"
+                    }
+                  ]
+                },
+                {
+                  "cat": "ORMs",
+                  "skills": [
+                    {
+                      "name": "Dapper",
+                      "level": "A"
+                    },
+                    {
+                      "name": "SQL",
+                      "level": "A"
+                    },
+                    {
+                      "name": "EF",
+                      "level": "A"
+                    },
+                    {
+                      "name": "LINQ",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "noSQL",
+                  "skills": [
+                    {
+                      "name": "MongoDB Atlas",
+                      "level": "A"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group": "FRONTEND",
+          "subgroups": [
+            {
+              "sub": "WEB",
+              "categories": [
+                {
+                  "cat": "JavaScript",
+                  "skills": [
+                    {
+                      "name": "React [18+]",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Vite",
+                      "level": "A"
+                    },
+                    {
+                      "name": "TypeScript [5.7]",
+                      "level": "A"
+                    },
+                    {
+                      "name": "jQuery [3.x]",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Frameworks & Libraries",
+                  "skills": [
+                    {
+                      "name": "Blazor",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Razor",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Dynamic content",
+                  "skills": [
+                    {
+                      "name": "JavaScript [ES6+]",
+                      "level": "A"
+                    },
+                    {
+                      "name": "HTML5",
+                      "level": "A"
+                    },
+                    {
+                      "name": "CSS3",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Static content",
+                  "skills": [
+                    {
+                      "name": "Templates",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "WAF | CDN | DDoS",
+                  "skills": [
+                    {
+                      "name": "CloudFlare",
+                      "level": "A"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "sub": null,
+              "categories": [
+                {
+                  "cat": "Android",
+                  "skills": [
+                    {
+                      "name": "Unity6 (native)",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Android Studio",
+                      "level": "M"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "soft": {
+      "title": "Soft skills",
+      "categories": [
+        {
+          "cat": "Personal",
+          "skills": [
+            {
+              "name": "Time management",
+              "level": "A"
+            },
+            {
+              "name": "Organization",
+              "level": "A"
+            },
+            {
+              "name": "Learning agility",
+              "level": "A"
+            },
+            {
+              "name": "Adaptability",
+              "level": "A"
+            }
+          ]
+        },
+        {
+          "cat": "Analytical",
+          "skills": [
+            {
+              "name": "Problem solving",
+              "level": "A"
+            },
+            {
+              "name": "Analytical thinking",
+              "level": "A"
+            },
+            {
+              "name": "Critical thinking",
+              "level": "M"
+            },
+            {
+              "name": "Decision making",
+              "level": "M"
+            },
+            {
+              "name": "Attention to detail",
+              "level": "A"
+            }
+          ]
+        },
+        {
+          "cat": "Interpersonal",
+          "skills": [
+            {
+              "name": "Communication",
+              "level": "A"
+            },
+            {
+              "name": "Teamwork",
+              "level": "A"
+            },
+            {
+              "name": "Leadership",
+              "level": "A"
+            },
+            {
+              "name": "Empathy",
+              "level": "M"
+            },
+            {
+              "name": "Negotiation",
+              "level": "M"
+            }
+          ]
+        },
+        {
+          "cat": "Professional",
+          "skills": [
+            {
+              "name": "Self-motivation",
+              "level": "A"
+            },
+            {
+              "name": "Resilience",
+              "level": "A"
+            },
+            {
+              "name": "Conflict resolution",
+              "level": "M"
+            },
+            {
+              "name": "Feedback receiving",
+              "level": "M"
+            },
+            {
+              "name": "Mentoring",
+              "level": "M"
+            }
+          ]
+        }
+      ]
+    },
+    "levelLegend": {
+      "title": "Levels",
+      "a": "Advanced",
+      "m": "Medium",
+      "b": "Basic"
+    },
     "title": "Skills"
   },
   "lab": {

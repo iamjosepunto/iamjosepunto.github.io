@@ -1,115 +1,105 @@
 import { useTranslation } from "react-i18next";
 
-const skillGroups = [
-  {
-    titleEs: "Backend",
-    titleEn: "Backend",
-    descriptionEs:
-      "Desarrollo backend empresarial, APIs, bases de datos y arquitecturas escalables.",
-    descriptionEn:
-      "Enterprise backend development, APIs, databases and scalable architectures.",
-    skills: [
-      "C#",
-      ".NET",
-      "ASP.NET Core",
-      "ASP.NET MVC",
-      "REST APIs",
-      "SQL",
-      "MongoDB",
-    ],
-  },
+type Skill = { name: string; level: "A" | "M" | "B" };
+type Category = { cat: string; skills: Skill[] };
+type Subgroup = { sub: string | null; categories: Category[] };
+type Group = { group: string; subgroups: Subgroup[] };
 
-  {
-    titleEs: "Frontend",
-    titleEn: "Frontend",
-    descriptionEs:
-      "Aplicaciones web modernas e interfaces de usuario responsivas.",
-    descriptionEn:
-      "Modern web applications and responsive user interfaces.",
-    skills: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Blazor",
-      "Razor",
-      "Tailwind CSS",
-      "Vite",
-    ],
-  },
+const levelColor = (level: string) => {
+  if (level === "A") return "text-blue-400";
+  if (level === "M") return "text-green-400";
+  return "text-red-400";
+};
 
-  {
-    titleEs: "Móvil e Interactivo",
-    titleEn: "Mobile & Interactive",
-    descriptionEs:
-      "Aplicaciones móviles y experiencias interactivas desarrolladas con Unity y .NET.",
-    descriptionEn:
-      "Mobile applications and interactive experiences built with Unity and .NET.",
-    skills: [
-      "Unity",
-      ".NET Mobile",
-      "C#",
-    ],
-  },
+const SkillTag = ({ skill }: { skill: Skill }) => (
+  <span
+    className="
+      px-3
+      py-1
+      text-sm
+      rounded-full
+      bg-slate-800
+      border
+      border-slate-700
+      inline-flex
+      items-center
+      gap-1.5
+    "
+  >
+    {skill.name}
+    <span className={"font-bold " + levelColor(skill.level)}>
+      [{skill.level}]
+    </span>
+  </span>
+);
 
-  {
-    titleEs: "Herramientas y Metodologías",
-    titleEn: "Tools & Methodologies",
-    descriptionEs:
-      "Flujos de desarrollo, control de versiones y metodologías ágiles.",
-    descriptionEn:
-      "Development workflows, version control and agile methodologies.",
-    skills: [
-      "Git",
-      "PowerShell",
-      "Scrum",
-      "Agile",
-      "Software Architecture",
-    ],
-  },
-
-  {
-    titleEs: "Inteligencia Artificial",
-    titleEn: "Artificial Intelligence",
-    descriptionEs:
-      "Uso práctico de IA generativa aplicada al desarrollo de software y automatización.",
-    descriptionEn:
-      "Practical use of generative AI for software development and automation.",
-    skills: [
-      "ChatGPT",
-      "Claude",
-      "AI Assisted Development",
-      "Prompt Engineering",
-    ],
-  },
-];
+const CategoryBlock = ({ category }: { category: Category }) => (
+  <div className="mb-4">
+    <div className="text-xs font-semibold uppercase tracking-wide text-slate-400 mb-2">
+      {category.cat}
+    </div>
+    <div className="flex flex-wrap gap-2">
+      {category.skills.map((s) => (
+        <SkillTag key={s.name + s.level} skill={s} />
+      ))}
+    </div>
+  </div>
+);
 
 const Skills = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const isSpanish = i18n.language.startsWith("es");
+  const hard = t("skills.hard", { returnObjects: true }) as {
+    title: string;
+    groups: Group[];
+  };
+
+  const soft = t("skills.soft", { returnObjects: true }) as {
+    title: string;
+    categories: Category[];
+  };
+
+  const legend = t("skills.levelLegend", { returnObjects: true }) as {
+    title: string;
+    a: string;
+    m: string;
+    b: string;
+  };
 
   return (
     <section
       id="skills"
-      className="max-w-6xl mx-auto px-6 py-4"
+      className="max-w-7xl mx-auto px-6 py-4"
     >
       <h2
         className="
           text-4xl
           font-bold
-          mb-6
+          mb-4
           text-yellow-400
           text-center
           w-full
         "
       >
-        {t("skills.title")}
+        {t("skills.title", "Skills")}
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {skillGroups.map((group) => (
+      {/* Leyenda de niveles */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-ivory">
+        <span><span className="font-bold text-blue-400">[A]</span> {legend.a}</span>
+        <span><span className="font-bold text-green-400">[M]</span> {legend.m}</span>
+        <span><span className="font-bold text-red-400">[B]</span> {legend.b}</span>
+      </div>
+
+      {/* Aptitudes técnicas */}
+      <h3 className="text-2xl font-bold text-blue-400 mb-4">
+        {hard.title}
+      </h3>
+
+      <div className="flex flex-col gap-6 mb-12">
+        {hard.groups.map((group) => (
           <div
-            key={group.titleEn}
+            key={group.group}
             className="
               bg-slate-900
               border
@@ -118,32 +108,51 @@ const Skills = () => {
               p-6
             "
           >
-            <h3 className="text-xl font-bold text-blue-400 mb-3">
-              {isSpanish ? group.titleEs : group.titleEn}
-            </h3>
+            <div className="text-lg font-bold text-yellow-400 italic mb-4">
+              {group.group}
+            </div>
 
-            <p className="text-ivory mb-5 text-sm">
-              {isSpanish
-                ? group.descriptionEs
-                : group.descriptionEn}
-            </p>
+            {group.subgroups.map((sub, si) => (
+              <div key={si} className={sub.sub ? "mb-4" : ""}>
+                {sub.sub && (
+                  <div className="text-sm font-bold text-ivory uppercase tracking-wide mb-3 pl-1 border-l-2 border-yellow-400">
+                    <span className="pl-2">{sub.sub}</span>
+                  </div>
+                )}
 
-            <div className="flex flex-wrap gap-3">
-              {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="
-                    px-3
-                    py-2
-                    rounded-lg
-                    border
-                    border-yellow-400
-                    bg-slate-800
-                    text-sm
-                  "
-                >
-                  {skill}
-                </span>
+                {sub.categories.map((cat) => (
+                  <CategoryBlock key={cat.cat} category={cat} />
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Aptitudes humanas */}
+      <h3 className="text-2xl font-bold text-blue-400 mb-4">
+        {soft.title}
+      </h3>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {soft.categories.map((cat) => (
+          <div
+            key={cat.cat}
+            className="
+              bg-slate-900
+              border
+              border-slate-800
+              rounded-2xl
+              p-6
+            "
+          >
+            <div className="text-lg font-bold text-yellow-400 mb-4">
+              {cat.cat}
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {cat.skills.map((s) => (
+                <SkillTag key={s.name + s.level} skill={s} />
               ))}
             </div>
           </div>
