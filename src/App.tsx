@@ -1,11 +1,11 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Languages from "./components/Languages";
-import Lab from "./components/Lab";
 import Skills from "./components/Skills";
-import About from "./components/About";
+import Lab from "./components/Lab";
 import Location from "./components/Location";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -21,17 +21,17 @@ function App() {
       <main>
         <Hero />
 
+        <About />
+
         <Experience />
 
         <Projects />
 
         <Languages />
 
-        <Lab />
-
         <Skills />
 
-        <About />
+        <Lab />
 
         <Location />
 

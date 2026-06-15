@@ -27,6 +27,10 @@ const Nav = () => {
         {/* Desktop */}
         <ul className="hidden md:flex gap-8 text-ivory">
           <li>
+            <a href="#about">{t("nav.about")}</a>
+          </li>
+
+          <li>
             <a href="#experience">{t("nav.experience")}</a>
           </li>
 
@@ -39,15 +43,11 @@ const Nav = () => {
           </li>
 
           <li>
-            <a href="#lab">{t("nav.lab")}</a>
-          </li>
-
-          <li>
             <a href="#skills">{t("nav.skills")}</a>
           </li>
 
           <li>
-            <a href="#about">{t("nav.about")}</a>
+            <a href="#lab">{t("nav.lab")}</a>
           </li>
 
           <li>
@@ -114,6 +114,10 @@ const Nav = () => {
           "
         >
           <div className="flex flex-col p-6 gap-6 text-ivory">
+            <a href="#about" onClick={closeMenu}>
+              {t("nav.about")}
+            </a>
+
             <a href="#experience" onClick={closeMenu}>
               {t("nav.experience")}
             </a>
@@ -126,16 +130,12 @@ const Nav = () => {
               {t("nav.languages")}
             </a>
 
-            <a href="#lab" onClick={closeMenu}>
-              {t("nav.lab")}
-            </a>
-
             <a href="#skills" onClick={closeMenu}>
               {t("nav.skills")}
             </a>
 
-            <a href="#about" onClick={closeMenu}>
-              {t("nav.about")}
+            <a href="#lab" onClick={closeMenu}>
+              {t("nav.lab")}
             </a>
 
             <a href="#location" onClick={closeMenu}>
