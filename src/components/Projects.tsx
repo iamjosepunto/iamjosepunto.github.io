@@ -189,9 +189,42 @@ const Projects = () => {
         "
       >
         {isSummary ? (
-          <pre className="text-ivory leading-relaxed whitespace-pre-wrap font-sans m-0">
-            {t("projects.summary.text")}
-          </pre>
+          <div className="text-ivory leading-relaxed">
+            <div className="font-semibold mb-3">
+              {"<<"}{t("projects.summary.label")}{">>"}
+            </div>
+
+            <div className="flex flex-col gap-1">
+              {PROJECT_GROUPS.map((group) => (
+                <div key={`${group.empresa}-${group.proyecto}`}>
+                  <div className="mt-2">
+                    • {group.empresa}-{group.proyecto}-
+                    {t(`projects.proyectos.${group.proyectoKey}`)}
+                  </div>
+
+                  {group.tasks.map((task) => {
+                    const code = task.code.split(" - ").pop();
+                    return (
+                      <div key={task.code} className="pl-6">
+                        <button
+                          onClick={() => select(task, group.empresaName)}
+                          className="
+                            text-left
+                            text-ivory
+                            hover:text-yellow-400
+                            transition
+                            cursor-pointer
+                          "
+                        >
+                          {">"}{code}-{t(`projects.tareas.${task.key}.title`)}
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          </div>
         ) : (
           <>
             <div className="font-mono text-sm text-blue-400 mb-2">
