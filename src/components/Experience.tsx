@@ -82,6 +82,10 @@ const Experience = () => {
                 <div className="text-sm text-slate-400 mt-0.5 pl-8">
                   {t(`experience.items.${exp.key}.title`)}
                 </div>
+
+                <div className="text-xs text-slate-500 mt-0.5 pl-8">
+                  {exp.dates} · {t(`experience.items.${exp.key}.duration`)}
+                </div>
               </div>
 
               {/* Tecla */}
