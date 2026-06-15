@@ -45,9 +45,11 @@ const SkillTag = ({ skill }: { skill: Skill }) => (
 
 const CategoryBlock = ({ category }: { category: Category }) => (
   <div className="mb-4">
-    <div className="text-xs font-semibold uppercase tracking-wide text-slate-400 mb-2">
-      {category.cat}
-    </div>
+    {category.cat && (
+      <div className="text-xs font-semibold uppercase tracking-wide text-slate-400 mb-2">
+        {category.cat}
+      </div>
+    )}
     <div className="flex flex-wrap gap-2">
       {category.skills.map((s) => (
         <SkillTag key={s.name + s.level} skill={s} />

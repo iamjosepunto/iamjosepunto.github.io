@@ -332,10 +332,10 @@
               ]
             },
             {
-              "sub": null,
+              "sub": "ANDROID",
               "categories": [
                 {
-                  "cat": "Android",
+                  "cat": "",
                   "skills": [
                     {
                       "name": "Unity6 (native)",
