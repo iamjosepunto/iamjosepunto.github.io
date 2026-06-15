@@ -5,11 +5,21 @@ type Category = { cat: string; skills: Skill[] };
 type Subgroup = { sub: string | null; categories: Category[] };
 type Group = { group: string; subgroups: Subgroup[] };
 
+type Legend = { title: string; a: string; m: string; b: string };
+
 const levelColor = (level: string) => {
   if (level === "A") return "text-blue-400";
   if (level === "M") return "text-green-400";
   return "text-red-400";
 };
+
+const LegendBar = ({ legend }: { legend: Legend }) => (
+  <div className="flex flex-wrap gap-4 mb-4 text-sm text-ivory">
+    <span><span className="font-bold text-blue-400">[A]</span> {legend.a}</span>
+    <span><span className="font-bold text-green-400">[M]</span> {legend.m}</span>
+    <span><span className="font-bold text-red-400">[B]</span> {legend.b}</span>
+  </div>
+);
 
 const SkillTag = ({ skill }: { skill: Skill }) => (
   <span
@@ -59,12 +69,9 @@ const Skills = () => {
     categories: Category[];
   };
 
-  const legend = t("skills.levelLegend", { returnObjects: true }) as {
-    title: string;
-    a: string;
-    m: string;
-    b: string;
-  };
+  const legend = t("skills.levelLegend", {
+    returnObjects: true,
+  }) as Legend;
 
   return (
     <section
@@ -75,7 +82,7 @@ const Skills = () => {
         className="
           text-4xl
           font-bold
-          mb-4
+          mb-6
           text-yellow-400
           text-center
           w-full
@@ -83,13 +90,6 @@ const Skills = () => {
       >
         {t("skills.title", "Skills")}
       </h2>
-
-      {/* Leyenda de niveles */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-ivory">
-        <span><span className="font-bold text-blue-400">[A]</span> {legend.a}</span>
-        <span><span className="font-bold text-green-400">[M]</span> {legend.m}</span>
-        <span><span className="font-bold text-red-400">[B]</span> {legend.b}</span>
-      </div>
 
       {/* Aptitudes técnicas */}
       <h3 className="text-2xl font-bold text-blue-400 mb-4">
@@ -108,14 +108,16 @@ const Skills = () => {
               p-6
             "
           >
-            <div className="text-lg font-bold text-yellow-400 italic mb-4">
+            <div className="text-lg font-bold text-yellow-400 italic mb-2">
               {group.group}
             </div>
+
+            <LegendBar legend={legend} />
 
             {group.subgroups.map((sub, si) => (
               <div key={si} className={sub.sub ? "mb-4" : ""}>
                 {sub.sub && (
-                  <div className="text-sm font-bold text-ivory uppercase tracking-wide mb-3 pl-1 border-l-2 border-yellow-400">
+                  <div className="text-sm font-bold text-ivory uppercase tracking-wide mb-3 border-l-2 border-yellow-400">
                     <span className="pl-2">{sub.sub}</span>
                   </div>
                 )}
@@ -130,9 +132,11 @@ const Skills = () => {
       </div>
 
       {/* Aptitudes humanas */}
-      <h3 className="text-2xl font-bold text-blue-400 mb-4">
+      <h3 className="text-2xl font-bold text-blue-400 mb-2">
         {soft.title}
       </h3>
+
+      <LegendBar legend={legend} />
 
       <div className="grid md:grid-cols-2 gap-6">
         {soft.categories.map((cat) => (
