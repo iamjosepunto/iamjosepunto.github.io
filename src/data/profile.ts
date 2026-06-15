@@ -10,6 +10,7 @@ export type ProjectGroup = {
   empresaName: string;
   proyecto: string;
   proyectoKey: string;
+  dates: string;
   tasks: TaskRef[];
 };
 
@@ -71,7 +72,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "dates": "may. 2026 - actualidad",
         "url": "https://iamjosepunto.github.io"
       }
-    ]
+    ],
+    "dates": "may. 2026 - actualidad"
   },
   {
     "empresa": "E011",
@@ -129,7 +131,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "key": "e011_p006_t001",
         "dates": "abr. 2022 - sept. 2022"
       }
-    ]
+    ],
+    "dates": "abr. 2022 - actualidad"
   },
   {
     "empresa": "E011",
@@ -162,7 +165,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "key": "e011_p005_t001",
         "dates": "sept. 2020 - oct. 2020"
       }
-    ]
+    ],
+    "dates": "sept. 2020 - mar. 2022"
   },
   {
     "empresa": "E010",
@@ -190,7 +194,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "key": "e010_p004_t001",
         "dates": "jun. 2019 - ago. 2019"
       }
-    ]
+    ],
+    "dates": "jun. 2019 - ago. 2020"
   },
   {
     "empresa": "E009",
@@ -213,7 +218,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "key": "e009_p003_t001",
         "dates": "sept. 2018 - dic. 2018"
       }
-    ]
+    ],
+    "dates": "sept. 2018 - jun. 2019"
   },
   {
     "empresa": "E008",
@@ -236,7 +242,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "key": "e008_p002_t001",
         "dates": "feb. 2018 - abr. 2018"
       }
-    ]
+    ],
+    "dates": "feb. 2018 - sept. 2018"
   },
   {
     "empresa": "E007",
@@ -304,7 +311,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
         "key": "e007_p001_t001",
         "dates": "mar. 2012 - jul. 2012"
       }
-    ]
+    ],
+    "dates": "mar. 2012 - ene. 2018"
   }
 ];
 

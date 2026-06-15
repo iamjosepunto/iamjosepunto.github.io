@@ -151,6 +151,10 @@ const Projects = () => {
                   {t(`projects.proyectos.${group.proyectoKey}`)}
                 </span>
               </div>
+
+              <div className="text-xs text-slate-500 mt-0.5 pl-8">
+                {group.dates}
+              </div>
             </div>
 
             {/* Teclas */}
