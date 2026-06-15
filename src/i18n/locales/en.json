@@ -456,9 +456,9 @@
     },
     "levelLegend": {
       "title": "Levels",
-      "a": "Advanced",
-      "m": "Medium",
-      "b": "Basic"
+      "a": "Advanced level",
+      "m": "Medium level",
+      "b": "Basic level"
     },
     "title": "Skills"
   },

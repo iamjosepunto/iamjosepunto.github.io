@@ -456,9 +456,9 @@
     },
     "levelLegend": {
       "title": "Niveles",
-      "a": "Avanzado",
-      "m": "Medio",
-      "b": "Básico"
+      "a": "Nivel avanzado",
+      "m": "Nivel medio",
+      "b": "Nivel básico"
     },
     "title": "Habilidades"
   },
