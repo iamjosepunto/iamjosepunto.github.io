@@ -55,6 +55,10 @@ const Nav = () => {
           </li>
 
           <li>
+            <a href="#downloads">{t("nav.downloads")}</a>
+          </li>
+
+          <li>
             <a href="#contact">{t("nav.contact")}</a>
           </li>
         </ul>
@@ -140,6 +144,10 @@ const Nav = () => {
 
             <a href="#location" onClick={closeMenu}>
               {t("nav.location")}
+            </a>
+
+            <a href="#downloads" onClick={closeMenu}>
+              {t("nav.downloads")}
             </a>
 
             <a href="#contact" onClick={closeMenu}>

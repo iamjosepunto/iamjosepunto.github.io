@@ -8,7 +8,8 @@
     "contact": "Contact",
     "location": "Location",
     "experience": "Experience",
-    "languages": "Languages"
+    "languages": "Languages",
+    "downloads": "Downloads"
   },
   "hero": {
     "role1": "Industrial Engineer (completed)",
@@ -1888,5 +1889,10 @@
         "level": "Full professional proficiency"
       }
     ]
+  },
+  "downloads": {
+    "title": "Downloads",
+    "label": "Download CV (PDF)",
+    "note": "Bilingual résumé (Spanish · English)"
   }
 }

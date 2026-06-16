@@ -7,6 +7,7 @@ import Languages from "./components/Languages";
 import Skills from "./components/Skills";
 import Lab from "./components/Lab";
 import Location from "./components/Location";
+import Downloads from "./components/Downloads";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -34,6 +35,8 @@ function App() {
         <Lab />
 
         <Location />
+
+        <Downloads />
 
         <Contact />
       </main>

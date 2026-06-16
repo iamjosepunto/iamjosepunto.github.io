@@ -8,7 +8,8 @@
     "contact": "Contacto",
     "location": "Ubicación",
     "experience": "Experiencia",
-    "languages": "Idiomas"
+    "languages": "Idiomas",
+    "downloads": "Descargas"
   },
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
@@ -1888,5 +1889,10 @@
         "level": "Competencia profesional completa"
       }
     ]
+  },
+  "downloads": {
+    "title": "Descargas",
+    "label": "Descargar CV (PDF)",
+    "note": "Currículum bilingüe (Español · English)"
   }
 }
