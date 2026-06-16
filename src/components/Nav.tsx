@@ -51,11 +51,11 @@ const Nav = () => {
           </li>
 
           <li>
-            <a href="#location">{t("nav.location")}</a>
+            <a href="#downloads">{t("nav.downloads")}</a>
           </li>
 
           <li>
-            <a href="#downloads">{t("nav.downloads")}</a>
+            <a href="#location">{t("nav.location")}</a>
           </li>
 
           <li>
@@ -142,12 +142,12 @@ const Nav = () => {
               {t("nav.lab")}
             </a>
 
-            <a href="#location" onClick={closeMenu}>
-              {t("nav.location")}
-            </a>
-
             <a href="#downloads" onClick={closeMenu}>
               {t("nav.downloads")}
+            </a>
+
+            <a href="#location" onClick={closeMenu}>
+              {t("nav.location")}
             </a>
 
             <a href="#contact" onClick={closeMenu}>

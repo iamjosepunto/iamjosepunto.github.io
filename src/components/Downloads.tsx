@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const CV_FILE = "CV_summary_Jose ._June_2026_En-Es.pdf";
+const CV_FILE = "Summary_CV_Jose ._June_2026_En-Es.pdf";
 
 const Downloads = () => {
   const { t } = useTranslation();
@@ -39,6 +39,10 @@ const Downloads = () => {
           gap-4
         "
       >
+        <p className="text-sm text-slate-400">
+          {t("downloads.note")}
+        </p>
+
         <a
           href={href}
           download={CV_FILE}
@@ -75,10 +79,6 @@ const Downloads = () => {
 
           {t("downloads.label")}
         </a>
-
-        <p className="text-sm text-slate-400">
-          {t("downloads.note")}
-        </p>
       </div>
     </section>
   );

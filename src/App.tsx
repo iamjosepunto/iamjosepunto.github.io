@@ -34,9 +34,9 @@ function App() {
 
         <Lab />
 
-        <Location />
-
         <Downloads />
+
+        <Location />
 
         <Contact />
       </main>
