@@ -36,7 +36,7 @@ const LinkedInBadge = () => {
         className="badge-base LI-profile-badge"
         data-locale="es_ES"
         data-size="medium"
-        data-theme="dark"
+        data-theme="light"
         data-type="VERTICAL"
         data-vanity="iamjosepunto"
         data-version="v1"
