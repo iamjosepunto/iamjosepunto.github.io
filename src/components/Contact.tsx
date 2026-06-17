@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
+import LinkedInBadge from "./LinkedInBadge";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -124,6 +125,10 @@ const Contact = () => {
             </a>
           ))}
         </div>
+      </div>
+
+      <div className="mt-6">
+        <LinkedInBadge />
       </div>
     </section>
   );
