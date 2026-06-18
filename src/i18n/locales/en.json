@@ -9,7 +9,8 @@
     "location": "Location",
     "experience": "Experience",
     "languages": "Languages",
-    "downloads": "Downloads"
+    "downloads": "Downloads",
+    "education": "Education"
   },
   "hero": {
     "role1": "Industrial Engineer (completed)",
@@ -1900,5 +1901,22 @@
     "title": "Downloads",
     "label": "Download Bilingual summary curriculum (English-Spanish)",
     "note": "Click this button to download my bilingual summary curriculum."
+  },
+  "education": {
+    "title": "Education",
+    "labels": {
+      "university": "University",
+      "web": "Web site",
+      "location": "Location",
+      "faculty": "Faculty",
+      "degree": "Academic degree",
+      "period": "Training period"
+    },
+    "university": "Universidad Alfonso X el Sabio (UAX)",
+    "web": "https://uax.com",
+    "location": "Villanueva de la Cañada, Madrid, Spain",
+    "faculty": "Higher Polytechnic School",
+    "degree": "Industrial engineering",
+    "period": "Sep. 2000 - Oct. 2005 (Completed)"
   }
 }

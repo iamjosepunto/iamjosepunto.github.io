@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Education from "./components/Education";
 import Languages from "./components/Languages";
 import Skills from "./components/Skills";
 import Lab from "./components/Lab";
@@ -27,6 +28,8 @@ function App() {
         <Experience />
 
         <Projects />
+
+        <Education />
 
         <Languages />
 

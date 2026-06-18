@@ -9,7 +9,8 @@
     "location": "Ubicación",
     "experience": "Experiencia",
     "languages": "Idiomas",
-    "downloads": "Descargas"
+    "downloads": "Descargas",
+    "education": "Educación"
   },
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
@@ -1900,5 +1901,22 @@
     "title": "Descargas",
     "label": "Descargar currículum resumido bilingüe (Inglés-Español)",
     "note": "Pulsa este botón para descargar mi currículum resumido y bilingüe."
+  },
+  "education": {
+    "title": "Educación",
+    "labels": {
+      "university": "Universidad",
+      "web": "Sitio web",
+      "location": "Ubicación",
+      "faculty": "Facultad",
+      "degree": "Título académico",
+      "period": "Periodo de formación"
+    },
+    "university": "Universidad Alfonso X el Sabio (UAX)",
+    "web": "https://uax.com",
+    "location": "Villanueva de la Cañada, Madrid, España",
+    "faculty": "Escuela politécnica superior",
+    "degree": "Ingeniería Industrial",
+    "period": "sep. 2000 - oct. 2005 (Finalizada)"
   }
 }
