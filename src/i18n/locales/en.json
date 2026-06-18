@@ -491,7 +491,8 @@
     "title": "Lab"
   },
   "footer": {
-    "subtitle": "Industrial Engineer (completed) · Senior Full Stack .NET Developer · AI & Software Automation"
+    "subtitle": "Industrial Engineer (completed) · Senior Full Stack .NET Developer · AI & Software Automation",
+    "builtWith": "Built with 😊 using ⚛️ React, ⚡ Vite and 🐱 Tailwind CSS."
   },
   "projects": {
     "title": "My projects - Portfolio",
