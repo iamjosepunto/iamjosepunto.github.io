@@ -72,32 +72,22 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col gap-4">
-          {/* Email: botón que copia al portapapeles */}
-          <button
-            onClick={copyEmail}
-            className="
-              flex
-              flex-col
-              sm:flex-row
-              sm:items-baseline
-              sm:gap-3
-              text-left
-              cursor-pointer
-              group
-            "
-          >
+          {/* Email: texto + botón Copiar (sin enlace) */}
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left">
             <span className="text-sm font-semibold text-blue-400 sm:w-24 shrink-0">
               {t("contact.email")}
             </span>
 
-            <span className="text-ivory group-hover:text-yellow-400 transition break-all">
+            <span className="text-ivory break-all flex items-center gap-3">
               {PROFILE.socials.email}
+              <button
+                onClick={copyEmail}
+                className="text-base text-yellow-400 font-semibold shrink-0 cursor-pointer"
+              >
+                {copied ? t("contact.copied") : t("contact.copy")}
+              </button>
             </span>
-
-            <span className="text-base text-slate-400 group-hover:text-yellow-400 transition shrink-0">
-              {copied ? t("contact.copied") : t("contact.copy")}
-            </span>
-          </button>
+          </div>
 
           {/* Resto de enlaces */}
           {links.map((item) => (
