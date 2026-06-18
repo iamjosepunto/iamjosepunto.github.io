@@ -61,8 +61,8 @@ const Experience = () => {
                 flex-col
                 md:flex-row
                 md:items-center
-                md:justify-between
                 gap-3
+                md:gap-5
                 border-b
                 border-slate-800
                 pb-3
@@ -89,7 +89,7 @@ const Experience = () => {
               </div>
 
               {/* Tecla */}
-              <div className="flex md:justify-end shrink-0">
+              <div className="flex shrink-0">
                 <button
                   onClick={() => select(exp)}
                   className={
