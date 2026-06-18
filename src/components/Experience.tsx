@@ -61,6 +61,7 @@ const Experience = () => {
                 flex-col
                 md:flex-row
                 md:items-center
+                md:justify-center
                 gap-3
                 md:gap-5
                 border-b
