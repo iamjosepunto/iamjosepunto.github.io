@@ -98,11 +98,13 @@ const Skills = () => {
         {hard.title}
       </h3>
 
-      <div className="flex flex-col gap-6 mb-12">
+      <div className="flex flex-col items-center gap-6 mb-12">
         {hard.groups.map((group) => (
           <div
             key={group.group}
             className="
+              w-fit
+              max-w-full
               bg-slate-900
               border
               border-slate-800
@@ -140,11 +142,13 @@ const Skills = () => {
 
       <LegendBar legend={legend} />
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {soft.categories.map((cat) => (
           <div
             key={cat.cat}
             className="
+              w-fit
+              max-w-full
               bg-slate-900
               border
               border-slate-800
