@@ -50,7 +50,7 @@ const CategoryBlock = ({ category }: { category: Category }) => (
         {category.cat}
       </div>
     )}
-    <div className="flex flex-wrap justify-center gap-2">
+    <div className="flex flex-col items-center gap-2">
       {category.skills.map((s) => (
         <SkillTag key={s.name + s.level} skill={s} />
       ))}
