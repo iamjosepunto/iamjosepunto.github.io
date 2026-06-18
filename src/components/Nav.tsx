@@ -19,7 +19,7 @@ const Nav = () => {
       <nav className="max-w-full mx-auto px-6 h-16 flex items-center justify-between md:justify-center gap-5">
         <a
           href="#"
-          className="font-bold text-xl tracking-wide whitespace-nowrap shrink-0"
+          className="font-bold text-2xl tracking-wide whitespace-nowrap shrink-0"
         >
           <span className="text-yellow-400">Jose .</span>
         </a>
@@ -73,20 +73,7 @@ const Nav = () => {
 
         {/* Desktop controls */}
         <div className="hidden md:flex items-center gap-4">
-          <div className="text-sm">
-            <button
-              onClick={() => changeLanguage("es")}
-              className={
-                i18n.language.startsWith("es")
-                  ? "text-yellow-400 font-bold cursor-pointer"
-                  : "text-ivory hover:text-yellow-300 transition cursor-pointer"
-              }
-            >
-              ES
-            </button>
-
-            <span className="mx-2 text-ivory">|</span>
-
+          <div className="text-base">
             <button
               onClick={() => changeLanguage("en")}
               className={
@@ -96,6 +83,19 @@ const Nav = () => {
               }
             >
               EN
+            </button>
+
+            <span className="mx-2 text-ivory">|</span>
+
+            <button
+              onClick={() => changeLanguage("es")}
+              className={
+                i18n.language.startsWith("es")
+                  ? "text-yellow-400 font-bold cursor-pointer"
+                  : "text-ivory hover:text-yellow-300 transition cursor-pointer"
+              }
+            >
+              ES
             </button>
           </div>
         </div>
@@ -172,25 +172,25 @@ const Nav = () => {
 
             <div className="pt-2 border-t border-slate-800">
               <button
-                onClick={() => changeLanguage("es")}
+                onClick={() => changeLanguage("en")}
                 className={
-                  i18n.language.startsWith("es")
+                  i18n.language.startsWith("en")
                     ? "text-yellow-400 font-bold mr-4"
                     : "text-ivory mr-4"
                 }
               >
-                ES
+                EN
               </button>
 
               <button
-                onClick={() => changeLanguage("en")}
+                onClick={() => changeLanguage("es")}
                 className={
-                  i18n.language.startsWith("en")
+                  i18n.language.startsWith("es")
                     ? "text-yellow-400 font-bold"
                     : "text-ivory"
                 }
               >
-                EN
+                ES
               </button>
             </div>
           </div>
