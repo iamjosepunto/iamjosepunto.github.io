@@ -160,7 +160,7 @@ const Skills = () => {
               {cat.cat}
             </div>
 
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-col items-center gap-2">
               {cat.skills.map((s) => (
                 <SkillTag key={s.name + s.level} skill={s} />
               ))}

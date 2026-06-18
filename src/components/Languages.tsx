@@ -30,7 +30,7 @@ const Languages = () => {
         {t("languages.title")}
       </h2>
 
-      <div className="grid sm:grid-cols-2 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {items.map((item) => (
           <div
             key={item.name}
@@ -39,7 +39,9 @@ const Languages = () => {
               border
               border-slate-800
               rounded-2xl
-              p-6
+              px-8
+              py-6
+              text-center
             "
           >
             <h3 className="text-xl font-bold text-blue-400 mb-2">

@@ -406,7 +406,7 @@
           "cat": "Analíticas",
           "skills": [
             {
-              "name": "Resolución",
+              "name": "Resolución de problemas",
               "level": "A"
             },
             {
@@ -1912,12 +1912,12 @@
     "title": "Idiomas",
     "items": [
       {
-        "name": "Español",
-        "level": "Competencia bilingüe o nativa"
-      },
-      {
         "name": "Inglés",
         "level": "Competencia profesional completa"
+      },
+      {
+        "name": "Español",
+        "level": "Competencia bilingüe o nativa"
       }
     ]
   },
