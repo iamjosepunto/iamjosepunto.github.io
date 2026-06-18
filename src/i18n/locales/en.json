@@ -26,7 +26,29 @@
     "paragraph2": "During those years, software development was initially a personal passion. Over time, that passion became my main profession and eventually led me to transition completely into software engineering.",
     "paragraph3": "Today I work as a Senior .NET Full Stack Developer, participating in the analysis, design, development and maintenance of enterprise applications, REST APIs, web platforms and mobile solutions.",
     "paragraph4": "My main technologies include C#, .NET, ASP.NET Core, React, TypeScript, SQL, MongoDB, Razor, Blazor, Unity and modern Full Stack architectures.",
-    "paragraph5": "Since 2023 I have incorporated Artificial Intelligence tools such as ChatGPT and Claude into real software development workflows."
+    "paragraph5": "Since 2023 I have incorporated Artificial Intelligence tools such as ChatGPT and Claude into real software development workflows.",
+    "data": {
+      "labels": {
+        "name": "Name",
+        "birth": "Date of birth",
+        "nationality": "Nationality",
+        "resident": "Resident in",
+        "cv": "Complete CV",
+        "email": "Email",
+        "contact": "Contact method",
+        "availability": "Availability",
+        "workmode": "Desired work mode"
+      },
+      "name": "Jose .",
+      "birth": "Nov. 1981",
+      "nationality": "Spanish",
+      "resident": "Toledo, Spain",
+      "cv": "https://iamjosepunto.github.io",
+      "email": "iamjosepunto@gmail.com",
+      "contact": "Preferably email",
+      "availability": "Currently working",
+      "workmode": "Remote or hybrid"
+    }
   },
   "skills": {
     "hard": {
