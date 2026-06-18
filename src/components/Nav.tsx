@@ -16,7 +16,7 @@ const Nav = () => {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800">
-      <nav className="max-w-full mx-auto px-6 h-16 flex items-center justify-between gap-4">
+      <nav className="max-w-full mx-auto px-6 h-16 flex items-center gap-6">
         <a
           href="#"
           className="font-bold text-xl tracking-wide whitespace-nowrap shrink-0"
@@ -105,6 +105,7 @@ const Nav = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="
             md:hidden
+            ml-auto
             text-ivory
             text-3xl
             cursor-pointer
