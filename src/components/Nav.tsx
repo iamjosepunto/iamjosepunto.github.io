@@ -16,16 +16,16 @@ const Nav = () => {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800">
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-full mx-auto px-6 h-16 flex items-center justify-between gap-4">
         <a
           href="#"
-          className="font-bold text-xl tracking-wide"
+          className="font-bold text-xl tracking-wide whitespace-nowrap shrink-0"
         >
           <span className="text-yellow-400">Jose .</span>
         </a>
 
         {/* Desktop */}
-        <ul className="hidden md:flex gap-8 text-ivory">
+        <ul className="hidden md:flex gap-4 lg:gap-5 text-ivory whitespace-nowrap">
           <li>
             <a href="#about">{t("nav.about")}</a>
           </li>
