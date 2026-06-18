@@ -78,6 +78,9 @@ const About = () => {
 
       <div
         className="
+          w-fit
+          max-w-full
+          mx-auto
           bg-slate-900
           border
           border-slate-800
@@ -97,7 +100,6 @@ const About = () => {
               flex
               flex-col
               sm:flex-row
-              sm:justify-center
               sm:gap-4
               py-2.5
             "
