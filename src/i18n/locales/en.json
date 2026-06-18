@@ -10,7 +10,8 @@
     "experience": "Experience",
     "languages": "Languages",
     "downloads": "Downloads",
-    "education": "Education"
+    "education": "Education",
+    "availability": "Availability"
   },
   "hero": {
     "role1": "Industrial Engineer (completed)",
@@ -46,7 +47,7 @@
       "cv": "https://iamjosepunto.github.io",
       "email": "iamjosepunto@gmail.com",
       "contact": "Preferably email",
-      "availability": "Currently working",
+      "availability": "Employed, open to a change",
       "workmode": "Remote or hybrid"
     }
   },
@@ -1940,5 +1941,12 @@
     "faculty": "Higher Polytechnic School",
     "degree": "Industrial engineering",
     "period": "Sep. 2000 - Oct. 2005 (Completed)"
+  },
+  "availability": {
+    "title": "Availability",
+    "cta": {
+      "title": "Open to new opportunities",
+      "text": "I am open to new professional opportunities where I can add value through backend development and APIs, complemented by frontend work to build complete applications. If you think my profile could fit your team or project, I would be glad to talk with you."
+    }
   }
 }

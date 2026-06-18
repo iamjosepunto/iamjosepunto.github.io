@@ -10,7 +10,8 @@
     "experience": "Experiencia",
     "languages": "Idiomas",
     "downloads": "Descargas",
-    "education": "Educación"
+    "education": "Educación",
+    "availability": "Disponibilidad"
   },
   "hero": {
     "role1": "Ingeniero Industrial (finalizada)",
@@ -46,7 +47,7 @@
       "cv": "https://iamjosepunto.github.io",
       "email": "iamjosepunto@gmail.com",
       "contact": "Preferiblemente email",
-      "availability": "Actualmente trabajando",
+      "availability": "Trabajando, abierto a un cambio",
       "workmode": "Teletrabajo o híbrido"
     }
   },
@@ -1940,5 +1941,12 @@
     "faculty": "Escuela politécnica superior",
     "degree": "Ingeniería Industrial",
     "period": "sep. 2000 - oct. 2005 (Finalizada)"
+  },
+  "availability": {
+    "title": "Disponibilidad",
+    "cta": {
+      "title": "Abierto a nuevas oportunidades",
+      "text": "Estoy abierto a nuevas oportunidades profesionales donde aportar valor desde el desarrollo backend y las APIs, complementando con frontend para construir aplicaciones completas. Si crees que mi perfil puede encajar en tu equipo o proyecto, estaré encantado de hablar contigo."
+    }
   }
 }
