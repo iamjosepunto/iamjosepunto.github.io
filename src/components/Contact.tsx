@@ -60,6 +60,9 @@ const Contact = () => {
 
       <div
         className="
+          w-fit
+          max-w-full
+          mx-auto
           bg-slate-900
           border
           border-slate-800
