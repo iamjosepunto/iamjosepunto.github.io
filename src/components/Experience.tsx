@@ -69,7 +69,7 @@ const Experience = () => {
               "
             >
               {/* Empresa */}
-              <div className="min-w-0">
+              <div className="min-w-0 md:w-96">
                 <div className="flex items-baseline gap-2">
                   <span className="font-mono text-xs text-slate-500">
                     {exp.code}
