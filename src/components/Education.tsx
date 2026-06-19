@@ -32,6 +32,9 @@ const Education = () => {
 
       <div
         className="
+          w-fit
+          max-w-full
+          mx-auto
           bg-slate-900
           border
           border-slate-800
@@ -62,7 +65,7 @@ const Education = () => {
                 py-2.5
               "
             >
-              <span className="text-sm font-semibold text-blue-400 sm:w-48 shrink-0">
+              <span className="text-sm font-semibold text-blue-400 sm:w-40 shrink-0">
                 {row.label}
               </span>
 
@@ -71,12 +74,12 @@ const Education = () => {
                   href={row.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-ivory hover:text-yellow-400 transition break-all"
+                  className="text-ivory hover:text-yellow-400 transition break-all sm:w-72"
                 >
                   {row.value}
                 </a>
               ) : (
-                <span className="text-ivory">{row.value}</span>
+                <span className="text-ivory sm:w-72">{row.value}</span>
               )}
             </div>
           ))}
