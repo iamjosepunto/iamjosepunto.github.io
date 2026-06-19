@@ -52,10 +52,6 @@ const GitHubBadge = () => {
           {t("contact.gh.name")}
         </div>
 
-        <p className="text-[12px] text-slate-600 mt-0.5">
-          {t("contact.gh.user")}
-        </p>
-
         <p className="text-[12px] text-slate-600 leading-snug mt-2 px-1">
           {t("contact.gh.headline")}
         </p>
