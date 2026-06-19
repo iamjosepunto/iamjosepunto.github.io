@@ -67,11 +67,11 @@ const GitHubBadge = () => {
               py-1.5
               rounded-full
               border-2
-              border-[#181717]
-              text-[#181717]
+              border-[#0A66C2]
+              text-[#0A66C2]
               text-[13px]
               font-semibold
-              hover:bg-[#181717]
+              hover:bg-[#0A66C2]
               hover:text-white
               transition
             "
