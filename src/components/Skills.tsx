@@ -118,9 +118,17 @@ const Skills = () => {
                   </div>
                 )}
 
-                {sub.categories.map((cat) => (
-                  <CategoryBlock key={cat.cat} category={cat} />
-                ))}
+                {sub.sub ? (
+                  <div className="border border-yellow-400 rounded-2xl p-4">
+                    {sub.categories.map((cat) => (
+                      <CategoryBlock key={cat.cat} category={cat} />
+                    ))}
+                  </div>
+                ) : (
+                  sub.categories.map((cat) => (
+                    <CategoryBlock key={cat.cat} category={cat} />
+                  ))
+                )}
               </div>
             ))}
           </div>
