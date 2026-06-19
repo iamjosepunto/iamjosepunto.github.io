@@ -58,7 +58,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="
-            max-w-4xl
+            w-fit
             mx-auto
             text-xl
             md:text-3xl
