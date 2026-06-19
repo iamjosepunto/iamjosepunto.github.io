@@ -15,8 +15,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-ivory text-sm">
           © {new Date().getFullYear()}{" "}
-          <span className="text-yellow-400">Jose .</span>
-          <span className="mx-3"> </span>
+          <span className="text-yellow-400">Jose .</span>{" "}
           {t("footer.builtWith")}
         </p>
 
