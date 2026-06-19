@@ -39,8 +39,6 @@ const Education = () => {
           p-8
           flex
           flex-col
-          md:flex-row
-          md:items-start
           gap-8
         "
       >
@@ -52,7 +50,7 @@ const Education = () => {
           />
         </div>
 
-        <div className="flex-1 flex flex-col divide-y divide-slate-800">
+        <div className="flex flex-col divide-y divide-slate-800">
           {rows.map((row) => (
             <div
               key={row.label}
