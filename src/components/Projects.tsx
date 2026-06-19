@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { PROJECT_GROUPS } from "../data/profile";
 import type { TaskRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./SectionTitle";
 
 const SUMMARY = "__summary__";
 
@@ -99,18 +100,7 @@ const Projects = () => {
       id="projects"
       className="max-w-7xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("projects.title")}
-      </h2>
+      <SectionTitle>{t("projects.title")}</SectionTitle>
 
       {/* Teclado de tareas */}
       <div className="flex flex-col gap-3 mb-8">

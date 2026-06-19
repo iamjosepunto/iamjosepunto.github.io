@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./SectionTitle";
 
 const labs = [
   {
@@ -79,18 +80,7 @@ const Lab = () => {
       id="lab"
       className="max-w-6xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("lab.title")}
-      </h2>
+      <SectionTitle>{t("lab.title")}</SectionTitle>
 
       <div className="grid md:grid-cols-2 gap-6">
         {labs.map((item) => (

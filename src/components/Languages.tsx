@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./SectionTitle";
 
 type LanguageItem = {
   name: string;
@@ -17,18 +18,7 @@ const Languages = () => {
       id="languages"
       className="max-w-5xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("languages.title")}
-      </h2>
+      <SectionTitle>{t("languages.title")}</SectionTitle>
 
       <div className="flex flex-wrap justify-center gap-6">
         {items.map((item) => (

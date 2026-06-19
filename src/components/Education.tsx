@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./SectionTitle";
 
 const Education = () => {
   const { t } = useTranslation();
@@ -17,18 +18,7 @@ const Education = () => {
       id="education"
       className="max-w-5xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("education.title")}
-      </h2>
+      <SectionTitle>{t("education.title")}</SectionTitle>
 
       <div
         className="

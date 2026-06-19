@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { EXPERIENCE_GROUPS } from "../data/profile";
 import type { ExperienceRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./SectionTitle";
 
 const Experience = () => {
   const { t } = useTranslation();
@@ -35,18 +36,7 @@ const Experience = () => {
       id="experience"
       className="max-w-7xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("experience.title")}
-      </h2>
+      <SectionTitle>{t("experience.title")}</SectionTitle>
 
       {/* Teclado de experiencias */}
       <div className="flex flex-col gap-3 mb-8">

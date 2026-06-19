@@ -3,6 +3,7 @@ import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import LinkedInBadge from "./LinkedInBadge";
 import GitHubBadge from "./GitHubBadge";
+import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -46,18 +47,7 @@ const Contact = () => {
       id="contact"
       className="max-w-5xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("contact.title")}
-      </h2>
+      <SectionTitle>{t("contact.title")}</SectionTitle>
 
       <div
         className="

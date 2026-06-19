@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./SectionTitle";
 
 type Skill = { name: string; level: "A" | "M" | "B" };
 type Category = { cat: string; skills: Skill[] };
@@ -80,18 +81,7 @@ const Skills = () => {
       id="skills"
       className="max-w-7xl mx-auto px-6 py-4"
     >
-      <h2
-        className="
-          text-4xl
-          font-bold
-          mb-6
-          text-yellow-400
-          text-center
-          w-full
-        "
-      >
-        {t("skills.title", "Skills")}
-      </h2>
+      <SectionTitle>{t("skills.title", "Skills")}</SectionTitle>
 
       {/* Aptitudes técnicas */}
       <h3 className="text-2xl font-bold text-blue-400 mb-4 text-center">
