@@ -6,20 +6,19 @@ const LinkedInBadge = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-center">
-      <div
-        className="
-          w-[300px]
-          bg-white
-          rounded-md
-          overflow-hidden
-          border
-          border-slate-300
-          shadow-sm
-          text-center
-        "
-        style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
-      >
+    <div
+      className="
+        w-[300px]
+        bg-white
+        rounded-md
+        overflow-hidden
+        border
+        border-slate-300
+        shadow-sm
+        text-center
+      "
+      style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
+    >
         {/* Cabecera con logo LinkedIn */}
         <div className="flex items-center px-4 py-3 border-b border-slate-200">
           <span
@@ -90,7 +89,6 @@ const LinkedInBadge = () => {
             {t("contact.li.cta")}
           </a>
         </div>
-      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import LinkedInBadge from "./LinkedInBadge";
+import GitHubBadge from "./GitHubBadge";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -120,8 +121,9 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 flex flex-wrap justify-center gap-6">
         <LinkedInBadge />
+        <GitHubBadge />
       </div>
     </section>
   );
