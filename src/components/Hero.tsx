@@ -108,7 +108,8 @@ const Hero = () => {
             max-w-4xl
             mx-auto
             text-ivory
-            text-base
+            text-lg
+            leading-relaxed
             mt-4
             text-left
           "
