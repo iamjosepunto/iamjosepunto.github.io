@@ -72,24 +72,29 @@ const About = () => {
           p-8
         "
       >
-        <p className="text-lg text-ivory leading-relaxed mb-6">
-          {t("about.paragraph1")}
+        <p className="text-lg text-ivory leading-relaxed mb-6 flex gap-3">
+          <span className="text-yellow-400 shrink-0">•</span>
+          <span>{t("about.paragraph1")}</span>
         </p>
 
-        <p className="text-lg text-ivory leading-relaxed mb-6">
-          {t("about.paragraph2")}
+        <p className="text-lg text-ivory leading-relaxed mb-6 flex gap-3">
+          <span className="text-yellow-400 shrink-0">•</span>
+          <span>{t("about.paragraph2")}</span>
         </p>
 
-        <p className="text-lg text-ivory leading-relaxed mb-6">
-          {t("about.paragraph3")}
+        <p className="text-lg text-ivory leading-relaxed mb-6 flex gap-3">
+          <span className="text-yellow-400 shrink-0">•</span>
+          <span>{t("about.paragraph3")}</span>
         </p>
 
-        <p className="text-lg text-ivory leading-relaxed mb-6">
-          {t("about.paragraph4")}
+        <p className="text-lg text-ivory leading-relaxed mb-6 flex gap-3">
+          <span className="text-yellow-400 shrink-0">•</span>
+          <span>{t("about.paragraph4")}</span>
         </p>
 
-        <p className="text-lg text-ivory leading-relaxed">
-          {t("about.paragraph5")}
+        <p className="text-lg text-ivory leading-relaxed flex gap-3">
+          <span className="text-yellow-400 shrink-0">•</span>
+          <span>{t("about.paragraph5")}</span>
         </p>
       </div>
 
