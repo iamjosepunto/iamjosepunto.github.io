@@ -95,6 +95,10 @@ const Hero = () => {
             text-lg
             leading-relaxed
             text-left
+            border
+            border-yellow-400
+            rounded-2xl
+            p-6
           "
         >
           {t("hero.description1")}
@@ -112,6 +116,10 @@ const Hero = () => {
             leading-relaxed
             mt-4
             text-left
+            border
+            border-yellow-400
+            rounded-2xl
+            p-6
           "
         >
           {t("hero.description2")}
