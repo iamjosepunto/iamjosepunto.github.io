@@ -110,6 +110,8 @@ const Skills = () => {
 
             <LegendBar legend={legend} />
 
+            <div className="border-t border-yellow-400 mb-4" />
+
             {group.subgroups.map((sub, si) => (
               <div key={si} className={sub.sub ? "mb-4" : ""}>
                 {sub.sub && (
