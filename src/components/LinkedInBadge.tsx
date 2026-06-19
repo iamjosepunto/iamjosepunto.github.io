@@ -16,6 +16,8 @@ const LinkedInBadge = () => {
         border-slate-300
         shadow-sm
         text-center
+        flex
+        flex-col
       "
       style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
     >
@@ -47,7 +49,7 @@ const LinkedInBadge = () => {
         </div>
 
         {/* Cuerpo */}
-        <div className="px-4 pt-4 pb-5">
+        <div className="px-4 pt-4 pb-5 flex flex-col flex-1">
           <img
             src="/FotoJosePunto.jpg"
             alt={t("contact.li.name")}
@@ -66,28 +68,29 @@ const LinkedInBadge = () => {
             {t("contact.li.school")}
           </p>
 
-          <a
-            href={PROFILE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              inline-block
-              mt-4
-              px-5
-              py-1.5
-              rounded-full
-              border-2
-              border-[#0A66C2]
-              text-[#0A66C2]
-              text-[13px]
-              font-semibold
-              hover:bg-[#0A66C2]
-              hover:text-white
-              transition
-            "
-          >
-            {t("contact.li.cta")}
-          </a>
+          <div className="mt-auto pt-4">
+            <a
+              href={PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-block
+                px-5
+                py-1.5
+                rounded-full
+                border-2
+                border-[#0A66C2]
+                text-[#0A66C2]
+                text-[13px]
+                font-semibold
+                hover:bg-[#0A66C2]
+                hover:text-white
+                transition
+              "
+            >
+              {t("contact.li.cta")}
+            </a>
+          </div>
         </div>
     </div>
   );

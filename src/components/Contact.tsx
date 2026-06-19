@@ -121,7 +121,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap justify-center gap-6">
+      <div className="mt-6 flex flex-wrap justify-center items-stretch gap-6">
         <LinkedInBadge />
         <GitHubBadge />
       </div>
