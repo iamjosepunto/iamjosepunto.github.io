@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "./SectionTitle";
 
@@ -84,16 +83,17 @@ const Lab = () => {
 
       <div className="grid md:grid-cols-2 gap-6">
         {labs.map((item) => (
-          <motion.div
+          <div
             key={item.titleEn}
-            whileHover={{ y: -4 }}
             className="
               bg-slate-900
               border
               border-slate-800
               rounded-2xl
               p-6
-            "
+            transition
+            hover:-translate-y-1
+          "
           >
             <h3 className="text-xl font-semibold text-blue-400 mb-3">
               {isSpanish ? item.titleEs : item.titleEn}
@@ -104,7 +104,7 @@ const Lab = () => {
                 ? item.descriptionEs
                 : item.descriptionEn}
             </p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

@@ -32,7 +32,9 @@ const Languages = () => {
               px-8
               py-6
               text-center
-            "
+            transition
+            hover:-translate-y-1
+          "
           >
             <h3 className="text-xl font-bold text-blue-400 mb-2">
               {item.name}

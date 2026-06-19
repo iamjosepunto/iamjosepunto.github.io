@@ -18,6 +18,8 @@ const GitHubBadge = () => {
         text-center
         flex
         flex-col
+        transition
+        hover:-translate-y-1
       "
       style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
     >

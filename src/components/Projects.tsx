@@ -187,7 +187,9 @@ const Projects = () => {
           border-slate-800
           rounded-2xl
           p-8
-        "
+            transition
+            hover:-translate-y-1
+          "
       >
         {isSummary ? (
           <div className="text-ivory leading-relaxed">

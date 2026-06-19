@@ -18,7 +18,9 @@ const Location = () => {
           border-slate-800
           rounded-2xl
           p-8
-        "
+            transition
+            hover:-translate-y-1
+          "
       >
         <p className="text-ivory leading-relaxed mb-6">
           {t("location.description")}

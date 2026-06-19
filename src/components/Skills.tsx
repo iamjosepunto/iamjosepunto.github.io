@@ -100,7 +100,9 @@ const Skills = () => {
               border-slate-800
               rounded-2xl
               p-6
-            "
+            transition
+            hover:-translate-y-1
+          "
           >
             <div className="text-lg font-bold text-yellow-400 italic mb-2 text-center">
               {group.group}
@@ -144,7 +146,9 @@ const Skills = () => {
               border-slate-800
               rounded-2xl
               p-6
-            "
+            transition
+            hover:-translate-y-1
+          "
           >
             <div className="text-lg font-bold text-yellow-400 mb-4 text-center">
               {cat.cat}

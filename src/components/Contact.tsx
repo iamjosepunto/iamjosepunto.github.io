@@ -59,7 +59,9 @@ const Contact = () => {
           border-slate-800
           rounded-2xl
           p-8
-        "
+            transition
+            hover:-translate-y-1
+          "
       >
         <p className="text-lg text-ivory leading-relaxed mb-6">
           {t("contact.subtitle")}

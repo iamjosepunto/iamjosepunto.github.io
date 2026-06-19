@@ -60,7 +60,9 @@ const About = () => {
           border-slate-800
           rounded-2xl
           p-8
-        "
+            transition
+            hover:-translate-y-1
+          "
       >
         <p className="text-lg text-ivory leading-relaxed mb-6 flex gap-3">
           <span className="text-yellow-400 shrink-0">•</span>
@@ -103,7 +105,9 @@ const About = () => {
           flex-col
           divide-y
           divide-slate-800
-        "
+            transition
+            hover:-translate-y-1
+          "
       >
         {rows.map((row) => (
           <div

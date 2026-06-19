@@ -108,7 +108,9 @@ const Experience = () => {
           border-slate-800
           rounded-2xl
           p-8
-        "
+            transition
+            hover:-translate-y-1
+          "
       >
         <div className="font-mono text-sm text-blue-400 mb-2">
           {selected.code}
