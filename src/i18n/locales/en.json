@@ -286,10 +286,10 @@
               "sub": "WEB",
               "categories": [
                 {
-                  "cat": "JavaScript",
+                  "cat": "JavaScript Frameworks & Libraries",
                   "skills": [
                     {
-                      "name": "React [18+]",
+                      "name": "React (18+)",
                       "level": "A"
                     },
                     {
@@ -297,22 +297,27 @@
                       "level": "A"
                     },
                     {
-                      "name": "TypeScript [5.7]",
+                      "name": "TypeScript (5.7)",
                       "level": "A"
                     },
                     {
-                      "name": "jQuery [3.x]",
+                      "name": "jQuery (3.x)",
                       "level": "A"
                     }
                   ]
                 },
                 {
-                  "cat": "Frameworks & Libraries",
+                  "cat": "WebAssembly",
                   "skills": [
                     {
                       "name": "Blazor",
                       "level": "A"
-                    },
+                    }
+                  ]
+                },
+                {
+                  "cat": "Templates",
+                  "skills": [
                     {
                       "name": "Razor",
                       "level": "A"
@@ -323,15 +328,7 @@
                   "cat": "Dynamic content",
                   "skills": [
                     {
-                      "name": "JavaScript [ES6+]",
-                      "level": "A"
-                    },
-                    {
-                      "name": "HTML5",
-                      "level": "A"
-                    },
-                    {
-                      "name": "CSS3",
+                      "name": "JavaScript (ES6+)",
                       "level": "A"
                     }
                   ]
@@ -340,7 +337,24 @@
                   "cat": "Static content",
                   "skills": [
                     {
-                      "name": "Templates",
+                      "name": "HTML5",
+                      "level": "A"
+                    }
+                  ]
+                },
+                {
+                  "cat": "Styles",
+                  "skills": [
+                    {
+                      "name": "CSS3",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Bootstrap 5",
+                      "level": "A"
+                    },
+                    {
+                      "name": "Tailwind CSS",
                       "level": "A"
                     }
                   ]
