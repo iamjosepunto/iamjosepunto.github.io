@@ -1933,11 +1933,13 @@
     "items": [
       {
         "name": "Inglés",
-        "level": "Competencia profesional completa"
+        "level": "Competencia profesional completa",
+        "flag": "/Bandera_En.jpg"
       },
       {
         "name": "Español",
-        "level": "Competencia bilingüe o nativa"
+        "level": "Competencia bilingüe o nativa",
+        "flag": "/Bandera_Es.jpg"
       }
     ]
   },

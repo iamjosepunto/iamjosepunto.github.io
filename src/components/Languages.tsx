@@ -4,6 +4,7 @@ import SectionTitle from "./SectionTitle";
 type LanguageItem = {
   name: string;
   level: string;
+  flag: string;
 };
 
 const Languages = () => {
@@ -36,6 +37,12 @@ const Languages = () => {
             hover:-translate-y-1
           "
           >
+            <img
+              src={item.flag}
+              alt={item.name}
+              className="w-12 h-8 object-cover rounded-sm mx-auto mb-3"
+            />
+
             <h3 className="text-xl font-bold text-blue-400 mb-2">
               {item.name}
             </h3>

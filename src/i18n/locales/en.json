@@ -1933,11 +1933,13 @@
     "items": [
       {
         "name": "English",
-        "level": "Full professional proficiency"
+        "level": "Full professional proficiency",
+        "flag": "/Bandera_En.jpg"
       },
       {
         "name": "Spanish",
-        "level": "Native or bilingual proficiency"
+        "level": "Native or bilingual proficiency",
+        "flag": "/Bandera_Es.jpg"
       }
     ]
   },
