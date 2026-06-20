@@ -19,7 +19,7 @@ import "./App.css";
 function App() {
   return (
     <div
-      className="min-h-screen text-slate-100"
+      className="min-h-screen text-slate-100 overflow-x-hidden"
       style={{ backgroundColor: "#111d33" }}
     >
       <Nav />
