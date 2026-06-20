@@ -20,7 +20,7 @@ function App() {
   return (
     <div
       className="min-h-screen text-slate-100"
-      style={{ backgroundColor: "#0b1322" }}
+      style={{ backgroundColor: "#111d33" }}
     >
       <Nav />
 
