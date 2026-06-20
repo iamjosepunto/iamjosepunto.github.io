@@ -7,11 +7,6 @@ import en from "./locales/en.json";
 const savedLanguage =
   localStorage.getItem("language");
 
-const browserLanguage =
-  navigator.language.startsWith("es")
-    ? "es"
-    : "en";
-
 i18n
   .use(initReactI18next)
   .init({
@@ -25,8 +20,7 @@ i18n
     },
 
     lng:
-      savedLanguage ??
-      browserLanguage,
+      savedLanguage ?? "en",
 
     fallbackLng: "en",
 
