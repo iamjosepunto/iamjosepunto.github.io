@@ -22,7 +22,7 @@
     "description2": "Specialized in .NET, C#, React, TypeScript, SQL, MongoDB and modern Full Stack architectures. Passionate about software engineering, automation, artificial intelligence and continuous learning."
   },
   "about": {
-    "title": "About",
+    "title": "👋 About",
     "paragraph1": "I started my professional career as an Industrial Engineer, working on projects related to energy efficiency, electrical systems, climate control and industrial installations.",
     "paragraph2": "During those years, software development was initially a personal passion. Over time, that passion became my main profession and eventually led me to transition completely into software engineering.",
     "paragraph3": "Today I work as a Senior .NET Full Stack Developer, participating in the analysis, design, development and maintenance of enterprise applications, REST APIs, web platforms and mobile solutions.",
@@ -56,7 +56,7 @@
       "title": "Hard skills",
       "groups": [
         {
-          "group": "TOOLS",
+          "group": "🧰 TOOLS",
           "subgroups": [
             {
               "sub": null,
@@ -144,7 +144,7 @@
           ]
         },
         {
-          "group": "BACKEND",
+          "group": "⚙️ BACKEND",
           "subgroups": [
             {
               "sub": null,
@@ -226,7 +226,7 @@
               ]
             },
             {
-              "sub": "DATA BASEs",
+              "sub": "🗄️ DATA BASEs",
               "categories": [
                 {
                   "cat": "SQL",
@@ -280,10 +280,10 @@
           ]
         },
         {
-          "group": "FRONTEND",
+          "group": "🎨 FRONTEND",
           "subgroups": [
             {
-              "sub": "WEB",
+              "sub": "🌐 WEB",
               "categories": [
                 {
                   "cat": "JavaScript Frameworks & Libraries",
@@ -371,7 +371,7 @@
               ]
             },
             {
-              "sub": "ANDROID",
+              "sub": "🤖 ANDROID",
               "categories": [
                 {
                   "cat": "",
@@ -396,7 +396,7 @@
       "title": "Soft skills",
       "categories": [
         {
-          "cat": "Personal",
+          "cat": "🌟 Personal",
           "skills": [
             {
               "name": "Time management",
@@ -417,7 +417,7 @@
           ]
         },
         {
-          "cat": "Analytical",
+          "cat": "🧠 Analytical",
           "skills": [
             {
               "name": "Problem solving",
@@ -442,7 +442,7 @@
           ]
         },
         {
-          "cat": "Interpersonal",
+          "cat": "🤝 Interpersonal",
           "skills": [
             {
               "name": "Communication",
@@ -467,7 +467,7 @@
           ]
         },
         {
-          "cat": "Professional",
+          "cat": "💼 Professional",
           "skills": [
             {
               "name": "Self-motivation",
@@ -499,17 +499,17 @@
       "m": "Medium level",
       "b": "Basic level"
     },
-    "title": "Skills"
+    "title": "🛠️ Skills"
   },
   "lab": {
-    "title": "Lab"
+    "title": "🧪 Lab"
   },
   "footer": {
     "subtitle": "Industrial Engineer (completed) · Senior Full Stack .NET Developer · AI & Software Automation",
     "builtWith": "Built with 😊 using ⚛️ React, ⚡ Vite and 🎨 Tailwind CSS."
   },
   "projects": {
-    "title": "My projects - Portfolio",
+    "title": "🗂️ My projects - Portfolio",
     "labels": {
       "resumen": "Summary",
       "objetivo": "Objective",
@@ -1336,7 +1336,7 @@
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "✉️ Contact",
     "subtitle": "Let's talk? You can reach me through these channels.",
     "email": "Email",
     "linkedin": "LinkedIn",
@@ -1358,12 +1358,12 @@
     }
   },
   "location": {
-    "title": "Location",
+    "title": "📍 Location",
     "place": "Toledo, Spain, Europe",
     "description": "I live in the city of Toledo (Spain-Europe), one of the most beautiful and touristic medieval cities in the world."
   },
   "experience": {
-    "title": "Experience",
+    "title": "💼 Experience",
     "labels": {
       "company": "Company",
       "location": "Location",
@@ -1929,7 +1929,7 @@
     }
   },
   "languages": {
-    "title": "Languages",
+    "title": "🌐 Languages",
     "items": [
       {
         "name": "English",
@@ -1944,12 +1944,12 @@
     ]
   },
   "downloads": {
-    "title": "Downloads",
+    "title": "⬇️ Downloads",
     "label": "Download Bilingual summary curriculum (English-Spanish)",
     "note": "Click this button to download my bilingual summary curriculum."
   },
   "education": {
-    "title": "Education",
+    "title": "🎓 Education",
     "labels": {
       "university": "University",
       "web": "Web site",
@@ -1966,7 +1966,7 @@
     "period": "Sep. 2000 - Oct. 2005 (Completed)"
   },
   "availability": {
-    "title": "Availability",
+    "title": "🟢 Availability",
     "cta": {
       "title": "Open to new opportunities",
       "text": "I am open to new professional opportunities where I can add value through backend development and APIs, complemented by frontend work to build complete applications. If you think my profile could fit your team or project, I would be glad to talk with you."

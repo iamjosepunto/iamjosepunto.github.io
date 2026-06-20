@@ -22,7 +22,7 @@
     "description2": "Especializado en .NET, C#, React, TypeScript, SQL, MongoDB y arquitecturas Full Stack modernas. Apasionado por la ingeniería del software, la automatización, la inteligencia artificial y el aprendizaje continuo."
   },
   "about": {
-    "title": "Acerca de",
+    "title": "👋 Acerca de",
     "paragraph1": "Comencé mi carrera profesional como Ingeniero Industrial, participando en proyectos relacionados con eficiencia energética, instalaciones eléctricas, climatización e instalaciones industriales.",
     "paragraph2": "Durante aquellos años, el desarrollo de software era inicialmente una pasión personal. Con el tiempo, esa pasión se convirtió en mi profesión principal y finalmente me llevó a dedicarme por completo a la ingeniería del software.",
     "paragraph3": "Actualmente trabajo como Analista Programador .NET Senior Full Stack, participando en el análisis, diseño, desarrollo y mantenimiento de aplicaciones empresariales, APIs REST, plataformas web y soluciones móviles.",
@@ -56,7 +56,7 @@
       "title": "Aptitudes técnicas",
       "groups": [
         {
-          "group": "TOOLS",
+          "group": "🧰 TOOLS",
           "subgroups": [
             {
               "sub": null,
@@ -144,7 +144,7 @@
           ]
         },
         {
-          "group": "BACKEND",
+          "group": "⚙️ BACKEND",
           "subgroups": [
             {
               "sub": null,
@@ -226,7 +226,7 @@
               ]
             },
             {
-              "sub": "BASES DE DATOS",
+              "sub": "🗄️ BASES DE DATOS",
               "categories": [
                 {
                   "cat": "SQL",
@@ -280,10 +280,10 @@
           ]
         },
         {
-          "group": "FRONTEND",
+          "group": "🎨 FRONTEND",
           "subgroups": [
             {
-              "sub": "WEB",
+              "sub": "🌐 WEB",
               "categories": [
                 {
                   "cat": "JavaScript Frameworks y Librerías",
@@ -371,7 +371,7 @@
               ]
             },
             {
-              "sub": "ANDROID",
+              "sub": "🤖 ANDROID",
               "categories": [
                 {
                   "cat": "",
@@ -396,7 +396,7 @@
       "title": "Aptitudes humanas",
       "categories": [
         {
-          "cat": "Personales",
+          "cat": "🌟 Personales",
           "skills": [
             {
               "name": "Gestión del tiempo",
@@ -417,7 +417,7 @@
           ]
         },
         {
-          "cat": "Analíticas",
+          "cat": "🧠 Analíticas",
           "skills": [
             {
               "name": "Resolución de problemas",
@@ -442,7 +442,7 @@
           ]
         },
         {
-          "cat": "Interpersonales",
+          "cat": "🤝 Interpersonales",
           "skills": [
             {
               "name": "Comunicación",
@@ -467,7 +467,7 @@
           ]
         },
         {
-          "cat": "Profesionales",
+          "cat": "💼 Profesionales",
           "skills": [
             {
               "name": "Automotivación",
@@ -499,17 +499,17 @@
       "m": "Nivel medio",
       "b": "Nivel básico"
     },
-    "title": "Habilidades"
+    "title": "🛠️ Habilidades"
   },
   "lab": {
-    "title": "Laboratorio"
+    "title": "🧪 Laboratorio"
   },
   "footer": {
     "subtitle": "Ingeniero Industrial (finalizada) · Analista Programador .NET Senior Full Stack · IA y Automatización de Software",
     "builtWith": "Desarrollado con 😊 usando ⚛️ React, ⚡ Vite y 🎨 Tailwind CSS."
   },
   "projects": {
-    "title": "Mis proyectos - Portfolio",
+    "title": "🗂️ Mis proyectos - Portfolio",
     "labels": {
       "resumen": "Resumen",
       "objetivo": "Objetivo",
@@ -1336,7 +1336,7 @@
     }
   },
   "contact": {
-    "title": "Contacto",
+    "title": "✉️ Contacto",
     "subtitle": "¿Hablamos? Puedes contactarme a través de estos canales.",
     "email": "Email",
     "linkedin": "LinkedIn",
@@ -1358,12 +1358,12 @@
     }
   },
   "location": {
-    "title": "Ubicación",
+    "title": "📍 Ubicación",
     "place": "Toledo, España, Europa",
     "description": "Vivo en Toledo capital (España-Europa), una de las ciudades medievales más bonitas y turísticas del mundo."
   },
   "experience": {
-    "title": "Experiencia",
+    "title": "💼 Experiencia",
     "labels": {
       "company": "Empresa",
       "location": "Ubicación",
@@ -1929,7 +1929,7 @@
     }
   },
   "languages": {
-    "title": "Idiomas",
+    "title": "🌐 Idiomas",
     "items": [
       {
         "name": "Inglés",
@@ -1944,12 +1944,12 @@
     ]
   },
   "downloads": {
-    "title": "Descargas",
+    "title": "⬇️ Descargas",
     "label": "Descargar currículum resumido bilingüe (Inglés-Español)",
     "note": "Pulsa este botón para descargar mi currículum resumido y bilingüe."
   },
   "education": {
-    "title": "Educación",
+    "title": "🎓 Educación",
     "labels": {
       "university": "Universidad",
       "web": "Sitio web",
@@ -1966,7 +1966,7 @@
     "period": "sep. 2000 - oct. 2005 (Finalizada)"
   },
   "availability": {
-    "title": "Disponibilidad",
+    "title": "🟢 Disponibilidad",
     "cta": {
       "title": "Abierto a nuevas oportunidades",
       "text": "Estoy abierto a nuevas oportunidades profesionales donde aportar valor desde el desarrollo backend y las APIs, complementando con frontend para construir aplicaciones completas. Si crees que mi perfil puede encajar en tu equipo o proyecto, estaré encantado de hablar contigo."
