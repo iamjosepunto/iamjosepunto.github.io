@@ -65,7 +65,7 @@
                   "cat": "IDEs",
                   "skills": [
                     {
-                      "name": "V. Studio 2022",
+                      "name": "Visual Studio 2022",
                       "level": "A"
                     },
                     {
@@ -130,7 +130,7 @@
                   "cat": "Architectures & Quality",
                   "skills": [
                     {
-                      "name": "Clean Arch.",
+                      "name": "Clean Architecture",
                       "level": "A"
                     },
                     {
@@ -257,7 +257,7 @@
                       "level": "A"
                     },
                     {
-                      "name": "EF",
+                      "name": "Entity Framework",
                       "level": "A"
                     },
                     {
