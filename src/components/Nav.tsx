@@ -76,15 +76,16 @@ const Nav = () => {
 
         {/* Desktop controls */}
         <div className="hidden md:flex items-center gap-4">
-          <div className="text-base">
+          <div className="text-base flex items-center">
             <button
               onClick={() => changeLanguage("en")}
               className={
                 i18n.language.startsWith("en")
-                  ? "text-yellow-400 font-bold cursor-pointer"
-                  : "text-ivory hover:text-yellow-300 transition cursor-pointer"
+                  ? "text-yellow-400 font-bold cursor-pointer flex items-center gap-2"
+                  : "text-ivory hover:text-yellow-300 transition cursor-pointer flex items-center gap-2"
               }
             >
+              <img src="/Bandera_En.jpg" alt="EN" className="w-6 h-4 object-cover rounded-sm" />
               EN
             </button>
 
@@ -94,11 +95,12 @@ const Nav = () => {
               onClick={() => changeLanguage("es")}
               className={
                 i18n.language.startsWith("es")
-                  ? "text-yellow-400 font-bold cursor-pointer"
-                  : "text-ivory hover:text-yellow-300 transition cursor-pointer"
+                  ? "text-yellow-400 font-bold cursor-pointer flex items-center gap-2"
+                  : "text-ivory hover:text-yellow-300 transition cursor-pointer flex items-center gap-2"
               }
             >
               ES
+              <img src="/Bandera_Es.jpg" alt="ES" className="w-6 h-4 object-cover rounded-sm" />
             </button>
           </div>
         </div>
@@ -173,15 +175,16 @@ const Nav = () => {
               {t("nav.contact")}
             </a>
 
-            <div className="pt-2 border-t border-slate-800">
+            <div className="pt-2 border-t border-slate-800 flex items-center">
               <button
                 onClick={() => changeLanguage("en")}
                 className={
                   i18n.language.startsWith("en")
-                    ? "text-yellow-400 font-bold mr-4"
-                    : "text-ivory mr-4"
+                    ? "text-yellow-400 font-bold mr-4 flex items-center gap-2"
+                    : "text-ivory mr-4 flex items-center gap-2"
                 }
               >
+                <img src="/Bandera_En.jpg" alt="EN" className="w-6 h-4 object-cover rounded-sm" />
                 EN
               </button>
 
@@ -189,11 +192,12 @@ const Nav = () => {
                 onClick={() => changeLanguage("es")}
                 className={
                   i18n.language.startsWith("es")
-                    ? "text-yellow-400 font-bold"
-                    : "text-ivory"
+                    ? "text-yellow-400 font-bold flex items-center gap-2"
+                    : "text-ivory flex items-center gap-2"
                 }
               >
                 ES
+                <img src="/Bandera_Es.jpg" alt="ES" className="w-6 h-4 object-cover rounded-sm" />
               </button>
             </div>
           </div>
