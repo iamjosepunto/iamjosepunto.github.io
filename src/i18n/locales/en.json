@@ -56,7 +56,7 @@
       "title": "Hard skills",
       "groups": [
         {
-          "group": "🧰 TOOLS",
+          "group": "🔧 TOOLS",
           "subgroups": [
             {
               "sub": null,
@@ -226,7 +226,7 @@
               ]
             },
             {
-              "sub": "🗄️ DATA BASEs",
+              "sub": "💾 DATA BASEs",
               "categories": [
                 {
                   "cat": "SQL",
@@ -1336,7 +1336,7 @@
     }
   },
   "contact": {
-    "title": "✉️ Contact",
+    "title": "📬 Contact",
     "subtitle": "Let's talk? You can reach me through these channels.",
     "email": "Email",
     "linkedin": "LinkedIn",

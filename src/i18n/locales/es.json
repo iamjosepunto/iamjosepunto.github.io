@@ -56,7 +56,7 @@
       "title": "Aptitudes técnicas",
       "groups": [
         {
-          "group": "🧰 TOOLS",
+          "group": "🔧 TOOLS",
           "subgroups": [
             {
               "sub": null,
@@ -226,7 +226,7 @@
               ]
             },
             {
-              "sub": "🗄️ BASES DE DATOS",
+              "sub": "💾 BASES DE DATOS",
               "categories": [
                 {
                   "cat": "SQL",
@@ -1336,7 +1336,7 @@
     }
   },
   "contact": {
-    "title": "✉️ Contacto",
+    "title": "📬 Contacto",
     "subtitle": "¿Hablamos? Puedes contactarme a través de estos canales.",
     "email": "Email",
     "linkedin": "LinkedIn",
