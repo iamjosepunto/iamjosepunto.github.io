@@ -467,7 +467,7 @@
           ]
         },
         {
-          "cat": "💼 Professional",
+          "cat": "🏢 Professional",
           "skills": [
             {
               "name": "Self-motivation",
@@ -1363,7 +1363,7 @@
     "description": "I live in the city of Toledo (Spain-Europe), one of the most beautiful and touristic medieval cities in the world."
   },
   "experience": {
-    "title": "💼 Experience",
+    "title": "🏢 Experience",
     "labels": {
       "company": "Company",
       "location": "Location",

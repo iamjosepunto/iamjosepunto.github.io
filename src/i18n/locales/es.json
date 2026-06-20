@@ -467,7 +467,7 @@
           ]
         },
         {
-          "cat": "💼 Profesionales",
+          "cat": "🏢 Profesionales",
           "skills": [
             {
               "name": "Automotivación",
@@ -1363,7 +1363,7 @@
     "description": "Vivo en Toledo capital (España-Europa), una de las ciudades medievales más bonitas y turísticas del mundo."
   },
   "experience": {
-    "title": "💼 Experiencia",
+    "title": "🏢 Experiencia",
     "labels": {
       "company": "Empresa",
       "location": "Ubicación",
