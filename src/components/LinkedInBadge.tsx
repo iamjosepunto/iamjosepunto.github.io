@@ -52,25 +52,7 @@ const LinkedInBadge = () => {
 
         {/* Cuerpo */}
         <div className="px-4 pt-4 pb-5 flex flex-col flex-1">
-          <img
-            src="/FotoJosePunto.jpg"
-            alt={t("contact.li.name")}
-            className="w-[72px] h-[72px] rounded-full object-cover mx-auto mb-3"
-          />
-
-          <div className="text-[15px] font-semibold text-slate-900">
-            {t("contact.li.name")}
-          </div>
-
-          <p className="text-[12px] text-slate-600 leading-snug mt-1 px-1">
-            {t("contact.li.headline")}
-          </p>
-
-          <p className="text-[11px] text-slate-500 mt-2">
-            {t("contact.li.school")}
-          </p>
-
-          <div className="mt-auto pt-4">
+          <div className="mt-auto">
             <a
               href={PROFILE_URL}
               target="_blank"

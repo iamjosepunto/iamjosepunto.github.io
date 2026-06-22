@@ -44,21 +44,7 @@ const GitHubBadge = () => {
 
       {/* Cuerpo */}
       <div className="px-4 pt-4 pb-5 flex flex-col flex-1">
-        <img
-          src="/FotoJosePunto.jpg"
-          alt={t("contact.gh.name")}
-          className="w-[72px] h-[72px] rounded-full object-cover mx-auto mb-3"
-        />
-
-        <div className="text-[15px] font-semibold text-slate-900">
-          {t("contact.gh.name")}
-        </div>
-
-        <p className="text-[12px] text-slate-600 leading-snug mt-2 px-1">
-          {t("contact.gh.headline")}
-        </p>
-
-        <div className="mt-auto pt-4">
+        <div className="mt-auto">
           <a
             href={PROFILE_URL}
             target="_blank"
