@@ -64,14 +64,14 @@ const Contact = () => {
           "
       >
         <p className="text-lg text-ivory leading-relaxed mb-3">
+          {t("contact.subtitle")}
+        </p>
+
+        <p className="text-lg text-ivory leading-relaxed mb-6">
           <span className="text-yellow-400 font-semibold">
             {t("about.data.labels.contact")}
           </span>{" "}
           - {t("about.data.contact")}
-        </p>
-
-        <p className="text-lg text-ivory leading-relaxed mb-6">
-          {t("contact.subtitle")}
         </p>
 
         <div className="flex flex-col gap-4">
