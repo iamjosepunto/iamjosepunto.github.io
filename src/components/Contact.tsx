@@ -63,6 +63,13 @@ const Contact = () => {
             hover:-translate-y-1
           "
       >
+        <p className="text-lg text-ivory leading-relaxed mb-3">
+          <span className="text-yellow-400 font-semibold">
+            {t("about.data.labels.contact")}
+          </span>{" "}
+          - {t("about.data.contact")}
+        </p>
+
         <p className="text-lg text-ivory leading-relaxed mb-6">
           {t("contact.subtitle")}
         </p>
