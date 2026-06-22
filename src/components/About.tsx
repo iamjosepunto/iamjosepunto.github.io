@@ -34,12 +34,13 @@ const About = () => {
     workmode: string;
   };
 
-  const rows: { label: string; value: string; href?: string; copy?: boolean }[] = [
+  const rows: { label: string; value: string; href?: string; copy?: boolean; internal?: boolean }[] = [
     { label: data.labels.name, value: data.name },
     { label: data.labels.birth, value: data.birth },
     { label: data.labels.nationality, value: data.nationality },
     { label: data.labels.resident, value: data.resident },
     { label: data.labels.cv, value: data.cv, href: data.cv },
+    { label: data.labels.summaryCv, value: data.labels.summaryCvLink, href: "#downloads", internal: true },
     { label: data.labels.email, value: data.email, copy: true },
     { label: data.labels.contact, value: data.contact },
     { label: data.labels.availability, value: data.availability },
@@ -134,6 +135,13 @@ const About = () => {
                   {copied ? t("contact.copied") : t("contact.copy")}
                 </button>
               </span>
+            ) : row.internal && row.href ? (
+              <a
+                href={row.href}
+                className="text-ivory hover:text-yellow-400 transition sm:w-72"
+              >
+                {row.value}
+              </a>
             ) : row.href ? (
               <a
                 href={row.href}

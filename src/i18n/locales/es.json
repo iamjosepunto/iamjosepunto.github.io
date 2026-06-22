@@ -38,7 +38,9 @@
         "email": "Email",
         "contact": "Método de contacto",
         "availability": "Disponibilidad",
-        "workmode": "Modo de trabajo deseado"
+        "workmode": "Modo de trabajo deseado",
+        "summaryCv": "CV resumido",
+        "summaryCvLink": "Ir a Descargas"
       },
       "name": "Jose .",
       "birth": "Nov. 1981",
