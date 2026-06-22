@@ -16,7 +16,7 @@ const Nav = () => {
 
   return (
     <header
-      className="sticky top-0 z-50 backdrop-blur border-b border-slate-800"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur border-b border-slate-800"
       style={{ backgroundColor: "rgba(17, 29, 51, 0.8)" }}
     >
       <nav className="max-w-full mx-auto px-6 h-16 flex items-center justify-between md:justify-center gap-5">

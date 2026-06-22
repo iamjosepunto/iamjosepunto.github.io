@@ -24,7 +24,7 @@ function App() {
     >
       <Nav />
 
-      <main>
+      <main className="pt-16">
         <Hero />
 
         <About />
