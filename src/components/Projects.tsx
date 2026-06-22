@@ -10,7 +10,7 @@ const Projects = () => {
   const { t } = useTranslation();
 
   const [selected, setSelected] = useState<TaskRef | typeof SUMMARY>(
-    PROJECT_GROUPS[0].tasks[0]
+    SUMMARY
   );
 
   const [selectedEmpresa, setSelectedEmpresa] = useState<string>(
