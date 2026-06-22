@@ -8,7 +8,7 @@ const LinkedInBadge = () => {
   return (
     <div
       className="
-        w-[300px]
+        w-fit
         bg-white
         rounded-md
         overflow-hidden
@@ -24,9 +24,9 @@ const LinkedInBadge = () => {
       style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
     >
         {/* Cabecera con logo LinkedIn */}
-        <div className="flex items-center px-4 py-3 border-b border-slate-200">
+        <div className="flex items-center justify-center px-6 py-3 border-b border-slate-200">
           <span
-            className="text-[20px] font-bold text-slate-800"
+            className="text-[27px] font-bold text-slate-800"
             style={{ letterSpacing: "-0.5px" }}
           >
             Linked
@@ -37,12 +37,12 @@ const LinkedInBadge = () => {
               items-center
               justify-center
               ml-0.5
-              w-[24px]
-              h-[24px]
+              w-[32px]
+              h-[32px]
               rounded
               bg-[#0A66C2]
               text-white
-              text-[13px]
+              text-[18px]
               font-bold
             "
           >
