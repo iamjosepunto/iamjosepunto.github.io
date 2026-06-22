@@ -3,6 +3,7 @@ import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import LinkedInBadge from "./LinkedInBadge";
 import GitHubBadge from "./GitHubBadge";
+import WellFoundBadge from "./WellFoundBadge";
 import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
@@ -34,6 +35,11 @@ const Contact = () => {
       label: t("contact.github"),
       value: PROFILE.socials.github.replace(/^https?:\/\//, ""),
       href: PROFILE.socials.github,
+    },
+    {
+      label: t("contact.wellfound"),
+      value: PROFILE.socials.wellfound.replace(/^https?:\/\//, ""),
+      href: PROFILE.socials.wellfound,
     },
     {
       label: t("contact.web"),
@@ -123,6 +129,7 @@ const Contact = () => {
       <div className="mt-6 flex flex-wrap justify-center items-stretch gap-6">
         <LinkedInBadge />
         <GitHubBadge />
+        <WellFoundBadge />
       </div>
     </section>
   );

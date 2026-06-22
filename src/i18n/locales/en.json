@@ -1357,6 +1357,10 @@
       "user": "@iamjosepunto",
       "headline": "React | TypeScript | C# | .NET | ASP.NET | Blazor | Razor | MVC | MongoDB | SQL | Unity | PowerShell | 🌐 Web · 🔌 API Rest · 📱 Mobile | 🧠 AI | 💻 Full Stack Developer | 👨‍💻 Industrial engineer",
       "cta": "View profile"
+    },
+    "wellfound": "WellFound",
+    "wf": {
+      "cta": "View profile"
     }
   },
   "location": {
