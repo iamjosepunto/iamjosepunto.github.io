@@ -48,7 +48,7 @@
       "resident": "Toledo, España (Europa)",
       "cv": "https://iamjosepunto.github.io",
       "email": "iamjosepunto@gmail.com",
-      "contact": "Preferiblemente email",
+      "contact": "Preferiblemente por email",
       "availability": "Trabajando, abierto a un cambio",
       "workmode": "Teletrabajo o híbrido"
     }
@@ -1356,10 +1356,6 @@
       "name": "Jose .",
       "user": "@iamjosepunto",
       "headline": "React | TypeScript | C# | .NET | ASP.NET | Blazor | Razor | MVC | MongoDB | SQL | Unity | PowerShell | 🌐 Web · 🔌 API Rest · 📱 Mobile | 🧠 IA | 💻 Desarrollador Full Stack | 👨‍💻 Ingeniero industrial",
-      "cta": "Ver perfil"
-    },
-    "wellfound": "WellFound",
-    "wf": {
       "cta": "Ver perfil"
     }
   },
