@@ -36,7 +36,6 @@ export const PROFILE = {
     linkedin: "https://linkedin.com/in/iamjosepunto",
     github: "https://github.com/iamjosepunto",
     web: "https://iamjosepunto.github.io/",
-    wellfound: "https://wellfound.com/u/iamjosepunto",
   },
 };
 
