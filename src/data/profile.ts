@@ -33,8 +33,13 @@ export const PROFILE = {
 
   socials: {
     email: "iamjosepunto@gmail.com",
-    linkedin: "https://linkedin.com/in/iamjosepunto",
+    linkedin: "https://www.linkedin.com/in/iamjosepunto",
     github: "https://github.com/iamjosepunto",
+    gitlab: "https://gitlab.com/iamjosepunto/iamjosepunto",
+    devto: "https://dev.to/iamjosepunto",
+    stackoverflow: "https://stackoverflow.com/users/32871984/iamjosepunto",
+    wellfound: "https://wellfound.com/u/iamjosepunto",
+    arc: "https://arc.dev/@iamjosepunto",
     web: "https://iamjosepunto.github.io/",
   },
 };

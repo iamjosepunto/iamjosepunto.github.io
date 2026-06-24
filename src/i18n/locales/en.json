@@ -1346,18 +1346,10 @@
     "web": "Portfolio",
     "copy": "Copy",
     "copied": "Copied!",
-    "li": {
-      "name": "Jose .",
-      "headline": "👨‍💻 Industrial engineer (completed) || 💻 Full Stack Developer || 🧠 AI || 🌐 Web · 🔌 API Rest · 📱 Mobile || React || TypeScript || Blazor || Razor || MVC || C# || .NET || ASP.NET || MongoDB || SQL || Unity || PowerShell",
-      "school": "Universidad Alfonso X el Sabio",
-      "cta": "View profile"
-    },
-    "gh": {
-      "name": "Jose .",
-      "user": "@iamjosepunto",
-      "headline": "React | TypeScript | C# | .NET | ASP.NET | Blazor | Razor | MVC | MongoDB | SQL | Unity | PowerShell | 🌐 Web · 🔌 API Rest · 📱 Mobile | 🧠 AI | 💻 Full Stack Developer | 👨‍💻 Industrial engineer",
-      "cta": "View profile"
-    }
+    "catSocial": "Social networks",
+    "catRepos": "Source code repositories",
+    "catCommunities": "Developer communities",
+    "catPublic": "Public profiles"
   },
   "location": {
     "title": "📍 Location",

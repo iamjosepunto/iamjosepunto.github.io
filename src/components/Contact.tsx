@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
-import LinkedInBadge from "./LinkedInBadge";
-import GitHubBadge from "./GitHubBadge";
 import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
@@ -24,21 +22,22 @@ const Contact = () => {
     window.setTimeout(() => setCopied(false), 2000);
   };
 
-  const links = [
+  const groups = [
     {
-      label: t("contact.linkedin"),
-      value: PROFILE.socials.linkedin.replace(/^https?:\/\//, ""),
-      href: PROFILE.socials.linkedin,
+      label: t("contact.catSocial"),
+      links: [PROFILE.socials.linkedin],
     },
     {
-      label: t("contact.github"),
-      value: PROFILE.socials.github.replace(/^https?:\/\//, ""),
-      href: PROFILE.socials.github,
+      label: t("contact.catRepos"),
+      links: [PROFILE.socials.github, PROFILE.socials.gitlab],
     },
     {
-      label: t("contact.web"),
-      value: PROFILE.socials.web.replace(/^https?:\/\//, "").replace(/\/$/, ""),
-      href: PROFILE.socials.web,
+      label: t("contact.catCommunities"),
+      links: [PROFILE.socials.devto, PROFILE.socials.stackoverflow],
+    },
+    {
+      label: t("contact.catPublic"),
+      links: [PROFILE.socials.wellfound, PROFILE.socials.arc],
     },
   ];
 
@@ -74,10 +73,10 @@ const Contact = () => {
           - {t("about.data.contact")}
         </p>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {/* Email: texto + botón Copiar (sin enlace) */}
           <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left">
-            <span className="text-sm font-semibold text-blue-400 sm:w-24 shrink-0">
+            <span className="text-sm font-semibold text-blue-400 sm:w-56 shrink-0">
               {t("contact.email")}
             </span>
 
@@ -92,37 +91,32 @@ const Contact = () => {
             </span>
           </div>
 
-          {/* Resto de enlaces */}
-          {links.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                flex
-                flex-col
-                sm:flex-row
-                sm:items-baseline
-                sm:gap-3
-                group
-              "
+          {/* Grupos de enlaces por categoría */}
+          {groups.map((group) => (
+            <div
+              key={group.label}
+              className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left"
             >
-              <span className="text-sm font-semibold text-blue-400 sm:w-24 shrink-0">
-                {item.label}
+              <span className="text-sm font-semibold text-blue-400 sm:w-56 shrink-0">
+                {group.label}
               </span>
 
-              <span className="text-ivory group-hover:text-yellow-400 transition break-all">
-                {item.value}
-              </span>
-            </a>
+              <div className="flex flex-col gap-1 min-w-0">
+                {group.links.map((href) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ivory hover:text-yellow-400 transition break-all"
+                  >
+                    {href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                  </a>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
-      </div>
-
-      <div className="mt-6 flex flex-wrap justify-center items-stretch gap-6">
-        <LinkedInBadge />
-        <GitHubBadge />
       </div>
     </section>
   );
