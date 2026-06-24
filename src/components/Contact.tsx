@@ -39,6 +39,7 @@ const Contact = () => {
       links: [
         { name: "DEV.to", href: PROFILE.socials.devto },
         { name: "Stack Overflow", href: PROFILE.socials.stackoverflow },
+        { name: "CodePen", href: PROFILE.socials.codepen },
       ],
     },
     {

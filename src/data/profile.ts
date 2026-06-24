@@ -38,6 +38,7 @@ export const PROFILE = {
     gitlab: "https://gitlab.com/iamjosepunto/iamjosepunto",
     devto: "https://dev.to/iamjosepunto",
     stackoverflow: "https://stackoverflow.com/users/32871984/iamjosepunto",
+    codepen: "https://codepen.io/iamjosepunto",
     wellfound: "https://wellfound.com/u/iamjosepunto",
     arc: "https://arc.dev/@iamjosepunto",
     web: "https://iamjosepunto.github.io/",
