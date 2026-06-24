@@ -116,7 +116,7 @@ const Contact = () => {
                   {group.links.map((link) => (
                     <div key={link.href} className="flex flex-col min-w-0">
                       {/* Nombre del sitio encima del enlace */}
-                      <span className="text-base font-semibold text-slate-300">
+                      <span className="text-base font-semibold text-sky-300">
                         {link.name}
                       </span>
                       <a
