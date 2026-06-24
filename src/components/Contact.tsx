@@ -62,7 +62,7 @@ const Contact = () => {
             hover:-translate-y-1
           "
       >
-        <p className="text-lg text-ivory leading-relaxed mb-3">
+        <p className="text-lg text-ivory leading-relaxed mb-3 text-center">
           {t("contact.subtitle")}
         </p>
 
@@ -75,7 +75,7 @@ const Contact = () => {
 
         <div className="flex flex-col gap-6">
           {/* Email: texto + botón Copiar (sin enlace) */}
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left">
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left border border-yellow-400 rounded-xl p-4">
             <span className="text-sm font-semibold text-blue-400 sm:w-56 shrink-0">
               {t("contact.email")}
             </span>
@@ -95,7 +95,7 @@ const Contact = () => {
           {groups.map((group) => (
             <div
               key={group.label}
-              className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left"
+              className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left border border-yellow-400 rounded-xl p-4"
             >
               <span className="text-sm font-semibold text-blue-400 sm:w-56 shrink-0">
                 {group.label}
