@@ -33,7 +33,7 @@ export const PROFILE = {
 
   socials: {
     email: "iamjosepunto@gmail.com",
-    linkedin: "https://www.linkedin.com/in/iamjosepunto",
+    linkedin: "https://linkedin.com/in/iamjosepunto",
     github: "https://github.com/iamjosepunto",
     gitlab: "https://gitlab.com/iamjosepunto/iamjosepunto",
     devto: "https://dev.to/iamjosepunto",

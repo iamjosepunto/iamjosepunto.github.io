@@ -102,26 +102,32 @@ const Contact = () => {
 
           {/* Grupos de enlaces por categoría */}
           {groups.map((group) => (
-            <div
-              key={group.label}
-              className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left border border-yellow-400 rounded-xl p-4"
-            >
-              <span className="text-sm font-semibold text-blue-400 sm:w-56 shrink-0">
+            <div key={group.label} className="flex flex-col">
+              {/* Título de categoría: fuera de la cajita, arriba, centrado */}
+              <span className="text-sm font-semibold text-blue-400 text-center mb-2">
                 {group.label}
               </span>
 
-              <div className="flex flex-col gap-1 min-w-0">
-                {group.links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-ivory hover:text-yellow-400 transition break-all"
-                  >
-                    {link.name} - {link.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                  </a>
-                ))}
+              {/* Cajita con borde amarillo */}
+              <div className="border border-yellow-400 rounded-xl p-4">
+                <div className="flex flex-col gap-3">
+                  {group.links.map((link) => (
+                    <div key={link.href} className="flex flex-col min-w-0">
+                      {/* Nombre del sitio encima del enlace */}
+                      <span className="text-sm font-semibold text-ivory">
+                        {link.name}
+                      </span>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {link.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
