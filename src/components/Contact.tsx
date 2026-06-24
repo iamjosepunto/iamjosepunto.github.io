@@ -83,21 +83,23 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col gap-6">
-          {/* Email: texto + botón Copiar (sin enlace) */}
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 text-left border border-yellow-400 rounded-xl p-4">
-            <span className="text-sm font-semibold text-blue-400 sm:w-56 shrink-0">
+          {/* Email: etiqueta centrada arriba + cajita con texto y botón Copiar */}
+          <div className="flex flex-col">
+            <span className="text-sm font-semibold text-blue-400 text-center mb-2">
               {t("contact.email")}
             </span>
 
-            <span className="text-ivory break-all flex items-center gap-3">
-              {PROFILE.socials.email}
-              <button
-                onClick={copyEmail}
-                className="text-base text-yellow-400 font-semibold shrink-0 cursor-pointer"
-              >
-                {copied ? t("contact.copied") : t("contact.copy")}
-              </button>
-            </span>
+            <div className="border border-yellow-400 rounded-xl p-4">
+              <span className="text-ivory break-all flex items-center gap-3">
+                {PROFILE.socials.email}
+                <button
+                  onClick={copyEmail}
+                  className="text-base text-yellow-400 font-semibold shrink-0 cursor-pointer"
+                >
+                  {copied ? t("contact.copied") : t("contact.copy")}
+                </button>
+              </span>
+            </div>
           </div>
 
           {/* Grupos de enlaces por categoría */}
