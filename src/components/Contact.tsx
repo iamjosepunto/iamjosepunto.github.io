@@ -85,7 +85,7 @@ const Contact = () => {
         <div className="flex flex-col gap-6">
           {/* Email: etiqueta centrada arriba + cajita con texto y botón Copiar */}
           <div className="flex flex-col">
-            <span className="text-sm font-semibold text-blue-400 text-center mb-2">
+            <span className="text-sm font-semibold text-blue-400 text-center mb-2 uppercase">
               {t("contact.email")}
             </span>
 
@@ -106,7 +106,7 @@ const Contact = () => {
           {groups.map((group) => (
             <div key={group.label} className="flex flex-col">
               {/* Título de categoría: fuera de la cajita, arriba, centrado */}
-              <span className="text-sm font-semibold text-blue-400 text-center mb-2">
+              <span className="text-sm font-semibold text-blue-400 text-center mb-2 uppercase">
                 {group.label}
               </span>
 
