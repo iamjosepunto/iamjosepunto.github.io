@@ -25,19 +25,28 @@ const Contact = () => {
   const groups = [
     {
       label: t("contact.catSocial"),
-      links: [PROFILE.socials.linkedin],
+      links: [{ name: "LinkedIn", href: PROFILE.socials.linkedin }],
     },
     {
       label: t("contact.catRepos"),
-      links: [PROFILE.socials.github, PROFILE.socials.gitlab],
+      links: [
+        { name: "GitHub", href: PROFILE.socials.github },
+        { name: "GitLab", href: PROFILE.socials.gitlab },
+      ],
     },
     {
       label: t("contact.catCommunities"),
-      links: [PROFILE.socials.devto, PROFILE.socials.stackoverflow],
+      links: [
+        { name: "DEV.to", href: PROFILE.socials.devto },
+        { name: "Stack Overflow", href: PROFILE.socials.stackoverflow },
+      ],
     },
     {
       label: t("contact.catPublic"),
-      links: [PROFILE.socials.wellfound, PROFILE.socials.arc],
+      links: [
+        { name: "WellFound", href: PROFILE.socials.wellfound },
+        { name: "Arc.dev", href: PROFILE.socials.arc },
+      ],
     },
   ];
 
@@ -102,15 +111,15 @@ const Contact = () => {
               </span>
 
               <div className="flex flex-col gap-1 min-w-0">
-                {group.links.map((href) => (
+                {group.links.map((link) => (
                   <a
-                    key={href}
-                    href={href}
+                    key={link.href}
+                    href={link.href}
                     target="_blank"
                     rel="noreferrer"
                     className="text-ivory hover:text-yellow-400 transition break-all"
                   >
-                    {href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                    {link.name} - {link.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
                   </a>
                 ))}
               </div>
