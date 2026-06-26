@@ -57,7 +57,7 @@ const Education = () => {
                 py-2.5
               "
             >
-              <span className="text-sm font-semibold text-blue-400 sm:w-40 shrink-0">
+              <span className="text-sm font-semibold text-sky-300 sm:w-40 shrink-0">
                 {row.label}
               </span>
 

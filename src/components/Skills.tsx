@@ -47,7 +47,7 @@ const SkillTag = ({ skill }: { skill: Skill }) => (
 const CategoryBlock = ({ category }: { category: Category }) => (
   <div className="mb-4">
     {category.cat && (
-      <div className="text-xs font-semibold uppercase tracking-wide text-slate-400 mb-2 text-center">
+      <div className="text-xs font-semibold uppercase tracking-wide text-sky-300 mb-2 text-center">
         {category.cat}
       </div>
     )}
