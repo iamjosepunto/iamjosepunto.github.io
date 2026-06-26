@@ -11,3 +11,22 @@ html {
 body {
   margin: 0;
 }
+
+@keyframes blinkSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.blink-soft {
+  animation: blinkSoft 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink-soft {
+    animation: none;
+  }
+}

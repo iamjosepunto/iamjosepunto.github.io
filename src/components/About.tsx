@@ -34,7 +34,7 @@ const About = () => {
     workmode: string;
   };
 
-  const rows: { label: string; value: string; href?: string; copy?: boolean; internal?: boolean }[] = [
+  const rows: { label: string; value: string; href?: string; copy?: boolean; internal?: boolean; blink?: boolean }[] = [
     { label: data.labels.name, value: data.name },
     { label: data.labels.birth, value: data.birth },
     { label: data.labels.nationality, value: data.nationality },
@@ -42,7 +42,7 @@ const About = () => {
     { label: data.labels.cv, value: data.cv, href: data.cv },
     { label: data.labels.summaryCv, value: data.labels.summaryCvLink, href: "#downloads", internal: true },
     { label: data.labels.email, value: data.email, copy: true },
-    { label: data.labels.contact, value: data.contact },
+    { label: data.labels.contact, value: data.contact, blink: true },
     { label: data.labels.availability, value: data.availability },
     { label: data.labels.workmode, value: data.workmode },
   ];
@@ -152,7 +152,13 @@ const About = () => {
                 {row.value}
               </a>
             ) : (
-              <span className="text-ivory sm:w-72">{row.value}</span>
+              <span className="text-ivory sm:w-72">
+                {row.blink ? (
+                  <span className="blink-soft">{row.value}</span>
+                ) : (
+                  row.value
+                )}
+              </span>
             )}
           </div>
         ))}
