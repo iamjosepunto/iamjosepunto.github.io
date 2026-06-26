@@ -3,6 +3,17 @@ import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "./SectionTitle";
 
+type Item =
+  | { name: string; href: string }
+  | { name: string; pending: true };
+
+type SubGroup = { subLabel?: string; items: Item[] };
+
+type Group = {
+  label: string;
+  subGroups: SubGroup[];
+};
+
 const Contact = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
@@ -22,31 +33,98 @@ const Contact = () => {
     window.setTimeout(() => setCopied(false), 2000);
   };
 
-  const groups = [
+  const groups: Group[] = [
     {
       label: t("contact.catSocial"),
-      links: [{ name: "LinkedIn", href: PROFILE.socials.linkedin }],
+      subGroups: [
+        {
+          items: [{ name: "LinkedIn", href: PROFILE.socials.linkedin }],
+        },
+      ],
     },
     {
       label: t("contact.catRepos"),
-      links: [
-        { name: "GitHub", href: PROFILE.socials.github },
-        { name: "GitLab", href: PROFILE.socials.gitlab },
+      subGroups: [
+        {
+          items: [
+            { name: "GitHub", href: PROFILE.socials.github },
+            { name: "GitLab", href: PROFILE.socials.gitlab },
+            { name: "Bitbucket", pending: true },
+            { name: "SourceForge", pending: true },
+            { name: "Codeberg", pending: true },
+          ],
+        },
       ],
     },
     {
       label: t("contact.catCommunities"),
-      links: [
-        { name: "DEV.to", href: PROFILE.socials.devto },
-        { name: "Stack Overflow", href: PROFILE.socials.stackoverflow },
-        { name: "CodePen", href: PROFILE.socials.codepen },
+      subGroups: [
+        {
+          subLabel: t("contact.subBlogging"),
+          items: [
+            { name: "DEV.to", href: PROFILE.socials.devto },
+            { name: "Hashnode", pending: true },
+            { name: "Medium", pending: true },
+          ],
+        },
+        {
+          subLabel: t("contact.subQA"),
+          items: [
+            { name: "Stack Overflow", href: PROFILE.socials.stackoverflow },
+            { name: "Quora", pending: true },
+          ],
+        },
+        {
+          subLabel: t("contact.subForums"),
+          items: [
+            { name: "Hacker News", pending: true },
+            { name: "Reddit", pending: true },
+          ],
+        },
+        {
+          subLabel: t("contact.subPlaygrounds"),
+          items: [
+            { name: "CodePen", href: PROFILE.socials.codepen },
+            { name: "Replit", pending: true },
+            { name: "freeCodeCamp", pending: true },
+          ],
+        },
+        {
+          subLabel: t("contact.subDesign"),
+          items: [{ name: "Dribbble", pending: true }],
+        },
       ],
     },
     {
       label: t("contact.catPublic"),
-      links: [
-        { name: "WellFound", href: PROFILE.socials.wellfound },
-        { name: "Arc.dev", href: PROFILE.socials.arc },
+      subGroups: [
+        {
+          subLabel: t("contact.subJobs"),
+          items: [
+            { name: "WellFound", href: PROFILE.socials.wellfound },
+            { name: "Arc.dev", href: PROFILE.socials.arc },
+          ],
+        },
+        {
+          subLabel: t("contact.subPortfolio"),
+          items: [
+            { name: "Devpost", pending: true },
+            { name: "Product Hunt", pending: true },
+            { name: "Behance", pending: true },
+          ],
+        },
+        {
+          subLabel: t("contact.subCareer"),
+          items: [{ name: "Polywork", pending: true }],
+        },
+        {
+          subLabel: t("contact.subIdentity"),
+          items: [
+            { name: "Gravatar", pending: true },
+            { name: "about.me", pending: true },
+            { name: "Linktree", pending: true },
+          ],
+        },
       ],
     },
   ];
@@ -113,21 +191,57 @@ const Contact = () => {
 
               {/* Cajita con borde amarillo */}
               <div className="border border-yellow-400 rounded-xl p-4">
-                <div className="flex flex-col gap-3">
-                  {group.links.map((link) => (
-                    <div key={link.href} className="flex flex-col min-w-0">
-                      {/* Nombre del sitio encima del enlace */}
-                      <span className="text-base font-semibold text-sky-300">
-                        {link.name}
-                      </span>
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-ivory hover:text-yellow-400 transition break-all"
+                <div className="flex flex-col gap-4">
+                  {group.subGroups.map((sub, sIdx) => (
+                    <div key={sub.subLabel ?? sIdx} className="flex flex-col">
+                      {/* Subtítulo de subcategoría (opcional) */}
+                      {sub.subLabel && (
+                        <span className="text-sm font-semibold text-yellow-300 mb-2">
+                          {sub.subLabel}
+                        </span>
+                      )}
+
+                      <div
+                        className={`flex flex-col gap-3 ${
+                          sub.subLabel ? "pl-1" : ""
+                        }`}
                       >
-                        {link.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                      </a>
+                        {sub.items.map((item) =>
+                          "pending" in item ? (
+                            <div
+                              key={item.name}
+                              className="flex flex-col min-w-0"
+                            >
+                              <span className="text-base font-semibold text-slate-500">
+                                {item.name}{" "}
+                                <span className="text-sm font-normal text-slate-500">
+                                  ({t("contact.pending")})
+                                </span>
+                              </span>
+                            </div>
+                          ) : (
+                            <div
+                              key={item.href}
+                              className="flex flex-col min-w-0"
+                            >
+                              {/* Nombre del sitio encima del enlace */}
+                              <span className="text-base font-semibold text-sky-300">
+                                {item.name}
+                              </span>
+                              <a
+                                href={item.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-ivory hover:text-yellow-400 transition break-all"
+                              >
+                                {item.href
+                                  .replace(/^https?:\/\//, "")
+                                  .replace(/\/$/, "")}
+                              </a>
+                            </div>
+                          )
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>

@@ -1349,7 +1349,17 @@
     "catSocial": "Redes sociales",
     "catRepos": "Repositorios de código fuente",
     "catCommunities": "Comunidades de desarrolladores",
-    "catPublic": "Perfiles públicos - Sólo tecnología"
+    "catPublic": "Perfiles públicos - Sólo tecnología",
+    "subBlogging": "Blogging / Artículos",
+    "subQA": "Q&A (Preguntas y Respuestas)",
+    "subForums": "Foros / Discusión",
+    "subPlaygrounds": "Code playgrounds / Práctica",
+    "subDesign": "Diseño / UI",
+    "subJobs": "Portales de empleo tech",
+    "subPortfolio": "Portfolio / Proyectos",
+    "subCareer": "Trayectoria profesional",
+    "subIdentity": "Identidad / Agregadores",
+    "pending": "pendiente"
   },
   "location": {
     "title": "📍 Ubicación",
