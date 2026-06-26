@@ -203,7 +203,7 @@ const Contact = () => {
 
                       <div
                         className={`flex flex-col gap-3 ${
-                          sub.subLabel ? "pl-1" : ""
+                          sub.subLabel ? "pl-4" : ""
                         }`}
                       >
                         {sub.items.map((item) =>
