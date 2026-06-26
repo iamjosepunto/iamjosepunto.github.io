@@ -22,6 +22,7 @@ body {
 }
 
 .blink-soft {
+  color: #86efac;
   animation: blinkSoft 2s ease-in-out infinite;
 }
 
