@@ -169,15 +169,21 @@ const Contact = () => {
             </span>
 
             <div className="border border-yellow-400 rounded-xl p-4">
-              <span className="text-ivory break-all flex items-center gap-3">
-                {PROFILE.socials.email}
-                <button
-                  onClick={copyEmail}
-                  className="text-base text-yellow-400 font-semibold shrink-0 cursor-pointer"
-                >
-                  {copied ? t("contact.copied") : t("contact.copy")}
-                </button>
-              </span>
+              <div className="flex flex-col min-w-0">
+                {/* Nombre "Email" en azul claro, como las demás plataformas */}
+                <span className="text-base font-semibold text-sky-300">
+                  {t("contact.email")}
+                </span>
+                <span className="text-ivory break-all flex items-center gap-3">
+                  {PROFILE.socials.email}
+                  <button
+                    onClick={copyEmail}
+                    className="text-base text-yellow-400 font-semibold shrink-0 cursor-pointer"
+                  >
+                    {copied ? t("contact.copied") : t("contact.copy")}
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
 
