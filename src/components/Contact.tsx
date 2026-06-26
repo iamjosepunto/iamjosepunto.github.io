@@ -156,9 +156,9 @@ const Contact = () => {
 
         <p className="text-lg text-ivory leading-relaxed mb-6 text-center">
           <span className="text-yellow-400 font-semibold">
-            {t("about.data.labels.contact")}
+            {t("about.data.labels.contact")}:
           </span>{" "}
-          - <span className="blink-soft">{t("about.data.contact")}</span>
+          <span className="blink-soft">{t("about.data.contact")}</span>
         </p>
 
         <div className="flex flex-col gap-6">
