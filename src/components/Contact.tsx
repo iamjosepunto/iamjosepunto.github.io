@@ -63,7 +63,7 @@ const Contact = () => {
           subLabel: t("contact.subBlogging"),
           items: [
             { name: "DEV.to", href: PROFILE.socials.devto, indexed: true },
-            { name: "Hashnode", pending: true },
+            { name: "Hashnode", href: PROFILE.socials.hashnode },
             { name: "Medium", href: PROFILE.socials.medium },
           ],
         },

@@ -43,6 +43,7 @@ export const PROFILE = {
     arc: "https://arc.dev/@iamjosepunto",
     aboutme: "https://about.me/iamjosepunto",
     medium: "https://iamjosepunto.medium.com/",
+    hashnode: "https://iamjosepunto.hashnode.dev/",
     web: "https://iamjosepunto.github.io/",
   },
 };
