@@ -7,7 +7,7 @@ type Item =
   | { name: string; href: string; indexed?: boolean }
   | { name: string; pending: true };
 
-type SubGroup = { subLabel?: string; items: Item[] };
+type SubGroup = { subLabel?: string; subTag?: string; items: Item[] };
 
 type Group = {
   label: string;
@@ -61,6 +61,7 @@ const Contact = () => {
       subGroups: [
         {
           subLabel: t("contact.subBlogging"),
+          subTag: "[2026-W27]",
           items: [
             { name: "DEV.to", href: PROFILE.socials.devto, indexed: true },
             { name: "Hashnode", href: PROFILE.socials.hashnode },
@@ -204,6 +205,12 @@ const Contact = () => {
                       {sub.subLabel && (
                         <span className="text-sm font-semibold text-yellow-300 mb-2">
                           {sub.subLabel}
+                          {sub.subTag && (
+                            <span className="text-sm font-normal text-slate-500">
+                              {" "}
+                              {sub.subTag}
+                            </span>
+                          )}
                         </span>
                       )}
 
