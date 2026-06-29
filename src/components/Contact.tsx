@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "./SectionTitle";
 
 type Item =
-  | { name: string; href: string }
+  | { name: string; href: string; indexed?: boolean }
   | { name: string; pending: true };
 
 type SubGroup = { subLabel?: string; items: Item[] };
@@ -38,7 +38,7 @@ const Contact = () => {
       label: t("contact.catSocial"),
       subGroups: [
         {
-          items: [{ name: "LinkedIn", href: PROFILE.socials.linkedin }],
+          items: [{ name: "LinkedIn", href: PROFILE.socials.linkedin, indexed: true }],
         },
       ],
     },
@@ -62,7 +62,7 @@ const Contact = () => {
         {
           subLabel: t("contact.subBlogging"),
           items: [
-            { name: "DEV.to", href: PROFILE.socials.devto },
+            { name: "DEV.to", href: PROFILE.socials.devto, indexed: true },
             { name: "Hashnode", pending: true },
             { name: "Medium", pending: true },
           ],
@@ -233,6 +233,12 @@ const Contact = () => {
                               {/* Nombre del sitio encima del enlace */}
                               <span className="text-base font-semibold text-sky-300">
                                 {item.name}
+                                {item.indexed && (
+                                  <span className="text-sm font-normal text-slate-500">
+                                    {" "}
+                                    [i]
+                                  </span>
+                                )}
                               </span>
                               <a
                                 href={item.href}
