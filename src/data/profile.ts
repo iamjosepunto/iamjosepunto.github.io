@@ -41,6 +41,7 @@ export const PROFILE = {
     codepen: "https://codepen.io/iamjosepunto",
     wellfound: "https://wellfound.com/u/iamjosepunto",
     arc: "https://arc.dev/@iamjosepunto",
+    aboutme: "https://about.me/iamjosepunto",
     web: "https://iamjosepunto.github.io/",
   },
 };

@@ -121,7 +121,7 @@ const Contact = () => {
           subLabel: t("contact.subIdentity"),
           items: [
             { name: "Gravatar", pending: true },
-            { name: "about.me", pending: true },
+            { name: "about.me", href: PROFILE.socials.aboutme },
             { name: "Linktree", pending: true },
           ],
         },
