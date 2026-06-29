@@ -42,6 +42,7 @@ export const PROFILE = {
     wellfound: "https://wellfound.com/u/iamjosepunto",
     arc: "https://arc.dev/@iamjosepunto",
     aboutme: "https://about.me/iamjosepunto",
+    medium: "https://iamjosepunto.medium.com/",
     web: "https://iamjosepunto.github.io/",
   },
 };

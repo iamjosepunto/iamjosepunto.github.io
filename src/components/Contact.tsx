@@ -64,7 +64,7 @@ const Contact = () => {
           items: [
             { name: "DEV.to", href: PROFILE.socials.devto, indexed: true },
             { name: "Hashnode", pending: true },
-            { name: "Medium", pending: true },
+            { name: "Medium", href: PROFILE.socials.medium },
           ],
         },
         {
