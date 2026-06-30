@@ -123,7 +123,7 @@ const Contact = () => {
           items: [
             { name: "Gravatar", href: PROFILE.socials.gravatar },
             { name: "about.me", href: PROFILE.socials.aboutme },
-            { name: "Linktree", pending: true },
+            { name: "Linktree", href: PROFILE.socials.linktree },
           ],
         },
       ],

@@ -45,6 +45,7 @@ export const PROFILE = {
     gravatar: "https://gravatar.com/iamjosepunto",
     medium: "https://iamjosepunto.medium.com/",
     hashnode: "https://iamjosepunto.hashnode.dev/",
+    linktree: "https://linktr.ee/iamjosepunto",
     web: "https://iamjosepunto.github.io/",
   },
 };
