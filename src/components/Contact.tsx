@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "./SectionTitle";
 
 type Item =
-  | { name: string; href: string; indexed?: boolean }
+  | { name: string; href: string; indexed?: boolean; sharesToLinkedIn?: boolean }
   | { name: string; pending: true };
 
 type SubGroup = { subLabel?: string; subTag?: string; items: Item[] };
@@ -65,7 +65,7 @@ const Contact = () => {
           items: [
             { name: "DEV.to", href: PROFILE.socials.devto, indexed: true },
             { name: "Hashnode", href: PROFILE.socials.hashnode },
-            { name: "Medium", href: PROFILE.socials.medium },
+            { name: "Medium", href: PROFILE.socials.medium, sharesToLinkedIn: true },
           ],
         },
         {
@@ -244,6 +244,12 @@ const Contact = () => {
                                   <span className="text-sm font-normal text-slate-500">
                                     {" "}
                                     [i]
+                                  </span>
+                                )}
+                                {item.sharesToLinkedIn && (
+                                  <span className="text-sm font-normal text-slate-500">
+                                    {" "}
+                                    [+L]
                                   </span>
                                 )}
                               </span>
