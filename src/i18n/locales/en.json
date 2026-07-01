@@ -1349,7 +1349,7 @@
     "catSocial": "Social networks",
     "catRepos": "Source code repositories",
     "catCommunities": "Developer communities",
-    "catPublic": "Public profiles - Tech only",
+    "catPublic": "Public profiles",
     "subBlogging": "Blogging / Articles",
     "subQA": "Q&A (Questions & Answers)",
     "subForums": "Forums / Discussion",
@@ -1359,6 +1359,12 @@
     "subPortfolio": "Portfolio / Projects",
     "subCareer": "Professional track record",
     "subIdentity": "Identity / Aggregators",
+    "blockTech": "Tech Only",
+    "blockGeneralist": "Generalist",
+    "blockIdentity": "Identity / Aggregators",
+    "catNetworks": "Professional networks",
+    "catBloggingGen": "Blogging / Articles",
+    "subLearning": "Learning",
     "pending": "pending"
   },
   "location": {
