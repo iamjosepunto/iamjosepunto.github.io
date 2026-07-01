@@ -8,10 +8,11 @@ type Item =
       name: string;
       href: string;
       users?: string;
+      manager?: string;
       indexed?: boolean;
       sharesToLinkedIn?: boolean;
     }
-  | { name: string; users?: string; pending: true };
+  | { name: string; users?: string; manager?: string; pending: true };
 
 type SubGroup = { subLabel?: string; subTag?: string; items: Item[] };
 
@@ -138,7 +139,7 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", indexed: true },
+                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true },
                 { name: "Polywork", users: "[n/d]", pending: true },
                 { name: "Xing", users: "[20.5M]", pending: true },
                 { name: "Read.cv", users: "[n/d]", pending: true },
@@ -151,12 +152,12 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "X (Twitter)", users: "[550M]", pending: true },
-                { name: "Instagram", users: "[3000M]", pending: true },
-                { name: "Facebook", users: "[3070M]", pending: true },
-                { name: "Threads", users: "[400M]", pending: true },
-                { name: "Bluesky", users: "[42M]", pending: true },
-                { name: "Mastodon", users: "[10.5M]", pending: true },
+                { name: "X (Twitter)", users: "[550M]", manager: "[B]", pending: true },
+                { name: "Instagram", users: "[3000M]", manager: "[M]", pending: true },
+                { name: "Facebook", users: "[3070M]", manager: "[P]", pending: true },
+                { name: "Threads", users: "[400M]", manager: "[P]", pending: true },
+                { name: "Bluesky", users: "[42M]", manager: "[P]", pending: true },
+                { name: "Mastodon", users: "[10.5M]", manager: "[B]", pending: true },
               ],
             },
           ],
@@ -282,6 +283,9 @@ const Contact = () => {
               {item.users && (
                 <span className="text-sm font-normal text-slate-500"> {item.users}</span>
               )}
+              {item.manager && (
+                <span className="text-sm font-normal text-slate-500"> {item.manager}</span>
+              )}
             </span>
             <span className="text-sm font-normal text-slate-500">
               ({t("contact.pending")})
@@ -293,6 +297,9 @@ const Contact = () => {
               {item.name}
               {item.users && (
                 <span className="text-sm font-normal text-slate-500"> {item.users}</span>
+              )}
+              {item.manager && (
+                <span className="text-sm font-normal text-slate-500"> {item.manager}</span>
               )}
               {item.indexed && (
                 <span className="text-sm font-normal text-slate-500"> [i]</span>
