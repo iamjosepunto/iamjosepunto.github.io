@@ -231,43 +231,54 @@ const Contact = () => {
     </>
   );
 
-  const renderGroup = (group: Group, gIdx: number) => (
-    <div key={group.label ?? gIdx} className="flex flex-col">
-      {/* Subcabecera de categoría: alineada a la izquierda */}
-      {group.label && (
+  const renderSubGroups = (group: Group) => (
+    <div className="flex flex-col gap-4">
+      {group.subGroups.map((sub, sIdx) => (
+        <div key={sub.subLabel ?? sIdx} className="flex flex-col">
+          {sub.subLabel && (
+            <span className="text-sm font-semibold text-yellow-300 mb-2">
+              {sub.subLabel}
+              {sub.subTag && (
+                <span className="text-sm font-normal text-slate-500">
+                  {" "}
+                  {sub.subTag}
+                </span>
+              )}
+            </span>
+          )}
+
+          <div className={`flex flex-col gap-3 ${sub.subLabel ? "pl-4" : ""}`}>
+            {renderItems(sub.items)}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderGroup = (group: Group, gIdx: number) => {
+    // Grupo sin label (p. ej. bloque Identidad): sin cajita interior,
+    // los ítems van directos dentro del contenedor del bloque.
+    if (!group.label) {
+      return (
+        <div key={gIdx} className="flex flex-col">
+          {renderSubGroups(group)}
+        </div>
+      );
+    }
+
+    // Grupo con label: subcabecera a la izquierda + cajita con borde amarillo.
+    return (
+      <div key={group.label} className="flex flex-col">
         <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
           {group.label}
         </span>
-      )}
 
-      {/* Cajita con borde amarillo */}
-      <div className="border border-yellow-400 rounded-xl p-4">
-        <div className="flex flex-col gap-4">
-          {group.subGroups.map((sub, sIdx) => (
-            <div key={sub.subLabel ?? sIdx} className="flex flex-col">
-              {sub.subLabel && (
-                <span className="text-sm font-semibold text-yellow-300 mb-2">
-                  {sub.subLabel}
-                  {sub.subTag && (
-                    <span className="text-sm font-normal text-slate-500">
-                      {" "}
-                      {sub.subTag}
-                    </span>
-                  )}
-                </span>
-              )}
-
-              <div
-                className={`flex flex-col gap-3 ${sub.subLabel ? "pl-4" : ""}`}
-              >
-                {renderItems(sub.items)}
-              </div>
-            </div>
-          ))}
+        <div className="border border-yellow-400 rounded-xl p-4">
+          {renderSubGroups(group)}
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="contact" className="max-w-5xl mx-auto px-6 py-4">
