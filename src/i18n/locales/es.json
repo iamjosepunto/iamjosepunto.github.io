@@ -1365,7 +1365,12 @@
     "catNetworks": "Redes profesionales",
     "catBloggingGen": "Blogging / Artículos",
     "subLearning": "Aprendizaje",
-    "pending": "pendiente"
+    "pending": "pendiente",
+    "subChallenges": "Retos",
+    "subData": "Datos / ML",
+    "subArt": "Arte",
+    "subPhoto": "Fotografía",
+    "subCreators": "Creadores"
   },
   "location": {
     "title": "📍 Ubicación",

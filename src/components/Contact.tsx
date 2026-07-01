@@ -4,8 +4,14 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "./SectionTitle";
 
 type Item =
-  | { name: string; href: string; indexed?: boolean; sharesToLinkedIn?: boolean }
-  | { name: string; pending: true };
+  | {
+      name: string;
+      href: string;
+      users?: string;
+      indexed?: boolean;
+      sharesToLinkedIn?: boolean;
+    }
+  | { name: string; users?: string; pending: true };
 
 type SubGroup = { subLabel?: string; subTag?: string; items: Item[] };
 
@@ -22,6 +28,13 @@ type Block = {
 const Contact = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
+
+  // Comparador alfabético insensible a mayúsculas/acentos, según idioma activo.
+  const collator = new Intl.Collator(undefined, {
+    sensitivity: "base",
+    numeric: true,
+  });
+  const byText = (a: string, b: string) => collator.compare(a, b);
 
   const copyEmail = async () => {
     try {
@@ -47,11 +60,11 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "GitHub", href: PROFILE.socials.github },
-                { name: "GitLab", href: PROFILE.socials.gitlab },
-                { name: "Bitbucket", pending: true },
-                { name: "SourceForge", pending: true },
-                { name: "Codeberg", pending: true },
+                { name: "GitHub", href: PROFILE.socials.github, users: "[165M]" },
+                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]" },
+                { name: "Bitbucket", users: "[15M]", pending: true },
+                { name: "SourceForge", users: "[n/d]", pending: true },
+                { name: "Codeberg", users: "[n/d]", pending: true },
               ],
             },
           ],
@@ -62,24 +75,37 @@ const Contact = () => {
             {
               subLabel: t("contact.subBlogging"),
               items: [
-                { name: "DEV.to", href: PROFILE.socials.devto, indexed: true },
-                { name: "Hashnode", href: PROFILE.socials.hashnode },
+                { name: "DEV.to", href: PROFILE.socials.devto, users: "[1M]", indexed: true },
+                { name: "Hashnode", href: PROFILE.socials.hashnode, users: "[1M]" },
               ],
             },
             {
               subLabel: t("contact.subQA"),
-              items: [{ name: "Stack Overflow", href: PROFILE.socials.stackoverflow }],
+              items: [
+                { name: "Stack Overflow", href: PROFILE.socials.stackoverflow, users: "[22M]" },
+              ],
             },
             {
               subLabel: t("contact.subPlaygrounds"),
               items: [
-                { name: "CodePen", href: PROFILE.socials.codepen },
-                { name: "Replit", pending: true },
+                { name: "CodePen", href: PROFILE.socials.codepen, users: "[6M]" },
+                { name: "Replit", users: "[50M]", pending: true },
+              ],
+            },
+            {
+              subLabel: t("contact.subData"),
+              items: [{ name: "Kaggle", users: "[30M]", pending: true }],
+            },
+            {
+              subLabel: t("contact.subChallenges"),
+              items: [
+                { name: "HackerRank", users: "[26M]", pending: true },
+                { name: "LeetCode", users: "[12M]", pending: true },
               ],
             },
             {
               subLabel: t("contact.subLearning"),
-              items: [{ name: "freeCodeCamp", pending: true }],
+              items: [{ name: "freeCodeCamp", users: "[n/d]", pending: true }],
             },
           ],
         },
@@ -89,15 +115,15 @@ const Contact = () => {
             {
               subLabel: t("contact.subJobs"),
               items: [
-                { name: "WellFound", href: PROFILE.socials.wellfound },
-                { name: "Arc.dev", href: PROFILE.socials.arc },
+                { name: "WellFound", href: PROFILE.socials.wellfound, users: "[n/d]" },
+                { name: "Arc.dev", href: PROFILE.socials.arc, users: "[n/d]" },
               ],
             },
             {
               subLabel: t("contact.subPortfolio"),
               items: [
-                { name: "Devpost", pending: true },
-                { name: "Product Hunt", pending: true },
+                { name: "Devpost", users: "[n/d]", pending: true },
+                { name: "Product Hunt", users: "[n/d]", pending: true },
               ],
             },
           ],
@@ -112,10 +138,10 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "LinkedIn", href: PROFILE.socials.linkedin, indexed: true },
-                { name: "Polywork", pending: true },
-                { name: "Xing", pending: true },
-                { name: "Read.cv", pending: true },
+                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", indexed: true },
+                { name: "Polywork", users: "[n/d]", pending: true },
+                { name: "Xing", users: "[20.5M]", pending: true },
+                { name: "Read.cv", users: "[n/d]", pending: true },
               ],
             },
           ],
@@ -125,10 +151,12 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "X (Twitter)", pending: true },
-                { name: "Instagram", pending: true },
-                { name: "Bluesky", pending: true },
-                { name: "Mastodon", pending: true },
+                { name: "X (Twitter)", users: "[550M]", pending: true },
+                { name: "Instagram", users: "[3000M]", pending: true },
+                { name: "Facebook", users: "[3070M]", pending: true },
+                { name: "Threads", users: "[400M]", pending: true },
+                { name: "Bluesky", users: "[42M]", pending: true },
+                { name: "Mastodon", users: "[10.5M]", pending: true },
               ],
             },
           ],
@@ -138,8 +166,9 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Medium", href: PROFILE.socials.medium, sharesToLinkedIn: true },
-                { name: "Substack", pending: true },
+                { name: "Medium", href: PROFILE.socials.medium, users: "[75M]", sharesToLinkedIn: true },
+                { name: "Substack", users: "[35M]", pending: true },
+                { name: "Tumblr", users: "[135M]", pending: true },
               ],
             },
           ],
@@ -148,7 +177,7 @@ const Contact = () => {
           label: t("contact.subQA"),
           subGroups: [
             {
-              items: [{ name: "Quora", pending: true }],
+              items: [{ name: "Quora", users: "[400M]", pending: true }],
             },
           ],
         },
@@ -157,8 +186,8 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Hacker News", pending: true },
-                { name: "Reddit", pending: true },
+                { name: "Hacker News", users: "[n/d]", pending: true },
+                { name: "Reddit", users: "[970M]", pending: true },
               ],
             },
           ],
@@ -168,9 +197,40 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Dribbble", pending: true },
-                { name: "Behance", pending: true },
+                { name: "Dribbble", users: "[12M]", pending: true },
+                { name: "Behance", users: "[50M]", pending: true },
               ],
+            },
+          ],
+        },
+        {
+          label: t("contact.subArt"),
+          subGroups: [
+            {
+              items: [
+                { name: "DeviantArt", users: "[110M]", pending: true },
+                { name: "pixiv", users: "[100M]", pending: true },
+              ],
+            },
+          ],
+        },
+        {
+          label: t("contact.subPhoto"),
+          subGroups: [
+            {
+              items: [
+                { name: "VSCO", users: "[200M]", pending: true },
+                { name: "Flickr", users: "[n/d]", pending: true },
+                { name: "Unsplash", users: "[0.4M]", pending: true },
+              ],
+            },
+          ],
+        },
+        {
+          label: t("contact.subCreators"),
+          subGroups: [
+            {
+              items: [{ name: "Ko-fi", users: "[1M]", pending: true }],
             },
           ],
         },
@@ -183,9 +243,9 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Gravatar", href: PROFILE.socials.gravatar },
-                { name: "about.me", href: PROFILE.socials.aboutme },
-                { name: "Linktree", href: PROFILE.socials.linktree },
+                { name: "Gravatar", href: PROFILE.socials.gravatar, users: "[n/d]" },
+                { name: "about.me", href: PROFILE.socials.aboutme, users: "[n/d]" },
+                { name: "Linktree", href: PROFILE.socials.linktree, users: "[50M]" },
               ],
             },
           ],
@@ -194,22 +254,46 @@ const Contact = () => {
     },
   ];
 
+  // Ordenación alfabética (por idioma activo) en los tres niveles:
+  // categorías dentro del bloque, subgrupos dentro del grupo, e ítems dentro del subgrupo.
+  // Los bloques se mantienen en su orden fijo.
+  const sortedBlocks: Block[] = blocks.map((block) => ({
+    ...block,
+    groups: [...block.groups]
+      .map((group) => ({
+        ...group,
+        subGroups: [...group.subGroups]
+          .map((sub) => ({
+            ...sub,
+            items: [...sub.items].sort((a, b) => byText(a.name, b.name)),
+          }))
+          .sort((a, b) => byText(a.subLabel ?? "", b.subLabel ?? "")),
+      }))
+      .sort((a, b) => byText(a.label ?? "", b.label ?? "")),
+  }));
+
   const renderItems = (items: Item[]) => (
     <>
       {items.map((item) =>
         "pending" in item ? (
           <div key={item.name} className="flex flex-col min-w-0">
-            <span className="text-base font-semibold text-slate-500">
-              {item.name}{" "}
-              <span className="text-sm font-normal text-slate-500">
-                ({t("contact.pending")})
-              </span>
+            <span className="text-base font-semibold text-sky-300">
+              {item.name}
+              {item.users && (
+                <span className="text-sm font-normal text-slate-500"> {item.users}</span>
+              )}
+            </span>
+            <span className="text-sm font-normal text-slate-500">
+              ({t("contact.pending")})
             </span>
           </div>
         ) : (
           <div key={item.href} className="flex flex-col min-w-0">
             <span className="text-base font-semibold text-sky-300">
               {item.name}
+              {item.users && (
+                <span className="text-sm font-normal text-slate-500"> {item.users}</span>
+              )}
               {item.indexed && (
                 <span className="text-sm font-normal text-slate-500"> [i]</span>
               )}
@@ -337,7 +421,7 @@ const Contact = () => {
           </div>
 
           {/* Bloques principales */}
-          {blocks.map((block) => (
+          {sortedBlocks.map((block) => (
             <div key={block.label} className="flex flex-col">
               {/* Cabecera de bloque: grande, centrada, fuera del contenedor */}
               <div className="text-center mb-3">
