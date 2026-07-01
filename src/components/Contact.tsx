@@ -398,7 +398,9 @@ const Contact = () => {
           <div className="flex flex-col">
             <div className="text-center mb-3">
               <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
+                {"<"}
                 {t("contact.email")}
+                {">"}
               </span>
             </div>
 
@@ -426,7 +428,9 @@ const Contact = () => {
               {/* Cabecera de bloque: grande, centrada, fuera del contenedor */}
               <div className="text-center mb-3">
                 <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
+                  {"<"}
                   {block.label}
+                  {">"}
                 </span>
               </div>
 
