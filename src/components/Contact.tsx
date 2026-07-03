@@ -106,7 +106,7 @@ const Contact = () => {
             },
             {
               subLabel: t("contact.subLearning"),
-              items: [{ name: "freeCodeCamp", users: "[n/d]", pending: true }],
+              items: [{ name: "FreeCodeCamp", users: "[n/d]", pending: true }],
             },
           ],
         },
@@ -210,7 +210,7 @@ const Contact = () => {
             {
               items: [
                 { name: "DeviantArt", users: "[110M]", pending: true },
-                { name: "pixiv", users: "[100M]", pending: true },
+                { name: "Pixiv", users: "[100M]", pending: true },
               ],
             },
           ],
@@ -245,7 +245,7 @@ const Contact = () => {
             {
               items: [
                 { name: "Gravatar", href: PROFILE.socials.gravatar, users: "[n/d]" },
-                { name: "about.me", href: PROFILE.socials.aboutme, users: "[n/d]" },
+                { name: "About.me", href: PROFILE.socials.aboutme, users: "[n/d]" },
                 { name: "Linktree", href: PROFILE.socials.linktree, users: "[50M]" },
               ],
             },
@@ -473,6 +473,42 @@ const Contact = () => {
                     className="text-ivory hover:text-yellow-400 transition break-all"
                   >
                     {tool.url}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Catálogo de publicaciones */}
+          <div className="flex flex-col">
+            <div className="text-center mb-3">
+              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
+                {"<"}
+                {t("contact.blockPublications")}
+                {">"}
+              </span>
+            </div>
+
+            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-4">
+              {[
+                {
+                  platform: "Medium",
+                  title:
+                    "Migrating a Legacy Razor + JavaScript Frontend to React and TypeScript, One Component at a Time",
+                  url: "https://iamjosepunto.medium.com/migrating-a-legacy-razor-javascript-frontend-to-react-and-typescript-one-component-at-a-time-ca9222d69490",
+                },
+              ].map((post) => (
+                <div key={post.url} className="flex flex-col min-w-0">
+                  <span className="text-base font-semibold text-sky-300">
+                    {post.platform}
+                  </span>
+                  <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ivory hover:text-yellow-400 transition break-words"
+                  >
+                    {post.title}
                   </a>
                 </div>
               ))}

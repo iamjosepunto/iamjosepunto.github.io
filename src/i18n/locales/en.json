@@ -1371,7 +1371,8 @@
     "subArt": "Art",
     "subPhoto": "Photography",
     "subCreators": "Creators",
-    "blockManagers": "Network managers"
+    "blockManagers": "Network managers",
+    "blockPublications": "Publications catalog"
   },
   "location": {
     "title": "📍 Location",
