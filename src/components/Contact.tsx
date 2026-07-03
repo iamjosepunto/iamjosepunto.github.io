@@ -506,7 +506,7 @@ const Contact = () => {
                     href={post.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-ivory hover:text-yellow-400 transition break-words"
+                    className="text-ivory hover:text-yellow-400 transition break-words max-w-sm"
                   >
                     {post.title}
                   </a>
