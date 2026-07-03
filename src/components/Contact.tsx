@@ -245,7 +245,7 @@ const Contact = () => {
             {
               items: [
                 { name: "Gravatar", href: PROFILE.socials.gravatar, users: "[n/d]" },
-                { name: "About.me", href: PROFILE.socials.aboutme, users: "[n/d]" },
+                { name: "About.me", href: PROFILE.socials.aboutme, users: "[n/d]", indexed: true },
                 { name: "Linktree", href: PROFILE.socials.linktree, users: "[50M]" },
               ],
             },
