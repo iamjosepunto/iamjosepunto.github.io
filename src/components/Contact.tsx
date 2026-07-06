@@ -64,8 +64,8 @@ const Contact = () => {
                 { name: "GitHub", href: PROFILE.socials.github, users: "[165M]" },
                 { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]" },
                 { name: "Bitbucket", users: "[15M]", pending: true },
-                { name: "SourceForge", users: "[n/d]", pending: true },
-                { name: "Codeberg", users: "[n/d]", pending: true },
+                { name: "SourceForge", users: "[35M]", pending: true },
+                { name: "Codeberg", users: "[0.2M]", pending: true },
               ],
             },
           ],
@@ -106,7 +106,7 @@ const Contact = () => {
             },
             {
               subLabel: t("contact.subLearning"),
-              items: [{ name: "FreeCodeCamp", users: "[n/d]", pending: true }],
+              items: [{ name: "FreeCodeCamp", users: "[18M]", pending: true }],
             },
           ],
         },
@@ -116,15 +116,15 @@ const Contact = () => {
             {
               subLabel: t("contact.subJobs"),
               items: [
-                { name: "WellFound", href: PROFILE.socials.wellfound, users: "[n/d]" },
-                { name: "Arc.dev", href: PROFILE.socials.arc, users: "[n/d]" },
+                { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
+                { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
               ],
             },
             {
               subLabel: t("contact.subPortfolio"),
               items: [
-                { name: "Devpost", users: "[n/d]", pending: true },
-                { name: "Product Hunt", users: "[n/d]", pending: true },
+                { name: "Devpost", users: "[6M]", pending: true },
+                { name: "Product Hunt", users: "[10M]", pending: true },
               ],
             },
           ],
