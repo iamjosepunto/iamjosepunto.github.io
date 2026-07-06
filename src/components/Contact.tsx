@@ -26,6 +26,93 @@ type Block = {
   groups: Group[];
 };
 
+// Contenedor principal colapsable: título grande <...> con flecha, colapsado por defecto.
+// SEO-safe: el contenido permanece siempre en el DOM; sólo se colapsa visualmente por CSS.
+const CollapsibleBlock = ({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="flex flex-col">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex items-center justify-center gap-2 mb-3 cursor-pointer bg-transparent border-0"
+      >
+        <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
+          {"<"}
+          {label}
+          {">"}
+        </span>
+        <svg
+          viewBox="0 0 24 24"
+          className={`w-5 h-5 text-yellow-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+      >
+        <div className="overflow-hidden">{children}</div>
+      </div>
+    </div>
+  );
+};
+
+// Sub-caja colapsable: subtítulo azul con flecha, colapsada por defecto. SEO-safe igual que arriba.
+const CollapsibleSub = ({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="flex flex-col">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex items-center gap-2 mb-2 cursor-pointer bg-transparent border-0 text-left"
+      >
+        <span className="text-sm font-semibold text-blue-400 uppercase">
+          {label}
+        </span>
+        <svg
+          viewBox="0 0 24 24"
+          className={`w-4 h-4 text-yellow-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+      >
+        <div className="overflow-hidden">{children}</div>
+      </div>
+    </div>
+  );
+};
+
 const Contact = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
@@ -427,33 +514,15 @@ const Contact = () => {
 
           {/* Bloques principales */}
           {sortedBlocks.map((block) => (
-            <div key={block.label} className="flex flex-col">
-              {/* Cabecera de bloque: grande, centrada, fuera del contenedor */}
-              <div className="text-center mb-3">
-                <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                  {"<"}
-                  {block.label}
-                  {">"}
-                </span>
-              </div>
-
-              {/* Contenedor de bloque con borde amarillo que engloba todo */}
+            <CollapsibleBlock key={block.label} label={block.label}>
               <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
                 {block.groups.map((group, gIdx) => renderGroup(group, gIdx))}
               </div>
-            </div>
+            </CollapsibleBlock>
           ))}
 
           {/* Gestores de redes sociales */}
-          <div className="flex flex-col">
-            <div className="text-center mb-3">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.blockManagers")}
-                {">"}
-              </span>
-            </div>
-
+          <CollapsibleBlock label={t("contact.blockManagers")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
               {[
                 { name: "Buffer", url: "buffer.com" },
@@ -473,18 +542,10 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </CollapsibleBlock>
 
           {/* Catálogo de publicaciones */}
-          <div className="flex flex-col">
-            <div className="text-center mb-3">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.blockPublications")}
-                {">"}
-              </span>
-            </div>
-
+          <CollapsibleBlock label={t("contact.blockPublications")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-4">
               {[
                 {
@@ -511,48 +572,23 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </CollapsibleBlock>
 
           {/* Perfiles privados - Sólo Tecnología (vacío) */}
-          <div className="flex flex-col">
-            <div className="text-center mb-3">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.blockPrivateTech")}
-                {">"}
-              </span>
-            </div>
+          <CollapsibleBlock label={t("contact.blockPrivateTech")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4" />
-          </div>
+          </CollapsibleBlock>
 
           {/* Perfiles privados - Generalistas (vacío) */}
-          <div className="flex flex-col">
-            <div className="text-center mb-3">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.blockPrivateGeneralist")}
-                {">"}
-              </span>
-            </div>
+          <CollapsibleBlock label={t("contact.blockPrivateGeneralist")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4" />
-          </div>
+          </CollapsibleBlock>
 
           {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
-          <div className="flex flex-col">
-            <div className="text-center mb-3">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.blockJobsTech")}
-                {">"}
-              </span>
-            </div>
-
+          <CollapsibleBlock label={t("contact.blockJobsTech")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
               {/* Sub-caja: Producto */}
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
-                  {t("contact.jobsProduct")}
-                </span>
+              <CollapsibleSub label={t("contact.jobsProduct")}>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
                     { name: "HP", users: "[2.8k-Es|58k-W]", descKey: "descHP", url: "https://apply.hp.com" },
@@ -602,13 +638,10 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </CollapsibleSub>
 
               {/* Sub-caja: Consultoras */}
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
-                  {t("contact.jobsConsulting")}
-                </span>
+              <CollapsibleSub label={t("contact.jobsConsulting")}>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
                     { name: "Capgemini", users: "[10.88k-Es|341k-W]", descKey: "descCapgemini", url: "https://capgemini.com/careers" },
@@ -652,26 +685,15 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </CollapsibleSub>
             </div>
-          </div>
+          </CollapsibleBlock>
 
           {/* Secciones empleo - Generalistas (dos sub-cajas: Corporaciones y Consultoras) */}
-          <div className="flex flex-col">
-            <div className="text-center mb-3">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.blockJobsGeneralist")}
-                {">"}
-              </span>
-            </div>
-
+          <CollapsibleBlock label={t("contact.blockJobsGeneralist")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
               {/* Sub-caja: Corporaciones */}
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
-                  {t("contact.jobsCorporations")}
-                </span>
+              <CollapsibleSub label={t("contact.jobsCorporations")}>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
                     { name: "Mercadona", users: "[98.7k-Es|104k-W]", descKey: "descMercadona", url: "https://mercadona.es/es/conocenos/trabaja-con-nosotros" },
@@ -712,13 +734,10 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </CollapsibleSub>
 
               {/* Sub-caja: Consultoras */}
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
-                  {t("contact.jobsConsultingGen")}
-                </span>
+              <CollapsibleSub label={t("contact.jobsConsultingGen")}>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
                     { name: "Deloitte", users: "[10.75k-Es|312k-W]", descKey: "descDeloitte", url: "https://deloitte.com/es/careers" },
@@ -756,9 +775,9 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </CollapsibleSub>
             </div>
-          </div>
+          </CollapsibleBlock>
         </div>
       </div>
     </section>
