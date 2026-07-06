@@ -42,7 +42,7 @@ const CollapsibleBlock = ({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center justify-center gap-2 mb-3 cursor-pointer bg-transparent border-0"
+        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
       >
         <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
           {"<"}
@@ -86,7 +86,7 @@ const CollapsibleSub = ({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-2 mb-2 cursor-pointer bg-transparent border-0 text-left"
+        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
       >
         <span className="text-sm font-semibold text-blue-400 uppercase">
           {label}
@@ -479,10 +479,10 @@ const Contact = () => {
           <span className="blink-soft">{t("about.data.contact")}</span>
         </p>
 
-        <div className="flex flex-col gap-4">
-          {/* Email: cabecera grande centrada + cajita con borde amarillo */}
+        <div className="flex flex-col gap-2">
+          {/* Email: cabecera grande a la izquierda + cajita con borde amarillo */}
           <div className="flex flex-col">
-            <div className="text-center mb-3">
+            <div className="text-left mb-1">
               <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
                 {"<"}
                 {t("contact.email")}
