@@ -612,6 +612,7 @@ const Contact = () => {
                     { name: "Capgemini", users: "[10.88k-Es|341k-W]", descKey: "descCapgemini", url: "https://capgemini.com/careers" },
                     { name: "Indra", users: "[10.19k-Es|61k-W]", descKey: "descIndra", url: "https://careers.indragroup.com" },
                     { name: "NTT Data", users: "[10.1k-Es|198k-W]", descKey: "descNTTData", url: "https://nttdata.com/careers" },
+                    { name: "Inetum", users: "[8.5k-Es|28k-W]", descKey: "descInetum", url: "https://inetum.com/es/careers" },
                     { name: "Sopra Steria", users: "[4k-Es|50k-W]", descKey: "descSopraSteria", url: "https://careers.soprasteria.es" },
                     { name: "Accenture", users: "[3.63k-Es|779k-W]", descKey: "descAccenture", url: "https://accenture.com/careers" },
                     { name: "HPE", users: "[1.1k-Es|61k-W]", descKey: "descHPE", url: "https://careers.hpe.com" },
