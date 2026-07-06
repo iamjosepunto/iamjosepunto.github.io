@@ -442,15 +442,11 @@ const Contact = () => {
 
     // Grupo con label: subcabecera a la izquierda + cajita con borde amarillo.
     return (
-      <div key={group.label} className="flex flex-col">
-        <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
-          {group.label}
-        </span>
-
+      <CollapsibleSub key={group.label} label={group.label}>
         <div className="border border-yellow-400 rounded-xl p-4">
           {renderSubGroups(group)}
         </div>
-      </div>
+      </CollapsibleSub>
     );
   };
 
