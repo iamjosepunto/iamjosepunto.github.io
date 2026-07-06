@@ -13,18 +13,10 @@ const Projects = () => {
     SUMMARY
   );
 
-  const [selectedEmpresa, setSelectedEmpresa] = useState<string>(
-    PROJECT_GROUPS[0].empresaName
-  );
-
   const panelRef = useRef<HTMLElement>(null);
 
-  const select = (
-    value: TaskRef | typeof SUMMARY,
-    empresaName?: string
-  ) => {
+  const select = (value: TaskRef | typeof SUMMARY) => {
     setSelected(value);
-    if (empresaName) setSelectedEmpresa(empresaName);
     panelRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -32,14 +24,6 @@ const Projects = () => {
   };
 
   const isSummary = selected === SUMMARY;
-
-  const base = isSummary
-    ? ""
-    : `projects.tareas.${(selected as TaskRef).key}`;
-
-  const aptitudes = isSummary
-    ? []
-    : (t(`${base}.aptitudes`, { returnObjects: true }) as string[]);
 
   const summaryRow = (
     <div
@@ -157,7 +141,7 @@ const Projects = () => {
                 return (
                   <button
                     key={task.code}
-                    onClick={() => select(task, group.empresaName)}
+                    onClick={() => select(task)}
                     className={
                       "px-3 py-1.5 rounded-lg font-mono text-sm border transition cursor-pointer " +
                       (isActive
@@ -191,114 +175,132 @@ const Projects = () => {
             hover:-translate-y-1
           "
       >
-        {isSummary ? (
-          <div className="text-ivory leading-relaxed">
-            <div className="font-semibold mb-3">
-              {"<<"}{t("projects.summary.label")}{">>"}
-            </div>
-
-            <div className="flex flex-col gap-1">
-              {PROJECT_GROUPS.map((group) => (
-                <div key={`${group.empresa}-${group.proyecto}`}>
-                  <div className="mt-2">
-                    • {group.empresa}-{group.proyecto}-
-                    {t(`projects.proyectos.${group.proyectoKey}`)}
-                  </div>
-
-                  {group.tasks.map((task) => {
-                    const code = task.code.split(" - ").pop();
-                    return (
-                      <div key={task.code} className="pl-6">
-                        <button
-                          onClick={() => select(task, group.empresaName)}
-                          className="
-                            text-left
-                            text-ivory
-                            hover:text-yellow-400
-                            transition
-                            cursor-pointer
-                          "
-                        >
-                          {">"}{code}-{t(`projects.tareas.${task.key}.title`)}
-                        </button>
-                      </div>
-                    );
-                  })}
-                </div>
-              ))}
-            </div>
+        {/* Panel Summary: visible sólo en modo resumen, pero siempre en el DOM */}
+        <div className={isSummary ? "text-ivory leading-relaxed" : "hidden"}>
+          <div className="font-semibold mb-3">
+            {"<<"}{t("projects.summary.label")}{">>"}
           </div>
-        ) : (
-          <>
-            <div className="font-mono text-sm text-blue-400 mb-2">
-              {(selected as TaskRef).code}
-            </div>
 
-            <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-              {t(`${base}.title`)}
-            </h3>
+          <div className="flex flex-col gap-1">
+            {PROJECT_GROUPS.map((group) => (
+              <div key={`${group.empresa}-${group.proyecto}`}>
+                <div className="mt-2">
+                  • {group.empresa}-{group.proyecto}-
+                  {t(`projects.proyectos.${group.proyectoKey}`)}
+                </div>
 
-            <div className="text-sm text-slate-400 mb-6">
-              {(selected as TaskRef).dates} · {t(`${base}.duration`)} · {selectedEmpresa}
-            </div>
-
-            {(selected as TaskRef).url && (
-              <a
-                href={(selected as TaskRef).url}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  inline-block
-                  mb-6
-                  text-yellow-400
-                  hover:text-yellow-300
-                  break-all
-                "
-              >
-                {t("projects.labels.viewSite")} → {(selected as TaskRef).url}
-              </a>
-            )}
-
-            <div className="flex flex-col gap-5">
-              <Block label={t("projects.labels.resumen")} text={t(`${base}.resumen`)} />
-              <Block label={t("projects.labels.objetivo")} text={t(`${base}.objetivo`)} />
-              <Block
-                label={t("projects.labels.funcionalidades")}
-                text={t(`${base}.funcionalidades`)}
-              />
-              <Block
-                label={t("projects.labels.responsabilidades")}
-                text={t(`${base}.responsabilidades`)}
-              />
-              <Block label={t("projects.labels.tecnologias")} text={t(`${base}.tecnologias`)} />
-              <Block label={t("projects.labels.resultado")} text={t(`${base}.resultado`)} />
-            </div>
-
-            <div className="mt-6">
-              <div className="text-sm font-semibold text-blue-400 mb-3">
-                {t("projects.labels.aptitudes")}
+                {group.tasks.map((task) => {
+                  const code = task.code.split(" - ").pop();
+                  return (
+                    <div key={task.code} className="pl-6">
+                      <button
+                        onClick={() => select(task)}
+                        className="
+                          text-left
+                          text-ivory
+                          hover:text-yellow-400
+                          transition
+                          cursor-pointer
+                        "
+                      >
+                        {">"}{code}-{t(`projects.tareas.${task.key}.title`)}
+                      </button>
+                    </div>
+                  );
+                })}
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="flex flex-wrap gap-2">
-                {aptitudes.map((skill) => (
-                  <span
-                    key={skill}
+        {/* Detalle de CADA tarea: se renderizan TODAS para SEO (Google indexa todo el
+            texto). Sólo la seleccionada es visible; el resto se ocultan por CSS pero
+            permanecen en el DOM. */}
+        {PROJECT_GROUPS.map((group) =>
+          group.tasks.map((task) => {
+            const taskBase = `projects.tareas.${task.key}`;
+            const taskAptitudes = t(`${taskBase}.aptitudes`, {
+              returnObjects: true,
+            }) as string[];
+            const isVisible =
+              !isSummary && (selected as TaskRef).code === task.code;
+
+            return (
+              <div
+                key={task.code}
+                className={isVisible ? "" : "hidden"}
+              >
+                <div className="font-mono text-sm text-blue-400 mb-2">
+                  {task.code}
+                </div>
+
+                <h3 className="text-2xl font-bold text-yellow-400 mb-2">
+                  {t(`${taskBase}.title`)}
+                </h3>
+
+                <div className="text-sm text-slate-400 mb-6">
+                  {task.dates} · {t(`${taskBase}.duration`)} · {group.empresaName}
+                </div>
+
+                {task.url && (
+                  <a
+                    href={task.url}
+                    target="_blank"
+                    rel="noreferrer"
                     className="
-                      px-3
-                      py-1
-                      text-sm
-                      rounded-full
-                      bg-slate-800
-                      border
-                      border-yellow-400
+                      inline-block
+                      mb-6
+                      text-yellow-400
+                      hover:text-yellow-300
+                      break-all
                     "
                   >
-                    {skill}
-                  </span>
-                ))}
+                    {t("projects.labels.viewSite")} → {task.url}
+                  </a>
+                )}
+
+                <div className="flex flex-col gap-5">
+                  <Block label={t("projects.labels.resumen")} text={t(`${taskBase}.resumen`)} />
+                  <Block label={t("projects.labels.objetivo")} text={t(`${taskBase}.objetivo`)} />
+                  <Block
+                    label={t("projects.labels.funcionalidades")}
+                    text={t(`${taskBase}.funcionalidades`)}
+                  />
+                  <Block
+                    label={t("projects.labels.responsabilidades")}
+                    text={t(`${taskBase}.responsabilidades`)}
+                  />
+                  <Block label={t("projects.labels.tecnologias")} text={t(`${taskBase}.tecnologias`)} />
+                  <Block label={t("projects.labels.resultado")} text={t(`${taskBase}.resultado`)} />
+                </div>
+
+                <div className="mt-6">
+                  <div className="text-sm font-semibold text-blue-400 mb-3">
+                    {t("projects.labels.aptitudes")}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {taskAptitudes.map((skill) => (
+                      <span
+                        key={skill}
+                        className="
+                          px-3
+                          py-1
+                          text-sm
+                          rounded-full
+                          bg-slate-800
+                          border
+                          border-yellow-400
+                        "
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </>
+            );
+          })
         )}
       </article>
     </section>

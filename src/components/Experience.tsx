@@ -21,16 +21,6 @@ const Experience = () => {
     });
   };
 
-  const base = `experience.items.${selected.key}`;
-
-  const bullets = t(`${base}.bullets`, {
-    returnObjects: true,
-  }) as string[];
-
-  const aptitudes = t(`${base}.aptitudes`, {
-    returnObjects: true,
-  }) as string[];
-
   return (
     <section
       id="experience"
@@ -98,7 +88,9 @@ const Experience = () => {
         })}
       </div>
 
-      {/* Panel de detalle */}
+      {/* Panel de detalle: se renderizan TODOS los paneles para SEO (Google indexa
+          todo el texto). Sólo el seleccionado es visible; el resto se ocultan por CSS
+          manteniéndose en el DOM. */}
       <article
         ref={panelRef}
         className="
@@ -112,61 +104,76 @@ const Experience = () => {
             hover:-translate-y-1
           "
       >
-        <div className="font-mono text-sm text-blue-400 mb-2">
-          {selected.code}
-        </div>
+        {EXPERIENCE_GROUPS.map((exp) => {
+          const expBase = `experience.items.${exp.key}`;
+          const expBullets = t(`${expBase}.bullets`, {
+            returnObjects: true,
+          }) as string[];
+          const expAptitudes = t(`${expBase}.aptitudes`, {
+            returnObjects: true,
+          }) as string[];
+          const isVisible = selected.code === exp.code;
 
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          {t(`${base}.title`)}
-        </h3>
+          return (
+            <div key={exp.code} className={isVisible ? "" : "hidden"}>
+              <div className="font-mono text-sm text-blue-400 mb-2">
+                {exp.code}
+              </div>
 
-        <div className="text-sm text-slate-400 mb-1">
-          {selected.company} · {t(`${base}.schedule`)}
-        </div>
+              <h3 className="text-2xl font-bold text-yellow-400 mb-2">
+                {t(`${expBase}.title`)}
+              </h3>
 
-        <div className="text-sm text-slate-400 mb-1">
-          {selected.dates} · {t(`${base}.duration`)}
-        </div>
+              <div className="text-sm text-slate-400 mb-1">
+                {exp.company} · {t(`${expBase}.schedule`)}
+              </div>
 
-        <div className="text-sm text-slate-400 mb-6">
-          {t(`${base}.location`)}
-        </div>
+              <div className="text-sm text-slate-400 mb-1">
+                {exp.dates} · {t(`${expBase}.duration`)}
+              </div>
 
-        <p className="text-ivory leading-relaxed mb-4">
-          {t(`${base}.intro`)}
-        </p>
+              <div className="text-sm text-slate-400 mb-6">
+                {t(`${expBase}.location`)}
+              </div>
 
-        <ul className="flex flex-col gap-3 mb-6">
-          {bullets.map((b, i) => (
-            <li key={i} className="flex gap-2 text-ivory leading-relaxed">
-              <span className="text-yellow-400 shrink-0">•</span>
-              <span>{b}</span>
-            </li>
-          ))}
-        </ul>
+              <p className="text-ivory leading-relaxed mb-4">
+                {t(`${expBase}.intro`)}
+              </p>
 
-        <div className="text-sm font-semibold text-blue-400 mb-3">
-          {t("experience.labels.aptitudes")}
-        </div>
+              <ul className="flex flex-col gap-3 mb-6">
+                {expBullets.map((b, i) => (
+                  <li key={i} className="flex gap-2 text-ivory leading-relaxed">
+                    <span className="text-yellow-400 shrink-0">•</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
 
-        <div className="flex flex-wrap gap-2">
-          {aptitudes.map((skill) => (
-            <span
-              key={skill}
-              className="
-                px-3
-                py-1
-                text-sm
-                rounded-full
-                bg-slate-800
-                border
-                border-yellow-400
-              "
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
+              <div className="text-sm font-semibold text-blue-400 mb-3">
+                {t("experience.labels.aptitudes")}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {expAptitudes.map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      px-3
+                      py-1
+                      text-sm
+                      rounded-full
+                      bg-slate-800
+                      border
+                      border-yellow-400
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </article>
     </section>
   );
