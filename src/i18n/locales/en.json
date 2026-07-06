@@ -1376,7 +1376,9 @@
     "blockPrivateTech": "Private profiles-Tech Only",
     "blockPrivateGeneralist": "Private profiles-Generalist",
     "blockJobsTech": "Company job sections-Tech Only",
-    "blockJobsGeneralist": "Company job sections-Generalist"
+    "blockJobsGeneralist": "Company job sections-Generalist",
+    "jobsProduct": "Product",
+    "jobsConsulting": "Consulting"
   },
   "location": {
     "title": "📍 Location",

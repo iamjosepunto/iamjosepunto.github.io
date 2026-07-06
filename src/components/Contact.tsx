@@ -535,7 +535,7 @@ const Contact = () => {
             <div className="border-2 border-yellow-400 rounded-2xl p-4" />
           </div>
 
-          {/* Secciones empleo - Sólo Tecnología */}
+          {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
           <div className="flex flex-col">
             <div className="text-center mb-3">
               <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
@@ -544,33 +544,93 @@ const Contact = () => {
                 {">"}
               </span>
             </div>
-            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
-              {[
-                { name: "Amazon", url: "https://www.amazon.jobs/es/search?loc_query=Espa%C3%B1a&country=ESP" },
-                { name: "HP", url: "https://apply.hp.com/careers?location=spain" },
-                { name: "IBM", url: "https://www.ibm.com/careers/search" },
-                { name: "Microsoft", url: "https://careers.microsoft.com/" },
-                { name: "Oracle", url: "https://www.oracle.com/careers/" },
-                { name: "SAP", url: "https://jobs.sap.com/" },
-                { name: "Cisco", url: "https://careers.cisco.com/" },
-                { name: "Google", url: "https://careers.google.com/" },
-                { name: "Salesforce", url: "https://careers.salesforce.com/en/jobs/" },
-                { name: "Dell", url: "https://jobs.dell.com/en" },
-              ].map((company) => (
-                <div key={company.url} className="flex flex-col min-w-0">
-                  <span className="text-base font-semibold text-sky-300">
-                    {company.name}
-                  </span>
-                  <a
-                    href={company.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-ivory hover:text-yellow-400 transition break-all"
-                  >
-                    {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                  </a>
+
+            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
+              {/* Sub-caja: Producto */}
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
+                  {t("contact.jobsProduct")}
+                </span>
+                <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
+                  {[
+                    { name: "HP", users: "[2.8k]", url: "https://apply.hp.com/careers?location=spain" },
+                    { name: "Oracle", users: "[1.27k]", url: "https://www.oracle.com/careers/" },
+                    { name: "Microsoft", users: "[1.26k]", url: "https://careers.microsoft.com/" },
+                    { name: "Amadeus", users: "[1.17k]", url: "#" },
+                    { name: "HPE", users: "[1.1k]", url: "#" },
+                    { name: "SAP", users: "[1.02k]", url: "https://jobs.sap.com/" },
+                    { name: "IBM", users: "[0.78k]", url: "https://www.ibm.com/careers/search" },
+                    { name: "Autodesk", users: "[0.68k]", url: "#" },
+                    { name: "Salesforce", users: "[0.65k]", url: "https://careers.salesforce.com/en/jobs/" },
+                    { name: "Red Hat", users: "[0.59k]", url: "#" },
+                    { name: "Google", users: "[0.58k]", url: "https://careers.google.com/" },
+                    { name: "Dell", users: "[0.51k]", url: "https://jobs.dell.com/en" },
+                    { name: "Cisco", users: "[0.49k]", url: "https://careers.cisco.com/" },
+                    { name: "VMware", users: "[0.2k]", url: "#" },
+                    { name: "SAS", users: "[0.16k]", url: "#" },
+                    { name: "Nutanix", users: "[0.12k]", url: "#" },
+                    { name: "Intel", users: "[0.06k]", url: "#" },
+                    { name: "NVIDIA", users: "[0.03k]", url: "#" },
+                    { name: "Adobe", users: "[0.03k]", url: "#" },
+                    { name: "Qualcomm", users: "[n/d]", url: "#" },
+                  ].map((company) => (
+                    <div key={company.name} className="flex flex-col min-w-0">
+                      <span className="text-base font-semibold text-sky-300">
+                        {company.name}
+                        <span className="text-sm font-normal text-slate-500"> {company.users}</span>
+                      </span>
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {company.url === "#"
+                          ? t("contact.pending")
+                          : company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Sub-caja: Consultoras */}
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
+                  {t("contact.jobsConsulting")}
+                </span>
+                <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
+                  {[
+                    { name: "Capgemini", users: "[10.88k]", url: "#" },
+                    { name: "Indra", users: "[10.19k]", url: "https://careers.indragroup.com/" },
+                    { name: "NTT Data", users: "[10.1k]", url: "#" },
+                    { name: "Sopra Steria", users: "[4k]", url: "#" },
+                    { name: "Accenture", users: "[3.63k]", url: "#" },
+                    { name: "TCS", users: "[0.77k]", url: "#" },
+                    { name: "Atos", users: "[n/d]", url: "#" },
+                    { name: "GFT", users: "[n/d]", url: "#" },
+                    { name: "Cognizant", users: "[n/d]", url: "#" },
+                    { name: "Globant", users: "[n/d]", url: "#" },
+                  ].map((company) => (
+                    <div key={company.name} className="flex flex-col min-w-0">
+                      <span className="text-base font-semibold text-sky-300">
+                        {company.name}
+                        <span className="text-sm font-normal text-slate-500"> {company.users}</span>
+                      </span>
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {company.url === "#"
+                          ? t("contact.pending")
+                          : company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
