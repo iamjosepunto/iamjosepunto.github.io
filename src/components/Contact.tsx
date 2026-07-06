@@ -553,32 +553,36 @@ const Contact = () => {
                 </span>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
-                    { name: "HP", users: "[2.8k]", url: "https://apply.hp.com" },
-                    { name: "Oracle", users: "[1.27k]", url: "https://oracle.com/careers" },
-                    { name: "Microsoft", users: "[1.26k]", url: "https://careers.microsoft.com" },
-                    { name: "Amadeus", users: "[1.17k]", url: "https://amadeus.com/careers" },
-                    { name: "HPE", users: "[1.1k]", url: "https://careers.hpe.com" },
-                    { name: "SAP", users: "[1.02k]", url: "https://jobs.sap.com" },
-                    { name: "IBM", users: "[0.78k]", url: "https://ibm.com/careers" },
-                    { name: "Autodesk", users: "[0.68k]", url: "https://autodesk.com/careers" },
-                    { name: "Salesforce", users: "[0.65k]", url: "https://careers.salesforce.com" },
-                    { name: "Red Hat", users: "[0.59k]", url: "https://redhat.com/jobs" },
-                    { name: "Google", users: "[0.58k]", url: "https://careers.google.com" },
-                    { name: "Dell", users: "[0.51k]", url: "https://jobs.dell.com" },
-                    { name: "Cisco", users: "[0.49k]", url: "https://careers.cisco.com" },
-                    { name: "VMware", users: "[0.2k]", url: "https://broadcom.com/careers" },
-                    { name: "SAS", users: "[0.16k]", url: "https://sas.com/careers" },
-                    { name: "Nutanix", users: "[0.12k]", url: "https://nutanix.com/careers" },
-                    { name: "Intel", users: "[0.06k]", url: "https://jobs.intel.com" },
-                    { name: "NVIDIA", users: "[0.03k]", url: "https://jobs.nvidia.com" },
-                    { name: "Adobe", users: "[0.03k]", url: "https://careers.adobe.com" },
-                    { name: "Qualcomm", users: "[n/d]", url: "https://qualcomm.com/careers" },
+                    { name: "HP", users: "[2.8k]", descKey: "descHP", url: "https://apply.hp.com" },
+                    { name: "Oracle", users: "[1.27k]", descKey: "descOracle", url: "https://oracle.com/careers" },
+                    { name: "Microsoft", users: "[1.26k]", descKey: "descMicrosoft", url: "https://careers.microsoft.com" },
+                    { name: "Amadeus", users: "[1.17k]", descKey: "descAmadeus", url: "https://amadeus.com/careers" },
+                    { name: "SAP", users: "[1.02k]", descKey: "descSAP", url: "https://jobs.sap.com" },
+                    { name: "IBM Producto", users: "[0.79k]", descKey: "descIBMProduct", url: "https://ibm.com/careers" },
+                    { name: "Autodesk", users: "[0.68k]", descKey: "descAutodesk", url: "https://autodesk.com/careers" },
+                    { name: "Salesforce", users: "[0.65k]", descKey: "descSalesforce", url: "https://careers.salesforce.com" },
+                    { name: "Red Hat", users: "[0.59k]", descKey: "descRedHat", url: "https://redhat.com/jobs" },
+                    { name: "Google", users: "[0.58k]", descKey: "descGoogle", url: "https://careers.google.com" },
+                    { name: "Dell", users: "[0.51k]", descKey: "descDell", url: "https://jobs.dell.com" },
+                    { name: "Cisco", users: "[0.49k]", descKey: "descCisco", url: "https://careers.cisco.com" },
+                    { name: "VMware", users: "[0.2k]", descKey: "descVMware", url: "https://broadcom.com/careers" },
+                    { name: "SAS", users: "[0.16k]", descKey: "descSAS", url: "https://sas.com/careers" },
+                    { name: "Nutanix", users: "[0.12k]", descKey: "descNutanix", url: "https://nutanix.com/careers" },
+                    { name: "Intel", users: "[0.06k]", descKey: "descIntel", url: "https://jobs.intel.com" },
+                    { name: "NVIDIA", users: "[0.03k]", descKey: "descNVIDIA", url: "https://jobs.nvidia.com" },
+                    { name: "Adobe", users: "[0.03k]", descKey: "descAdobe", url: "https://careers.adobe.com" },
+                    { name: "Qualcomm", users: "[n/d]", descKey: "descQualcomm", url: "https://qualcomm.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
-                      <span className="text-base font-semibold text-sky-300">
-                        {company.name}
-                        <span className="text-sm font-normal text-slate-500"> {company.users}</span>
-                      </span>
+                      <div className="flex items-baseline gap-2 flex-wrap">
+                        <span className="text-base font-semibold text-sky-300">
+                          {company.name}
+                        </span>
+                        <span className="text-sm text-slate-400">
+                          {t(`contact.${company.descKey}`)}
+                        </span>
+                      </div>
+                      <span className="text-sm font-normal text-slate-500">{company.users}</span>
                       {company.url === "#" ? (
                         <span className="text-sm font-normal text-slate-500">
                           ({t("contact.pending")})
@@ -605,22 +609,29 @@ const Contact = () => {
                 </span>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
-                    { name: "Capgemini", users: "[10.88k]", url: "https://capgemini.com/careers" },
-                    { name: "Indra", users: "[10.19k]", url: "https://careers.indragroup.com" },
-                    { name: "NTT Data", users: "[10.1k]", url: "https://nttdata.com/careers" },
-                    { name: "Sopra Steria", users: "[4k]", url: "https://careers.soprasteria.es" },
-                    { name: "Accenture", users: "[3.63k]", url: "https://accenture.com/careers" },
-                    { name: "TCS", users: "[0.77k]", url: "https://tcs.com/careers" },
-                    { name: "Atos", users: "[n/d]", url: "https://jobs.atos.net" },
-                    { name: "GFT", users: "[n/d]", url: "https://jobs.gft.com" },
-                    { name: "Cognizant", users: "[n/d]", url: "https://careers.cognizant.com" },
-                    { name: "Globant", users: "[n/d]", url: "https://globant.com/careers" },
+                    { name: "Capgemini", users: "[10.88k]", descKey: "descCapgemini", url: "https://capgemini.com/careers" },
+                    { name: "Indra", users: "[10.19k]", descKey: "descIndra", url: "https://careers.indragroup.com" },
+                    { name: "NTT Data", users: "[10.1k]", descKey: "descNTTData", url: "https://nttdata.com/careers" },
+                    { name: "Sopra Steria", users: "[4k]", descKey: "descSopraSteria", url: "https://careers.soprasteria.es" },
+                    { name: "Accenture", users: "[3.63k]", descKey: "descAccenture", url: "https://accenture.com/careers" },
+                    { name: "HPE", users: "[1.1k]", descKey: "descHPE", url: "https://careers.hpe.com" },
+                    { name: "IBM Consulting", users: "[0.78k]", descKey: "descIBMConsulting", url: "https://ibm.com/careers" },
+                    { name: "TCS", users: "[0.77k]", descKey: "descTCS", url: "https://tcs.com/careers" },
+                    { name: "Atos", users: "[n/d]", descKey: "descAtos", url: "https://jobs.atos.net" },
+                    { name: "GFT", users: "[n/d]", descKey: "descGFT", url: "https://jobs.gft.com" },
+                    { name: "Cognizant", users: "[n/d]", descKey: "descCognizant", url: "https://careers.cognizant.com" },
+                    { name: "Globant", users: "[n/d]", descKey: "descGlobant", url: "https://globant.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
-                      <span className="text-base font-semibold text-sky-300">
-                        {company.name}
-                        <span className="text-sm font-normal text-slate-500"> {company.users}</span>
-                      </span>
+                      <div className="flex items-baseline gap-2 flex-wrap">
+                        <span className="text-base font-semibold text-sky-300">
+                          {company.name}
+                        </span>
+                        <span className="text-sm text-slate-400">
+                          {t(`contact.${company.descKey}`)}
+                        </span>
+                      </div>
+                      <span className="text-sm font-normal text-slate-500">{company.users}</span>
                       {company.url === "#" ? (
                         <span className="text-sm font-normal text-slate-500">
                           ({t("contact.pending")})
