@@ -489,6 +489,7 @@ const Contact = () => {
               {[
                 {
                   platform: "Medium",
+                  marker: "[w27-26]",
                   title:
                     "Migrating a Legacy Razor + JavaScript Frontend to React and TypeScript, One Component at a Time",
                   url: "https://iamjosepunto.medium.com/migrating-a-legacy-razor-javascript-frontend-to-react-and-typescript-one-component-at-a-time-ca9222d69490",
@@ -498,6 +499,7 @@ const Contact = () => {
                   <span className="text-base font-semibold text-sky-300">
                     {post.platform}
                   </span>
+                  <span className="text-sm font-normal text-slate-500">{post.marker}</span>
                   <a
                     href={post.url}
                     target="_blank"
