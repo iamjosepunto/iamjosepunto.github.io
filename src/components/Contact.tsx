@@ -510,6 +510,30 @@ const Contact = () => {
               ))}
             </div>
           </div>
+
+          {/* Perfiles privados - Sólo Tecnología (vacío) */}
+          <div className="flex flex-col">
+            <div className="text-center mb-3">
+              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
+                {"<"}
+                {t("contact.blockPrivateTech")}
+                {">"}
+              </span>
+            </div>
+            <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+          </div>
+
+          {/* Perfiles privados - Generalistas (vacío) */}
+          <div className="flex flex-col">
+            <div className="text-center mb-3">
+              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
+                {"<"}
+                {t("contact.blockPrivateGeneralist")}
+                {">"}
+              </span>
+            </div>
+            <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+          </div>
         </div>
       </div>
     </section>

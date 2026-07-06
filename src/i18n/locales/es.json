@@ -1372,7 +1372,9 @@
     "subPhoto": "Fotografía",
     "subCreators": "Creadores",
     "blockManagers": "Gestores de redes",
-    "blockPublications": "Catálogo de publicaciones"
+    "blockPublications": "Catálogo de publicaciones",
+    "blockPrivateTech": "Perfiles privados-Sólo Tecnología",
+    "blockPrivateGeneralist": "Perfiles privados-Generalistas"
   },
   "location": {
     "title": "📍 Ubicación",
