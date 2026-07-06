@@ -1375,8 +1375,8 @@
     "blockPublications": "Catálogo de publicaciones",
     "blockPrivateTech": "Perfiles privados-Sólo Tecnología",
     "blockPrivateGeneralist": "Perfiles privados-Generalistas",
-    "blockJobsTech": "Secciones empleo-Sólo Tecnología",
-    "blockJobsGeneralist": "Secciones empleo-Generalistas"
+    "blockJobsTech": "Secciones empleo empresas-Sólo Tecnología",
+    "blockJobsGeneralist": "Secciones empleo empresas-Generalistas"
   },
   "location": {
     "title": "📍 Ubicación",

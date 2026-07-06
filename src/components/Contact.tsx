@@ -535,7 +535,7 @@ const Contact = () => {
             <div className="border-2 border-yellow-400 rounded-2xl p-4" />
           </div>
 
-          {/* Secciones empleo - Sólo Tecnología (vacío) */}
+          {/* Secciones empleo - Sólo Tecnología */}
           <div className="flex flex-col">
             <div className="text-center mb-3">
               <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
@@ -544,7 +544,34 @@ const Contact = () => {
                 {">"}
               </span>
             </div>
-            <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
+              {[
+                { name: "Amazon", url: "https://www.amazon.jobs/es/search?loc_query=Espa%C3%B1a&country=ESP" },
+                { name: "HP", url: "https://apply.hp.com/careers?location=spain" },
+                { name: "IBM", url: "https://www.ibm.com/careers/search" },
+                { name: "Microsoft", url: "https://careers.microsoft.com/" },
+                { name: "Oracle", url: "https://www.oracle.com/careers/" },
+                { name: "SAP", url: "https://jobs.sap.com/" },
+                { name: "Cisco", url: "https://careers.cisco.com/" },
+                { name: "Google", url: "https://careers.google.com/" },
+                { name: "Salesforce", url: "https://careers.salesforce.com/en/jobs/" },
+                { name: "Dell", url: "https://jobs.dell.com/en" },
+              ].map((company) => (
+                <div key={company.url} className="flex flex-col min-w-0">
+                  <span className="text-base font-semibold text-sky-300">
+                    {company.name}
+                  </span>
+                  <a
+                    href={company.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ivory hover:text-yellow-400 transition break-all"
+                  >
+                    {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Secciones empleo - Generalistas (vacío) */}
