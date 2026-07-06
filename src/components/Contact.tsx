@@ -479,7 +479,7 @@ const Contact = () => {
           <span className="blink-soft">{t("about.data.contact")}</span>
         </p>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
           {/* Email: cabecera grande centrada + cajita con borde amarillo */}
           <div className="flex flex-col">
             <div className="text-center mb-3">
