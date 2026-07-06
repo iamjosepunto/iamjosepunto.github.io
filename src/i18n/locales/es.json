@@ -1374,7 +1374,9 @@
     "blockManagers": "Gestores de redes",
     "blockPublications": "Catálogo de publicaciones",
     "blockPrivateTech": "Perfiles privados-Sólo Tecnología",
-    "blockPrivateGeneralist": "Perfiles privados-Generalistas"
+    "blockPrivateGeneralist": "Perfiles privados-Generalistas",
+    "blockJobsTech": "Secciones empleo-Sólo Tecnología",
+    "blockJobsGeneralist": "Secciones empleo-Generalistas"
   },
   "location": {
     "title": "📍 Ubicación",
