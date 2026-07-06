@@ -373,8 +373,8 @@ const Contact = () => {
 
       <div
         className="
-          w-fit
-          max-w-full
+          w-full
+          max-w-md
           mx-auto
           bg-slate-900
           border
