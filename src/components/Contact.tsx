@@ -235,12 +235,8 @@ const Contact = () => {
             },
           ],
         },
-      ],
-    },
-    {
-      label: t("contact.blockIdentity"),
-      groups: [
         {
+          label: t("contact.blockIdentity"),
           subGroups: [
             {
               items: [
