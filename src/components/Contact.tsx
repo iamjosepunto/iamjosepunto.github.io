@@ -116,7 +116,7 @@ const Contact = () => {
             {
               subLabel: t("contact.subJobs"),
               items: [
-                { name: "Wellfound", href: PROFILE.socials.wellfound, users: "[10M]" },
+                { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
                 { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
               ],
             },
@@ -573,7 +573,7 @@ const Contact = () => {
                     { name: "Intel", users: "[0.06k-Es|109k-W]", descKey: "descIntel", url: "https://jobs.intel.com" },
                     { name: "NVIDIA", users: "[0.03k-Es|36k-W]", descKey: "descNVIDIA", url: "https://jobs.nvidia.com" },
                     { name: "Adobe", users: "[0.03k-Es|31k-W]", descKey: "descAdobe", url: "https://careers.adobe.com" },
-                    { name: "Qualcomm", users: "[0.2k-Es|49k-W]", descKey: "descQualcomm", url: "https://qualcomm.com/careers" },
+                    { name: "Qualcomm", users: "[n/d-Es|49k-W]", descKey: "descQualcomm", url: "https://qualcomm.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
                       <div className="flex items-baseline gap-2 flex-wrap">
@@ -615,15 +615,15 @@ const Contact = () => {
                     { name: "Indra", users: "[10.19k-Es|61k-W]", descKey: "descIndra", url: "https://careers.indragroup.com" },
                     { name: "NTT Data", users: "[10.1k-Es|198k-W]", descKey: "descNTTData", url: "https://nttdata.com/careers" },
                     { name: "Inetum", users: "[8.5k-Es|28k-W]", descKey: "descInetum", url: "https://inetum.com/es/careers" },
-                    { name: "Atos", users: "[6.0k-Es|110k-W]", descKey: "descAtos", url: "https://jobs.atos.net" },
                     { name: "Sopra Steria", users: "[4k-Es|50k-W]", descKey: "descSopraSteria", url: "https://careers.soprasteria.es" },
                     { name: "Accenture", users: "[3.63k-Es|779k-W]", descKey: "descAccenture", url: "https://accenture.com/careers" },
-                    { name: "GFT", users: "[2.5k-Es|12k-W]", descKey: "descGFT", url: "https://jobs.gft.com" },
-                    { name: "Cognizant", users: "[1.2k-Es|348k-W]", descKey: "descCognizant", url: "https://careers.cognizant.com" },
                     { name: "HPE", users: "[1.1k-Es|61k-W]", descKey: "descHPE", url: "https://careers.hpe.com" },
                     { name: "IBM Consulting", users: "[0.78k-Es|282k-W]", descKey: "descIBMConsulting", url: "https://ibm.com/careers" },
                     { name: "TCS", users: "[0.77k-Es|615k-W]", descKey: "descTCS", url: "https://tcs.com/careers" },
-                    { name: "Globant", users: "[0.6k-Es|29k-W]", descKey: "descGlobant", url: "https://globant.com/careers" },
+                    { name: "Atos", users: "[n/d-Es|110k-W]", descKey: "descAtos", url: "https://jobs.atos.net" },
+                    { name: "GFT", users: "[n/d-Es|12k-W]", descKey: "descGFT", url: "https://jobs.gft.com" },
+                    { name: "Cognizant", users: "[n/d-Es|348k-W]", descKey: "descCognizant", url: "https://careers.cognizant.com" },
+                    { name: "Globant", users: "[n/d-Es|29k-W]", descKey: "descGlobant", url: "https://globant.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
                       <div className="flex items-baseline gap-2 flex-wrap">
@@ -674,15 +674,15 @@ const Contact = () => {
                 </span>
                 <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-3">
                   {[
-                    { name: "Mercadona", users: "[93k-Es|110k-W]", descKey: "descMercadona", url: "https://mercadona.es/es/conocenos/trabaja-con-nosotros" },
-                    { name: "El Corte Inglés", users: "[50.7k-Es|80k-W]", descKey: "descElCorteIngles", url: "https://elcorteingles.es/empleo" },
+                    { name: "Mercadona", users: "[98.7k-Es|104k-W]", descKey: "descMercadona", url: "https://mercadona.es/es/conocenos/trabaja-con-nosotros" },
+                    { name: "El Corte Inglés", users: "[74.7k-Es|80k-W]", descKey: "descElCorteIngles", url: "https://elcorteingles.es/empleo" },
                     { name: "Inditex", users: "[46k-Es|161k-W]", descKey: "descInditex", url: "https://inditexcareers.com" },
-                    { name: "CaixaBank", users: "[44k-Es|44k-W]", descKey: "descCaixaBank", url: "https://caixabank.com/es/talento" },
+                    { name: "CaixaBank", users: "[44.9k-Es|49.8k-W]", descKey: "descCaixaBank", url: "https://caixabank.com/es/talento" },
                     { name: "BBVA", users: "[28.2k-Es|125k-W]", descKey: "descBBVA", url: "https://careers.bbva.com" },
                     { name: "Amazon", users: "[28k-Es|1556k-W]", descKey: "descAmazon", url: "https://amazon.jobs/es" },
                     { name: "Telefónica", users: "[27.8k-Es|104k-W]", descKey: "descTelefonica", url: "https://telefonica.com/es/talento" },
                     { name: "Santander", users: "[26.8k-Es|210k-W]", descKey: "descSantander", url: "https://santandercareers.com" },
-                    { name: "Repsol", users: "[25k-Es|25k-W]", descKey: "descRepsol", url: "https://repsol.com/es/talento" },
+                    { name: "Repsol", users: "[15k-Es|26k-W]", descKey: "descRepsol", url: "https://repsol.com/es/talento" },
                     { name: "Iberdrola", users: "[9.75k-Es|42k-W]", descKey: "descIberdrola", url: "https://iberdrola.com/talento" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
@@ -725,9 +725,9 @@ const Contact = () => {
                     { name: "EY", users: "[6.44k-Es|395k-W]", descKey: "descEY", url: "https://ey.com/es_es/careers" },
                     { name: "KPMG", users: "[6.05k-Es|275k-W]", descKey: "descKPMG", url: "https://kpmg.com/es/careers" },
                     { name: "PwC", users: "[5.79k-Es|370k-W]", descKey: "descPwC", url: "https://pwc.es/carreras" },
-                    { name: "McKinsey", users: "[0.8k-Es|45k-W]", descKey: "descMcKinsey", url: "https://mckinsey.com/careers" },
-                    { name: "BCG", users: "[0.7k-Es|32k-W]", descKey: "descBCG", url: "https://bcg.com/careers" },
-                    { name: "Bain", users: "[0.2k-Es|19k-W]", descKey: "descBain", url: "https://bain.com/careers" },
+                    { name: "McKinsey", users: "[n/d-Es|45k-W]", descKey: "descMcKinsey", url: "https://mckinsey.com/careers" },
+                    { name: "BCG", users: "[n/d-Es|32k-W]", descKey: "descBCG", url: "https://bcg.com/careers" },
+                    { name: "Bain", users: "[n/d-Es|19k-W]", descKey: "descBain", url: "https://bain.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
                       <div className="flex items-baseline gap-2 flex-wrap">
