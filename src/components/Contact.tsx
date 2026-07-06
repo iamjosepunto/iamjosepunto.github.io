@@ -116,7 +116,7 @@ const Contact = () => {
             {
               subLabel: t("contact.subJobs"),
               items: [
-                { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
+                { name: "Wellfound", href: PROFILE.socials.wellfound, users: "[10M]" },
                 { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
               ],
             },
@@ -140,9 +140,9 @@ const Contact = () => {
             {
               items: [
                 { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true },
-                { name: "Polywork", users: "[n/d]", pending: true },
+                { name: "Polywork", users: "[2M]", pending: true },
                 { name: "Xing", users: "[20.5M]", pending: true },
-                { name: "Read.cv", users: "[n/d]", pending: true },
+                { name: "Read.cv", users: "[0.5M]", pending: true },
               ],
             },
           ],
@@ -187,7 +187,7 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Hacker News", users: "[n/d]", pending: true },
+                { name: "Hacker News", users: "[8M]", pending: true },
                 { name: "Reddit", users: "[970M]", pending: true },
               ],
             },
@@ -221,7 +221,7 @@ const Contact = () => {
             {
               items: [
                 { name: "VSCO", users: "[200M]", pending: true },
-                { name: "Flickr", users: "[n/d]", pending: true },
+                { name: "Flickr", users: "[120M]", pending: true },
                 { name: "Unsplash", users: "[0.4M]", pending: true },
               ],
             },
@@ -240,8 +240,8 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Gravatar", href: PROFILE.socials.gravatar, users: "[n/d]" },
-                { name: "About.me", href: PROFILE.socials.aboutme, users: "[n/d]", indexed: true },
+                { name: "Gravatar", href: PROFILE.socials.gravatar, users: "[60M]" },
+                { name: "About.me", href: PROFILE.socials.aboutme, users: "[40M]", indexed: true },
                 { name: "Linktree", href: PROFILE.socials.linktree, users: "[50M]" },
               ],
             },
@@ -573,7 +573,7 @@ const Contact = () => {
                     { name: "Intel", users: "[0.06k-Es|109k-W]", descKey: "descIntel", url: "https://jobs.intel.com" },
                     { name: "NVIDIA", users: "[0.03k-Es|36k-W]", descKey: "descNVIDIA", url: "https://jobs.nvidia.com" },
                     { name: "Adobe", users: "[0.03k-Es|31k-W]", descKey: "descAdobe", url: "https://careers.adobe.com" },
-                    { name: "Qualcomm", users: "[n/d-Es|49k-W]", descKey: "descQualcomm", url: "https://qualcomm.com/careers" },
+                    { name: "Qualcomm", users: "[0.2k-Es|49k-W]", descKey: "descQualcomm", url: "https://qualcomm.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
                       <div className="flex items-baseline gap-2 flex-wrap">
@@ -615,15 +615,15 @@ const Contact = () => {
                     { name: "Indra", users: "[10.19k-Es|61k-W]", descKey: "descIndra", url: "https://careers.indragroup.com" },
                     { name: "NTT Data", users: "[10.1k-Es|198k-W]", descKey: "descNTTData", url: "https://nttdata.com/careers" },
                     { name: "Inetum", users: "[8.5k-Es|28k-W]", descKey: "descInetum", url: "https://inetum.com/es/careers" },
+                    { name: "Atos", users: "[6.0k-Es|110k-W]", descKey: "descAtos", url: "https://jobs.atos.net" },
                     { name: "Sopra Steria", users: "[4k-Es|50k-W]", descKey: "descSopraSteria", url: "https://careers.soprasteria.es" },
                     { name: "Accenture", users: "[3.63k-Es|779k-W]", descKey: "descAccenture", url: "https://accenture.com/careers" },
+                    { name: "GFT", users: "[2.5k-Es|12k-W]", descKey: "descGFT", url: "https://jobs.gft.com" },
+                    { name: "Cognizant", users: "[1.2k-Es|348k-W]", descKey: "descCognizant", url: "https://careers.cognizant.com" },
                     { name: "HPE", users: "[1.1k-Es|61k-W]", descKey: "descHPE", url: "https://careers.hpe.com" },
                     { name: "IBM Consulting", users: "[0.78k-Es|282k-W]", descKey: "descIBMConsulting", url: "https://ibm.com/careers" },
                     { name: "TCS", users: "[0.77k-Es|615k-W]", descKey: "descTCS", url: "https://tcs.com/careers" },
-                    { name: "Atos", users: "[n/d-Es|110k-W]", descKey: "descAtos", url: "https://jobs.atos.net" },
-                    { name: "GFT", users: "[n/d-Es|12k-W]", descKey: "descGFT", url: "https://jobs.gft.com" },
-                    { name: "Cognizant", users: "[n/d-Es|348k-W]", descKey: "descCognizant", url: "https://careers.cognizant.com" },
-                    { name: "Globant", users: "[n/d-Es|29k-W]", descKey: "descGlobant", url: "https://globant.com/careers" },
+                    { name: "Globant", users: "[0.6k-Es|29k-W]", descKey: "descGlobant", url: "https://globant.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
                       <div className="flex items-baseline gap-2 flex-wrap">
@@ -725,9 +725,9 @@ const Contact = () => {
                     { name: "EY", users: "[6.44k-Es|395k-W]", descKey: "descEY", url: "https://ey.com/es_es/careers" },
                     { name: "KPMG", users: "[6.05k-Es|275k-W]", descKey: "descKPMG", url: "https://kpmg.com/es/careers" },
                     { name: "PwC", users: "[5.79k-Es|370k-W]", descKey: "descPwC", url: "https://pwc.es/carreras" },
-                    { name: "McKinsey", users: "[n/d-Es|45k-W]", descKey: "descMcKinsey", url: "https://mckinsey.com/careers" },
-                    { name: "BCG", users: "[n/d-Es|32k-W]", descKey: "descBCG", url: "https://bcg.com/careers" },
-                    { name: "Bain", users: "[n/d-Es|19k-W]", descKey: "descBain", url: "https://bain.com/careers" },
+                    { name: "McKinsey", users: "[0.8k-Es|45k-W]", descKey: "descMcKinsey", url: "https://mckinsey.com/careers" },
+                    { name: "BCG", users: "[0.7k-Es|32k-W]", descKey: "descBCG", url: "https://bcg.com/careers" },
+                    { name: "Bain", users: "[0.2k-Es|19k-W]", descKey: "descBain", url: "https://bain.com/careers" },
                   ].map((company) => (
                     <div key={company.name} className="flex flex-col min-w-0">
                       <div className="flex items-baseline gap-2 flex-wrap">
