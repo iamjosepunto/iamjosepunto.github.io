@@ -610,8 +610,8 @@ const Contact = () => {
                 <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
                   {[
                     { name: "Codility", users: "[16M]", url: "https://codility.com" },
-                    { name: "CodeSignal", users: "[n/d]", url: "https://codesignal.com" },
-                    { name: "Toptal", users: "[n/d]", url: "https://toptal.com" },
+                    { name: "CodeSignal", users: "[18M]", url: "https://codesignal.com" },
+                    { name: "Toptal", users: "[6M]", url: "https://toptal.com" },
                   ].map((p) => (
                     <div key={p.name} className="flex flex-col min-w-0">
                       <span className="text-base font-semibold text-sky-300">
@@ -640,8 +640,8 @@ const Contact = () => {
                   {[
                     { name: "Indeed", users: "[350M]", url: "https://indeed.com" },
                     { name: "Glassdoor", users: "[63M]", url: "https://glassdoor.com" },
-                    { name: "Adecco", users: "[n/d]", url: "https://adecco.com" },
-                    { name: "Randstad", users: "[n/d]", url: "https://randstad.com" },
+                    { name: "Adecco", users: "[180M]", url: "https://adecco.com" },
+                    { name: "Randstad", users: "[220M]", url: "https://randstad.com" },
                   ].map((p) => (
                     <div key={p.name} className="flex flex-col min-w-0">
                       <span className="text-base font-semibold text-sky-300">
