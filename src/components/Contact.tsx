@@ -484,7 +484,7 @@ const Contact = () => {
           {t("contact.subtitle")}
         </p>
 
-        <p className="text-lg text-ivory leading-relaxed mb-6 text-center">
+        <p className="text-lg text-ivory leading-relaxed mb-2 text-center">
           <span className="text-yellow-400 font-semibold">
             {t("about.data.labels.contact")}:
           </span>{" "}
