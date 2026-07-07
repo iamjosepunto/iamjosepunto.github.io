@@ -205,6 +205,7 @@ const Contact = () => {
               items: [
                 { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
                 { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
+                { name: "Tecnoempleo", users: "[0.5M]", pending: true },
               ],
             },
             {
@@ -227,6 +228,7 @@ const Contact = () => {
             {
               items: [
                 { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true },
+                { name: "InfoJobs", users: "[4M]", pending: true },
                 { name: "Polywork", users: "[2M]", pending: true },
                 { name: "Xing", users: "[20.5M]", pending: true },
                 { name: "Read.cv", users: "[0.5M]", pending: true },
