@@ -31,9 +31,11 @@ type Block = {
 const CollapsibleBlock = ({
   label,
   children,
+  bare = false,
 }: {
   label: string;
   children: React.ReactNode;
+  bare?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -45,9 +47,7 @@ const CollapsibleBlock = ({
         className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
       >
         <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-          {"<"}
-          {label}
-          {">"}
+          {bare ? label : `<${label}>`}
         </span>
         <svg
           viewBox="0 0 24 24"
@@ -512,7 +512,7 @@ const Contact = () => {
           <CollapsibleBlock label={t("contact.blockPublicProfiles")}>
             <div className="flex flex-col gap-2 pl-4">
               {sortedBlocks.map((block) => (
-                <CollapsibleBlock key={block.label} label={block.label}>
+                <CollapsibleBlock key={block.label} label={block.label} bare>
                   <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
                     {block.groups.map((group, gIdx) => renderGroup(group, gIdx))}
                   </div>
@@ -578,12 +578,12 @@ const Contact = () => {
           <CollapsibleBlock label={t("contact.blockPrivateProfiles")}>
             <div className="flex flex-col gap-2 pl-4">
               {/* Perfiles privados - Sólo Tecnología (vacío) */}
-              <CollapsibleBlock label={t("contact.blockPrivateTech")}>
+              <CollapsibleBlock label={t("contact.blockPrivateTech")} bare>
                 <div className="border-2 border-yellow-400 rounded-2xl p-4" />
               </CollapsibleBlock>
 
               {/* Perfiles privados - Generalistas (vacío) */}
-              <CollapsibleBlock label={t("contact.blockPrivateGeneralist")}>
+              <CollapsibleBlock label={t("contact.blockPrivateGeneralist")} bare>
                 <div className="border-2 border-yellow-400 rounded-2xl p-4" />
               </CollapsibleBlock>
             </div>
@@ -593,7 +593,7 @@ const Contact = () => {
           <CollapsibleBlock label={t("contact.blockCompanyJobs")}>
             <div className="flex flex-col gap-2 pl-4">
               {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
-              <CollapsibleBlock label={t("contact.blockJobsTech")}>
+              <CollapsibleBlock label={t("contact.blockJobsTech")} bare>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
               {/* Sub-caja: Producto */}
               <CollapsibleSub label={t("contact.jobsProduct")}>
@@ -698,7 +698,7 @@ const Contact = () => {
           </CollapsibleBlock>
 
           {/* Secciones empleo - Generalistas (dos sub-cajas: Corporaciones y Consultoras) */}
-          <CollapsibleBlock label={t("contact.blockJobsGeneralist")}>
+          <CollapsibleBlock label={t("contact.blockJobsGeneralist")} bare>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
               {/* Sub-caja: Corporaciones */}
               <CollapsibleSub label={t("contact.jobsCorporations")}>
