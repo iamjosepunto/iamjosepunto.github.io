@@ -492,16 +492,8 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col gap-2">
-          {/* Email: cabecera grande a la izquierda + cajita con borde amarillo */}
+          {/* Email: cajita con borde amarillo (sin cabecera) */}
           <div className="flex flex-col">
-            <div className="text-left mb-1">
-              <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
-                {"<"}
-                {t("contact.email")}
-                {">"}
-              </span>
-            </div>
-
             <div className="border-2 border-yellow-400 rounded-2xl p-4">
               <div className="flex flex-col min-w-0">
                 <span className="text-base font-semibold text-sky-300">
