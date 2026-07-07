@@ -1432,7 +1432,17 @@
     "descInetum": "IT consulting and services",
     "blockPublicProfiles": "Public profiles",
     "blockPrivateProfiles": "Private profiles",
-    "blockCompanyJobs": "Company job sections"
+    "blockCompanyJobs": "Company job sections",
+    "pubPublished": "Published",
+    "pubIdeas": "Ideas for future articles",
+    "pubIdeasList": [
+      "React vs Vue",
+      "Kubernetes vs managed Kubernetes (Azure Container Apps)",
+      "Blazor vs React: when to choose each",
+      "Minimal APIs vs Controllers in ASP.NET Core",
+      "SQL vs MongoDB: how to choose your database",
+      "AI integration (ChatGPT/Claude) in .NET applications"
+    ]
   },
   "location": {
     "title": "📍 Location",

@@ -523,31 +523,55 @@ const Contact = () => {
 
           {/* Catálogo de publicaciones */}
           <CollapsibleBlock label={t("contact.blockPublications")}>
-            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-4">
-              {[
-                {
-                  platform: "Medium",
-                  marker: "[w27-26]",
-                  title:
-                    "Migrating a Legacy Razor + JavaScript Frontend to React and TypeScript, One Component at a Time",
-                  url: "https://iamjosepunto.medium.com/migrating-a-legacy-razor-javascript-frontend-to-react-and-typescript-one-component-at-a-time-ca9222d69490",
-                },
-              ].map((post) => (
-                <div key={post.url} className="flex flex-col min-w-0">
-                  <span className="text-base font-semibold text-sky-300">
-                    {post.platform}
-                  </span>
-                  <span className="text-sm font-normal text-slate-500">{post.marker}</span>
-                  <a
-                    href={post.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-ivory hover:text-yellow-400 transition break-words max-w-sm"
-                  >
-                    {post.title}
-                  </a>
+            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
+              {/* Sub-sección: Publicados */}
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
+                  {t("contact.pubPublished")}
+                </span>
+                <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-4">
+                  {[
+                    {
+                      platform: "Medium",
+                      marker: "[w27-26]",
+                      title:
+                        "Migrating a Legacy Razor + JavaScript Frontend to React and TypeScript, One Component at a Time",
+                      url: "https://iamjosepunto.medium.com/migrating-a-legacy-razor-javascript-frontend-to-react-and-typescript-one-component-at-a-time-ca9222d69490",
+                    },
+                  ].map((post) => (
+                    <div key={post.url} className="flex flex-col min-w-0">
+                      <span className="text-base font-semibold text-sky-300">
+                        {post.platform}
+                      </span>
+                      <span className="text-sm font-normal text-slate-500">{post.marker}</span>
+                      <a
+                        href={post.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-words max-w-sm"
+                      >
+                        {post.title}
+                      </a>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Sub-sección: Ideas para futuros artículos */}
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-blue-400 text-left mb-2 uppercase">
+                  {t("contact.pubIdeas")}
+                </span>
+                <div className="border border-yellow-400 rounded-xl p-4 flex flex-col gap-2.5">
+                  {(t("contact.pubIdeasList", { returnObjects: true }) as string[]).map(
+                    (idea, i) => (
+                      <span key={i} className="text-sm text-slate-400">
+                        {idea}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
             </div>
           </CollapsibleBlock>
 
