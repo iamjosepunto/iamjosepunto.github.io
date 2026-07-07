@@ -521,29 +521,6 @@ const Contact = () => {
             </div>
           </CollapsibleBlock>
 
-          {/* Gestores de redes sociales */}
-          <CollapsibleBlock label={t("contact.blockManagers")}>
-            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
-              {[
-                { name: "Buffer", url: "buffer.com" },
-                { name: "Publer", url: "publer.com" },
-                { name: "Metricool", url: "metricool.com" },
-              ].map((tool) => (
-                <div key={tool.name} className="flex flex-col min-w-0">
-                  <span className="text-base font-semibold text-sky-300">{tool.name}</span>
-                  <a
-                    href={`https://${tool.url}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-ivory hover:text-yellow-400 transition break-all"
-                  >
-                    {tool.url}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </CollapsibleBlock>
-
           {/* Catálogo de publicaciones */}
           <CollapsibleBlock label={t("contact.blockPublications")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-4">
@@ -568,6 +545,29 @@ const Contact = () => {
                     className="text-ivory hover:text-yellow-400 transition break-words max-w-sm"
                   >
                     {post.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </CollapsibleBlock>
+
+          {/* Gestores de redes sociales */}
+          <CollapsibleBlock label={t("contact.blockManagers")}>
+            <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
+              {[
+                { name: "Buffer", url: "buffer.com" },
+                { name: "Publer", url: "publer.com" },
+                { name: "Metricool", url: "metricool.com" },
+              ].map((tool) => (
+                <div key={tool.name} className="flex flex-col min-w-0">
+                  <span className="text-base font-semibold text-sky-300">{tool.name}</span>
+                  <a
+                    href={`https://${tool.url}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ivory hover:text-yellow-400 transition break-all"
+                  >
+                    {tool.url}
                   </a>
                 </div>
               ))}
