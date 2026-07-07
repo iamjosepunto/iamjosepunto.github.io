@@ -715,20 +715,17 @@ const Contact = () => {
                         </span>
                       </div>
                       <span className="text-sm font-normal text-slate-500">{company.users}</span>
-                      {company.url === "#" ? (
-                        <span className="text-sm font-normal text-slate-500">
-                          ({t("contact.pending")})
-                        </span>
-                      ) : (
-                        <a
-                          href={company.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-ivory hover:text-yellow-400 transition break-all"
-                        >
-                          {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                        </a>
-                      )}
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                      <span className="text-sm font-normal text-slate-500">
+                        ({t("contact.pending")})
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -762,20 +759,17 @@ const Contact = () => {
                         </span>
                       </div>
                       <span className="text-sm font-normal text-slate-500">{company.users}</span>
-                      {company.url === "#" ? (
-                        <span className="text-sm font-normal text-slate-500">
-                          ({t("contact.pending")})
-                        </span>
-                      ) : (
-                        <a
-                          href={company.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-ivory hover:text-yellow-400 transition break-all"
-                        >
-                          {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                        </a>
-                      )}
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                      <span className="text-sm font-normal text-slate-500">
+                        ({t("contact.pending")})
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -811,20 +805,17 @@ const Contact = () => {
                         </span>
                       </div>
                       <span className="text-sm font-normal text-slate-500">{company.users}</span>
-                      {company.url === "#" ? (
-                        <span className="text-sm font-normal text-slate-500">
-                          ({t("contact.pending")})
-                        </span>
-                      ) : (
-                        <a
-                          href={company.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-ivory hover:text-yellow-400 transition break-all"
-                        >
-                          {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                        </a>
-                      )}
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                      <span className="text-sm font-normal text-slate-500">
+                        ({t("contact.pending")})
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -852,20 +843,17 @@ const Contact = () => {
                         </span>
                       </div>
                       <span className="text-sm font-normal text-slate-500">{company.users}</span>
-                      {company.url === "#" ? (
-                        <span className="text-sm font-normal text-slate-500">
-                          ({t("contact.pending")})
-                        </span>
-                      ) : (
-                        <a
-                          href={company.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-ivory hover:text-yellow-400 transition break-all"
-                        >
-                          {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                        </a>
-                      )}
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {company.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                      <span className="text-sm font-normal text-slate-500">
+                        ({t("contact.pending")})
+                      </span>
                     </div>
                   ))}
                 </div>
