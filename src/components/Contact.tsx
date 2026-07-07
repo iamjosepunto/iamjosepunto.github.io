@@ -12,7 +12,7 @@ type Item =
       indexed?: boolean;
       sharesToLinkedIn?: boolean;
     }
-  | { name: string; users?: string; manager?: string; pending: true };
+  | { name: string; href?: string; users?: string; manager?: string; pending: true };
 
 type SubGroup = { subLabel?: string; subTag?: string; items: Item[] };
 
@@ -372,6 +372,16 @@ const Contact = () => {
                 <span className="text-sm font-normal text-slate-500"> {item.manager}</span>
               )}
             </span>
+            {item.href && (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-ivory hover:text-yellow-400 transition break-all"
+              >
+                {item.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+              </a>
+            )}
             <span className="text-sm font-normal text-slate-500">
               ({t("contact.pending")})
             </span>
@@ -603,14 +613,64 @@ const Contact = () => {
           {/* Perfiles privados (padre): agrupa Tech only + Generalist */}
           <CollapsibleBlock label={t("contact.blockPrivateProfiles")}>
             <div className="flex flex-col gap-2 pl-4">
-              {/* Perfiles privados - Sólo Tecnología (vacío) */}
+              {/* Perfiles privados - Sólo Tecnología */}
               <CollapsibleBlock label={t("contact.blockPrivateTech")} bare>
-                <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+                <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
+                  {[
+                    { name: "HackerRank", users: "[26M]", url: "https://hackerrank.com" },
+                    { name: "Codility", users: "[16M]", url: "https://codility.com" },
+                    { name: "CodeSignal", users: "[n/d]", url: "https://codesignal.com" },
+                    { name: "Toptal", users: "[n/d]", url: "https://toptal.com" },
+                  ].map((p) => (
+                    <div key={p.name} className="flex flex-col min-w-0">
+                      <span className="text-base font-semibold text-sky-300">
+                        {p.name}
+                        <span className="text-sm font-normal text-slate-500"> {p.users}</span>
+                      </span>
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                      <span className="text-sm font-normal text-slate-500">
+                        ({t("contact.pending")})
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </CollapsibleBlock>
 
-              {/* Perfiles privados - Generalistas (vacío) */}
+              {/* Perfiles privados - Generalistas */}
               <CollapsibleBlock label={t("contact.blockPrivateGeneralist")} bare>
-                <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+                <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
+                  {[
+                    { name: "Indeed", users: "[350M]", url: "https://indeed.com" },
+                    { name: "Glassdoor", users: "[63M]", url: "https://glassdoor.com" },
+                    { name: "Adecco", users: "[n/d]", url: "https://adecco.com" },
+                    { name: "Randstad", users: "[n/d]", url: "https://randstad.com" },
+                  ].map((p) => (
+                    <div key={p.name} className="flex flex-col min-w-0">
+                      <span className="text-base font-semibold text-sky-300">
+                        {p.name}
+                        <span className="text-sm font-normal text-slate-500"> {p.users}</span>
+                      </span>
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-ivory hover:text-yellow-400 transition break-all"
+                      >
+                        {p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      </a>
+                      <span className="text-sm font-normal text-slate-500">
+                        ({t("contact.pending")})
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </CollapsibleBlock>
             </div>
           </CollapsibleBlock>
