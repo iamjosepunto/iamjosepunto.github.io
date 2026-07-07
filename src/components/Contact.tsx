@@ -617,7 +617,6 @@ const Contact = () => {
               <CollapsibleBlock label={t("contact.blockPrivateTech")} bare>
                 <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
                   {[
-                    { name: "HackerRank", users: "[26M]", url: "https://hackerrank.com" },
                     { name: "Codility", users: "[16M]", url: "https://codility.com" },
                     { name: "CodeSignal", users: "[n/d]", url: "https://codesignal.com" },
                     { name: "Toptal", users: "[n/d]", url: "https://toptal.com" },
