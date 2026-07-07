@@ -508,14 +508,18 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Bloques principales */}
-          {sortedBlocks.map((block) => (
-            <CollapsibleBlock key={block.label} label={block.label}>
-              <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
-                {block.groups.map((group, gIdx) => renderGroup(group, gIdx))}
-              </div>
-            </CollapsibleBlock>
-          ))}
+          {/* Perfiles públicos (padre): agrupa Tech only + Generalist */}
+          <CollapsibleBlock label={t("contact.blockPublicProfiles")}>
+            <div className="flex flex-col gap-2 pl-4">
+              {sortedBlocks.map((block) => (
+                <CollapsibleBlock key={block.label} label={block.label}>
+                  <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
+                    {block.groups.map((group, gIdx) => renderGroup(group, gIdx))}
+                  </div>
+                </CollapsibleBlock>
+              ))}
+            </div>
+          </CollapsibleBlock>
 
           {/* Gestores de redes sociales */}
           <CollapsibleBlock label={t("contact.blockManagers")}>
@@ -570,18 +574,26 @@ const Contact = () => {
             </div>
           </CollapsibleBlock>
 
-          {/* Perfiles privados - Sólo Tecnología (vacío) */}
-          <CollapsibleBlock label={t("contact.blockPrivateTech")}>
-            <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+          {/* Perfiles privados (padre): agrupa Tech only + Generalist */}
+          <CollapsibleBlock label={t("contact.blockPrivateProfiles")}>
+            <div className="flex flex-col gap-2 pl-4">
+              {/* Perfiles privados - Sólo Tecnología (vacío) */}
+              <CollapsibleBlock label={t("contact.blockPrivateTech")}>
+                <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+              </CollapsibleBlock>
+
+              {/* Perfiles privados - Generalistas (vacío) */}
+              <CollapsibleBlock label={t("contact.blockPrivateGeneralist")}>
+                <div className="border-2 border-yellow-400 rounded-2xl p-4" />
+              </CollapsibleBlock>
+            </div>
           </CollapsibleBlock>
 
-          {/* Perfiles privados - Generalistas (vacío) */}
-          <CollapsibleBlock label={t("contact.blockPrivateGeneralist")}>
-            <div className="border-2 border-yellow-400 rounded-2xl p-4" />
-          </CollapsibleBlock>
-
-          {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
-          <CollapsibleBlock label={t("contact.blockJobsTech")}>
+          {/* Secciones empleo empresas (padre): agrupa Tech only + Generalist */}
+          <CollapsibleBlock label={t("contact.blockCompanyJobs")}>
+            <div className="flex flex-col gap-2 pl-4">
+              {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
+              <CollapsibleBlock label={t("contact.blockJobsTech")}>
             <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-5">
               {/* Sub-caja: Producto */}
               <CollapsibleSub label={t("contact.jobsProduct")}>
@@ -772,6 +784,8 @@ const Contact = () => {
                   ))}
                 </div>
               </CollapsibleSub>
+            </div>
+          </CollapsibleBlock>
             </div>
           </CollapsibleBlock>
         </div>
