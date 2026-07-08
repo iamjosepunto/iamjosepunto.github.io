@@ -872,12 +872,14 @@ const Contact = () => {
           </CollapsibleBlock>
         </div>
 
-        {/* Nota al pie: explicación del asterisco [Link-Indexed]* */}
+        {/* Nota al pie: explicación del asterisco [Link-Indexed]* (texto fijo, igual en ambos idiomas) */}
         <p className="text-xs text-slate-500 mt-6 break-all">
-          *{t("contact.linkIndexedNote")}{" "}
+          * Google + Bing query:{" "}
           <span className="font-mono">
             "iamjosepunto.github.io" -site:iamjosepunto.github.io
           </span>
+          <br />
+          [Si aparece una vez, está indexado, aunque en búsquedas posteriores no salga]
         </p>
       </div>
     </section>
