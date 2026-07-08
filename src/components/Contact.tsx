@@ -11,6 +11,7 @@ type Item =
       manager?: string;
       indexed?: boolean;
       sharesToLinkedIn?: boolean;
+      half?: boolean;
     }
   | { name: string; href?: string; users?: string; manager?: string; pending: true };
 
@@ -205,7 +206,7 @@ const Contact = () => {
               items: [
                 { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
                 { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
-                { name: "Tecnoempleo", users: "[0.5M]", pending: true },
+                { name: "Tecnoempleo", href: "https://www.tecnoempleo.com/jose-punto.mpt", users: "[0.5M] [GoogleLess]", half: true },
               ],
             },
             {
@@ -410,6 +411,11 @@ const Contact = () => {
             >
               {item.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
             </a>
+            {"half" in item && item.half && (
+              <span className="text-sm font-normal text-slate-500">
+                ({t("contact.pendingHalf")})
+              </span>
+            )}
           </div>
         )
       )}
