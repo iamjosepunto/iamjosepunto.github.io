@@ -157,7 +157,7 @@ const Contact = () => {
             {
               items: [
                 { name: "GitHub", href: PROFILE.socials.github, users: "[165M]" },
-                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]", indexed: true },
+                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M] [Link-Indexed]*", indexed: true },
                 { name: "Bitbucket", users: "[15M]", pending: true },
                 { name: "SourceForge", users: "[35M]", pending: true },
                 { name: "Codeberg", users: "[0.2M]", pending: true },
@@ -171,7 +171,7 @@ const Contact = () => {
             {
               subLabel: t("contact.subBlogging"),
               items: [
-                { name: "DEV.to", href: PROFILE.socials.devto, users: "[1M]", indexed: true },
+                { name: "DEV.to", href: PROFILE.socials.devto, users: "[1M] [Link-Indexed]*", indexed: true },
                 { name: "Hashnode", href: PROFILE.socials.hashnode, users: "[1M]", indexed: true },
               ],
             },
@@ -235,7 +235,7 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true },
+                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M] [Link-Indexed]*", manager: "[B]", indexed: true },
                 { name: "Polywork", users: "[2M]", pending: true },
                 { name: "Xing", href: "https://www.xing.com/profile/Jose_Punto", users: "[20.5M]" },
                 { name: "Read.cv", users: "[0.5M]", pending: true },
@@ -867,6 +867,14 @@ const Contact = () => {
             </div>
           </CollapsibleBlock>
         </div>
+
+        {/* Nota al pie: explicación del asterisco [Link-Indexed]* */}
+        <p className="text-xs text-slate-500 mt-6 break-all">
+          *{t("contact.linkIndexedNote")}{" "}
+          <span className="font-mono">
+            "iamjosepunto.github.io" -site:iamjosepunto.github.io
+          </span>
+        </p>
       </div>
     </section>
   );

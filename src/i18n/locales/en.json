@@ -1444,7 +1444,8 @@
       "AI integration (ChatGPT/Claude) in .NET applications"
     ],
     "pendingHalf": "pending - partially created",
-    "markerPublicProfiles": "[Custom URL]"
+    "markerPublicProfiles": "[Custom URL]",
+    "linkIndexedNote": "Search query:"
   },
   "location": {
     "title": "📍 Location",
