@@ -149,7 +149,7 @@ const Contact = () => {
             {
               items: [
                 { name: "GitHub", href: PROFILE.socials.github, users: "[165M]" },
-                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]" },
+                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]", indexed: true },
                 { name: "Bitbucket", users: "[15M]", pending: true },
                 { name: "SourceForge", users: "[35M]", pending: true },
                 { name: "Codeberg", users: "[0.2M]", pending: true },
@@ -176,7 +176,7 @@ const Contact = () => {
             {
               subLabel: t("contact.subPlaygrounds"),
               items: [
-                { name: "CodePen", href: PROFILE.socials.codepen, users: "[6M]" },
+                { name: "CodePen", href: PROFILE.socials.codepen, users: "[6M]", indexed: true },
                 { name: "Replit", users: "[50M]", pending: true },
               ],
             },
