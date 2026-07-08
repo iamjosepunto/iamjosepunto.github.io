@@ -12,6 +12,7 @@ type Item =
       indexed?: boolean;
       sharesToLinkedIn?: boolean;
       half?: boolean;
+      linkIndexed?: boolean;
     }
   | { name: string; href?: string; users?: string; manager?: string; pending: true };
 
@@ -157,7 +158,7 @@ const Contact = () => {
             {
               items: [
                 { name: "GitHub", href: PROFILE.socials.github, users: "[165M]" },
-                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M] [Link-Indexed]*", indexed: true },
+                { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]", indexed: true, linkIndexed: true },
                 { name: "Bitbucket", users: "[15M]", pending: true },
                 { name: "SourceForge", users: "[35M]", pending: true },
                 { name: "Codeberg", users: "[0.2M]", pending: true },
@@ -171,7 +172,7 @@ const Contact = () => {
             {
               subLabel: t("contact.subBlogging"),
               items: [
-                { name: "DEV.to", href: PROFILE.socials.devto, users: "[1M] [Link-Indexed]*", indexed: true },
+                { name: "DEV.to", href: PROFILE.socials.devto, users: "[1M]", indexed: true, linkIndexed: true },
                 { name: "Hashnode", href: PROFILE.socials.hashnode, users: "[1M]", indexed: true },
               ],
             },
@@ -235,7 +236,7 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M] [Link-Indexed]*", manager: "[B]", indexed: true },
+                { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true, linkIndexed: true },
                 { name: "Polywork", users: "[2M]", pending: true },
                 { name: "Xing", href: "https://www.xing.com/profile/Jose_Punto", users: "[20.5M]" },
                 { name: "Read.cv", users: "[0.5M]", pending: true },
@@ -405,6 +406,9 @@ const Contact = () => {
               )}
               {item.indexed && (
                 <span className="text-sm font-normal text-slate-500"> [i]</span>
+              )}
+              {"linkIndexed" in item && item.linkIndexed && (
+                <span className="text-sm font-normal text-slate-500"> [Link-Indexed]*</span>
               )}
               {item.sharesToLinkedIn && (
                 <span className="text-sm font-normal text-slate-500"> [+L]</span>
