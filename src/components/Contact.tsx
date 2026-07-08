@@ -230,7 +230,7 @@ const Contact = () => {
                 { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true },
                 { name: "InfoJobs", users: "[4M]", pending: true },
                 { name: "Polywork", users: "[2M]", pending: true },
-                { name: "Xing", href: "https://www.xing.com/profile/Jose_Punto", users: "[20.5M]", indexed: true },
+                { name: "Xing", href: "https://www.xing.com/profile/Jose_Punto", users: "[20.5M]" },
                 { name: "Read.cv", users: "[0.5M]", pending: true },
               ],
             },
