@@ -33,10 +33,12 @@ const CollapsibleBlock = ({
   label,
   children,
   bare = false,
+  marker,
 }: {
   label: string;
   children: React.ReactNode;
   bare?: boolean;
+  marker?: string;
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -62,6 +64,11 @@ const CollapsibleBlock = ({
         >
           <path d="M6 9l6 6 6-6" />
         </svg>
+        {marker && (
+          <span className="text-sm font-normal text-slate-500 normal-case tracking-normal">
+            {marker}
+          </span>
+        )}
       </button>
       <div
         className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
@@ -518,7 +525,7 @@ const Contact = () => {
           </div>
 
           {/* Perfiles públicos (padre): agrupa Tech only + Generalist */}
-          <CollapsibleBlock label={t("contact.blockPublicProfiles")}>
+          <CollapsibleBlock label={t("contact.blockPublicProfiles")} marker={t("contact.markerPublicProfiles")}>
             <div className="flex flex-col gap-2 pl-4">
               {sortedBlocks.map((block) => (
                 <CollapsibleBlock key={block.label} label={block.label} bare>

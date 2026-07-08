@@ -1443,7 +1443,8 @@
       "SQL vs MongoDB: cómo elegir la base de datos",
       "Integración de IA (ChatGPT/Claude) en aplicaciones .NET"
     ],
-    "pendingHalf": "pendiente - a medio crear"
+    "pendingHalf": "pendiente - a medio crear",
+    "markerPublicProfiles": "[URL personalizada + Link a esta web]"
   },
   "location": {
     "title": "📍 Ubicación",

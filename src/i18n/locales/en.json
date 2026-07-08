@@ -1443,7 +1443,8 @@
       "SQL vs MongoDB: how to choose your database",
       "AI integration (ChatGPT/Claude) in .NET applications"
     ],
-    "pendingHalf": "pending - partially created"
+    "pendingHalf": "pending - partially created",
+    "markerPublicProfiles": "[Custom URL + Link to this site]"
   },
   "location": {
     "title": "📍 Location",
