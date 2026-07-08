@@ -228,7 +228,6 @@ const Contact = () => {
             {
               items: [
                 { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true },
-                { name: "InfoJobs", users: "[4M] [GoogleLess]", pending: true },
                 { name: "Polywork", users: "[2M]", pending: true },
                 { name: "Xing", href: "https://www.xing.com/profile/Jose_Punto", users: "[20.5M]" },
                 { name: "Read.cv", users: "[0.5M]", pending: true },
@@ -638,6 +637,7 @@ const Contact = () => {
               <CollapsibleBlock label={t("contact.blockPrivateGeneralist")} bare>
                 <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
                   {[
+                    { name: "InfoJobs", users: "[4M] [GoogleLess]", url: "https://infojobs.net" },
                     { name: "Indeed", users: "[350M]", url: "https://indeed.com" },
                     { name: "Glassdoor", users: "[63M]", url: "https://glassdoor.com" },
                     { name: "Adecco", users: "[180M]", url: "https://adecco.com" },
