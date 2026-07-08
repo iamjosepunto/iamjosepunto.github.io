@@ -157,7 +157,7 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "GitHub", href: PROFILE.socials.github, users: "[165M]" },
+                { name: "GitHub", href: PROFILE.socials.github, users: "[165M]", linkIndexed: true },
                 { name: "GitLab", href: PROFILE.socials.gitlab, users: "[45M]", indexed: true, linkIndexed: true },
                 { name: "Bitbucket", users: "[15M]", pending: true },
                 { name: "SourceForge", users: "[35M]", pending: true },
@@ -173,7 +173,7 @@ const Contact = () => {
               subLabel: t("contact.subBlogging"),
               items: [
                 { name: "DEV.to", href: PROFILE.socials.devto, users: "[1M]", indexed: true, linkIndexed: true },
-                { name: "Hashnode", href: PROFILE.socials.hashnode, users: "[1M]", indexed: true },
+                { name: "Hashnode", href: PROFILE.socials.hashnode, users: "[1M]", indexed: true, linkIndexed: true },
               ],
             },
             {
