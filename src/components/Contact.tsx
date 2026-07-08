@@ -874,7 +874,8 @@ const Contact = () => {
 
         {/* Nota al pie: explicación del asterisco [Link-Indexable]* (texto fijo, igual en ambos idiomas) */}
         <p className="text-xs text-slate-500 mt-6 break-all">
-          * Google + Bing query:{" "}
+          * Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
+          <br />
           <span className="font-mono">
             "iamjosepunto.github.io" -site:iamjosepunto.github.io
           </span>
