@@ -264,7 +264,7 @@ const Contact = () => {
           subGroups: [
             {
               items: [
-                { name: "Medium", href: PROFILE.socials.medium, users: "[75M]", sharesToLinkedIn: true },
+                { name: "Medium", href: PROFILE.socials.medium, users: "[75M]", sharesToLinkedIn: true, linkIndexed: true },
                 { name: "Substack", users: "[35M]", pending: true },
                 { name: "Tumblr", users: "[135M]", pending: true },
               ],
