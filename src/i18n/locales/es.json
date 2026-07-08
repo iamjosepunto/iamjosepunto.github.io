@@ -1442,7 +1442,8 @@
       "Minimal APIs vs Controllers en ASP.NET Core",
       "SQL vs MongoDB: cómo elegir la base de datos",
       "Integración de IA (ChatGPT/Claude) en aplicaciones .NET"
-    ]
+    ],
+    "pendingHalf": "pendiente - a medio crear"
   },
   "location": {
     "title": "📍 Ubicación",

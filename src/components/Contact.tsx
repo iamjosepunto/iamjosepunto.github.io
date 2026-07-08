@@ -637,7 +637,7 @@ const Contact = () => {
               <CollapsibleBlock label={t("contact.blockPrivateGeneralist")} bare>
                 <div className="border-2 border-yellow-400 rounded-2xl p-4 flex flex-col gap-3">
                   {[
-                    { name: "InfoJobs", users: "[4M] [GoogleLess]", url: "https://infojobs.net" },
+                    { name: "InfoJobs", users: "[4M] [GoogleLess]", url: "https://infojobs.net", half: true },
                     { name: "Indeed", users: "[350M]", url: "https://indeed.com" },
                     { name: "Glassdoor", users: "[63M]", url: "https://glassdoor.com" },
                     { name: "Adecco", users: "[180M]", url: "https://adecco.com" },
@@ -657,7 +657,7 @@ const Contact = () => {
                         {p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
                       </a>
                       <span className="text-sm font-normal text-slate-500">
-                        ({t("contact.pending")})
+                        ({t(`contact.${"half" in p && p.half ? "pendingHalf" : "pending"}`)})
                       </span>
                     </div>
                   ))}
