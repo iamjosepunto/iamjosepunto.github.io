@@ -212,7 +212,7 @@ const Contact = () => {
             {
               subLabel: t("contact.subJobs"),
               items: [
-                { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
+                { name: "Wellfound", href: PROFILE.socials.wellfound, users: "[10M]" },
                 { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
                 { name: "Tecnoempleo", href: PROFILE.socials.tecnoempleo, users: "[0.5M] [GoogleLess]", half: true },
               ],
