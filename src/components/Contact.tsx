@@ -510,7 +510,7 @@ const Contact = () => {
         <div className="flex flex-col gap-2">
           {/* Email: cajita con borde amarillo (sin cabecera) */}
           <div className="flex flex-col">
-            <div className="border-2 border-yellow-400 rounded-2xl p-4">
+            <div className="border-2 border-yellow-400 rounded-2xl p-4 max-w-md">
               <div className="flex flex-col min-w-0">
                 <span className="text-base font-semibold text-sky-300">
                   {t("contact.email")}
