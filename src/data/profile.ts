@@ -46,6 +46,8 @@ export const PROFILE = {
     medium: "https://iamjosepunto.medium.com/",
     hashnode: "https://iamjosepunto.hashnode.dev/",
     linktree: "https://linktr.ee/iamjosepunto",
+    xing: "https://www.xing.com/profile/Jose_Punto",
+    tecnoempleo: "https://www.tecnoempleo.com/jose-punto.mpt",
     web: "https://iamjosepunto.github.io/",
   },
 };

@@ -214,7 +214,7 @@ const Contact = () => {
               items: [
                 { name: "WellFound", href: PROFILE.socials.wellfound, users: "[10M]" },
                 { name: "Arc.dev", href: PROFILE.socials.arc, users: "[4M]" },
-                { name: "Tecnoempleo", href: "https://www.tecnoempleo.com/jose-punto.mpt", users: "[0.5M] [GoogleLess]", half: true },
+                { name: "Tecnoempleo", href: PROFILE.socials.tecnoempleo, users: "[0.5M] [GoogleLess]", half: true },
               ],
             },
             {
@@ -237,7 +237,7 @@ const Contact = () => {
             {
               items: [
                 { name: "LinkedIn", href: PROFILE.socials.linkedin, users: "[1150M]", manager: "[B]", indexed: true, linkIndexed: true },
-                { name: "Xing", href: "https://www.xing.com/profile/Jose_Punto", users: "[20.5M]" },
+                { name: "Xing", href: PROFILE.socials.xing, users: "[20.5M]" },
               ],
             },
           ],
