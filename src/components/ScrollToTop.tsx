@@ -41,7 +41,7 @@ const ScrollToTop = () => {
 
         rounded-full
 
-        bg-blue-600
+        bg-blue-600/60
         hover:bg-yellow-400
         hover:text-slate-950
 
