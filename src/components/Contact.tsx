@@ -685,7 +685,7 @@ const Contact = () => {
           </CollapsibleBlock>
 
           {/* Secciones empleo empresas (padre): agrupa Tech only + Generalist */}
-          <CollapsibleBlock label={t("contact.blockCompanyJobs")} tightContent>
+          <CollapsibleBlock label={t("contact.blockCompanyJobs")}>
             <div className="flex flex-col gap-2 pl-4">
               {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
               <CollapsibleBlock label={t("contact.blockJobsTech")} bare>
