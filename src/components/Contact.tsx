@@ -406,7 +406,7 @@ const Contact = () => {
                 <span className="text-sm font-normal text-slate-500"> [i]</span>
               )}
               {"linkIndexed" in item && item.linkIndexed && (
-                <span className="text-sm font-normal text-slate-500"> [Indexable-Link]*</span>
+                <span className="text-sm font-normal text-slate-500"> [Indexable-Link]</span>
               )}
               {item.sharesToLinkedIn && (
                 <span className="text-sm font-normal text-slate-500"> [+L]</span>
@@ -870,9 +870,11 @@ const Contact = () => {
           </CollapsibleBlock>
         </div>
 
-        {/* Nota al pie: explicación del asterisco [Indexable-Link]* (texto fijo, igual en ambos idiomas) */}
+        {/* Nota al pie: explicación de [Indexable-Link] (texto fijo, igual en ambos idiomas) */}
         <p className="text-xs text-slate-500 mt-6 break-all">
-          *Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
+          [Indexable-Link]:
+          <br />
+          Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
           <br />
           <span className="font-mono">
             "iamjosepunto.github.io" -site:iamjosepunto.github.io
