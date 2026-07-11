@@ -125,6 +125,7 @@ const CollapsibleSub = ({
 const Contact = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(false);
 
   // Comparador alfabético insensible a mayúsculas/acentos, según idioma activo.
   const collator = new Intl.Collator(undefined, {
@@ -870,37 +871,82 @@ const Contact = () => {
           </CollapsibleBlock>
         </div>
 
-        {/* Nota al pie: explicación de [i] e [Indexable-Link] (texto fijo, igual en ambos idiomas) */}
-        <p className="text-xs text-slate-500 mt-6 break-all">
-          [i]:
-          <br />
-          Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
-          <br />
-          <span className="font-mono">
-            site:linkedin.com/in/iamjosepunto
-            <br />
-            site:gitlab.com/iamjosepunto/iamjosepunto
-            <br />
-            site:dev.to/iamjosepunto
-            <br />
-            site:codepen.io/iamjosepunto
-            <br />
-            site:about.me/iamjosepunto
-            <br />
-            site:iamjosepunto.hashnode.dev
-          </span>
-          <br />
-          <br />
-          [Indexable-Link]:
-          <br />
-          Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
-          <br />
-          <span className="font-mono">
-            "iamjosepunto.github.io" -site:iamjosepunto.github.io
-          </span>
-          <br />
-          [Si aparece una vez, está indexado, aunque en búsquedas posteriores no salga]
-        </p>
+        {/* Nota al pie colapsable: explicación de [i] e [Indexable-Link] */}
+        <div className="mt-6">
+          <button
+            type="button"
+            onClick={() => setNotesOpen((v) => !v)}
+            className="flex items-center gap-2 cursor-pointer bg-transparent border-0 p-0"
+            aria-expanded={notesOpen}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${notesOpen ? "rotate-180" : ""}`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div
+            className={`grid transition-all duration-300 ${notesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+          >
+            <div className="overflow-hidden">
+              <p className="text-xs text-slate-500 break-all">
+                [i]:
+                <br />
+                Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
+                <br />
+                <span className="font-mono">
+                  site:linkedin.com/in/iamjosepunto
+                  <br />
+                  site:github.com/iamjosepunto
+                  <br />
+                  site:gitlab.com/iamjosepunto/iamjosepunto
+                  <br />
+                  site:dev.to/iamjosepunto
+                  <br />
+                  site:stackoverflow.com/users/32871984/iamjosepunto
+                  <br />
+                  site:codepen.io/iamjosepunto
+                  <br />
+                  site:wellfound.com/u/iamjosepunto
+                  <br />
+                  site:arc.dev/@iamjosepunto
+                  <br />
+                  site:about.me/iamjosepunto
+                  <br />
+                  site:gravatar.com/iamjosepunto
+                  <br />
+                  site:iamjosepunto.medium.com
+                  <br />
+                  site:iamjosepunto.hashnode.dev
+                  <br />
+                  site:linktr.ee/iamjosepunto
+                  <br />
+                  site:xing.com/profile/Jose_Punto
+                  <br />
+                  site:tecnoempleo.com/jose-punto.mpt
+                </span>
+                <br />
+                <br />
+                [Indexable-Link]:
+                <br />
+                Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
+                <br />
+                <span className="font-mono">
+                  "iamjosepunto.github.io" -site:iamjosepunto.github.io
+                </span>
+                <br />
+                [Si aparece una vez, está indexado, aunque en búsquedas posteriores no salga]
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
