@@ -870,8 +870,27 @@ const Contact = () => {
           </CollapsibleBlock>
         </div>
 
-        {/* Nota al pie: explicación de [Indexable-Link] (texto fijo, igual en ambos idiomas) */}
+        {/* Nota al pie: explicación de [i] e [Indexable-Link] (texto fijo, igual en ambos idiomas) */}
         <p className="text-xs text-slate-500 mt-6 break-all">
+          [i]:
+          <br />
+          Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
+          <br />
+          <span className="font-mono">
+            site:linkedin.com/in/iamjosepunto
+            <br />
+            site:gitlab.com/iamjosepunto/iamjosepunto
+            <br />
+            site:dev.to/iamjosepunto
+            <br />
+            site:codepen.io/iamjosepunto
+            <br />
+            site:about.me/iamjosepunto
+            <br />
+            site:iamjosepunto.hashnode.dev
+          </span>
+          <br />
+          <br />
           [Indexable-Link]:
           <br />
           Google + Bing + DuckDuckGo + Yahoo + Ecosia query:
