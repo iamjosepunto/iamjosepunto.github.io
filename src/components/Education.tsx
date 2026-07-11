@@ -41,6 +41,7 @@ const Education = () => {
           <img
             src="/Logo_UAX.png"
             alt="Universidad Alfonso X el Sabio (UAX)"
+            loading="lazy"
             className="w-32 h-32 object-contain"
           />
         </div>

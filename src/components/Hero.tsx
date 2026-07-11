@@ -22,7 +22,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           src="/FotoJosePunto.jpg"
-          alt="Jose Punto"
+          alt="Jose Punto - Senior Full Stack .NET Developer & Industrial Engineer"
           className="
             w-28
             h-28

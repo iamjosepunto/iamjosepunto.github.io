@@ -7,6 +7,7 @@ const Nav = () => {
 
   const changeLanguage = (language: "es" | "en") => {
     i18n.changeLanguage(language);
+    document.documentElement.lang = language;
     localStorage.setItem("language", language);
   };
 
