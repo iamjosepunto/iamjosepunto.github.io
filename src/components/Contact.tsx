@@ -874,7 +874,7 @@ const Contact = () => {
         </div>
 
         {/* Nota al pie colapsable: explicación de [i] e [Indexable-Link] */}
-        <div className="mt-6">
+        <div className="mt-2">
           <button
             type="button"
             onClick={() => setNotesOpen((v) => !v)}
