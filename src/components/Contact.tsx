@@ -492,7 +492,9 @@ const Contact = () => {
           border
           border-slate-800
           rounded-2xl
-          p-8
+          px-8
+          pt-8
+          pb-2
             transition
             hover:-translate-y-1
           "
