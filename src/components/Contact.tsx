@@ -35,11 +35,13 @@ const CollapsibleBlock = ({
   children,
   bare = false,
   marker,
+  tightContent = false,
 }: {
   label: string;
   children: React.ReactNode;
   bare?: boolean;
   marker?: string;
+  tightContent?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -48,7 +50,7 @@ const CollapsibleBlock = ({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
+        className={`flex w-full items-center justify-start gap-2 ${tightContent ? "mb-0" : "mb-1"} cursor-pointer bg-transparent border-0 text-left`}
       >
         <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
           {bare ? label : `<${label}>`}
@@ -683,7 +685,7 @@ const Contact = () => {
           </CollapsibleBlock>
 
           {/* Secciones empleo empresas (padre): agrupa Tech only + Generalist */}
-          <CollapsibleBlock label={t("contact.blockCompanyJobs")}>
+          <CollapsibleBlock label={t("contact.blockCompanyJobs")} tightContent>
             <div className="flex flex-col gap-2 pl-4">
               {/* Secciones empleo - Sólo Tecnología (dos sub-cajas: Producto y Consultoras) */}
               <CollapsibleBlock label={t("contact.blockJobsTech")} bare>
