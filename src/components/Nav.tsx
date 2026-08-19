@@ -88,12 +88,9 @@ const Nav = () => {
       style={{ backgroundColor: "rgba(17, 29, 51, 0.8)" }}
     >
       <nav className="max-w-full mx-auto px-6 h-16 flex items-center justify-between md:justify-center gap-5">
-        <a
-          href="#"
-          className="font-bold text-2xl tracking-wide whitespace-nowrap shrink-0"
-        >
+        <span className="font-bold text-2xl tracking-wide whitespace-nowrap shrink-0">
           <span className="text-yellow-400">Jose .</span>
-        </a>
+        </span>
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-4 lg:gap-5 text-ivory whitespace-nowrap">
