@@ -22,7 +22,7 @@ const CursorEffects = () => {
     const dot = dotRef.current;
     const cross = crossRef.current;
     const spot = spotRef.current;
-    if (!ring || !dot || !spot) return;
+    if (!ring || !dot || !spot || !cross) return;
 
     document.body.classList.add("cursor-fx-active");
     // Oculta el cursor nativo (incluido sobre enlaces/botones) mientras los efectos
