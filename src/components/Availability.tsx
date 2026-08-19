@@ -9,7 +9,7 @@ const Availability = () => {
       id="availability"
       className="max-w-5xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("availability.title")}>
+      <CollapsibleSection id="availability" title={t("availability.title")}>
 
       <div
         className="

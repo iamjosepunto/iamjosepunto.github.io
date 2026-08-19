@@ -52,7 +52,7 @@ const About = () => {
       id="about"
       className="max-w-5xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("about.title")}>
+      <CollapsibleSection id="about" title={t("about.title")}>
 
       <div
         className="

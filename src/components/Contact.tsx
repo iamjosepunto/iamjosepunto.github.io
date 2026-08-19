@@ -481,7 +481,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="max-w-5xl mx-auto px-6 py-0">
-      <CollapsibleSection title={t("contact.title")}>
+      <CollapsibleSection id="contact" title={t("contact.title")}>
 
       <div
         className="

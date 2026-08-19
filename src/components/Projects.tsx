@@ -259,7 +259,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="max-w-7xl mx-auto px-6 py-0">
-      <CollapsibleSection title={t("projects.title")}>
+      <CollapsibleSection id="projects" title={t("projects.title")}>
         <CollapsibleSub label={t("projects.subPersonales")}>
           <ProjectsBlock groups={personales} />
         </CollapsibleSub>

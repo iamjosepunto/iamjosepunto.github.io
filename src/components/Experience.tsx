@@ -26,7 +26,7 @@ const Experience = () => {
       id="experience"
       className="max-w-7xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("experience.title")}>
+      <CollapsibleSection id="experience" title={t("experience.title")}>
 
       {/* Teclado de experiencias */}
       <div className="flex flex-col gap-3 mb-8">

@@ -13,7 +13,7 @@ const Downloads = () => {
       id="downloads"
       className="max-w-5xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("downloads.title")}>
+      <CollapsibleSection id="downloads" title={t("downloads.title")}>
 
       <div
         className="

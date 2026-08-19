@@ -81,7 +81,7 @@ const Skills = () => {
       id="skills"
       className="max-w-7xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("skills.title", "Skills")}>
+      <CollapsibleSection id="skills" title={t("skills.title", "Skills")}>
 
       {/* Aptitudes técnicas */}
       <h3 className="text-2xl font-bold text-blue-400 mb-4 text-center">

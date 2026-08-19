@@ -19,7 +19,7 @@ const Languages = () => {
       id="languages"
       className="max-w-5xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("languages.title")}>
+      <CollapsibleSection id="languages" title={t("languages.title")}>
 
       <div className="flex flex-wrap justify-center gap-6">
         {items.map((item) => (

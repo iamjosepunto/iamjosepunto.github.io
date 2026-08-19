@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { useAccordion } from "./AccordionContext";
 
 const Nav = () => {
   const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { open } = useAccordion();
 
   const changeLanguage = (language: "es" | "en") => {
     i18n.changeLanguage(language);
@@ -14,6 +16,45 @@ const Nav = () => {
   const closeMenu = () => {
     setMobileMenuOpen(false);
   };
+
+  // Abre la seccion correspondiente y hace scroll suave hasta ella.
+  const goToSection = (id: string) => {
+    open(id);
+    setMobileMenuOpen(false);
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
+  const NavLink = ({ id, label }: { id: string; label: string }) => (
+    <a
+      href={`#${id}`}
+      onClick={(e) => {
+        e.preventDefault();
+        goToSection(id);
+      }}
+      className="hover:text-yellow-300 transition cursor-pointer"
+    >
+      {label}
+    </a>
+  );
+
+  const links: { id: string; label: string }[] = [
+    { id: "about", label: t("nav.about") },
+    { id: "availability", label: t("nav.availability") },
+    { id: "experience", label: t("nav.experience") },
+    { id: "projects", label: t("nav.projects") },
+    { id: "education", label: t("nav.education") },
+    { id: "languages", label: t("nav.languages") },
+    { id: "skills", label: t("nav.skills") },
+    { id: "lab", label: t("nav.lab") },
+    { id: "downloads", label: t("nav.downloads") },
+    { id: "location", label: t("nav.location") },
+    { id: "contact", label: t("nav.contact") },
+  ];
 
   return (
     <header
@@ -30,49 +71,11 @@ const Nav = () => {
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-4 lg:gap-5 text-ivory whitespace-nowrap">
-          <li>
-            <a href="#about">{t("nav.about")}</a>
-          </li>
-
-          <li>
-            <a href="#availability">{t("nav.availability")}</a>
-          </li>
-
-          <li>
-            <a href="#experience">{t("nav.experience")}</a>
-          </li>
-
-          <li>
-            <a href="#projects">{t("nav.projects")}</a>
-          </li>
-
-          <li>
-            <a href="#education">{t("nav.education")}</a>
-          </li>
-
-          <li>
-            <a href="#languages">{t("nav.languages")}</a>
-          </li>
-
-          <li>
-            <a href="#skills">{t("nav.skills")}</a>
-          </li>
-
-          <li>
-            <a href="#lab">{t("nav.lab")}</a>
-          </li>
-
-          <li>
-            <a href="#downloads">{t("nav.downloads")}</a>
-          </li>
-
-          <li>
-            <a href="#location">{t("nav.location")}</a>
-          </li>
-
-          <li>
-            <a href="#contact">{t("nav.contact")}</a>
-          </li>
+          {links.map((l) => (
+            <li key={l.id}>
+              <NavLink id={l.id} label={l.label} />
+            </li>
+          ))}
         </ul>
 
         {/* Desktop controls */}
@@ -109,12 +112,7 @@ const Nav = () => {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="
-            md:hidden
-            text-ivory
-            text-3xl
-            cursor-pointer
-          "
+          className="md:hidden text-ivory text-3xl cursor-pointer"
           aria-label="Menu"
         >
           ☰
@@ -123,62 +121,18 @@ const Nav = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div
-          className="
-            md:hidden
-            bg-slate-900
-            border-t
-            border-slate-800
-          "
-        >
+        <div className="md:hidden bg-slate-900 border-t border-slate-800">
           <div className="flex flex-col p-6 gap-6 text-ivory">
-            <a href="#about" onClick={closeMenu}>
-              {t("nav.about")}
-            </a>
-
-            <a href="#availability" onClick={closeMenu}>
-              {t("nav.availability")}
-            </a>
-
-            <a href="#experience" onClick={closeMenu}>
-              {t("nav.experience")}
-            </a>
-
-            <a href="#projects" onClick={closeMenu}>
-              {t("nav.projects")}
-            </a>
-
-            <a href="#education" onClick={closeMenu}>
-              {t("nav.education")}
-            </a>
-
-            <a href="#languages" onClick={closeMenu}>
-              {t("nav.languages")}
-            </a>
-
-            <a href="#skills" onClick={closeMenu}>
-              {t("nav.skills")}
-            </a>
-
-            <a href="#lab" onClick={closeMenu}>
-              {t("nav.lab")}
-            </a>
-
-            <a href="#downloads" onClick={closeMenu}>
-              {t("nav.downloads")}
-            </a>
-
-            <a href="#location" onClick={closeMenu}>
-              {t("nav.location")}
-            </a>
-
-            <a href="#contact" onClick={closeMenu}>
-              {t("nav.contact")}
-            </a>
+            {links.map((l) => (
+              <NavLink key={l.id} id={l.id} label={l.label} />
+            ))}
 
             <div className="pt-2 border-t border-slate-800 flex items-center">
               <button
-                onClick={() => changeLanguage("en")}
+                onClick={() => {
+                  changeLanguage("en");
+                  closeMenu();
+                }}
                 className={
                   i18n.language.startsWith("en")
                     ? "text-yellow-400 font-bold mr-4 flex items-center gap-2"
@@ -190,7 +144,10 @@ const Nav = () => {
               </button>
 
               <button
-                onClick={() => changeLanguage("es")}
+                onClick={() => {
+                  changeLanguage("es");
+                  closeMenu();
+                }}
                 className={
                   i18n.language.startsWith("es")
                     ? "text-yellow-400 font-bold flex items-center gap-2"

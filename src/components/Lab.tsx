@@ -79,7 +79,7 @@ const Lab = () => {
       id="lab"
       className="max-w-6xl mx-auto px-6 py-0"
     >
-      <CollapsibleSection title={t("lab.title")}>
+      <CollapsibleSection id="lab" title={t("lab.title")}>
 
       <div className="grid md:grid-cols-2 gap-6">
         {labs.map((item) => (

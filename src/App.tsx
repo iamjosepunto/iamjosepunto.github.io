@@ -13,48 +13,51 @@ import Downloads from "./components/Downloads";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { AccordionProvider } from "./components/AccordionContext";
 
 import "./App.css";
 
 function App() {
   return (
-    <div
-      className="min-h-screen text-slate-100 overflow-x-hidden"
-      style={{ backgroundColor: "#111d33" }}
-    >
-      <Nav />
+    <AccordionProvider>
+      <div
+        className="min-h-screen text-slate-100 overflow-x-hidden"
+        style={{ backgroundColor: "#111d33" }}
+      >
+        <Nav />
 
-      <main className="pt-16">
-        <Hero />
+        <main className="pt-16">
+          <Hero />
 
-        <About />
+          <About />
 
-        <Availability />
+          <Availability />
 
-        <Experience />
+          <Experience />
 
-        <Projects />
+          <Projects />
 
-        <Education />
+          <Education />
 
-        <Languages />
+          <Languages />
 
-        <Skills />
+          <Skills />
 
-        <Lab />
+          <Lab />
 
-        <Downloads />
+          <Downloads />
 
-        <Location />
+          <Location />
 
-        <Contact />
-        <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
-      </main>
+          <Contact />
+          <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
+        </main>
 
-      <Footer />
+        <Footer />
 
-      <ScrollToTop />
-    </div>
+        <ScrollToTop />
+      </div>
+    </AccordionProvider>
   );
 }
 

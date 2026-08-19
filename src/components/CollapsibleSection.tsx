@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useAccordion } from "./AccordionContext";
 
 type CollapsibleSectionProps = {
+  id: string;
   title: string;
   children: React.ReactNode;
 };
 
-// Seccion colapsable: titulo estilo SectionTitle con flecha a la derecha del nombre.
+// Seccion colapsable conectada al acordeon global (solo una abierta a la vez).
 // El contenido permanece SIEMPRE en el DOM (grid-rows) para no perder SEO; solo se
-// oculta visualmente al estar cerrada. Empieza cerrada.
-const CollapsibleSection = ({ title, children }: CollapsibleSectionProps) => {
-  const [open, setOpen] = useState(false);
+// oculta visualmente al estar cerrada.
+const CollapsibleSection = ({ id, title, children }: CollapsibleSectionProps) => {
+  const { openId, toggle } = useAccordion();
+  const isOpen = openId === id;
 
   return (
     <div>
@@ -17,17 +19,17 @@ const CollapsibleSection = ({ title, children }: CollapsibleSectionProps) => {
 
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        className="flex w-full items-center justify-center gap-3 py-1 cursor-pointer bg-transparent border-0"
+        onClick={() => toggle(id)}
+        aria-expanded={isOpen}
+        className="flex w-full items-center justify-start gap-3 py-1 cursor-pointer bg-transparent border-0"
       >
-        <h2 className="text-4xl font-bold text-yellow-400 text-center leading-none">
+        <h2 className="text-4xl font-bold text-yellow-400 leading-none">
           {title}
         </h2>
 
         <svg
           viewBox="0 0 24 24"
-          className={`w-7 h-7 text-yellow-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          className={`w-7 h-7 text-yellow-400 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
@@ -40,7 +42,7 @@ const CollapsibleSection = ({ title, children }: CollapsibleSectionProps) => {
       </button>
 
       <div
-        className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100 mt-6" : "grid-rows-[0fr] opacity-0"}`}
+        className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100 mt-6" : "grid-rows-[0fr] opacity-0"}`}
       >
         <div className="overflow-hidden">{children}</div>
       </div>
