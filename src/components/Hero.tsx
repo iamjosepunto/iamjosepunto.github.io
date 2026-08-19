@@ -7,18 +7,18 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex items-center justify-center px-6 py-4"
+      className="flex items-center justify-center px-6 py-2"
     >
       <div className="max-w-5xl mx-auto w-full">
 
         {/* Roles (izquierda) + Foto (centro) + Nombre (derecha). Responsive: apilado en movil. */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-2">
           {/* Roles */}
           <motion.h2
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="order-3 md:order-1 text-xl md:text-2xl text-ivory leading-relaxed text-left"
+            className="order-3 md:order-1 text-xl md:text-2xl text-ivory leading-tight text-left"
           >
             <div>
               <span className="text-yellow-400">•</span>{" "}
