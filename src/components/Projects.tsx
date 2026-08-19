@@ -1,8 +1,9 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PROJECT_GROUPS } from "../data/profile";
 import type { ProjectGroup, TaskRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import CollapsibleSection from "./CollapsibleSection";
+import { useAccordion } from "./AccordionContext";
 
 const SUMMARY = "__summary__";
 
@@ -259,6 +260,7 @@ const ProjectsBlock = ({ groups }: { groups: ProjectGroup[] }) => {
 
 const Projects = () => {
   const { t } = useTranslation();
+  const { openId } = useAccordion();
 
   const personales = PROJECT_GROUPS.filter((g) => g.tipo === "personal");
   const terceros = PROJECT_GROUPS.filter((g) => g.tipo === "terceros");
@@ -267,6 +269,13 @@ const Projects = () => {
   const [openSub, setOpenSub] = useState<"personales" | "terceros" | null>(null);
   const toggleSub = (sub: "personales" | "terceros") =>
     setOpenSub((current) => (current === sub ? null : sub));
+
+  // Al cerrar la seccion Portfolio, colapsar todas las subsecciones.
+  useEffect(() => {
+    if (openId !== "projects") {
+      setOpenSub(null);
+    }
+  }, [openId]);
 
   return (
     <section id="projects" className="max-w-5xl mx-auto px-6 py-0">
