@@ -266,7 +266,7 @@ const Projects = () => {
     setOpenSub((current) => (current === sub ? null : sub));
 
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-6 py-0">
+    <section id="projects" className="max-w-5xl mx-auto px-6 py-0">
       <CollapsibleSection id="projects" title={t("projects.title")}>
         <CollapsibleSub
           label={t("projects.subPersonales")}

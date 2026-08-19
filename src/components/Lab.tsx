@@ -77,7 +77,7 @@ const Lab = () => {
   return (
     <section
       id="lab"
-      className="max-w-6xl mx-auto px-6 py-0"
+      className="max-w-5xl mx-auto px-6 py-0"
     >
       <CollapsibleSection id="lab" title={t("lab.title")}>
 
