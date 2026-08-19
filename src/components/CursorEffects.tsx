@@ -56,12 +56,16 @@ const CursorEffects = () => {
     const grow = () => {
       ring.style.width = "60px";
       ring.style.height = "60px";
-      ring.style.backgroundColor = "rgba(250,204,21,0.15)";
+      ring.style.backgroundColor = "rgba(239,68,68,0.15)";
+      ring.style.borderColor = "#ef4444";
+      dot.style.backgroundColor = "#ef4444";
     };
     const shrink = () => {
       ring.style.width = "36px";
       ring.style.height = "36px";
       ring.style.backgroundColor = "transparent";
+      ring.style.borderColor = "#facc15";
+      dot.style.backgroundColor = "#facc15";
     };
 
     // Delegacion: crecer sobre elementos interactivos.
@@ -143,7 +147,7 @@ const CursorEffects = () => {
           opacity: 0,
           zIndex: 9999,
           transition:
-            "width 0.25s ease, height 0.25s ease, background-color 0.25s ease",
+            "width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease",
         }}
       />
       <div
@@ -160,6 +164,7 @@ const CursorEffects = () => {
           pointerEvents: "none",
           opacity: 0,
           zIndex: 9999,
+          transition: "background-color 0.25s ease",
         }}
       />
     </>
