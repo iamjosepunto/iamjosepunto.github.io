@@ -13,6 +13,7 @@ import Downloads from "./components/Downloads";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import CursorEffects from "./components/CursorEffects";
 import { AccordionProvider } from "./components/AccordionContext";
 
 import "./App.css";
@@ -24,6 +25,8 @@ function App() {
         className="min-h-screen text-slate-100 overflow-x-hidden"
         style={{ backgroundColor: "#111d33" }}
       >
+        <CursorEffects />
+
         <Nav />
 
         <main className="pt-16">
