@@ -34,7 +34,6 @@ const Education = () => {
           flex-col
           gap-8
             transition
-            hover:-translate-y-1
           "
       >
         <div className="flex justify-center shrink-0">

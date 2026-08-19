@@ -153,7 +153,7 @@ const ProjectsBlock = ({ groups }: { groups: ProjectGroup[] }) => {
       {/* Panel de detalle */}
       <article
         ref={panelRef}
-        className="scroll-mt-20 bg-slate-900 border border-slate-800 rounded-2xl p-8 transition hover:-translate-y-1"
+        className="scroll-mt-20 bg-slate-900 border border-slate-800 rounded-2xl p-8 transition"
       >
         {/* Panel Summary: visible solo en modo resumen, pero siempre en el DOM */}
         <div className={isSummary ? "text-ivory leading-relaxed" : "hidden"}>

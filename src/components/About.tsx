@@ -62,7 +62,6 @@ const About = () => {
           rounded-2xl
           p-8
             transition
-            hover:-translate-y-1
           "
       >
         <p className="text-lg text-ivory leading-relaxed mb-6 flex gap-3">
@@ -107,7 +106,6 @@ const About = () => {
           divide-y
           divide-slate-800
             transition
-            hover:-translate-y-1
           "
       >
         {rows.map((row) => (

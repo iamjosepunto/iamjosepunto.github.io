@@ -92,7 +92,6 @@ const Lab = () => {
               rounded-2xl
               p-6
             transition
-            hover:-translate-y-1
           "
           >
             <h3 className="text-xl font-semibold text-blue-400 mb-3">

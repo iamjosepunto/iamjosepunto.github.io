@@ -496,7 +496,6 @@ const Contact = () => {
           pt-8
           pb-2
             transition
-            hover:-translate-y-1
           "
       >
         <p className="text-lg text-ivory leading-relaxed mb-3 text-center">

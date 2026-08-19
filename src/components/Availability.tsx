@@ -19,7 +19,6 @@ const Availability = () => {
           rounded-2xl
           p-8
             transition
-            hover:-translate-y-1
           "
       >
         <h3 className="text-2xl font-bold text-yellow-400 mb-3">

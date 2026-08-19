@@ -101,7 +101,6 @@ const Experience = () => {
           rounded-2xl
           p-8
             transition
-            hover:-translate-y-1
           "
       >
         {EXPERIENCE_GROUPS.map((exp) => {

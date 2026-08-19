@@ -28,7 +28,6 @@ const Downloads = () => {
           text-center
           gap-4
             transition
-            hover:-translate-y-1
           "
       >
         <p className="text-sm text-slate-400">
