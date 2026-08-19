@@ -10,11 +10,13 @@ const SUMMARY = "__summary__";
 // permanece SIEMPRE en el DOM (grid-rows) para no perder SEO. Empieza cerrada.
 const CollapsibleSub = ({
   label,
+  icon,
   isOpen,
   onToggle,
   children,
 }: {
   label: string;
+  icon: string;
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
@@ -25,8 +27,9 @@ const CollapsibleSub = ({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-center gap-2 mb-1 cursor-pointer bg-transparent border-0"
+        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0"
       >
+        <span className="w-8 shrink-0 text-xl text-center">{icon}</span>
         <span className="text-2xl font-semibold text-blue-400">{label}</span>
         <svg
           viewBox="0 0 24 24"
@@ -270,6 +273,7 @@ const Projects = () => {
       <CollapsibleSection id="projects" title={t("projects.title")}>
         <CollapsibleSub
           label={t("projects.subPersonales")}
+          icon="🚀"
           isOpen={openSub === "personales"}
           onToggle={() => toggleSub("personales")}
         >
@@ -280,6 +284,7 @@ const Projects = () => {
 
         <CollapsibleSub
           label={t("projects.subTerceros")}
+          icon="🏢"
           isOpen={openSub === "terceros"}
           onToggle={() => toggleSub("terceros")}
         >
