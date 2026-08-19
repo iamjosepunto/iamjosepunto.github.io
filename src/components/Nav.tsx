@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+﻿import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useAccordion } from "./AccordionContext";
 
@@ -93,7 +93,7 @@ const Nav = () => {
         </span>
 
         {/* Desktop */}
-        <ul className="hidden md:flex gap-4 lg:gap-5 text-ivory whitespace-nowrap">
+        <ul className="hidden md:flex gap-4 lg:gap-5 text-cream whitespace-nowrap">
           {links.map((l) => (
             <li key={l.id}>
               <NavLink id={l.id} label={l.label} />
@@ -145,7 +145,7 @@ const Nav = () => {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-slate-900 border-t border-slate-800">
-          <div className="flex flex-col p-6 gap-6 text-ivory">
+          <div className="flex flex-col p-6 gap-6 text-cream">
             {links.map((l) => (
               <NavLink key={l.id} id={l.id} label={l.label} />
             ))}
