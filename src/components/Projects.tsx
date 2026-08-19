@@ -258,7 +258,7 @@ const Projects = () => {
   const terceros = PROJECT_GROUPS.filter((g) => g.tipo === "terceros");
 
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-6 py-4">
+    <section id="projects" className="max-w-7xl mx-auto px-6 py-0">
       <CollapsibleSection title={t("projects.title")}>
         <CollapsibleSub label={t("projects.subPersonales")}>
           <ProjectsBlock groups={personales} />

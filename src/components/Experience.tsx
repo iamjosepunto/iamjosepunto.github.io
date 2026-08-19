@@ -24,7 +24,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="max-w-7xl mx-auto px-6 py-4"
+      className="max-w-7xl mx-auto px-6 py-0"
     >
       <CollapsibleSection title={t("experience.title")}>
 

@@ -7,7 +7,7 @@ const Location = () => {
   return (
     <section
       id="location"
-      className="max-w-5xl mx-auto px-6 py-4"
+      className="max-w-5xl mx-auto px-6 py-0"
     >
       <CollapsibleSection title={t("location.title")}>
 
