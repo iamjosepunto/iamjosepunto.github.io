@@ -48,6 +48,7 @@ function App() {
         <Location />
 
         <Contact />
+        <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
       </main>
 
       <Footer />

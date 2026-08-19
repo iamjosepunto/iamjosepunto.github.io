@@ -12,7 +12,7 @@ const CollapsibleSection = ({ title, children }: CollapsibleSectionProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mb-6">
+    <div>
       <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
 
       <button
@@ -38,8 +38,6 @@ const CollapsibleSection = ({ title, children }: CollapsibleSectionProps) => {
           <path d="M6 9l6 6 6-6" />
         </svg>
       </button>
-
-      <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
 
       <div
         className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100 mt-6" : "grid-rows-[0fr] opacity-0"}`}
