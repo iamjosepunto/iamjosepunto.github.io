@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import CollapsibleSection from "./CollapsibleSection";
 
@@ -119,7 +119,7 @@ const About = () => {
               py-2.5
             "
           >
-            <span className="text-sm font-semibold text-sky-300 sm:w-40 shrink-0">
+            <span className="text-sm font-semibold text-sky-300 sm:w-60 sm:whitespace-nowrap shrink-0">
               {row.label}
             </span>
 

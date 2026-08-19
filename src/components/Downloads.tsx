@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+﻿import { useTranslation } from "react-i18next";
 import CollapsibleSection from "./CollapsibleSection";
 
 const CV_FILE = "Summary_CV_Jose ._June_2026_En-Es.pdf";
@@ -45,10 +45,10 @@ const Downloads = () => {
             px-6
             py-3
             rounded-xl
-            bg-yellow-400
+            bg-ivory
             text-slate-950
             font-bold
-            hover:bg-yellow-300
+            hover:bg-slate-100
             transition
             cursor-pointer
           "
