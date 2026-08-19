@@ -63,8 +63,8 @@ const CursorEffects = () => {
       hovering = true;
       ring.style.width = "60px";
       ring.style.height = "60px";
-      ring.style.backgroundColor = "rgba(239,68,68,0.15)";
-      ring.style.borderColor = "#ef4444";
+      ring.style.backgroundColor = "rgba(34,197,94,0.15)";
+      ring.style.borderColor = "#22c55e";
       // Modo mira: ocultar el punto y mostrar la cruz.
       dot.style.opacity = "0";
       cross.style.opacity = "1";
@@ -203,7 +203,7 @@ const CursorEffects = () => {
             left: 0,
             width: "100%",
             height: 2,
-            backgroundColor: "#ef4444",
+            backgroundColor: "#22c55e",
             transform: "translateY(-50%)",
           }}
         />
@@ -215,7 +215,7 @@ const CursorEffects = () => {
             top: 0,
             height: "100%",
             width: 2,
-            backgroundColor: "#ef4444",
+            backgroundColor: "#22c55e",
             transform: "translateX(-50%)",
           }}
         />
