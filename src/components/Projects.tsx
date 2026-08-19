@@ -62,7 +62,7 @@ const CollapsibleSub = ({
         type="button"
         onClick={handleClick}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0"
+        className="flex w-fit items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0"
       >
         <span className="w-8 shrink-0 text-xl text-center">{icon}</span>
         <span className="text-2xl font-semibold text-blue-400">{label}</span>

@@ -136,7 +136,7 @@ const CollapsibleBlock = ({
         type="button"
         onClick={handleClick}
         aria-expanded={open}
-        className={`flex w-full items-center justify-start gap-2 ${tightContent ? "mb-0" : "mb-1"} cursor-pointer bg-transparent border-0 text-left`}
+        className={`flex w-fit items-center justify-start gap-2 ${tightContent ? "mb-0" : "mb-1"} cursor-pointer bg-transparent border-0 text-left`}
       >
         <span className="text-lg font-semibold tracking-widest text-sky-400 uppercase">
           {bare ? label : `<${label}>`}
@@ -195,7 +195,7 @@ const CollapsibleSub = ({
         type="button"
         onClick={handleClick}
         aria-expanded={open}
-        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
+        className="flex w-fit items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
       >
         <span className="text-sm font-semibold text-blue-400 uppercase">
           {label}

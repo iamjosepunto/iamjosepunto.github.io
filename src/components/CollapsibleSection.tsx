@@ -61,7 +61,7 @@ const CollapsibleSection = ({ id, title, children }: CollapsibleSectionProps) =>
         type="button"
         onClick={handleToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-start gap-3 py-1 cursor-pointer bg-transparent border-0"
+        className="flex w-fit items-center justify-start gap-3 py-1 cursor-pointer bg-transparent border-0"
       >
         <span className="w-10 shrink-0 text-3xl text-center">{emoji}</span>
 
