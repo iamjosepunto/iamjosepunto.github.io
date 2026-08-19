@@ -64,7 +64,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className="max-w-4xl mx-auto text-ivory text-lg leading-relaxed text-left border border-yellow-400 rounded-2xl p-2"
         >
-          <p className="flex gap-3 mb-4">
+          <p className="flex gap-3 mb-1">
             <span className="text-yellow-400 shrink-0">•</span>
             <span>{t("hero.description1")}</span>
           </p>
