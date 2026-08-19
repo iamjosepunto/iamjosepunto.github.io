@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { PROJECT_GROUPS } from "../data/profile";
 import type { ProjectGroup, TaskRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
@@ -324,7 +324,7 @@ const Projects = () => {
           <ProjectsBlock groups={personales} />
         </CollapsibleSub>
 
-        <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-blue-400" />
+        <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-blue-400 mb-4" />
 
         <CollapsibleSub
           label={t("projects.subTerceros")}
