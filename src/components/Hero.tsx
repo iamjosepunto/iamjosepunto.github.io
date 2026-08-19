@@ -11,49 +11,51 @@ const Hero = () => {
     >
       <div className="max-w-5xl mx-auto w-full">
 
-        {/* Foto + Nombre en horizontal */}
-        <div className="flex items-center justify-center gap-6 mb-4">
+        {/* Roles (izquierda) + Foto (centro) + Nombre (derecha). Responsive: apilado en movil. */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-4">
+          {/* Roles */}
+          <motion.h2
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="order-3 md:order-1 text-xl md:text-2xl text-ivory leading-relaxed text-left"
+          >
+            <div>
+              <span className="text-yellow-400">•</span>{" "}
+              {t("hero.role1")}
+            </div>
+
+            <div>
+              <span className="text-yellow-400">•</span>{" "}
+              {t("hero.role2")}
+            </div>
+
+            <div>
+              <span className="text-yellow-400">•</span>{" "}
+              {t("hero.role3")}
+            </div>
+          </motion.h2>
+
+          {/* Foto */}
           <motion.img
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             src="/FotoJosePunto.jpg"
             alt="Jose Punto - Senior Full Stack .NET Developer & Industrial Engineer"
-            className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-yellow-400 shadow-lg shrink-0"
+            className="order-1 md:order-2 w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-yellow-400 shadow-lg shrink-0"
           />
 
+          {/* Nombre */}
           <motion.h1
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-black leading-none"
+            className="order-2 md:order-3 text-5xl md:text-7xl font-black leading-none shrink-0"
           >
             <span className="text-yellow-400">Jose .</span>
           </motion.h1>
         </div>
-
-        {/* Roles */}
-        <motion.h2
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="w-fit mx-auto text-xl md:text-3xl text-ivory mb-4 leading-relaxed text-left"
-        >
-          <div>
-            <span className="text-yellow-400">•</span>{" "}
-            {t("hero.role1")}
-          </div>
-
-          <div>
-            <span className="text-yellow-400">•</span>{" "}
-            {t("hero.role2")}
-          </div>
-
-          <div>
-            <span className="text-yellow-400">•</span>{" "}
-            {t("hero.role3")}
-          </div>
-        </motion.h2>
 
         {/* Descripcion: un solo contenedor con dos parrafos, cada uno con punto amarillo */}
         <motion.div
