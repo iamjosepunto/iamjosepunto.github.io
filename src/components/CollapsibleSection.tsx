@@ -1,4 +1,4 @@
-import { useRef } from "react";
+﻿import { useRef } from "react";
 import { useAccordion } from "./AccordionContext";
 
 type CollapsibleSectionProps = {
@@ -55,7 +55,7 @@ const CollapsibleSection = ({ id, title, children }: CollapsibleSectionProps) =>
 
   return (
     <div ref={rootRef}>
-      <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
+      <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-ivory" />
 
       <button
         type="button"

@@ -1,7 +1,8 @@
-import { useState } from "react";
+﻿import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import CollapsibleSection from "./CollapsibleSection";
+import { useAccordion } from "./AccordionContext";
 
 type Item =
   | {
@@ -28,6 +29,82 @@ type Block = {
   groups: Group[];
 };
 
+// Grupo de colapsables hermanos: solo uno puede estar abierto a la vez dentro del
+// mismo padre. Cada colapsable abre un grupo nuevo para sus hijos.
+type CollapseGroup = {
+  openKey: string | null;
+  setOpenKey: (key: string | null) => void;
+};
+
+const CollapseGroupContext = createContext<CollapseGroup | null>(null);
+
+const useCollapseGroup = (): CollapseGroup => {
+  const ctx = useContext(CollapseGroupContext);
+  if (!ctx) {
+    throw new Error("useCollapseGroup debe usarse dentro de CollapseGroupProvider");
+  }
+  return ctx;
+};
+
+// Proveedor de grupo. Al cerrarse el padre colapsa a sus hijos, de modo que al
+// reabrirlo todo aparece cerrado. El reset cascadea hacia los niveles inferiores.
+const CollapseGroupProvider = ({
+  isOpen,
+  children,
+}: {
+  isOpen: boolean;
+  children: React.ReactNode;
+}) => {
+  const [openKey, setOpenKey] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isOpen) setOpenKey(null);
+  }, [isOpen]);
+
+  const value = useMemo(() => ({ openKey, setOpenKey }), [openKey]);
+
+  return (
+    <CollapseGroupContext.Provider value={value}>
+      {children}
+    </CollapseGroupContext.Provider>
+  );
+};
+
+// Centra el elemento verticalmente al terminar la animacion de apertura.
+const useCentrarAlAbrir = () => {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const centrarSiAbre = (willOpen: boolean) => {
+    if (!willOpen) return;
+
+    const centrar = () =>
+      rootRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    const inner = contentRef.current;
+    let hecho = false;
+    const ejecutar = () => {
+      if (hecho) return;
+      hecho = true;
+      centrar();
+    };
+
+    if (inner) {
+      const onEnd = () => {
+        inner.removeEventListener("transitionend", onEnd);
+        ejecutar();
+      };
+      inner.addEventListener("transitionend", onEnd);
+      // Respaldo por si el evento no dispara.
+      window.setTimeout(ejecutar, 400);
+    } else {
+      window.setTimeout(ejecutar, 400);
+    }
+  };
+
+  return { rootRef, contentRef, centrarSiAbre };
+};
+
 // Contenedor principal colapsable: título grande <...> con flecha, colapsado por defecto.
 // SEO-safe: el contenido permanece siempre en el DOM; sólo se colapsa visualmente por CSS.
 const CollapsibleBlock = ({
@@ -43,12 +120,21 @@ const CollapsibleBlock = ({
   marker?: string;
   tightContent?: boolean;
 }) => {
-  const [open, setOpen] = useState(false);
+  const { openKey, setOpenKey } = useCollapseGroup();
+  const open = openKey === label;
+  const { rootRef, contentRef, centrarSiAbre } = useCentrarAlAbrir();
+
+  const handleClick = () => {
+    const willOpen = !open;
+    setOpenKey(willOpen ? label : null);
+    centrarSiAbre(willOpen);
+  };
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" ref={rootRef}>
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={handleClick}
         aria-expanded={open}
         className={`flex w-full items-center justify-start gap-2 ${tightContent ? "mb-0" : "mb-1"} cursor-pointer bg-transparent border-0 text-left`}
       >
@@ -74,9 +160,12 @@ const CollapsibleBlock = ({
         )}
       </button>
       <div
+        ref={contentRef}
         className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
-        <div className="overflow-hidden">{children}</div>
+        <div className="overflow-hidden">
+          <CollapseGroupProvider isOpen={open}>{children}</CollapseGroupProvider>
+        </div>
       </div>
     </div>
   );
@@ -90,12 +179,21 @@ const CollapsibleSub = ({
   label: string;
   children: React.ReactNode;
 }) => {
-  const [open, setOpen] = useState(false);
+  const { openKey, setOpenKey } = useCollapseGroup();
+  const open = openKey === label;
+  const { rootRef, contentRef, centrarSiAbre } = useCentrarAlAbrir();
+
+  const handleClick = () => {
+    const willOpen = !open;
+    setOpenKey(willOpen ? label : null);
+    centrarSiAbre(willOpen);
+  };
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" ref={rootRef}>
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={handleClick}
         aria-expanded={open}
         className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
       >
@@ -116,9 +214,12 @@ const CollapsibleSub = ({
         </svg>
       </button>
       <div
+        ref={contentRef}
         className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
-        <div className="overflow-hidden">{children}</div>
+        <div className="overflow-hidden">
+          <CollapseGroupProvider isOpen={open}>{children}</CollapseGroupProvider>
+        </div>
       </div>
     </div>
   );
@@ -126,6 +227,8 @@ const CollapsibleSub = ({
 
 const Contact = () => {
   const { t } = useTranslation();
+  const { openId } = useAccordion();
+  const seccionAbierta = openId === "contact";
   const [copied, setCopied] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
 
@@ -509,6 +612,7 @@ const Contact = () => {
           <span className="blink-soft">{t("about.data.contact")}</span>
         </p>
 
+        <CollapseGroupProvider isOpen={seccionAbierta}>
         <div className="flex flex-col gap-2">
           {/* Email: cajita con borde amarillo (sin cabecera) */}
           <div className="flex flex-col items-center">
@@ -873,6 +977,7 @@ const Contact = () => {
             </div>
           </CollapsibleBlock>
         </div>
+        </CollapseGroupProvider>
 
         {/* Nota al pie colapsable: explicación de [i] e [Indexable-Link] */}
         <div className="mt-2">
