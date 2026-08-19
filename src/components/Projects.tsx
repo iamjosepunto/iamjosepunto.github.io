@@ -276,6 +276,8 @@ const Projects = () => {
           <ProjectsBlock groups={personales} />
         </CollapsibleSub>
 
+        <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-blue-400" />
+
         <CollapsibleSub
           label={t("projects.subTerceros")}
           isOpen={openSub === "terceros"}
