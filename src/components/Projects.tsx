@@ -22,11 +22,45 @@ const CollapsibleSub = ({
   onToggle: () => void;
   children: React.ReactNode;
 }) => {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Alterna la subseccion. Si se abre, espera a que termine la animacion y la centra
+  // verticalmente en la pantalla (mismo efecto que las secciones).
+  const handleClick = () => {
+    const willOpen = !isOpen;
+    onToggle();
+
+    if (!willOpen) return;
+
+    const centrar = () =>
+      rootRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    const inner = contentRef.current;
+    let hecho = false;
+    const ejecutar = () => {
+      if (hecho) return;
+      hecho = true;
+      centrar();
+    };
+
+    if (inner) {
+      const onEnd = () => {
+        inner.removeEventListener("transitionend", onEnd);
+        ejecutar();
+      };
+      inner.addEventListener("transitionend", onEnd);
+      window.setTimeout(ejecutar, 400);
+    } else {
+      window.setTimeout(ejecutar, 400);
+    }
+  };
+
   return (
-    <div className="mb-4">
+    <div className="mb-4" ref={rootRef}>
       <button
         type="button"
-        onClick={onToggle}
+        onClick={handleClick}
         aria-expanded={isOpen}
         className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0"
       >
@@ -46,6 +80,7 @@ const CollapsibleSub = ({
         </svg>
       </button>
       <div
+        ref={contentRef}
         className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
         <div className="overflow-hidden">{children}</div>
