@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import SectionTitle from "./SectionTitle";
+import CollapsibleSection from "./CollapsibleSection";
 
 const CV_FILE = "Summary_CV_Jose ._June_2026_En-Es.pdf";
 
@@ -13,7 +13,7 @@ const Downloads = () => {
       id="downloads"
       className="max-w-5xl mx-auto px-6 py-4"
     >
-      <SectionTitle>{t("downloads.title")}</SectionTitle>
+      <CollapsibleSection title={t("downloads.title")}>
 
       <div
         className="
@@ -93,6 +93,7 @@ const Downloads = () => {
           {t("downloads.label")}
         </a>
       </div>
+    </CollapsibleSection>
     </section>
   );
 };

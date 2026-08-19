@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PROFILE } from "../data/profile";
 import { useTranslation } from "react-i18next";
-import SectionTitle from "./SectionTitle";
+import CollapsibleSection from "./CollapsibleSection";
 
 type Item =
   | {
@@ -481,7 +481,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="max-w-5xl mx-auto px-6 py-4">
-      <SectionTitle>{t("contact.title")}</SectionTitle>
+      <CollapsibleSection title={t("contact.title")}>
 
       <div
         className="
@@ -952,6 +952,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+    </CollapsibleSection>
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import SectionTitle from "./SectionTitle";
+import CollapsibleSection from "./CollapsibleSection";
 
 type LanguageItem = {
   name: string;
@@ -19,7 +19,7 @@ const Languages = () => {
       id="languages"
       className="max-w-5xl mx-auto px-6 py-4"
     >
-      <SectionTitle>{t("languages.title")}</SectionTitle>
+      <CollapsibleSection title={t("languages.title")}>
 
       <div className="flex flex-wrap justify-center gap-6">
         {items.map((item) => (
@@ -51,6 +51,7 @@ const Languages = () => {
           </div>
         ))}
       </div>
+    </CollapsibleSection>
     </section>
   );
 };

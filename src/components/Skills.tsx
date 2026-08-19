@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import SectionTitle from "./SectionTitle";
+import CollapsibleSection from "./CollapsibleSection";
 
 type Skill = { name: string; level: "A" | "M" | "B" };
 type Category = { cat: string; skills: Skill[] };
@@ -81,7 +81,7 @@ const Skills = () => {
       id="skills"
       className="max-w-7xl mx-auto px-6 py-4"
     >
-      <SectionTitle>{t("skills.title", "Skills")}</SectionTitle>
+      <CollapsibleSection title={t("skills.title", "Skills")}>
 
       {/* Aptitudes técnicas */}
       <h3 className="text-2xl font-bold text-blue-400 mb-4 text-center">
@@ -172,6 +172,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
+    </CollapsibleSection>
     </section>
   );
 };

@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { EXPERIENCE_GROUPS } from "../data/profile";
 import type { ExperienceRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
-import SectionTitle from "./SectionTitle";
+import CollapsibleSection from "./CollapsibleSection";
 
 const Experience = () => {
   const { t } = useTranslation();
@@ -26,7 +26,7 @@ const Experience = () => {
       id="experience"
       className="max-w-7xl mx-auto px-6 py-4"
     >
-      <SectionTitle>{t("experience.title")}</SectionTitle>
+      <CollapsibleSection title={t("experience.title")}>
 
       {/* Teclado de experiencias */}
       <div className="flex flex-col gap-3 mb-8">
@@ -175,6 +175,7 @@ const Experience = () => {
           );
         })}
       </article>
+    </CollapsibleSection>
     </section>
   );
 };
