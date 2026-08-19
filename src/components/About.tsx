@@ -41,8 +41,8 @@ const About = () => {
     { label: data.labels.resident, value: data.resident },
     { label: data.labels.cv, value: data.cv, href: data.cv },
     { label: data.labels.summaryCv, value: data.labels.summaryCvLink, href: "#downloads", internal: true },
-    { label: data.labels.email, value: data.email, copy: true },
     { label: data.labels.contact, value: data.contact, blink: true },
+    { label: data.labels.email, value: data.email, copy: true },
     { label: data.labels.availability, value: data.availability },
     { label: data.labels.workmode, value: data.workmode },
   ];
