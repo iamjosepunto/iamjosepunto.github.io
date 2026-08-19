@@ -22,7 +22,7 @@ const CollapsibleSub = ({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
+        className="flex w-full items-center justify-center gap-2 mb-1 cursor-pointer bg-transparent border-0"
       >
         <span className="text-2xl font-semibold text-blue-400">{label}</span>
         <svg
