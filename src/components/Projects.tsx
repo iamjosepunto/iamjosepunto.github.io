@@ -108,7 +108,7 @@ const ProjectsBlock = ({ groups }: { groups: ProjectGroup[] }) => {
         {groups.map((group) => (
           <div
             key={`${group.empresa}-${group.proyecto}`}
-            className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border-b border-slate-800 pb-3"
+            className="flex flex-col md:flex-row md:items-center md:justify-start gap-3 md:gap-4 border-b border-slate-800 pb-3"
           >
             <div className="min-w-0">
               <div className="flex items-baseline gap-2">
@@ -124,7 +124,7 @@ const ProjectsBlock = ({ groups }: { groups: ProjectGroup[] }) => {
               <div className="text-xs text-slate-500 mt-0.5 pl-8">{group.dates}</div>
             </div>
 
-            <div className="flex flex-wrap gap-2 md:justify-end shrink-0">
+            <div className="flex flex-wrap gap-2 shrink-0">
               {[...group.tasks].reverse().map((task) => {
                 const code = task.code.split(" - ").pop();
                 const isActive = !isSummary && (selected as TaskRef).code === task.code;

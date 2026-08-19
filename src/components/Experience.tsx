@@ -41,16 +41,16 @@ const Experience = () => {
                 flex-col
                 md:flex-row
                 md:items-center
-                md:justify-center
+                md:justify-start
                 gap-3
-                md:gap-5
+                md:gap-3
                 border-b
                 border-slate-800
                 pb-3
               "
             >
               {/* Empresa */}
-              <div className="min-w-0 md:w-96">
+              <div className="min-w-0">
                 <div className="flex items-baseline gap-2">
                   <span className="font-mono text-xs text-slate-500">
                     {exp.code}
