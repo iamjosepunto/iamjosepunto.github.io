@@ -21,7 +21,7 @@ const CollapsibleSection = ({ title, children }: CollapsibleSectionProps) => {
         aria-expanded={open}
         className="flex w-full items-center justify-center gap-3 py-2 cursor-pointer bg-transparent border-0"
       >
-        <h2 className="text-4xl font-bold text-yellow-400 text-center">
+        <h2 className="text-4xl font-bold text-yellow-400 text-center leading-none">
           {title}
         </h2>
 
