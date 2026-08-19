@@ -5,7 +5,7 @@ import { useAccordion } from "./AccordionContext";
 const Nav = () => {
   const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { open } = useAccordion();
+  const { openId, toggle } = useAccordion();
 
   const changeLanguage = (language: "es" | "en") => {
     i18n.changeLanguage(language);
@@ -17,16 +17,19 @@ const Nav = () => {
     setMobileMenuOpen(false);
   };
 
-  // Abre la seccion correspondiente y hace scroll suave hasta ella.
+  // Alterna la seccion: si esta cerrada la abre y hace scroll; si esta abierta la cierra.
   const goToSection = (id: string) => {
-    open(id);
+    const willOpen = openId !== id;
+    toggle(id);
     setMobileMenuOpen(false);
-    requestAnimationFrame(() => {
-      document.getElementById(id)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+    if (willOpen) {
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       });
-    });
+    }
   };
 
   const NavLink = ({ id, label }: { id: string; label: string }) => (

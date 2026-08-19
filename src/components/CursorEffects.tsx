@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 const CursorEffects = () => {
   const ringRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLDivElement>(null);
+  const crossRef = useRef<HTMLDivElement>(null);
   const spotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,6 +20,7 @@ const CursorEffects = () => {
 
     const ring = ringRef.current;
     const dot = dotRef.current;
+    const cross = crossRef.current;
     const spot = spotRef.current;
     if (!ring || !dot || !spot) return;
 
@@ -38,34 +40,44 @@ const CursorEffects = () => {
     let spotX = mouseX;
     let spotY = mouseY;
     let raf = 0;
+    let hovering = false;
 
     const onMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       ring.style.opacity = "1";
-      dot.style.opacity = "1";
       spot.style.opacity = "1";
+      // Segun el modo, se ve el punto o la cruz.
+      dot.style.opacity = hovering ? "0" : "1";
+      cross.style.opacity = hovering ? "1" : "0";
     };
 
     const onLeave = () => {
       ring.style.opacity = "0";
       dot.style.opacity = "0";
+      cross.style.opacity = "0";
       spot.style.opacity = "0";
     };
 
     const grow = () => {
+      hovering = true;
       ring.style.width = "60px";
       ring.style.height = "60px";
       ring.style.backgroundColor = "rgba(239,68,68,0.15)";
       ring.style.borderColor = "#ef4444";
-      dot.style.backgroundColor = "#ef4444";
+      // Modo mira: ocultar el punto y mostrar la cruz.
+      dot.style.opacity = "0";
+      cross.style.opacity = "1";
     };
     const shrink = () => {
+      hovering = false;
       ring.style.width = "36px";
       ring.style.height = "36px";
       ring.style.backgroundColor = "transparent";
       ring.style.borderColor = "#facc15";
-      dot.style.backgroundColor = "#facc15";
+      // Modo normal: mostrar el punto y ocultar la cruz.
+      dot.style.opacity = "1";
+      cross.style.opacity = "0";
     };
 
     // Delegacion: crecer sobre elementos interactivos.
@@ -88,6 +100,7 @@ const CursorEffects = () => {
       ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
 
       dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      cross.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
 
       spotX += (mouseX - spotX) * 0.12;
       spotY += (mouseY - spotY) * 0.12;
@@ -167,6 +180,46 @@ const CursorEffects = () => {
           transition: "background-color 0.25s ease",
         }}
       />
+      <div
+        ref={crossRef}
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: 20,
+          height: 20,
+          pointerEvents: "none",
+          opacity: 0,
+          zIndex: 9999,
+          transition: "opacity 0.2s ease",
+        }}
+      >
+        {/* Linea horizontal */}
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: 0,
+            width: "100%",
+            height: 2,
+            backgroundColor: "#ef4444",
+            transform: "translateY(-50%)",
+          }}
+        />
+        {/* Linea vertical */}
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: 0,
+            height: "100%",
+            width: 2,
+            backgroundColor: "#ef4444",
+            transform: "translateX(-50%)",
+          }}
+        />
+      </div>
     </>
   );
 };
