@@ -12,6 +12,7 @@ export type ProjectGroup = {
   proyectoKey: string;
   dates: string;
   tasks: TaskRef[];
+  tipo: "personal" | "terceros";
 };
 
 
@@ -77,6 +78,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E100",
     "empresaName": "Proyecto Personal",
     "proyecto": "P100",
+    "tipo": "personal",
     "proyectoKey": "e100_p100",
     "tasks": [
       {
@@ -92,6 +94,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E011",
     "empresaName": "Grupo de Empresas Tecnológicas",
     "proyecto": "P006",
+    "tipo": "terceros",
     "proyectoKey": "e011_p006",
     "tasks": [
       {
@@ -151,6 +154,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E011",
     "empresaName": "Grupo de Empresas Tecnológicas",
     "proyecto": "P005",
+    "tipo": "terceros",
     "proyectoKey": "e011_p005",
     "tasks": [
       {
@@ -185,6 +189,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E010",
     "empresaName": "Unisys",
     "proyecto": "P004",
+    "tipo": "terceros",
     "proyectoKey": "e010_p004",
     "tasks": [
       {
@@ -214,6 +219,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E009",
     "empresaName": "IO Digital X",
     "proyecto": "P003",
+    "tipo": "terceros",
     "proyectoKey": "e009_p003",
     "tasks": [
       {
@@ -238,6 +244,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E008",
     "empresaName": "INECO",
     "proyecto": "P002",
+    "tipo": "terceros",
     "proyectoKey": "e008_p002",
     "tasks": [
       {
@@ -262,6 +269,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     "empresa": "E007",
     "empresaName": "GRUPO J2INGENIEROS",
     "proyecto": "P001",
+    "tipo": "terceros",
     "proyectoKey": "e007_p001",
     "tasks": [
       {

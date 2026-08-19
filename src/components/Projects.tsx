@@ -1,68 +1,81 @@
 import { useRef, useState } from "react";
 import { PROJECT_GROUPS } from "../data/profile";
-import type { TaskRef } from "../data/profile";
+import type { ProjectGroup, TaskRef } from "../data/profile";
 import { useTranslation } from "react-i18next";
 import CollapsibleSection from "./CollapsibleSection";
 
 const SUMMARY = "__summary__";
 
-const Projects = () => {
-  const { t } = useTranslation();
-
-  const [selected, setSelected] = useState<TaskRef | typeof SUMMARY>(
-    SUMMARY
+// Subseccion colapsable dentro de Portfolio (subtitulo azul + flecha). El contenido
+// permanece SIEMPRE en el DOM (grid-rows) para no perder SEO. Empieza cerrada.
+const CollapsibleSub = ({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mb-4">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-start gap-2 mb-1 cursor-pointer bg-transparent border-0 text-left"
+      >
+        <span className="text-2xl font-semibold text-blue-400">{label}</span>
+        <svg
+          viewBox="0 0 24 24"
+          className={`w-6 h-6 text-blue-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+      >
+        <div className="overflow-hidden">{children}</div>
+      </div>
+    </div>
   );
+};
 
+// Bloque de proyectos (teclado + resumen + panel de detalle) para una lista de grupos.
+// Cada instancia tiene su propio estado de seleccion, de modo que las subsecciones
+// (personales / terceros) son independientes.
+const ProjectsBlock = ({ groups }: { groups: ProjectGroup[] }) => {
+  const { t } = useTranslation();
+  const [selected, setSelected] = useState<TaskRef | typeof SUMMARY>(SUMMARY);
   const panelRef = useRef<HTMLElement>(null);
 
   const select = (value: TaskRef | typeof SUMMARY) => {
     setSelected(value);
-    panelRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const isSummary = selected === SUMMARY;
 
   const summaryRow = (
-    <div
-      className="
-        flex
-        flex-col
-        md:flex-row
-        md:items-center
-        gap-3
-        border-b
-        border-slate-800
-        pb-3
-      "
-    >
+    <div className="flex flex-col md:flex-row md:items-center gap-3 border-b border-slate-800 pb-3">
       <div className="flex items-center gap-2 min-w-0 flex-1">
         <span className="text-base font-semibold text-ivory whitespace-nowrap">
           {t("projects.summary.label")}
         </span>
-
         <span
           aria-hidden="true"
-          className="
-            hidden
-            md:block
-            flex-1
-            border-t-2
-            border-dashed
-            border-slate-600
-          "
+          className="hidden md:block flex-1 border-t-2 border-dashed border-slate-600"
         />
-
-        <span
-          aria-hidden="true"
-          className="hidden md:block text-slate-600 font-mono"
-        >
+        <span aria-hidden="true" className="hidden md:block text-slate-600 font-mono">
           &gt;&gt;
         </span>
       </div>
-
       <div className="flex md:justify-end shrink-0">
         <button
           onClick={() => select(SUMMARY)}
@@ -80,64 +93,34 @@ const Projects = () => {
   );
 
   return (
-    <section
-      id="projects"
-      className="max-w-7xl mx-auto px-6 py-4"
-    >
-      <CollapsibleSection title={t("projects.title")}>
-
+    <div>
       {/* Teclado de tareas */}
       <div className="flex flex-col gap-3 mb-8">
-        {/* Tecla especial: Resumen de proyectos (arriba) */}
         {summaryRow}
 
-        {PROJECT_GROUPS.map((group) => (
+        {groups.map((group) => (
           <div
             key={`${group.empresa}-${group.proyecto}`}
-            className="
-              flex
-              flex-col
-              md:flex-row
-              md:items-center
-              md:justify-between
-              gap-3
-              border-b
-              border-slate-800
-              pb-3
-            "
+            className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border-b border-slate-800 pb-3"
           >
-            {/* Empresa + Proyecto */}
             <div className="min-w-0">
               <div className="flex items-baseline gap-2">
-                <span className="font-mono text-xs text-slate-500">
-                  {group.empresa}
-                </span>
-                <span className="text-sm text-slate-400 truncate">
-                  {group.empresaName}
-                </span>
+                <span className="font-mono text-xs text-slate-500">{group.empresa}</span>
+                <span className="text-sm text-slate-400 truncate">{group.empresaName}</span>
               </div>
-
               <div className="flex items-baseline gap-2 mt-0.5">
-                <span className="font-mono text-xs text-blue-400">
-                  {group.proyecto}
-                </span>
+                <span className="font-mono text-xs text-blue-400">{group.proyecto}</span>
                 <span className="text-base font-semibold text-ivory truncate">
                   {t(`projects.proyectos.${group.proyectoKey}`)}
                 </span>
               </div>
-
-              <div className="text-xs text-slate-500 mt-0.5 pl-8">
-                {group.dates}
-              </div>
+              <div className="text-xs text-slate-500 mt-0.5 pl-8">{group.dates}</div>
             </div>
 
-            {/* Teclas */}
             <div className="flex flex-wrap gap-2 md:justify-end shrink-0">
               {[...group.tasks].reverse().map((task) => {
                 const code = task.code.split(" - ").pop();
-                const isActive =
-                  !isSummary && (selected as TaskRef).code === task.code;
-
+                const isActive = !isSummary && (selected as TaskRef).code === task.code;
                 return (
                   <button
                     key={task.code}
@@ -157,51 +140,33 @@ const Projects = () => {
           </div>
         ))}
 
-        {/* Tecla especial: Resumen de proyectos (abajo) */}
         {summaryRow}
       </div>
 
       {/* Panel de detalle */}
       <article
         ref={panelRef}
-        className="
-          scroll-mt-20
-          bg-slate-900
-          border
-          border-slate-800
-          rounded-2xl
-          p-8
-            transition
-            hover:-translate-y-1
-          "
+        className="scroll-mt-20 bg-slate-900 border border-slate-800 rounded-2xl p-8 transition hover:-translate-y-1"
       >
-        {/* Panel Summary: visible sólo en modo resumen, pero siempre en el DOM */}
+        {/* Panel Summary: visible solo en modo resumen, pero siempre en el DOM */}
         <div className={isSummary ? "text-ivory leading-relaxed" : "hidden"}>
           <div className="font-semibold mb-3">
             {"<<"}{t("projects.summary.label")}{">>"}
           </div>
-
           <div className="flex flex-col gap-1">
-            {PROJECT_GROUPS.map((group) => (
+            {groups.map((group) => (
               <div key={`${group.empresa}-${group.proyecto}`}>
                 <div className="mt-2">
                   • {group.empresa}-{group.proyecto}-
                   {t(`projects.proyectos.${group.proyectoKey}`)}
                 </div>
-
                 {group.tasks.map((task) => {
                   const code = task.code.split(" - ").pop();
                   return (
                     <div key={task.code} className="pl-6">
                       <button
                         onClick={() => select(task)}
-                        className="
-                          text-left
-                          text-ivory
-                          hover:text-yellow-400
-                          transition
-                          cursor-pointer
-                        "
+                        className="text-left text-ivory hover:text-yellow-400 transition cursor-pointer"
                       >
                         {">"}{code}-{t(`projects.tareas.${task.key}.title`)}
                       </button>
@@ -214,25 +179,19 @@ const Projects = () => {
         </div>
 
         {/* Detalle de CADA tarea: se renderizan TODAS para SEO (Google indexa todo el
-            texto). Sólo la seleccionada es visible; el resto se ocultan por CSS pero
+            texto). Solo la seleccionada es visible; el resto se ocultan por CSS pero
             permanecen en el DOM. */}
-        {PROJECT_GROUPS.map((group) =>
+        {groups.map((group) =>
           group.tasks.map((task) => {
             const taskBase = `projects.tareas.${task.key}`;
             const taskAptitudes = t(`${taskBase}.aptitudes`, {
               returnObjects: true,
             }) as string[];
-            const isVisible =
-              !isSummary && (selected as TaskRef).code === task.code;
+            const isVisible = !isSummary && (selected as TaskRef).code === task.code;
 
             return (
-              <div
-                key={task.code}
-                className={isVisible ? "" : "hidden"}
-              >
-                <div className="font-mono text-sm text-blue-400 mb-2">
-                  {task.code}
-                </div>
+              <div key={task.code} className={isVisible ? "" : "hidden"}>
+                <div className="font-mono text-sm text-blue-400 mb-2">{task.code}</div>
 
                 <h3 className="text-2xl font-bold text-yellow-400 mb-2">
                   {t(`${taskBase}.title`)}
@@ -247,13 +206,7 @@ const Projects = () => {
                     href={task.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="
-                      inline-block
-                      mb-6
-                      text-yellow-400
-                      hover:text-yellow-300
-                      break-all
-                    "
+                    className="inline-block mb-6 text-yellow-400 hover:text-yellow-300 break-all"
                   >
                     {t("projects.labels.viewSite")} → {task.url}
                   </a>
@@ -278,20 +231,11 @@ const Projects = () => {
                   <div className="text-sm font-semibold text-blue-400 mb-3">
                     {t("projects.labels.aptitudes")}
                   </div>
-
                   <div className="flex flex-wrap gap-2">
                     {taskAptitudes.map((skill) => (
                       <span
                         key={skill}
-                        className="
-                          px-3
-                          py-1
-                          text-sm
-                          rounded-full
-                          bg-slate-800
-                          border
-                          border-yellow-400
-                        "
+                        className="px-3 py-1 text-sm rounded-full bg-slate-800 border border-yellow-400"
                       >
                         {skill}
                       </span>
@@ -303,16 +247,34 @@ const Projects = () => {
           })
         )}
       </article>
-    </CollapsibleSection>
+    </div>
+  );
+};
+
+const Projects = () => {
+  const { t } = useTranslation();
+
+  const personales = PROJECT_GROUPS.filter((g) => g.tipo === "personal");
+  const terceros = PROJECT_GROUPS.filter((g) => g.tipo === "terceros");
+
+  return (
+    <section id="projects" className="max-w-7xl mx-auto px-6 py-4">
+      <CollapsibleSection title={t("projects.title")}>
+        <CollapsibleSub label={t("projects.subPersonales")}>
+          <ProjectsBlock groups={personales} />
+        </CollapsibleSub>
+
+        <CollapsibleSub label={t("projects.subTerceros")}>
+          <ProjectsBlock groups={terceros} />
+        </CollapsibleSub>
+      </CollapsibleSection>
     </section>
   );
 };
 
 const Block = ({ label, text }: { label: string; text: string }) => (
   <div>
-    <div className="text-sm font-semibold text-blue-400 mb-1">
-      {label}
-    </div>
+    <div className="text-sm font-semibold text-blue-400 mb-1">{label}</div>
     <p className="text-ivory leading-relaxed">{text}</p>
   </div>
 );
