@@ -18,7 +18,7 @@ const Footer = () => {
           {t("footer.builtWith")}
         </p>
 
-        <p className="text-ivory text-sm mt-2">
+        <p className="text-ivory text-sm mt-0.5">
           {t("footer.subtitle")}
         </p>
       </div>
