@@ -17,18 +17,41 @@ const Nav = () => {
     setMobileMenuOpen(false);
   };
 
-  // Alterna la seccion: si esta cerrada la abre y hace scroll; si esta abierta la cierra.
+  // Alterna la seccion: si esta cerrada la abre y la centra en pantalla; si esta
+  // abierta la cierra. Al abrir, espera a que la animacion de expansion termine antes
+  // de centrar, para que el scroll se calcule con la seccion ya desplegada.
   const goToSection = (id: string) => {
     const willOpen = openId !== id;
     toggle(id);
     setMobileMenuOpen(false);
-    if (willOpen) {
-      requestAnimationFrame(() => {
-        document.getElementById(id)?.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      });
+
+    if (!willOpen) return;
+
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const centrar = () =>
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // El contenido colapsable anima su altura ~300ms; esperamos a que termine.
+    const inner = el.querySelector("[data-collapsible-content]");
+    let hecho = false;
+    const ejecutar = () => {
+      if (hecho) return;
+      hecho = true;
+      centrar();
+    };
+
+    if (inner) {
+      const onEnd = () => {
+        inner.removeEventListener("transitionend", onEnd);
+        ejecutar();
+      };
+      inner.addEventListener("transitionend", onEnd);
+      // Respaldo por si el evento no dispara.
+      window.setTimeout(ejecutar, 400);
+    } else {
+      window.setTimeout(ejecutar, 400);
     }
   };
 
