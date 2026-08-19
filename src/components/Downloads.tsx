@@ -42,7 +42,7 @@ const Downloads = () => {
             inline-flex
             items-center
             gap-3
-            max-w-xs
+            max-w-md
             px-6
             py-3
             rounded-xl
