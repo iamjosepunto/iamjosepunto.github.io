@@ -61,8 +61,8 @@ const CursorEffects = () => {
 
     const grow = () => {
       hovering = true;
-      ring.style.width = "60px";
-      ring.style.height = "60px";
+      ring.style.width = "45px";
+      ring.style.height = "45px";
       ring.style.backgroundColor = "rgba(34,197,94,0.15)";
       ring.style.borderColor = "#22c55e";
       // Modo mira: ocultar el punto y mostrar la cruz.
@@ -187,8 +187,8 @@ const CursorEffects = () => {
           position: "fixed",
           top: 0,
           left: 0,
-          width: 90,
-          height: 90,
+          width: 68,
+          height: 68,
           pointerEvents: "none",
           opacity: 0,
           zIndex: 9999,
