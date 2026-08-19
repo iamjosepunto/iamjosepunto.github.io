@@ -13,6 +13,11 @@ const CollapsibleSection = ({ id, title, children }: CollapsibleSectionProps) =>
   const { openId, toggle } = useAccordion();
   const isOpen = openId === id;
 
+  // Separa el emoji inicial del resto del titulo para alinear los nombres en columna.
+  const firstSpace = title.indexOf(" ");
+  const emoji = firstSpace === -1 ? "" : title.slice(0, firstSpace);
+  const name = firstSpace === -1 ? title : title.slice(firstSpace + 1);
+
   return (
     <div>
       <div className="w-screen relative left-1/2 -translate-x-1/2 border-t border-yellow-400" />
@@ -23,8 +28,10 @@ const CollapsibleSection = ({ id, title, children }: CollapsibleSectionProps) =>
         aria-expanded={isOpen}
         className="flex w-full items-center justify-start gap-3 py-1 cursor-pointer bg-transparent border-0"
       >
+        <span className="w-10 shrink-0 text-3xl text-center">{emoji}</span>
+
         <h2 className="text-4xl font-bold text-yellow-400 leading-none">
-          {title}
+          {name}
         </h2>
 
         <svg
