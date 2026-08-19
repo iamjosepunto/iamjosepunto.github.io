@@ -10,24 +10,27 @@ const SUMMARY = "__summary__";
 // permanece SIEMPRE en el DOM (grid-rows) para no perder SEO. Empieza cerrada.
 const CollapsibleSub = ({
   label,
+  isOpen,
+  onToggle,
   children,
 }: {
   label: string;
+  isOpen: boolean;
+  onToggle: () => void;
   children: React.ReactNode;
 }) => {
-  const [open, setOpen] = useState(false);
   return (
     <div className="mb-4">
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
+        onClick={onToggle}
+        aria-expanded={isOpen}
         className="flex w-full items-center justify-center gap-2 mb-1 cursor-pointer bg-transparent border-0"
       >
         <span className="text-2xl font-semibold text-blue-400">{label}</span>
         <svg
           viewBox="0 0 24 24"
-          className={`w-6 h-6 text-blue-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          className={`w-6 h-6 text-blue-400 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
@@ -39,7 +42,7 @@ const CollapsibleSub = ({
         </svg>
       </button>
       <div
-        className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+        className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
         <div className="overflow-hidden">{children}</div>
       </div>
@@ -257,14 +260,27 @@ const Projects = () => {
   const personales = PROJECT_GROUPS.filter((g) => g.tipo === "personal");
   const terceros = PROJECT_GROUPS.filter((g) => g.tipo === "terceros");
 
+  // Solo una subseccion abierta a la vez.
+  const [openSub, setOpenSub] = useState<"personales" | "terceros" | null>(null);
+  const toggleSub = (sub: "personales" | "terceros") =>
+    setOpenSub((current) => (current === sub ? null : sub));
+
   return (
     <section id="projects" className="max-w-7xl mx-auto px-6 py-0">
       <CollapsibleSection id="projects" title={t("projects.title")}>
-        <CollapsibleSub label={t("projects.subPersonales")}>
+        <CollapsibleSub
+          label={t("projects.subPersonales")}
+          isOpen={openSub === "personales"}
+          onToggle={() => toggleSub("personales")}
+        >
           <ProjectsBlock groups={personales} />
         </CollapsibleSub>
 
-        <CollapsibleSub label={t("projects.subTerceros")}>
+        <CollapsibleSub
+          label={t("projects.subTerceros")}
+          isOpen={openSub === "terceros"}
+          onToggle={() => toggleSub("terceros")}
+        >
           <ProjectsBlock groups={terceros} />
         </CollapsibleSub>
       </CollapsibleSection>
