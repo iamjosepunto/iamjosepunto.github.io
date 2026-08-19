@@ -1,7 +1,8 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme {
   --color-ivory: #E2E8F0;
+  --color-cream: #FAF3E0;
 }
 
 html {

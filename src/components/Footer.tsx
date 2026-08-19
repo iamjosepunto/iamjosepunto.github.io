@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+﻿import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ const Footer = () => {
           {t("footer.builtWith")}
         </p>
 
-        <p className="text-ivory text-sm mt-0.5">
+        <p className="text-cream text-sm mt-0.5">
           {t("footer.subtitle")}
         </p>
       </div>
