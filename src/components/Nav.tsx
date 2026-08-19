@@ -26,7 +26,7 @@ const Nav = () => {
       requestAnimationFrame(() => {
         document.getElementById(id)?.scrollIntoView({
           behavior: "smooth",
-          block: "start",
+          block: "center",
         });
       });
     }
