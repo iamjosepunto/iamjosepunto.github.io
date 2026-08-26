@@ -248,7 +248,7 @@ const ProjectsBlock = ({ groups }: { groups: ProjectGroup[] }) => {
                     href={task.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-block mb-6 text-yellow-400 hover:text-yellow-300 break-all"
+                    className="inline-block mb-6 text-yellow-400 hover:text-yellow-300 break-all pulse-soft"
                   >
                     {t("projects.labels.viewSite")} → {task.url}
                   </a>

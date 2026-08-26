@@ -27,8 +27,14 @@ body {
   animation: blinkSoft 2s ease-in-out infinite;
 }
 
+/* Misma animacion que .blink-soft pero sin fijar color: el elemento conserva el suyo. */
+.pulse-soft {
+  animation: blinkSoft 2s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .blink-soft {
+  .blink-soft,
+  .pulse-soft {
     animation: none;
   }
 }
