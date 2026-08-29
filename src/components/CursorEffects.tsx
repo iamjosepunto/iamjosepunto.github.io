@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
 
-// Efectos de cursor (solo escritorio): anillo magnetico que sigue al raton con retardo
-// suave y crece sobre botones/enlaces, mas un punto central exacto y un foco de luz
-// ambiental. Puramente decorativo (no afecta al contenido ni al SEO). Respeta
-// prefers-reduced-motion y no se activa en dispositivos tactiles.
+// Efectos de cursor (solo escritorio): anillo que acompana al raton sin retardo y crece
+// sobre botones/enlaces, mas un punto central y un foco de luz ambiental. Puramente
+// decorativo (no afecta al contenido ni al SEO). Respeta prefers-reduced-motion y no
+// se activa en dispositivos tactiles.
 const CursorEffects = () => {
   const ringRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLDivElement>(null);
@@ -35,10 +35,6 @@ const CursorEffects = () => {
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let ringX = mouseX;
-    let ringY = mouseY;
-    let spotX = mouseX;
-    let spotY = mouseY;
     let raf = 0;
     let hovering = false;
 
@@ -94,17 +90,15 @@ const CursorEffects = () => {
       if (isInteractive(e.target as Element)) shrink();
     };
 
+    // Los cuatro elementos se posicionan exactamente sobre el raton, sin interpolacion.
+    // La escritura se mantiene dentro de requestAnimationFrame para no tocar el DOM mas
+    // veces de las que el navegador pinta.
     const animate = () => {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
-      ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
-
-      dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
-      cross.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
-
-      spotX += (mouseX - spotX) * 0.12;
-      spotY += (mouseY - spotY) * 0.12;
-      spot.style.transform = `translate(${spotX}px, ${spotY}px) translate(-50%, -50%)`;
+      const posicion = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      ring.style.transform = posicion;
+      dot.style.transform = posicion;
+      cross.style.transform = posicion;
+      spot.style.transform = posicion;
 
       raf = requestAnimationFrame(animate);
     };
