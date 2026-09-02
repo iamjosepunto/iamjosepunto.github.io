@@ -1,14 +1,11 @@
 ﻿import { useEffect, useRef } from "react";
 
-// Efectos de cursor (solo escritorio): anillo que acompana al raton sin retardo y crece
-// sobre botones/enlaces, mas un punto central y un foco de luz ambiental. Puramente
-// decorativo (no afecta al contenido ni al SEO). Respeta prefers-reduced-motion y no
-// se activa en dispositivos tactiles.
+// Cursor personalizado (solo escritorio): una flecha que acompana al raton sin retardo.
+// Blanca en reposo; sobre botones y enlaces pasa a relleno crema con borde azul claro y
+// crece un 5%. Puramente decorativo (no afecta al contenido ni al SEO). Respeta
+// prefers-reduced-motion y no se activa en dispositivos tactiles.
 const CursorEffects = () => {
-  const ringRef = useRef<HTMLDivElement>(null);
-  const dotRef = useRef<HTMLDivElement>(null);
   const arrowRef = useRef<HTMLDivElement>(null);
-  const spotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // No activar en tactil o si el usuario prefiere menos movimiento.
@@ -18,11 +15,8 @@ const CursorEffects = () => {
     ).matches;
     if (!finePointer || reduceMotion) return;
 
-    const ring = ringRef.current;
-    const dot = dotRef.current;
     const arrow = arrowRef.current;
-    const spot = spotRef.current;
-    if (!ring || !dot || !spot || !arrow) return;
+    if (!arrow) return;
 
     document.body.classList.add("cursor-fx-active");
     // Oculta el cursor nativo (incluido sobre enlaces/botones) mientras los efectos
@@ -41,37 +35,26 @@ const CursorEffects = () => {
     const onMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      // El anillo solo existe en reposo: sobre un enlace se apaga.
-      ring.style.opacity = hovering ? "0" : "1";
-      spot.style.opacity = "1";
-      // Segun el modo, se ve el punto o la flecha.
-      dot.style.opacity = hovering ? "0" : "1";
-      arrow.style.opacity = hovering ? "1" : "0";
+      arrow.style.opacity = "1";
     };
 
     const onLeave = () => {
-      ring.style.opacity = "0";
-      dot.style.opacity = "0";
       arrow.style.opacity = "0";
-      spot.style.opacity = "0";
     };
 
+    // El color se fija en el contenedor: fill y stroke se heredan hasta el path.
     const grow = () => {
       hovering = true;
-      // Modo flecha: solo la flecha, sin anillo ni punto.
-      ring.style.opacity = "0";
-      dot.style.opacity = "0";
-      arrow.style.opacity = "1";
+      arrow.style.fill = "#FAF3E0";
+      arrow.style.stroke = "#7dd3fc";
     };
     const shrink = () => {
       hovering = false;
-      // Modo normal: anillo y punto, sin flecha.
-      ring.style.opacity = "1";
-      dot.style.opacity = "1";
-      arrow.style.opacity = "0";
+      arrow.style.fill = "#FFFFFF";
+      arrow.style.stroke = "#FFFFFF";
     };
 
-    // Delegacion: crecer sobre elementos interactivos.
+    // Delegacion: reaccionar sobre elementos interactivos.
     const isInteractive = (el: Element | null) =>
       !!el &&
       !!el.closest(
@@ -85,15 +68,11 @@ const CursorEffects = () => {
       if (isInteractive(e.target as Element)) shrink();
     };
 
-    // Los cuatro elementos se posicionan exactamente sobre el raton, sin interpolacion.
-    // La escritura se mantiene dentro de requestAnimationFrame para no tocar el DOM mas
-    // veces de las que el navegador pinta.
+    // Posicion exacta sobre el raton, sin interpolacion. El 5% viaja en el mismo
+    // transform: una transicion aqui haria que la posicion tambien se arrastrase.
     const animate = () => {
-      const posicion = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
-      ring.style.transform = posicion;
-      dot.style.transform = posicion;
-      arrow.style.transform = posicion;
-      spot.style.transform = posicion;
+      arrow.style.transform =
+        `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${hovering ? 1.05 : 1})`;
 
       raf = requestAnimationFrame(animate);
     };
@@ -116,88 +95,34 @@ const CursorEffects = () => {
   }, []);
 
   return (
-    <>
-      <div
-        ref={spotRef}
-        aria-hidden="true"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: 400,
-          height: 400,
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(250,243,224,0.10) 0%, rgba(250,243,224,0.04) 40%, transparent 70%)",
-          pointerEvents: "none",
-          opacity: 0,
-          zIndex: 9998,
-        }}
-      />
-      <div
-        ref={ringRef}
-        aria-hidden="true"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: 29,
-          height: 29,
-          border: "2px solid #FAF3E0",
-          borderRadius: "50%",
-          pointerEvents: "none",
-          opacity: 0,
-          zIndex: 9999,
-          transition: "opacity 0.2s ease",
-        }}
-      />
-      <div
-        ref={dotRef}
-        aria-hidden="true"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: 6,
-          height: 6,
-          backgroundColor: "#FAF3E0",
-          borderRadius: "50%",
-          pointerEvents: "none",
-          opacity: 0,
-          zIndex: 9999,
-          transition: "background-color 0.25s ease",
-        }}
-      />
-      <div
-        ref={arrowRef}
-        aria-hidden="true"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: 26,
-          height: 26,
-          pointerEvents: "none",
-          opacity: 0,
-          zIndex: 9999,
-          transition: "opacity 0.2s ease",
-        }}
+    <div
+      ref={arrowRef}
+      aria-hidden="true"
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: 32.5,
+        height: 32.5,
+        pointerEvents: "none",
+        opacity: 0,
+        zIndex: 9999,
+        fill: "#FFFFFF",
+        stroke: "#FFFFFF",
+        transition: "opacity 0.2s ease, fill 0.15s ease, stroke 0.15s ease",
+      }}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        width="32.5"
+        height="32.5"
+        strokeWidth="0.75"
+        strokeLinejoin="round"
+        strokeLinecap="round"
       >
-        {/* Flecha de contorno: interior transparente, solo se ven los trazos. */}
-        <svg
-          viewBox="0 0 24 24"
-          width="26"
-          height="26"
-          fill="none"
-          stroke="#FAF3E0"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-          strokeLinecap="round"
-        >
-          <path d="M5 2.5 L5 19.5 L9.6 15.2 L12.6 21.8 L15.6 20.4 L12.7 14 L18.8 13.7 Z" />
-        </svg>
-      </div>
-    </>
+        <path d="M5 2.5 L5 19.5 L9.6 15.2 L12.6 21.8 L15.6 20.4 L12.7 14 L18.8 13.7 Z" />
+      </svg>
+    </div>
   );
 };
 
