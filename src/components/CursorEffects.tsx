@@ -7,7 +7,7 @@
 const CursorEffects = () => {
   const ringRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLDivElement>(null);
-  const crossRef = useRef<HTMLDivElement>(null);
+  const arrowRef = useRef<HTMLDivElement>(null);
   const spotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -20,9 +20,9 @@ const CursorEffects = () => {
 
     const ring = ringRef.current;
     const dot = dotRef.current;
-    const cross = crossRef.current;
+    const arrow = arrowRef.current;
     const spot = spotRef.current;
-    if (!ring || !dot || !spot || !cross) return;
+    if (!ring || !dot || !spot || !arrow) return;
 
     document.body.classList.add("cursor-fx-active");
     // Oculta el cursor nativo (incluido sobre enlaces/botones) mientras los efectos
@@ -41,39 +41,34 @@ const CursorEffects = () => {
     const onMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      ring.style.opacity = "1";
+      // El anillo solo existe en reposo: sobre un enlace se apaga.
+      ring.style.opacity = hovering ? "0" : "1";
       spot.style.opacity = "1";
-      // Segun el modo, se ve el punto o la cruz.
+      // Segun el modo, se ve el punto o la flecha.
       dot.style.opacity = hovering ? "0" : "1";
-      cross.style.opacity = hovering ? "1" : "0";
+      arrow.style.opacity = hovering ? "1" : "0";
     };
 
     const onLeave = () => {
       ring.style.opacity = "0";
       dot.style.opacity = "0";
-      cross.style.opacity = "0";
+      arrow.style.opacity = "0";
       spot.style.opacity = "0";
     };
 
     const grow = () => {
       hovering = true;
-      ring.style.width = "45px";
-      ring.style.height = "45px";
-      ring.style.backgroundColor = "rgba(250,243,224,0.15)";
-      ring.style.borderColor = "#FAF3E0";
-      // Modo mira: ocultar el punto y mostrar la cruz.
+      // Modo flecha: solo la flecha, sin anillo ni punto.
+      ring.style.opacity = "0";
       dot.style.opacity = "0";
-      cross.style.opacity = "1";
+      arrow.style.opacity = "1";
     };
     const shrink = () => {
       hovering = false;
-      ring.style.width = "36px";
-      ring.style.height = "36px";
-      ring.style.backgroundColor = "transparent";
-      ring.style.borderColor = "#FAF3E0";
-      // Modo normal: mostrar el punto y ocultar la cruz.
+      // Modo normal: anillo y punto, sin flecha.
+      ring.style.opacity = "1";
       dot.style.opacity = "1";
-      cross.style.opacity = "0";
+      arrow.style.opacity = "0";
     };
 
     // Delegacion: crecer sobre elementos interactivos.
@@ -97,7 +92,7 @@ const CursorEffects = () => {
       const posicion = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
       ring.style.transform = posicion;
       dot.style.transform = posicion;
-      cross.style.transform = posicion;
+      arrow.style.transform = posicion;
       spot.style.transform = posicion;
 
       raf = requestAnimationFrame(animate);
@@ -153,8 +148,7 @@ const CursorEffects = () => {
           pointerEvents: "none",
           opacity: 0,
           zIndex: 9999,
-          transition:
-            "width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease",
+          transition: "opacity 0.2s ease",
         }}
       />
       <div
@@ -175,44 +169,33 @@ const CursorEffects = () => {
         }}
       />
       <div
-        ref={crossRef}
+        ref={arrowRef}
         aria-hidden="true"
         style={{
           position: "fixed",
           top: 0,
           left: 0,
-          width: 63,
-          height: 63,
+          width: 26,
+          height: 26,
           pointerEvents: "none",
           opacity: 0,
           zIndex: 9999,
           transition: "opacity 0.2s ease",
         }}
       >
-        {/* Linea horizontal */}
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: 0,
-            width: "100%",
-            height: 2,
-            backgroundColor: "#FAF3E0",
-            transform: "translateY(-50%)",
-          }}
-        />
-        {/* Linea vertical */}
-        <div
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: 0,
-            height: "100%",
-            width: 2,
-            backgroundColor: "#FAF3E0",
-            transform: "translateX(-50%)",
-          }}
-        />
+        {/* Flecha de contorno: interior transparente, solo se ven los trazos. */}
+        <svg
+          viewBox="0 0 24 24"
+          width="26"
+          height="26"
+          fill="none"
+          stroke="#FAF3E0"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        >
+          <path d="M5 2.5 L5 19.5 L9.6 15.2 L12.6 21.8 L15.6 20.4 L12.7 14 L18.8 13.7 Z" />
+        </svg>
       </div>
     </>
   );
