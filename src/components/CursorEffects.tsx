@@ -59,8 +59,8 @@ const CursorEffects = () => {
       hovering = true;
       ring.style.width = "45px";
       ring.style.height = "45px";
-      ring.style.backgroundColor = "rgba(34,197,94,0.15)";
-      ring.style.borderColor = "#22c55e";
+      ring.style.backgroundColor = "rgba(250,243,224,0.15)";
+      ring.style.borderColor = "#FAF3E0";
       // Modo mira: ocultar el punto y mostrar la cruz.
       dot.style.opacity = "0";
       cross.style.opacity = "1";
@@ -70,7 +70,7 @@ const CursorEffects = () => {
       ring.style.width = "36px";
       ring.style.height = "36px";
       ring.style.backgroundColor = "transparent";
-      ring.style.borderColor = "#facc15";
+      ring.style.borderColor = "#FAF3E0";
       // Modo normal: mostrar el punto y ocultar la cruz.
       dot.style.opacity = "1";
       cross.style.opacity = "0";
@@ -133,7 +133,7 @@ const CursorEffects = () => {
           height: 400,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(250,204,21,0.10) 0%, rgba(250,204,21,0.04) 40%, transparent 70%)",
+            "radial-gradient(circle, rgba(250,243,224,0.10) 0%, rgba(250,243,224,0.04) 40%, transparent 70%)",
           pointerEvents: "none",
           opacity: 0,
           zIndex: 9998,
@@ -148,7 +148,7 @@ const CursorEffects = () => {
           left: 0,
           width: 36,
           height: 36,
-          border: "2px solid #facc15",
+          border: "2px solid #FAF3E0",
           borderRadius: "50%",
           pointerEvents: "none",
           opacity: 0,
@@ -166,7 +166,7 @@ const CursorEffects = () => {
           left: 0,
           width: 6,
           height: 6,
-          backgroundColor: "#facc15",
+          backgroundColor: "#FAF3E0",
           borderRadius: "50%",
           pointerEvents: "none",
           opacity: 0,
@@ -197,7 +197,7 @@ const CursorEffects = () => {
             left: 0,
             width: "100%",
             height: 2,
-            backgroundColor: "#22c55e",
+            backgroundColor: "#FAF3E0",
             transform: "translateY(-50%)",
           }}
         />
@@ -209,7 +209,7 @@ const CursorEffects = () => {
             top: 0,
             height: "100%",
             width: 2,
-            backgroundColor: "#22c55e",
+            backgroundColor: "#FAF3E0",
             transform: "translateX(-50%)",
           }}
         />
