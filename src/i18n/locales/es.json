@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "projects": "Portfolio",
     "lab": "Laboratorio",
@@ -15,7 +15,7 @@
   },
   "hero": {
     "role1": "Ingeniero Industrial (carrera finalizada)",
-    "role2": "Analista Programador .NET Senior Full Stack",
+    "role2": "Analista Programador <stack>.NET Senior Full Stack</stack>",
     "role3": "IA y Automatización de Software",
     "viewProjects": "Ver Proyectos",
     "description1": "Ingeniero Industrial y Analista Programador .NET Senior Full Stack con más de 10 años de experiencia desarrollando aplicaciones web, APIs REST, soluciones móviles y software empresarial.",

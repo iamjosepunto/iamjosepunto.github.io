@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+﻿import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -27,7 +27,16 @@ const Hero = () => {
 
             <div>
               <span className="text-yellow-400">•</span>{" "}
-              {t("hero.role2")}
+              {/* El fragmento subrayado se marca en la traduccion, no aqui: cada idioma
+                  decide que parte lleva la raya. */}
+              <Trans
+                i18nKey="hero.role2"
+                components={{
+                  stack: (
+                    <span className="underline decoration-cream decoration-2 underline-offset-4" />
+                  ),
+                }}
+              />
             </div>
 
             <div>

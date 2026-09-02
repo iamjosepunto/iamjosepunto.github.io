@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "projects": "Portfolio",
     "lab": "Lab",
@@ -15,7 +15,7 @@
   },
   "hero": {
     "role1": "Industrial Engineer (degree completed)",
-    "role2": "Senior Full Stack .NET Developer",
+    "role2": "<stack>Senior Full Stack .NET</stack> Developer",
     "role3": "AI & Software Automation",
     "viewProjects": "View Projects",
     "description1": "Industrial Engineer and Senior Full Stack Developer with more than 10 years of experience building web applications, REST APIs, mobile solutions and enterprise software.",
