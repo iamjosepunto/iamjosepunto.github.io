@@ -2,7 +2,7 @@
 
 // Cursor personalizado (solo escritorio): una flecha que acompana al raton sin retardo.
 // Puntero blanco en reposo; sobre botones y enlaces cambia a un dardo crema con borde
-// azul claro que mide 37,4 px. Puramente decorativo (no afecta al contenido ni al SEO).
+// azul claro que mide 56,1 px. Puramente decorativo (no afecta al contenido ni al SEO).
 // Respeta prefers-reduced-motion y no se activa en dispositivos tactiles.
 
 // Geometria. Las dos formas comparten la punta en (5, 2.5) dentro de un viewBox de 24
@@ -13,9 +13,9 @@ const TAM = 26;
 const VIEWBOX = 24;
 const PUNTA_X = (5 * TAM) / VIEWBOX;
 const PUNTA_Y = (2.5 * TAM) / VIEWBOX;
-// 26 x 1.4375 = 37,4 px: el dardo conserva su tamano aunque el puntero en reposo sea
-// mas pequeno.
-const ESCALA_OVER = 1.4375;
+// 26 x 2.15625 = 56,1 px. El dardo es deliberadamente mucho mayor que el puntero en
+// reposo; al escalar desde la punta, todo su volumen cae hacia abajo y a la derecha.
+const ESCALA_OVER = 2.15625;
 const FORMA_REPOSO =
   "M5 2.5 L5 19.5 L9.6 15.2 L12.6 21.8 L15.6 20.4 L12.7 14 L18.8 13.7 Z";
 const FORMA_OVER = "M5 2.5 L13 19.5 L13.5 12 L22 10.5 Z";
