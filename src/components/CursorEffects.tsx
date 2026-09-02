@@ -1,11 +1,26 @@
 ﻿import { useEffect, useRef } from "react";
 
 // Cursor personalizado (solo escritorio): una flecha que acompana al raton sin retardo.
-// Blanca en reposo; sobre botones y enlaces pasa a relleno crema con borde azul claro y
-// crece un 5%. Puramente decorativo (no afecta al contenido ni al SEO). Respeta
-// prefers-reduced-motion y no se activa en dispositivos tactiles.
+// Puntero blanco en reposo; sobre botones y enlaces cambia a un dardo crema con borde
+// azul claro y crece un 15%. Puramente decorativo (no afecta al contenido ni al SEO).
+// Respeta prefers-reduced-motion y no se activa en dispositivos tactiles.
+
+// Geometria. Las dos formas comparten la punta en (5, 2.5) dentro de un viewBox de 24
+// unidades: es el punto que debe coincidir con el raton, porque el navegador dispara el
+// hover en esa coordenada y no en el centro del dibujo. Al compartirla, cambiar de forma
+// no desplaza el cursor.
+const TAM = 32.5;
+const VIEWBOX = 24;
+const PUNTA_X = (5 * TAM) / VIEWBOX;
+const PUNTA_Y = (2.5 * TAM) / VIEWBOX;
+const ESCALA_OVER = 1.15;
+const FORMA_REPOSO =
+  "M5 2.5 L5 19.5 L9.6 15.2 L12.6 21.8 L15.6 20.4 L12.7 14 L18.8 13.7 Z";
+const FORMA_OVER = "M5 2.5 L13 19.5 L13.5 12 L22 10.5 Z";
+
 const CursorEffects = () => {
   const arrowRef = useRef<HTMLDivElement>(null);
+  const pathRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
     // No activar en tactil o si el usuario prefiere menos movimiento.
@@ -16,7 +31,8 @@ const CursorEffects = () => {
     if (!finePointer || reduceMotion) return;
 
     const arrow = arrowRef.current;
-    if (!arrow) return;
+    const path = pathRef.current;
+    if (!arrow || !path) return;
 
     document.body.classList.add("cursor-fx-active");
     // Oculta el cursor nativo (incluido sobre enlaces/botones) mientras los efectos
@@ -42,16 +58,20 @@ const CursorEffects = () => {
       arrow.style.opacity = "0";
     };
 
-    // El color se fija en el contenedor: fill y stroke se heredan hasta el path.
+    // El color se fija en el contenedor: fill y stroke se heredan hasta el path. La forma
+    // se cambia sustituyendo el trazado; entre trazados distintos no hay interpolacion
+    // posible, asi que el cambio de silueta es instantaneo y solo el color se funde.
     const grow = () => {
       hovering = true;
       arrow.style.fill = "#FAF3E0";
       arrow.style.stroke = "#7dd3fc";
+      path.setAttribute("d", FORMA_OVER);
     };
     const shrink = () => {
       hovering = false;
       arrow.style.fill = "#FFFFFF";
       arrow.style.stroke = "#FFFFFF";
+      path.setAttribute("d", FORMA_REPOSO);
     };
 
     // Delegacion: reaccionar sobre elementos interactivos.
@@ -68,11 +88,11 @@ const CursorEffects = () => {
       if (isInteractive(e.target as Element)) shrink();
     };
 
-    // Posicion exacta sobre el raton, sin interpolacion. El 5% viaja en el mismo
-    // transform: una transicion aqui haria que la posicion tambien se arrastrase.
+    // La punta cae exactamente sobre el raton, sin interpolacion. El escalado viaja en el
+    // mismo transform: una transicion aqui arrastraria tambien la posicion.
     const animate = () => {
       arrow.style.transform =
-        `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${hovering ? 1.05 : 1})`;
+        `translate(${mouseX - PUNTA_X}px, ${mouseY - PUNTA_Y}px) scale(${hovering ? ESCALA_OVER : 1})`;
 
       raf = requestAnimationFrame(animate);
     };
@@ -102,25 +122,26 @@ const CursorEffects = () => {
         position: "fixed",
         top: 0,
         left: 0,
-        width: 32.5,
-        height: 32.5,
+        width: TAM,
+        height: TAM,
         pointerEvents: "none",
         opacity: 0,
         zIndex: 9999,
         fill: "#FFFFFF",
         stroke: "#FFFFFF",
+        transformOrigin: `${PUNTA_X}px ${PUNTA_Y}px`,
         transition: "opacity 0.2s ease, fill 0.15s ease, stroke 0.15s ease",
       }}
     >
       <svg
-        viewBox="0 0 24 24"
-        width="32.5"
-        height="32.5"
+        viewBox={`0 0 ${VIEWBOX} ${VIEWBOX}`}
+        width={TAM}
+        height={TAM}
         strokeWidth="0.75"
         strokeLinejoin="round"
         strokeLinecap="round"
       >
-        <path d="M5 2.5 L5 19.5 L9.6 15.2 L12.6 21.8 L15.6 20.4 L12.7 14 L18.8 13.7 Z" />
+        <path ref={pathRef} d={FORMA_REPOSO} />
       </svg>
     </div>
   );
