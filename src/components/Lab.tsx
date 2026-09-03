@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+﻿import { useTranslation } from "react-i18next";
 import CollapsibleSection from "./CollapsibleSection";
 
 const labs = [
@@ -7,10 +7,10 @@ const labs = [
     titleEn: "AI Assisted Development",
 
     descriptionEs:
-      "Investigación y aplicación práctica de herramientas de IA generativa como ChatGPT y Claude para mejorar el desarrollo de software, la documentación, la depuración y la productividad.",
+      "Investigación y aplicación práctica de herramientas de IA generativa como Claude y ChatGPT para mejorar el desarrollo de software, la documentación, la depuración y la productividad.",
 
     descriptionEn:
-      "Research and practical application of generative AI tools such as ChatGPT and Claude to improve software development, documentation, debugging and productivity.",
+      "Research and practical application of generative AI tools such as Claude and ChatGPT to improve software development, documentation, debugging and productivity.",
   },
 
   {
