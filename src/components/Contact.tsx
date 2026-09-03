@@ -659,6 +659,13 @@ const Contact = () => {
                   {[
                     {
                       platform: "Medium",
+                      marker: "[w34-26]",
+                      title:
+                        "Your accordion is probably hiding your best content from Google",
+                      url: "https://medium.com/@iamjosepunto/your-accordion-is-probably-hiding-your-best-content-from-google-2f1fb2cd7f36",
+                    },
+                    {
+                      platform: "Medium",
                       marker: "[w27-26]",
                       title:
                         "Migrating a Legacy Razor + JavaScript Frontend to React and TypeScript, One Component at a Time",
